@@ -1,0 +1,385 @@
+// Gunakan window.vocabData array agar file JS lain bisa di-push juga nantinya
+window.vocabData = window.vocabData || [];
+
+const kosakata_m1h5 = [
+  // --- BAGIAN 1: Tindakan Fisik & Manipulasi Benda ---
+  {
+    id: 'm1h5_1',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'すすぐ',
+    furigana: 'すすぐ',
+    arti: 'Membilas / Mencuci',
+    penjelasan: 'Membersihkan sesuatu dengan air bersih setelah sebelumnya dicuci dengan sabun. Biasanya digunakan untuk benda seperti kain atau pakaian.',
+    contoh1: 'ふきんをすすぐ。\n(Membilas kain lap.)',
+    contoh2: '洗剤をきれいにすすぐ。\n(Membilas deterjen sampai bersih.)'
+  },
+  {
+    id: 'm1h5_2',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'ゆすぐ',
+    furigana: 'ゆすぐ',
+    arti: 'Berkumur / Membilas (ringan)',
+    penjelasan: 'Mirip dengan "すすぐ", namun "ゆすぐ" lebih sering digunakan untuk tindakan berkumur di mulut atau membilas wadah kecil (seperti gelas) dengan mengocok air di dalamnya.',
+    contoh1: '口をゆすぐ。\n(Berkumur / Membilas mulut.)',
+    contoh2: 'コップをゆすぐ。\n(Membilas gelas.)'
+  },
+  {
+    id: 'm1h5_3',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'こす',
+    furigana: 'こす',
+    arti: 'Menyaring',
+    penjelasan: 'Melewatkan cairan melalui saringan atau kain untuk memisahkan ampas, kotoran, atau partikel padat dari cairan tersebut.',
+    contoh1: '水をこす。\n(Menyaring air.)',
+    contoh2: 'お茶の葉をこす。\n(Menyaring daun teh.)'
+  },
+  {
+    id: 'm1h5_4',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'ばらまく',
+    furigana: 'ばらまく',
+    arti: 'Menebarkan / Menyebarkan',
+    penjelasan: 'Menyebarkan atau melemparkan benda-benda kecil ke berbagai arah secara acak. Bisa juga digunakan sebagai kiasan untuk membagi-bagikan uang dengan boros atau menyebarkan rumor.',
+    contoh1: '豆をばらまく。\n(Menebarkan kacang.)',
+    contoh2: '道にお金をばらまく。\n(Menyebarkan uang di jalan.)'
+  },
+  {
+    id: 'm1h5_5',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '緩める',
+    furigana: 'ゆるめる',
+    arti: 'Melonggarkan / Mengendurkan',
+    penjelasan: 'Membuat sesuatu yang tadinya kencang atau ketat menjadi longgar. Bisa digunakan untuk benda fisik (sabuk, tali) atau abstrak (peraturan, kewaspadaan). Kata kerja intransitifnya adalah 緩む (yurumu) yang berarti "menjadi longgar".',
+    contoh1: 'ベルトを緩める。\n(Melonggarkan sabuk.)',
+    contoh2: '気を緩める。\n(Mengendurkan kewaspadaan/bersantai.)'
+  },
+  {
+    id: 'm1h5_6',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '揺する',
+    furigana: 'ゆする',
+    arti: 'Menggoyangkan / Mengguncang',
+    penjelasan: 'Memberikan dorongan atau getaran berulang kali pada suatu benda agar bergoyang. Sering dipakai untuk pohon, bayi (agar tidur), atau tubuh.',
+    contoh1: '木を揺する。\n(Menggoyangkan pohon.)',
+    contoh2: '寝ている彼を揺すって起こす。\n(Mengguncang tubuhnya yang sedang tidur untuk membangunkannya.)'
+  },
+  {
+    id: 'm1h5_7',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '生やす',
+    furigana: 'はやす',
+    arti: 'Menumbuhkan / Membiarkan tumbuh',
+    penjelasan: 'Sengaja tidak memotong atau membiarkan sesuatu tumbuh memanjang, paling sering merujuk pada kumis atau jenggot. Kata kerja intransitifnya adalah 生える (haeru) yang berarti "tumbuh".',
+    contoh1: 'ひげを生やす。\n(Menumbuhkan jenggot/kumis.)',
+    contoh2: '髪を長く生やす。\n(Membiarkan rambut tumbuh panjang.)'
+  },
+  {
+    id: 'm1h5_8',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '生ける',
+    furigana: 'いける',
+    arti: 'Merangkai (bunga)',
+    penjelasan: 'Menata bunga potong ke dalam vas atau wadah air agar terlihat indah dan tetap hidup lebih lama. Kata ini identik dengan seni merangkai bunga Jepang (Ikebana).',
+    contoh1: '花を生ける。\n(Merangkai bunga.)',
+    contoh2: '花瓶にバラを生ける。\n(Merangkai bunga mawar di vas.)'
+  },
+
+  // --- BAGIAN 2: Interaksi, Penempatan & Kiasan ---
+  {
+    id: 'm1h5_9',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'よこす',
+    furigana: 'よこす',
+    arti: 'Mengirimkan / Menyerahkan (kepada saya)',
+    penjelasan: 'Mirip dengan "送る" (mengirim) atau "渡す" (menyerahkan), tetapi mengisyaratkan bahwa benda/informasi tersebut diberikan ke arah pembicara. Sering dipakai dalam nada memerintah secara kasar.',
+    contoh1: '手紙をよこす。\n(Mengirimkan surat kepadaku.)',
+    contoh2: '金をよこせ！\n(Serahkan uangnya!)'
+  },
+  {
+    id: 'm1h5_10',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'そらす',
+    furigana: 'そらす',
+    arti: 'Mengalihkan / Memalingkan',
+    penjelasan: 'Mengubah arah pandangan mata agar tidak menatap langsung, atau mengubah topik pembicaraan untuk menghindari sesuatu yang tidak nyaman.',
+    contoh1: '目をそらす。\n(Memalingkan/mengalihkan pandangan.)',
+    contoh2: '話をそらす。\n(Mengalihkan pembicaraan.)'
+  },
+  {
+    id: 'm1h5_11',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'さらす',
+    furigana: 'さらす',
+    arti: 'Membiarkan terpapar / Merendam',
+    penjelasan: 'Membiarkan sesuatu terkena unsur alam (seperti sinar matahari, angin, atau air). Bisa berarti menjemur, merendam bahan makanan di air untuk menghilangkan rasa pahit, atau mengekspos sesuatu ke bahaya.',
+    contoh1: '日光にさらす。\n(Membiarkan terpapar sinar matahari/menjemur.)',
+    contoh2: '水にさらす。\n(Merendam di dalam air.)'
+  },
+  {
+    id: 'm1h5_12',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '凝らす',
+    furigana: 'こらす',
+    arti: 'Memusatkan / Mencurahkan (ide/perhatian)',
+    penjelasan: 'Memfokuskan pikiran, mata, atau napas pada satu hal. Frasa yang sangat umum adalah "工夫を凝らす" (kufuu wo korasu) yang berarti memeras otak untuk memikirkan ide-ide cemerlang atau trik inovatif.',
+    contoh1: '特別な工夫を凝らす。\n(Mencurahkan ide/kreativitas yang spesial.)',
+    contoh2: '目を凝らして暗闇を見る。\n(Memusatkan pandangan untuk melihat di kegelapan.)'
+  },
+  {
+    id: 'm1h5_13',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'たどる',
+    furigana: 'たどる',
+    arti: 'Menelusuri / Mengikuti jejak',
+    penjelasan: 'Berjalan maju dengan mengikuti jejak langkah, jalan yang tidak jelas, atau petunjuk. Bisa juga dipakai kiasan untuk menelusuri sejarah atau ingatan.',
+    contoh1: '足跡をたどる。\n(Menelusuri jejak kaki.)',
+    contoh2: '記憶をたどって家を探す。\n(Menelusuri ingatan untuk mencari rumah tersebut.)'
+  },
+  {
+    id: 'm1h5_14',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '据える',
+    furigana: 'すえる',
+    arti: 'Memasang / Menempatkan',
+    penjelasan: 'Menempatkan barang yang berat atau penting pada suatu tempat agar stabil dan tidak bergerak. Sinonimnya adalah 据え付ける (suetsukeru).',
+    contoh1: '防犯カメラを据える。\n(Memasang kamera keamanan/CCTV.)',
+    contoh2: '腰を据えて仕事をする。\n(Bekerja dengan menetap/serius tanpa berpindah-pindah.)'
+  },
+  {
+    id: 'm1h5_15',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '添える',
+    furigana: 'そえる',
+    arti: 'Melampirkan / Menambahkan',
+    penjelasan: 'Menambahkan sesuatu yang kecil atau pelengkap pada benda utama agar menjadi lebih baik atau lengkap. Misalnya melampirkan foto pada surat, atau menambahkan hiasan pada makanan.',
+    contoh1: '写真を添える。\n(Melampirkan/menambahkan foto.)',
+    contoh2: '贈り物に手紙を添える。\n(Melampirkan surat pada hadiah.)'
+  },
+  {
+    id: 'm1h5_16',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '控える',
+    furigana: 'ひかえる',
+    arti: 'Menunggu / Menahan diri / Mengurangi',
+    penjelasan: 'Kata ini punya dua makna utama: 1) Menunggu di suatu tempat (seperti di ruang tunggu/控え室) bersiap untuk giliran. 2) Menahan diri atau mengurangi jumlah sesuatu (seperti mengurangi asupan garam) demi kebaikan.',
+    contoh1: '隣室に控える。\n(Menunggu di ruang sebelah.)',
+    contoh2: '塩分を控える。\n(Mengurangi asupan garam.)'
+  },
+  {
+    id: 'm1h5_17',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '歩む',
+    furigana: 'あゆむ',
+    arti: 'Berjalan / Menjalani (kiasan)',
+    penjelasan: 'Mirip dengan 歩く (aruku) yang berarti berjalan fisik, namun "歩む" lebih kental nuansa sastranya dan sering digunakan untuk kiasan "menjalani proses kehidupan atau sejarah". Kata bendanya adalah 歩み (ayumi) yang berarti jejak langkah atau sejarah.',
+    contoh1: '彼と別の人生を歩む。\n(Menjalani kehidupan yang berbeda darinya.)',
+    contoh2: '苦難の道を歩む。\n(Berjalan/Menjalani jalan yang penuh kesulitan.)'
+  },
+  {
+    id: 'm1h5_18',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'もくろむ',
+    furigana: 'もくろむ',
+    arti: 'Merencanakan / Mengincar',
+    penjelasan: 'Menyusun rencana, strategi, atau proyek di dalam pikiran. Sering (walau tidak selalu) memiliki nuansa merencanakan sesuatu secara diam-diam atau memiliki ambisi yang besar.',
+    contoh1: '世界進出をもくろむ。\n(Merencanakan/mengincar ekspansi ke seluruh dunia.)',
+    contoh2: '新しいビジネスをもくろんでいる。\n(Sedang merencanakan bisnis baru.)'
+  },
+  {
+    id: 'm1h5_19',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '阻む',
+    furigana: 'はばむ',
+    arti: 'Menghalangi / Mencegah',
+    penjelasan: 'Menjadi rintangan yang menghentikan atau menyulitkan pergerakan, kemajuan, atau rencana orang lain agar tidak terwujud.',
+    contoh1: '彼らの侵入を阻む。\n(Menghalangi/mencegah invasi mereka.)',
+    contoh2: '行く手を阻む。\n(Menghalangi jalan yang akan dilewati.)'
+  },
+  {
+    id: 'm1h5_20',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '遮る',
+    furigana: 'さえぎる',
+    arti: 'Memotong / Menghalangi (cahaya/pandangan)',
+    penjelasan: 'Membangun penghalang sehingga cahaya, pandangan, atau pergerakan terputus. Bisa juga digunakan untuk tindakan memotong pembicaraan orang lain di tengah-tengah.',
+    contoh1: '人の話を遮る。\n(Memotong pembicaraan orang lain.)',
+    contoh2: 'カーテンで光を遮る。\n(Menghalangi cahaya dengan tirai.)'
+  },
+  {
+    id: 'm1h5_21',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: 'つづる',
+    furigana: 'つづる',
+    arti: 'Mengeja / Menulis (merangkai kata)',
+    penjelasan: 'Merangkai huruf menjadi kata (mengeja), atau merangkai kata-kata menjadi sebuah kalimat, surat, atau karangan. Kata bendanya "つづり" berarti ejaan.',
+    contoh1: '英文でつづる。\n(Menulis/merangkai kalimat dalam bahasa Inggris.)',
+    contoh2: '手紙をつづる。\n(Menulis/menyusun surat.)'
+  },
+  {
+    id: 'm1h5_22',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '仕掛ける',
+    furigana: 'しかける',
+    arti: 'Memasang (perangkap) / Memulai (serangan)',
+    penjelasan: 'Tindakan proaktif untuk menyiapkan sesuatu secara diam-diam agar berfungsi terhadap pihak lain (seperti memasang jebakan atau bom), atau memulai konfrontasi dan perdebatan.',
+    contoh1: 'わなを仕掛ける。\n(Memasang perangkap.)',
+    contoh2: '相手に戦いを仕掛ける。\n(Memulai pertarungan/serangan kepada lawan.)'
+  },
+  {
+    id: 'm1h5_23',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '手掛ける',
+    furigana: 'てがける',
+    arti: 'Menangani / Memulai pengerjaan',
+    penjelasan: 'Mengambil alih tanggung jawab dan mulai mengerjakan suatu proyek, bisnis, atau karya secara langsung.',
+    contoh1: '新しい仕事を手掛ける。\n(Mulai mengerjakan/menangani pekerjaan baru.)',
+    contoh2: '彼が手掛けた作品。\n(Karya yang ditangani/dibuat olehnya.)'
+  },
+
+  // --- BAGIAN 3: Interaksi Manusia & Hal Abstrak ---
+  {
+    id: 'm1h5_24',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '合わす',
+    furigana: 'あわす',
+    arti: 'Menyatukan / Mencocokkan',
+    penjelasan: 'Bentuk lain dari 合わせる (awaseru). Artinya adalah menyatukan dua hal atau lebih (seperti suara atau kekuatan) agar menjadi harmonis, sinkron, atau bekerja sama.',
+    contoh1: '声を合わして（＝合わせて）歌う。\n(Menyanyikan bersama dengan suara yang disatukan.)',
+    contoh2: '力を合わす。\n(Menyatukan kekuatan / bekerja sama.)'
+  },
+  {
+    id: 'm1h5_25',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '与える',
+    furigana: 'あたえる',
+    arti: 'Memberikan',
+    penjelasan: 'Memberikan sesuatu kepada pihak yang posisinya (biasanya) lebih rendah. Bisa berupa benda fisik (uang, makanan) atau hal abstrak (pengaruh, kesan, kesempatan).',
+    contoh1: '子どもに小遣いを与える。\n(Memberikan uang saku kepada anak.)',
+    contoh2: '良い印象を与える。\n(Memberikan kesan yang baik.)'
+  },
+  {
+    id: 'm1h5_26',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '交える',
+    furigana: 'まじえる',
+    arti: 'Melibatkan / Mencampurkan',
+    penjelasan: 'Memasukkan atau menambahkan unsur/orang lain ke dalam suatu kelompok atau pembicaraan. Kata kerja intransitifnya "交わる" (majiwaru) berarti menyilang/berpotongan.',
+    contoh1: '先生を交えて話し合う。\n(Berdiskusi dengan melibatkan/mengikutsertakan guru.)',
+    contoh2: '冗談を交えて話す。\n(Berbicara dengan menyisipkan candaan.)'
+  },
+  {
+    id: 'm1h5_27',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '交わす',
+    furigana: 'かわす',
+    arti: 'Saling bertukar',
+    penjelasan: 'Melakukan interaksi dua arah dengan pihak lain, di mana kedua belah pihak saling memberi dan menerima (seperti bertukar salam, janji, atau argumen).',
+    contoh1: 'あいさつを交わす。\n(Saling bertukar salam.)',
+    contoh2: '契約を交わす。\n(Saling bertukar/menandatangani kontrak.)'
+  },
+  {
+    id: 'm1h5_28',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '束ねる',
+    furigana: 'たばねる',
+    arti: 'Mengikat / Menggabungkan (jadi satu)',
+    penjelasan: 'Mengumpulkan benda-benda panjang (seperti rambut, kayu, atau jerami) dan mengikatnya menjadi satu ikatan (束/taba). Kiasannya berarti mengorganisir kelompok orang.',
+    contoh1: '髪を束ねる。\n(Mengikat rambut menjadi satu.)',
+    contoh2: '古新聞を束ねる。\n(Mengikat koran bekas menjadi satu bundel.)'
+  },
+  {
+    id: 'm1h5_29',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '背く',
+    furigana: 'そむく',
+    arti: 'Membangkang / Mengkhianati',
+    penjelasan: 'Bertindak berlawanan dengan apa yang diharapkan, diperintahkan, atau disepakati. Menolak mematuhi aturan, harapan, atau perintah.',
+    contoh1: '命令に背く。\n(Membangkang terhadap perintah.)',
+    contoh2: '親の期待に背く。\n(Mengkhianati ekspektasi/harapan orang tua.)'
+  },
+  {
+    id: 'm1h5_30',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '逃す',
+    furigana: 'のがす',
+    arti: 'Melewatkan / Membiarkan lepas',
+    penjelasan: 'Gagal menangkap sesuatu yang sudah ada di depan mata, baik secara harfiah (ikan, pencuri) atau kiasan (kesempatan). Kata kerja intransitifnya 逃れる (nogareru) berarti melarikan diri/luput.',
+    contoh1: 'チャンスを逃す。\n(Melewatkan/menyia-nyiakan kesempatan.)',
+    contoh2: '犯人を逃してしまった。\n(Saya tidak sengaja membiarkan pelakunya lepas.)'
+  },
+  {
+    id: 'm1h5_31',
+    minggu: '1',
+    hari: '5',
+    kategori: 'kata kerja',
+    kanji: '促す',
+    furigana: 'うながす',
+    arti: 'Mendorong / Mempercepat / Meminta',
+    penjelasan: 'Memberikan stimulasi, dorongan, atau desakan kepada seseorang/sesuatu agar melakukan tindakan dengan lebih cepat atau untuk merangsang perkembangan.',
+    contoh1: 'この液体は植物の成長を促す。\n(Cairan ini merangsang/mendorong pertumbuhan tanaman.)',
+    contoh2: '注意を促す。\n(Meminta/mendesak agar berhati-hati.)'
+  }
+];
+
+// Menambahkan kosakata dari file ini ke data master
+window.vocabData.push(...kosakata_m1h5);

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>総まとめ - 文字語彙</title>
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>文</text></svg>"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --jp-red: #bc002d;
+        --jp-red-dark: #8c0022;
+        --jp-red-light: #fbe6e9;
+        --jp-blue-dark: #1d3557;
+        --jp-blue-wave: #457b9d;
+        --jp-cream: #fdfbf7;
+      }
+
+      /* Menggunakan Flexbox untuk memastikan footer selalu di bawah 
+           dan tidak ada ruang kosong jika konten sedikit */
+      body {
+        background-color: var(--jp-cream);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: #2b2d42;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex: 1 0 auto; /* Membiarkan bagian utama mengisi ruang yang ada */
+      }
+
+      /* Penyelarasan font khusus teks Jepang agar terlihat otentik */
+      h2,
+      .kanji-text {
+        font-family: 'Noto Sans JP', sans-serif;
+      }
+
+      /* Navbar Custom - Sticky Top agar tidak ada gap putih saat scroll */
+      .navbar-jp {
+        background: linear-gradient(
+          135deg,
+          var(--jp-blue-dark) 0%,
+          #112239 100%
+        );
+        border-bottom: 4px solid var(--jp-red);
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+      }
+
+      /* Notice Pengembangan */
+      .dev-notice {
+        background-color: #ffecd1;
+        color: #d07a00;
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 8px;
+        font-weight: 600;
+      }
+
+      /* Hero Section dengan Tema Matahari & Ombak */
+      .hero-banner {
+        background: linear-gradient(
+          135deg,
+          var(--jp-blue-dark) 0%,
+          var(--jp-blue-wave) 100%
+        );
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(29, 53, 87, 0.15);
+      }
+
+      /* Elemen Animasi Lingkaran Matahari Merah */
+      .hero-sun {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        width: 280px;
+        height: 280px;
+        background: radial-gradient(
+          circle,
+          rgba(188, 0, 45, 0.4) 0%,
+          rgba(188, 0, 45, 0) 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1;
+        animation: pulseSun 6s infinite ease-in-out;
+      }
+
+      @keyframes pulseSun {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.2);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 0.5;
+        }
+      }
+
+      /* Floating Clock Card */
+      .clock-badge {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        border-radius: 50px;
+        padding: 10px 24px;
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .bi-clock-animated {
+        display: inline-block;
+        animation: bounceIcon 2s infinite ease-in-out;
+      }
+
+      @keyframes bounceIcon {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      /* Filter Section Styling */
+      .filter-card {
+        background-color: #ffffff;
+        border: 1px solid rgba(29, 53, 87, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(29, 53, 87, 0.04);
+      }
+
+      .form-select,
+      .form-control {
+        border: 1px solid #e2e8f0;
+        padding: 0.6rem 1rem;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+      }
+
+      .form-select:focus,
+      .form-control:focus {
+        border-color: var(--jp-blue-wave);
+        box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.15);
+      }
+
+      /* Kosakata Card Custom Styling */
+      .vocab-card {
+        background: #ffffff;
+        border: none;
+        border-top: 5px solid var(--jp-red) !important;
+        border-radius: 20px !important;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+          box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        overflow: hidden;
+      }
+
+      .vocab-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(29, 53, 87, 0.12) !important;
+      }
+
+      /* Animasi Muncul Kartu Semakin Halus */
+      .animate-card-fade {
+        animation: cardEntrance 0.4s ease-out forwards;
+      }
+
+      @keyframes cardEntrance {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Badge Custom */
+      .badge-kategori {
+        background-color: var(--jp-red-light);
+        color: var(--jp-red-dark);
+        font-weight: 600;
+        border: 1px solid rgba(188, 0, 45, 0.15);
+      }
+
+      .badge-waktu {
+        background-color: rgba(69, 123, 157, 0.1);
+        color: var(--jp-blue-dark);
+        font-weight: 600;
+      }
+
+      /* Kalimat Contoh Section */
+      .contoh-box {
+        background-color: #f8fafc;
+        border-left: 3px solid var(--jp-blue-wave) !important;
+      }
+
+      /* Button Status Group Custom */
+      .btn-status-group {
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+      }
+
+      .btn-status-group .btn {
+        border: none;
+        font-size: 0.85rem;
+        padding: 8px 12px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      /* Footer Custom */
+      .footer-jp {
+        background: #112239;
+        color: #ffffff;
+        border-top: 4px solid var(--jp-red);
+        flex-shrink: 0; /* Mencegah footer menyusut */
+      }
+
+      .donation-btn {
+        background-color: var(--jp-red);
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .donation-btn:hover {
+        background-color: var(--jp-red-dark);
+        color: white;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dev-notice w-100">
+      <i class="bi bi-tools me-1"></i> Web ini masih dalam tahap pengembangan
+      (Beta Version). Data atau fitur mungkin berubah.
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-jp shadow-sm py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#">
+          <i class="bi bi-journal-bookmark-fill text-white me-2"></i>
+          <span>総<span style="color: var(--jp-red)">まとめ</span></span>
+        </a>
+        <span class="navbar-text text-white-50 small d-none d-sm-inline"
+          >文字語彙 - Master JLPT N1 Vocabulary</span
+        >
+      </div>
+    </nav>
+
+    <main>
+      <div class="container mt-4">
+        <div
+          id="hero-banner"
+          class="p-5 text-center text-md-start text-white position-relative overflow-hidden rounded-4 shadow-sm"
+        >
+          <div class="hero-sun"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            class="position-absolute bottom-0 start-0 w-100"
+            style="height: 50px; pointer-events: none; z-index: 0; opacity: 0.2"
+          >
+            <path
+              fill="#ffffff"
+              d="M0,224L48,208C96,192,192,160,288,160C384,160,480,192,576,213.3C672,235,768,245,864,229.3C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+
+          <div class="position-relative z-3 row align-items-center g-4">
+            <div class="col-md-8">
+              <h1
+                class="display-5 fw-bold d-flex align-items-center justify-content-center justify-content-md-start mb-2"
+                id="greeting"
+              ></h1>
+              <p class="lead opacity-90 mb-0" id="hero-quote"></p>
+            </div>
+            <div class="col-md-4 text-center text-md-end">
+              <div class="clock-badge">
+                <i
+                  class="bi bi-clock-fill me-2 bi-clock-animated text-warning"
+                ></i>
+                <span id="clock">00:00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="card filter-card border-0">
+          <div class="card-body p-4">
+            <h5
+              class="fw-bold mb-3 d-flex align-items-center"
+              style="color: var(--jp-blue-dark)"
+            >
+              <i class="bi bi-funnel-fill me-2 text-danger"></i>Filter Data
+              Kosakata
+            </h5>
+            <div class="row g-3">
+              <div class="col-md-12 col-lg-4">
+                <div class="input-group">
+                  <span
+                    class="input-group-text bg-white border-end-0 text-muted"
+                    ><i class="bi bi-search"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="search-input"
+                    class="form-control border-start-0"
+                    placeholder="Cari kanji, arti, furigana..."
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-2">
+                <select id="filter-minggu" class="form-select">
+                  <option value="all">Semua Minggu</option>
+                  <option value="1" selected>Minggu 1</option>
+                  <option value="2">Minggu 2</option>
+                  <option value="3">Minggu 3</option>
+                  <option value="4">Minggu 4</option>
+                  <option value="5">Minggu 5</option>
+                  <option value="6">Minggu 6</option>
+                  <option value="7">Minggu 7</option>
+                  <option value="8">Minggu 8</option>
+                </select>
+              </div>
+              <div class="col-md-3 col-lg-2">
+                <select id="filter-hari" class="form-select">
+                  <option value="all">Semua Hari</option>
+                  <option value="1" selected>Hari 1</option>
+                  <option value="2">Hari 2</option>
+                  <option value="3">Hari 3</option>
+                  <option value="4">Hari 4</option>
+                  <option value="5">Hari 5</option>
+                  <option value="6">Hari 6</option>
+                </select>
+              </div>
+              <div class="col-md-3 col-lg-2">
+                <select id="filter-kategori" class="form-select">
+                  <option value="all">Semua Kategori</option>
+                  <option value="kata benda">Kata Benda</option>
+                  <option value="kata sifat">Kata Sifat</option>
+                  <option value="kata kerja">Kata Kerja</option>
+                  <option value="kata keterangan">Kata Keterangan</option>
+                  <option value="onomatope">Onomatope</option>
+                </select>
+              </div>
+              <div class="col-md-3 col-lg-2">
+                <select id="filter-status" class="form-select">
+                  <option value="all">Semua Status</option>
+                  <option value="tidak_hafal">Tidak Hafal</option>
+                  <option value="agak_hafal">Agak Hafal</option>
+                  <option value="hafal">Hafal</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4 mb-5">
+        <div class="row g-4" id="vocab-container"></div>
+      </div>
+    </main>
+
+    <footer class="footer-jp py-4 mt-auto">
+      <div class="container text-center text-md-start">
+        <div class="row align-items-center g-3">
+          <div class="col-md-6">
+            <h5 class="fw-bold mb-2">
+              <i class="bi bi-journal-bookmark-fill text-danger me-2"></i
+              >総まとめ N1
+            </h5>
+            <p class="small text-white-50 mb-0" style="line-height: 1.6">
+              N1 Moji Goi memang tidak mudah, tapi setiap lembar yang kamu
+              pelajari hari ini adalah langkah pasti menuju kelulusan. Web ini
+              dibuat sesederhana mungkin khusus untuk menemani proses belajarmu
+              dari hari ke hari. <br />
+              <span class="text-white fw-medium"
+                >一歩一歩、合格へ！(Selangkah demi selangkah, menuju
+                lulus!)</span
+              >
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end text-center">
+            <div class="mb-2">
+              <span class="small text-white-50 me-2 opacity-75"
+                >Suka dengan web ini?</span
+              >
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-light rounded-pill px-3 shadow-sm fw-medium transition-all"
+                data-bs-toggle="modal"
+                data-bs-target="#donationModal"
+                style="border-color: rgba(255, 255, 255, 0.25)"
+              >
+                <i
+                  class="bi bi-cup-hot-fill me-1 text-warning animate-bounce"
+                ></i>
+                Traktir Kopi
+              </a>
+            </div>
+            <div class="small text-white-50 mt-3 opacity-75">
+              &copy; 2026 総まとめ Notes. <br class="d-md-none" />
+              Crafted by
+              <a
+                href="https://instagram.com/i.a.falathin"
+                class="text-white fw-bold text-decoration-none border-bottom border-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@i.a.falathin</a
+              >
+              <span class="opacity-50 fs-xs">(Programmer &amp; Desainer)</span>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="donationModal"
+            tabindex="-1"
+            aria-labelledby="donationModalLabel"
+            aria-hidden="true"
+            style="
+              backdrop-filter: blur(4px);
+              -webkit-backdrop-filter: blur(4px);
+            "
+          >
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div
+                class="modal-content bg-dark text-white border rounded-4 shadow-lg"
+                style="
+                  border-color: rgba(255, 255, 255, 0.1) !important;
+                  background: linear-gradient(145deg, #212529, #1a1d20);
+                "
+              >
+                <div
+                  class="modal-header border-bottom border-secondary border-opacity-25 py-3 px-4 justify-content-between align-items-center"
+                >
+                  <h6
+                    class="modal-title fw-bold d-flex align-items-center mb-0"
+                    id="donationModalLabel"
+                  >
+                    <i class="bi bi-heart-fill text-danger me-2 shadow-sm"></i
+                    >Dukung @i.a.falathin
+                  </h6>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white shadow-none m-0"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    style="font-size: 0.75rem; opacity: 0.6"
+                  ></button>
+                </div>
+                <div class="modal-body text-center py-4 px-4">
+                  <p
+                    class="small text-white-50 mb-4"
+                    style="font-size: 0.85rem; line-height: 1.5"
+                  >
+                    Scan QR code di bawah ini untuk memberikan dukungan atau
+                    sekadar membelikan secangkir kopi.
+                  </p>
+
+                  <div
+                    class="bg-white p-3 d-inline-block rounded-4 shadow mb-4"
+                    style="
+                      border: 1px solid rgba(0, 0, 0, 0.05);
+                      transition: transform 0.2s ease;
+                    "
+                  >
+                    <img
+                      src="img/qr.png"
+                      alt="Dukungan QR"
+                      class="img-fluid rounded-2"
+                      style="
+                        max-width: 180px;
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                      "
+                    />
+                  </div>
+
+                  <p
+                    class="small fw-semibold mb-0 text-warning border-top border-secondary border-opacity-25 pt-3 mx-2"
+                    style="font-size: 0.85rem; letter-spacing: 0.3px"
+                  >
+                    Terima kasih atas kebaikanmu!<br />
+                    <span
+                      class="fw-normal text-white-50 d-block mt-1"
+                      style="font-size: 0.75rem; font-style: italic"
+                      >いつも応援ありがとうございます！</span
+                    >
+                  </p>
+                </div>
+                <div class="modal-footer border-0 pt-0 pb-3 px-4">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary text-white border-secondary border-opacity-50 w-100 rounded-3 py-2 fw-medium"
+                    data-bs-dismiss="modal"
+                    style="
+                      font-size: 0.85rem;
+                      background: rgba(255, 255, 255, 0.03);
+                    "
+                  >
+                    Tutup
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="minggu1/hari1.js"></script>
+    <script src="minggu1/hari2.js"></script>
+    <script src="minggu1/hari3.js"></script>
+    <script src="minggu1/hari4.js"></script>
+    <script src="minggu1/hari5.js"></script>
+    <script src="minggu1/hari6.js"></script>
+    <script>
+      // --- Jam Digital, Ucapan & Quotes Waktu Otomatis ---
+      function updateTime() {
+        const now = new Date()
+        const h = now.getHours()
+        const m = now.getMinutes().toString().padStart(2, '0')
+        const s = now.getSeconds().toString().padStart(2, '0')
+
+        // Update Jam Digital
+        document.getElementById('clock').innerText = `${h
+          .toString()
+          .padStart(2, '0')}:${m}:${s}`
+
+        let greeting = ''
+        let icon = ''
+        let quote = ''
+        let bannerClass = '' // Untuk mengubah warna tema banner secara dinamis
+
+        // Logika pembagian waktu, quotes khusus, dan skema warna banner
+        if (h >= 5 && h < 11) {
+          // 1. PAGI (05:00 - 10:59) -> Berenergi & Segar
+          greeting = 'おはようございます (Ohayou Gozaimasu)'
+          icon =
+            '<i class="bi bi-brightness-alt-high-fill text-warning me-3"></i>'
+          quote =
+            'Selamat pagi! Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kanji N1 hari ini. 今日も一日頑張りましょう！'
+          bannerClass = 'bg-gradient bg-primary' // Biru cerah berenergi
+        } else if (h >= 11 && h < 15) {
+          // 2. SIANG (11:00 - 14:59) -> Fokus & Konsisten
+          greeting = 'こんにちは (Konnichiwa)'
+          icon = '<i class="bi bi-sun-fill text-warning me-3"></i>'
+          quote =
+            'Sudah siang! Istirahat sejenak di tengah kesibukanmu untuk mengulang beberapa baris Moji Goi. Konsistency is key, sedikit demi sedikit pasti bisa!'
+          bannerClass = 'bg-gradient text-bg-info' // Biru muda/cyan terang cerah
+        } else if (h >= 15 && h < 18) {
+          // 3. SORE (15:00 - 17:59) -> Produktif / Refreshing
+          greeting = 'こんにちは (Konnichiwa)'
+          icon = '<i class="bi bi-sunset-fill text-warning me-3"></i>'
+          quote =
+            'Matahari sudah mulai condong. Lelah itu wajar, tapi jangan biarkan target harian Sou Matome-mu terlewat begitu saja. Tetap fokus menuju garis finis!'
+          bannerClass = 'bg-gradient style-sore' // Oranye senja (Gunakan class kustom atau warna gelap)
+          // Catatan: Jika tidak ada CSS 'style-sore', bisa gunakan 'bg-warning text-dark' bawaan bootstrap
+        } else if (h >= 18 && h < 23) {
+          // 4. MALAM (18:00 - 22:59) -> Tenang & Evaluasi
+          greeting = 'こんばんは (Konbanwa)'
+          icon = '<i class="bi bi-moon-stars-fill text-warning me-3"></i>'
+          quote =
+            'Selamat malam. Suasana tenang malam hari sangat cocok untuk mengevaluasi daftar kosakata yang belum kamu hafal hari ini. Mari tutup hari dengan pencapaian!'
+          bannerClass = 'bg-gradient text-bg-dark' // Biru sangat gelap / Hitam Elegan
+        } else {
+          // 5. TENGAH MALAM (23:00 - 04:59) -> Peringatan Kesehatan tidur
+          greeting = 'こんばんは (Konbanwa)'
+          icon = '<i class="bi bi-moon-fill text-secondary me-3"></i>'
+          quote =
+            'Sudah larut malam. Ingat, belajar berlebihan di waktu yang salah justru bisa memperburuk kualitas tidur dan daya ingatmu. Tubuhmu butuh istirahat, besok kita lanjutkan lagi. おやすみなさい。'
+          bannerClass = 'bg-dark border border-secondary' // Gelap pekat dengan outline tipis
+        }
+
+        // Terapkan perubahan teks ke DOM
+        document.getElementById('greeting').innerHTML = icon + greeting
+        document.getElementById('hero-quote').innerText = quote
+
+        // Atur transisi warna background banner agar halus saat berganti jam
+        const banner = document.getElementById('hero-banner')
+        if (banner) {
+          // Reset class warna sebelumnya agar tidak menumpuk
+          banner.className =
+            'p-5 text-center text-md-start text-white position-relative overflow-hidden rounded-4 shadow-sm ' +
+            bannerClass
+        }
+      }
+
+      // Jalankan interval per detik
+      setInterval(updateTime, 1000)
+      // Eksekusi langsung di awal agar halaman tidak kosongan saat dimuat pertama kali
+      updateTime()
+
+      // --- Logika Render Kartu Kosakata ---
+      function renderCards() {
+        const container = document.getElementById('vocab-container')
+        container.innerHTML = ''
+
+        const searchTxt = document
+          .getElementById('search-input')
+          .value.toLowerCase()
+        const filterMinggu = document.getElementById('filter-minggu').value
+        const filterHari = document.getElementById('filter-hari').value
+        const filterKategori = document.getElementById('filter-kategori').value
+        const filterStatus = document.getElementById('filter-status').value
+
+        const statuses = JSON.parse(localStorage.getItem('vocabStatus')) || {}
+
+        if (!window.vocabData) {
+          window.vocabData = []
+        }
+
+        let filtered = window.vocabData.filter(item => {
+          const itemStatus = statuses[item.id] || 'tidak_hafal'
+
+          const matchSearch =
+            item.kanji.toLowerCase().includes(searchTxt) ||
+            item.furigana.toLowerCase().includes(searchTxt) ||
+            item.arti.toLowerCase().includes(searchTxt)
+          const matchMinggu =
+            filterMinggu === 'all' || item.minggu === filterMinggu
+          const matchHari = filterHari === 'all' || item.hari === filterHari
+          const matchKategori =
+            filterKategori === 'all' || item.kategori === filterKategori
+
+          let matchStatus = true
+          if (filterStatus !== 'all') {
+            matchStatus = itemStatus === filterStatus
+          }
+
+          return (
+            matchSearch &&
+            matchMinggu &&
+            matchHari &&
+            matchKategori &&
+            matchStatus
+          )
+        })
+
+        if (filtered.length === 0) {
+          container.innerHTML = `
+                    <div class="col-12 text-center text-muted mt-4 py-5 bg-white rounded-4 shadow-sm border border-dashed">
+                        <i class="bi bi-inbox fs-1 text-secondary opacity-50"></i>
+                        <h5 class="mt-3 fw-bold">Kosakata Tidak Ditemukan</h5>
+                        <p class="small text-secondary mb-0">Silakan sesuaikan kembali kata kunci pencarian atau filter Anda.</p>
+                    </div>`
+          return
+        }
+
+        filtered.forEach((item, index) => {
+          const itemStatus = statuses[item.id] || 'tidak_hafal'
+
+          // Styling Tombol Status Berdasarkan Pilihan Aktif
+          const btnTidakHafal =
+            itemStatus === 'tidak_hafal'
+              ? 'btn-danger text-white'
+              : 'btn-outline-danger'
+          const btnAgakHafal =
+            itemStatus === 'agak_hafal'
+              ? 'btn-warning text-dark'
+              : 'btn-outline-warning'
+          const btnHafal =
+            itemStatus === 'hafal'
+              ? 'btn-success text-white'
+              : 'btn-outline-success'
+
+          const cardHTML = `
+                <div class="col-md-6 col-lg-4 animate-card-fade" style="animation-delay: ${
+                  index * 0.03
+                }s;">
+                    <div class="card h-100 shadow-sm vocab-card">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge badge-kategori border text-capitalize px-3 py-2 rounded-pill">
+                                    <i class="bi bi-tag-fill me-1"></i>${
+                                      item.kategori
+                                    }
+                                </span>
+                                <span class="badge badge-waktu border px-3 py-2 rounded-pill">
+                                    M${item.minggu} - H${item.hari}
+                                </span>
+                            </div>
+                            
+                            <div class="text-center mb-4 mt-2">
+                                <p class="text-muted mb-1 small fw-semibold tracking-wide" style="letter-spacing: 0.5px;">${
+                                  item.furigana
+                                }</p>
+                                <h2 class="fw-bold text-dark mb-2 fs-1">${
+                                  item.kanji
+                                }</h2>
+                                <h5 class="fw-bold mb-0 text-decoration-none" style="color: var(--jp-blue-dark);">${
+                                  item.arti
+                                }</h5>
+                            </div>
+                            
+                            <p class="card-text small text-secondary text-center border-bottom pb-3 mb-3 flex-grow-1">${
+                              item.penjelasan
+                            }</p>
+                            
+                            <div class="p-3 rounded-3 small mb-3 border contoh-box">
+                                <div class="mb-2 fw-bold text-dark"><i class="bi bi-journal-text text-danger me-2"></i>Contoh Kalimat:</div>
+                                <div class="mb-2 lh-base fw-medium">${item.contoh1.replace(
+                                  '\n',
+                                  '<br><span class="text-secondary fw-normal">'
+                                )}</span></div>
+                                <hr class="my-2 opacity-25">
+                                <div class="lh-base fw-medium">${item.contoh2.replace(
+                                  '\n',
+                                  '<br><span class="text-secondary fw-normal">'
+                                )}</span></div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 pt-0">
+                            <div class="btn-group w-100 shadow-sm btn-status-group" role="group">
+                                <button type="button" class="btn ${btnTidakHafal}" onclick="setStatus('${
+            item.id
+          }', 'tidak_hafal')">
+                                    <i class="bi bi-x-circle-fill me-1"></i>Tidak
+                                </button>
+                                <button type="button" class="btn ${btnAgakHafal}" onclick="setStatus('${
+            item.id
+          }', 'agak_hafal')">
+                                    <i class="bi bi-dash-circle-fill me-1"></i>Agak
+                                </button>
+                                <button type="button" class="btn ${btnHafal}" onclick="setStatus('${
+            item.id
+          }', 'hafal')">
+                                    <i class="bi bi-check-circle-fill me-1"></i>Hafal
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `
+          container.insertAdjacentHTML('beforeend', cardHTML)
+        })
+      }
+
+      // --- Simpan Status Hafalan ke LocalStorage ---
+      function setStatus(id, status) {
+        let statuses = JSON.parse(localStorage.getItem('vocabStatus')) || {}
+        statuses[id] = status
+        localStorage.setItem('vocabStatus', JSON.stringify(statuses))
+        renderCards() // Refresh UI instan tanpa reload halaman
+      }
+
+      // --- Simpan dan Muat Status Filter dari LocalStorage ---
+      function saveFilters() {
+        const filters = {
+          search: document.getElementById('search-input').value,
+          minggu: document.getElementById('filter-minggu').value,
+          hari: document.getElementById('filter-hari').value,
+          kategori: document.getElementById('filter-kategori').value,
+          status: document.getElementById('filter-status').value
+        }
+        localStorage.setItem('vocabFilters', JSON.stringify(filters))
+      }
+
+      function loadFilters() {
+        const savedFilters = JSON.parse(localStorage.getItem('vocabFilters'))
+        if (savedFilters) {
+          document.getElementById('search-input').value =
+            savedFilters.search || ''
+          document.getElementById('filter-minggu').value =
+            savedFilters.minggu || 'all'
+          document.getElementById('filter-hari').value =
+            savedFilters.hari || 'all'
+          document.getElementById('filter-kategori').value =
+            savedFilters.kategori || 'all'
+          document.getElementById('filter-status').value =
+            savedFilters.status || 'all'
+        }
+      }
+
+      // --- Listener Event Filter ---
+      const filterIds = [
+        'search-input',
+        'filter-minggu',
+        'filter-hari',
+        'filter-kategori',
+        'filter-status'
+      ]
+
+      filterIds.forEach(id => {
+        const element = document.getElementById(id)
+        // Gunakan event 'input' khusus untuk kolom pencarian agar real-time saat mengetik
+        const eventType = id === 'search-input' ? 'input' : 'change'
+
+        element.addEventListener(eventType, () => {
+          saveFilters()
+          renderCards()
+        })
+      })
+
+      // --- Render Awal saat Halaman Dimuat ---
+      loadFilters() // Load posisi filter terakhir sebelum merender kartu
+      renderCards()
+    </script>
+  </body>
+</html>

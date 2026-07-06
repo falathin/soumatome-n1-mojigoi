@@ -1,0 +1,397 @@
+// Gunakan window.vocabData array agar file JS lain bisa di-push juga nantinya
+window.vocabData = window.vocabData || [];
+
+const kosakata_m1h3 = [
+  // --- BAGIAN 1: 頭・目・口 (Kepala, Mata, Mulut) ---
+  {
+    id: 'm1h3_1',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'うつむく',
+    furigana: 'うつむく',
+    arti: 'Menunduk',
+    penjelasan: 'Menundukkan kepala ke bawah, biasanya karena sedih, malu, atau sedang berpikir.',
+    contoh1: '恥ずかしくて下をうつむく。\n(Menunduk ke bawah karena malu.)',
+    contoh2: '彼女は黙ってうつむいた。\n(Dia menunduk dalam diam.)'
+  },
+  {
+    id: 'm1h3_2',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'うなずく',
+    furigana: 'うなずく',
+    arti: 'Mengangguk',
+    penjelasan: 'Menggerakkan kepala ke atas dan ke bawah sebagai tanda setuju atau mengerti.',
+    contoh1: '彼の話を聞いて深くうなずいた。\n(Mengangguk dalam-dalam saat mendengarkan ceritanya.)',
+    contoh2: '笑顔でうなずく。\n(Mengangguk dengan wajah tersenyum.)'
+  },
+  {
+    id: 'm1h3_3',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'まばたき（を）する',
+    furigana: 'まばたき（を）する',
+    arti: 'Berkedip',
+    penjelasan: 'Menutup dan membuka kelopak mata dengan cepat.',
+    contoh1: '驚いてまばたきをする。\n(Berkedip karena terkejut.)',
+    contoh2: 'まばたきもせずに見つめる。\n(Menatap tanpa berkedip sekalipun.)'
+  },
+  {
+    id: 'm1h3_4',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '目をつぶる',
+    furigana: 'めをつぶる',
+    arti: 'Menutup mata / Membiarkan (kesalahan)',
+    penjelasan: 'Secara harfiah berarti menutup mata. Secara kiasan, berarti pura-pura tidak melihat atau memaafkan kesalahan seseorang.',
+    contoh1: '目をつぶって寝る。\n(Menutup mata dan tidur.)',
+    contoh2: '今回だけは彼の失敗に目をつぶろう。\n(Untuk kali ini saja, mari kita tutup mata terhadap kesalahannya.)'
+  },
+  {
+    id: 'm1h3_5',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'つぶやく',
+    furigana: 'つぶやく',
+    arti: 'Bergumam',
+    penjelasan: 'Berbicara sendiri dengan suara yang sangat pelan sehingga hampir tidak terdengar oleh orang lain.',
+    contoh1: '一言つぶやく。\n(Bergumam sepatah kata.)',
+    contoh2: '不満をつぶやく。\n(Bergumam mengeluh/menyatakan ketidakpuasan.)'
+  },
+  {
+    id: 'm1h3_6',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'ささやく',
+    furigana: 'ささやく',
+    arti: 'Berbisik',
+    penjelasan: 'Berbicara dengan suara kecil langsung ke telinga orang lain agar tidak terdengar orang sekitar.',
+    contoh1: '彼女の耳元で愛をささやく。\n(Berbisik tentang cinta di dekat telinganya.)',
+    contoh2: '隣の人にささやく。\n(Berbisik kepada orang di sebelah.)'
+  },
+  {
+    id: 'm1h3_7',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '口ずさむ',
+    furigana: 'くちずさむ',
+    arti: 'Menyenandungkan / Bersenandung',
+    penjelasan: 'Menyanyikan sebuah lagu dengan suara pelan untuk diri sendiri.',
+    contoh1: '好きな歌を口ずさむ。\n(Menyenandungkan lagu kesukaan.)',
+    contoh2: '歩きながらメロディーを口ずさんだ。\n(Bersenandung melodi sambil berjalan.)'
+  },
+  {
+    id: 'm1h3_8',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'むせる',
+    furigana: 'むせる',
+    arti: 'Tersedak / Terbatuk (karena asap/makanan)',
+    penjelasan: 'Batuk-batuk karena ada asap atau makanan/minuman yang salah masuk ke saluran pernapasan.',
+    contoh1: '煙にむせる。\n(Terbatuk/Tersedak karena asap.)',
+    contoh2: '食べ物でむせる。\n(Tersedak oleh makanan.)'
+  },
+
+  // --- BAGIAN 2: 手 (Tangan) ---
+  {
+    id: 'm1h3_9',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'つねる',
+    furigana: 'つねる',
+    arti: 'Mencubit',
+    penjelasan: 'Menjepit sebagian kulit (biasanya pipi atau lengan) dengan jari dan memutarnya sedikit hingga terasa sakit.',
+    contoh1: 'ほっぺたをつねる。\n(Mencubit pipi.)',
+    contoh2: '夢じゃないかと腕をつねった。\n(Saya mencubit lengan untuk memastikan ini bukan mimpi.)'
+  },
+  {
+    id: 'm1h3_10',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'むしる',
+    furigana: 'むしる',
+    arti: 'Mencabut / Merenggut',
+    penjelasan: 'Mencabut sesuatu (seperti rumput, bulu ayam, dll) dengan paksa menggunakan tangan.',
+    contoh1: '庭の草をむしる。\n(Mencabut rumput di taman.)',
+    contoh2: '鳥の毛をむしる。\n(Mencabut bulu burung/ayam.)'
+  },
+  {
+    id: 'm1h3_11',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'めくる',
+    furigana: 'めくる',
+    arti: 'Membalik / Menyingkap',
+    penjelasan: 'Membuka atau membalik lembaran tipis seperti halaman buku, kalender, atau selimut.',
+    contoh1: 'カレンダーをめくる。\n(Membalik lembaran kalender.)',
+    contoh2: '本のページをめくる。\n(Membalik halaman buku.)'
+  },
+  {
+    id: 'm1h3_12',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'つまむ',
+    furigana: 'つまむ',
+    arti: 'Menjumput / Memencet hidung',
+    penjelasan: 'Mengambil sesuatu yang sangat kecil dengan ujung jari (seperti garam) atau memencet hidung.',
+    contoh1: '塩をつまむ。\n(Menjumput garam.)',
+    contoh2: '臭くて鼻をつまむ。\n(Memencet/menutup hidung karena bau.)'
+  },
+  {
+    id: 'm1h3_13',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '摘む',
+    furigana: 'つむ',
+    arti: 'Memetik / Menghancurkan (potensi)',
+    penjelasan: 'Memetik bunga/teh. Sering juga dipakai dalam kiasan "才能の芽を摘む" (Menghancurkan bibit bakat seseorang).',
+    contoh1: '野原で花を摘む。\n(Memetik bunga di padang rumput.)',
+    contoh2: '才能の芽を摘むようなことはしてはいけない。\n(Jangan melakukan hal yang mematikan bibit bakat seseorang.)'
+  },
+  {
+    id: 'm1h3_14',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'さする',
+    furigana: 'さする',
+    arti: 'Mengelus / Menggosok (tubuh)',
+    penjelasan: 'Menggosok-gosok permukaan (biasanya bagian tubuh) secara perlahan untuk meredakan sakit atau kedinginan.',
+    contoh1: '痛む足をさする。\n(Menggosok/mengelus kaki yang sakit.)',
+    contoh2: '背中を優しくさすってあげる。\n(Mengelus punggung dengan lembut.)'
+  },
+  {
+    id: 'm1h3_15',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'いじる',
+    furigana: 'いじる',
+    arti: 'Memainkan / Mengutak-atik',
+    penjelasan: 'Menyentuh atau memainkan sesuatu dengan ujung jari. Bisa juga bermakna mengutak-atik taman (berkebun).',
+    contoh1: '髪の毛をいじる癖がある。\n(Punya kebiasaan memainkan rambut.)',
+    contoh2: '休みの日は庭をいじる。\n(Pada hari libur, mengutak-atik taman/berkebun.)'
+  },
+  {
+    id: 'm1h3_16',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'はたく',
+    furigana: 'はたく',
+    arti: 'Mengebutkan / Memukul ringan (membersihkan debu)',
+    penjelasan: 'Memukul barang dengan lap atau kemoceng untuk membuang debu yang menempel.',
+    contoh1: '家具のほこりをはたく。\n(Membersihkan/mengebutkan debu di furnitur.)',
+    contoh2: 'コートの雪をはたいた。\n(Mengebutkan salju dari mantel.)'
+  },
+  {
+    id: 'm1h3_17',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'すくう',
+    furigana: 'すくう',
+    arti: 'Mencedok / Menyerok',
+    penjelasan: 'Mengambil cairan atau benda kecil menggunakan telapak tangan yang dikumpulkan atau dengan sendok/gayung.',
+    contoh1: '手で水をすくう。\n(Mencedok air dengan tangan.)',
+    contoh2: '金魚を網ですくう。\n(Menyerok ikan mas koki dengan jaring.)'
+  },
+  {
+    id: 'm1h3_18',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '杖を突く',
+    furigana: 'つえをつく',
+    arti: 'Bertumpu pada tongkat',
+    penjelasan: 'Menggunakan tongkat yang ditancapkan/ditekan ke tanah untuk membantu berjalan.',
+    contoh1: 'お年寄りが杖を突いて歩いている。\n(Lansia berjalan dengan bertumpu pada tongkat.)',
+    contoh2: '足を骨折して杖を突くことになった。\n(Saya harus memakai tongkat karena kaki saya patah.)'
+  },
+  {
+    id: 'm1h3_19',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'くるむ',
+    furigana: 'くるむ',
+    arti: 'Membungkus / Membalut',
+    penjelasan: 'Membungkus seluruh bagian suatu benda (seperti bayi dengan handuk) agar tertutup rapat atau hangat.',
+    contoh1: '赤ちゃんをバスタオルでくるむ。\n(Membungkus bayi dengan handuk mandi.)',
+    contoh2: 'プレゼントを綺麗な紙でくるんだ。\n(Membungkus hadiah dengan kertas yang cantik.)'
+  },
+  {
+    id: 'm1h3_20',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '丸める',
+    furigana: 'まるめる',
+    arti: 'Menggulung / Meremas menjadi bulat',
+    penjelasan: 'Membuat benda (kertas, adonan, tubuh) menjadi bentuk bulat.',
+    contoh1: '失敗した紙を丸めて捨てる。\n(Meremas kertas yang salah menjadi bulat dan membuangnya.)',
+    contoh2: '寒くて体を丸めて寝た。\n(Tidur dengan tubuh menggulung/meringkuk karena dingin.)'
+  },
+  {
+    id: 'm1h3_21',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '擦る',
+    furigana: 'する',
+    arti: 'Menggesek / Memantik',
+    penjelasan: 'Menggesekkan satu benda dengan benda lain, paling sering dipakai dalam konteks menyalakan korek api (マッチを擦る).',
+    contoh1: 'マッチを擦って火をつける。\n(Memantik/menggesek korek api untuk menyalakan api.)',
+    contoh2: '靴の底を擦って歩く。\n(Berjalan dengan menggesekkan sol sepatu ke tanah.)'
+  },
+  {
+    id: 'm1h3_22',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '指をさす',
+    furigana: 'ゆびをさす',
+    arti: 'Menunjuk',
+    penjelasan: 'Mengarahkan jari (biasanya jari telunjuk) ke suatu arah atau orang.',
+    contoh1: '遠くの山を指をさす。\n(Menunjuk gunung di kejauhan.)',
+    contoh2: '人に指をさすのは失礼だ。\n(Menunjuk kepada seseorang itu tidak sopan.)'
+  },
+
+  // --- BAGIAN 3: 体 (Tubuh) ---
+  {
+    id: 'm1h3_23',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '横になる',
+    furigana: 'よこになる',
+    arti: 'Berbaring / Merebahkan diri',
+    penjelasan: 'Merebahkan tubuh di kasur atau sofa untuk istirahat atau tidur.',
+    contoh1: '疲れたので少し横になる。\n(Karena lelah, saya akan berbaring sebentar.)',
+    contoh2: 'ベッドに横になって本を読む。\n(Berbaring di kasur sambil membaca buku.)'
+  },
+  {
+    id: 'm1h3_24',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'うつ伏せになる',
+    furigana: 'うつぶせになる',
+    arti: 'Tengkurap',
+    penjelasan: 'Berbaring dengan posisi perut/dada menghadap ke bawah.',
+    contoh1: 'うつ伏せになって寝るのが好きだ。\n(Suka tidur dengan posisi tengkurap.)',
+    contoh2: 'うつ伏せの状態で本を読む。\n(Membaca buku dalam posisi tengkurap.)'
+  },
+  {
+    id: 'm1h3_25',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '仰向けになる',
+    furigana: 'あおむけになる',
+    arti: 'Telentang',
+    penjelasan: 'Berbaring dengan posisi wajah dan perut menghadap ke atas.',
+    contoh1: '仰向けになって星空を見る。\n(Berbaring telentang dan melihat langit berbintang.)',
+    contoh2: '仰向けに倒れる。\n(Jatuh dalam posisi telentang.)'
+  },
+  {
+    id: 'm1h3_26',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '反らす',
+    furigana: 'そらす',
+    arti: 'Melengkungkan ke belakang / Membusungkan',
+    penjelasan: 'Membengkokkan tubuh bagian atas ke arah belakang (lawan dari 曲げる/membungkuk).',
+    contoh1: '背伸びをして体を反らす。\n(Meregangkan tubuh dan melengkungkannya ke belakang.)',
+    contoh2: '胸を反らして歩く。\n(Berjalan dengan membusungkan dada.)'
+  },
+  {
+    id: 'm1h3_27',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'またがる',
+    furigana: 'またがる',
+    arti: 'Menduduki (mengangkang) / Membentang',
+    penjelasan: 'Duduk dengan posisi kaki di kanan-kiri (seperti naik kuda/sepeda), atau merujuk pada rentang waktu/wilayah yang membentang luas.',
+    contoh1: '馬にまたがる。\n(Naik/menduduki kuda.)',
+    contoh2: '３年にまたがる（＝わたる）計画。\n(Rencana yang membentang/memakan waktu selama 3 tahun.)'
+  },
+  {
+    id: 'm1h3_28',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: '湯につかる',
+    furigana: 'ゆにつかる',
+    arti: 'Berendam di air panas',
+    penjelasan: 'Memasukkan tubuh ke dalam air hangat (biasanya di *ofuro* atau pemandian) untuk bersantai.',
+    contoh1: '温泉のお湯につかる。\n(Berendam di air panas onsen.)',
+    contoh2: 'ゆっくりお風呂につかって疲れをとる。\n(Berendam di ofuro pelan-pelan untuk menghilangkan lelah.)'
+  },
+  {
+    id: 'm1h3_29',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'くぐる',
+    furigana: 'くぐる',
+    arti: 'Melewati (bawah sesuatu) / Menerobos',
+    penjelasan: 'Berjalan melewati bawah suatu struktur seperti gerbang (門) atau tirai (*noren*).',
+    contoh1: 'お寺の門をくぐる。\n(Melewati gerbang kuil.)',
+    contoh2: 'のれんをくぐって店に入る。\n(Melewati tirai noren dan masuk ke toko.)'
+  },
+  {
+    id: 'm1h3_30',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'よける',
+    furigana: 'よける',
+    arti: 'Menghindar / Mengelak',
+    penjelasan: 'Minggir atau bergerak untuk menghindari benda yang menghalangi jalan, berbahaya, atau kotor.',
+    contoh1: '水たまりをよけて歩く。\n(Berjalan sambil menghindari genangan air.)',
+    contoh2: '飛んできたボールをよける。\n(Menghindari bola yang melayang ke arahku.)'
+  },
+  {
+    id: 'm1h3_31',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'もがく ／ あがく',
+    furigana: 'もがく ／ あがく',
+    arti: 'Meronta-ronta / Menggelepar',
+    penjelasan: 'Berusaha keras membebaskan diri dalam situasi sulit atau menyakitkan secara fisik maupun kiasan.',
+    contoh1: '水中でもがく。\n(Menggelepar/meronta di dalam air.)',
+    contoh2: '苦しみから抜け出そうともがく。\n(Berusaha meronta/berjuang untuk keluar dari penderitaan.)'
+  },
+  {
+    id: 'm1h3_32',
+    minggu: '1',
+    hari: '3',
+    kategori: 'kata kerja',
+    kanji: 'さまよう',
+    furigana: 'さまよう',
+    arti: 'Tersesat dan mengembara / Berkeliaran',
+    penjelasan: 'Berjalan tak tentu arah karena tersesat atau tidak memiliki tujuan yang jelas.',
+    contoh1: '山中をさまよう。\n(Tersesat dan berkeliaran di dalam gunung.)',
+    contoh2: '街の中を目的もなくさまよった。\n(Mengembara di dalam kota tanpa tujuan.)'
+  }
+];
+
+// Menambahkan kosakata dari file ini ke data master
+window.vocabData.push(...kosakata_m1h3);
