@@ -41,7 +41,7 @@
       }
 
       /* Menggunakan Flexbox untuk memastikan footer selalu di bawah 
-           dan tidak ada ruang kosong jika konten sedikit */
+       dan tidak ada ruang kosong jika konten sedikit */
       body {
         background-color: var(--jp-cream);
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -276,6 +276,55 @@
         color: white;
         transform: scale(1.05);
       }
+
+      /* --- TAMBAHAN BARU: Gaya Desain Greeting Premium & Transisi --- */
+
+      /* Gradasi Warna Kustom Sore (Senja Elegan) */
+      .style-sore {
+        background: linear-gradient(
+          135deg,
+          #e67e22 0%,
+          #2c3e50 100%
+        ) !important;
+      }
+
+      /* Efek Transisi Mulus Saat Latar Belakang Hero Banner Berubah Sesuai Jam */
+      #hero-banner {
+        transition: background 1.2s ease-in-out, color 0.6s ease-in-out,
+          border 0.6s ease-in-out;
+      }
+
+      /* Box Wadah Ikon dengan Efek Kaca (Glassmorphism) */
+      .greeting-icon-box {
+        width: 60px;
+        height: 60px;
+        min-width: 60px; /* Menjaga bentuk bundar konstan di layar kecil */
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      /* Animasi Berdenyut Halus Khusus Ikon Siang Hari */
+      .animate-pulse {
+        animation: pulseIcon 3s infinite ease-in-out;
+      }
+
+      @keyframes pulseIcon {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.15);
+          opacity: 0.85;
+        }
+      }
+
+      /* Pengaturan Spasi Sub-Teks Ucapan Indonesia */
+      .tracking-wider {
+        letter-spacing: 1px;
+      }
     </style>
   </head>
   <body>
@@ -317,10 +366,7 @@
 
           <div class="position-relative z-3 row align-items-center g-4">
             <div class="col-md-8">
-              <h1
-                class="display-5 fw-bold d-flex align-items-center justify-content-center justify-content-md-start mb-2"
-                id="greeting"
-              ></h1>
+              <h1 class="mb-3" id="greeting"></h1>
               <p class="lead opacity-90 mb-0" id="hero-quote"></p>
             </div>
             <div class="col-md-4 text-center text-md-end">
@@ -628,7 +674,6 @@
     <script src="minggu8/hari6.js"></script>
     <script src="minggu8/hari7.js"></script>
     <script>
-      // --- Jam Digital, Ucapan & Quotes Waktu Otomatis ---
       function updateTime() {
         const now = new Date()
         const h = now.getHours()
@@ -640,65 +685,78 @@
           .toString()
           .padStart(2, '0')}:${m}:${s}`
 
-        let greeting = ''
-        let icon = ''
+        let greetingJP = ''
+        let greetingID = ''
+        let iconClass = ''
         let quote = ''
-        let bannerClass = '' // Untuk mengubah warna tema banner secara dinamis
+        let bannerClass = ''
 
         // Logika pembagian waktu, quotes khusus, dan skema warna banner
         if (h >= 5 && h < 11) {
-          // 1. PAGI (05:00 - 10:59) -> Berenergi & Segar
-          greeting = 'おはようございます (Ohayou Gozaimasu)'
-          icon =
-            '<i class="bi bi-brightness-alt-high-fill text-warning me-3"></i>'
+          // 1. PAGI -> Berenergi & Segar
+          greetingJP = 'おはようございます'
+          greetingID = 'Selamat Pagi'
+          iconClass = 'bi-sunrise-fill text-warning' // Efek matahari terbit
           quote =
-            'Selamat pagi! Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日も一日頑張りましょう！'
-          bannerClass = 'bg-gradient bg-primary' // Biru cerah berenergi
+            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日mo一日頑張riまsyoう！'
+          bannerClass = 'bg-gradient bg-primary'
         } else if (h >= 11 && h < 15) {
-          // 2. SIANG (11:00 - 14:59) -> Fokus & Konsisten
-          greeting = 'こんにちは (Konnichiwa)'
-          icon = '<i class="bi bi-sun-fill text-warning me-3"></i>'
+          // 2. SIANG -> Fokus & Konsisten
+          greetingJP = 'こんにちは'
+          greetingID = 'Selamat Siang'
+          iconClass = 'bi-sun-fill text-warning animate-pulse' // Matahari terik
           quote =
-            'Sudah siang! Istirahat sejenak di tengah kesibukanmu untuk mengulang beberapa baris Moji Goi. Konsistency is key, sedikit demi sedikit pasti bisa!'
-          bannerClass = 'bg-gradient text-bg-info' // Biru muda/cyan terang cerah
+            'Sudah siang! Istirahat sejenak di tengah kesibukanmu untuk mengulang beberapa baris Moji Goi. Consistency is key, sedikit demi sedikit pasti bisa!'
+          bannerClass = 'bg-gradient bg-info text-dark'
         } else if (h >= 15 && h < 18) {
-          // 3. SORE (15:00 - 17:59) -> Produktif / Refreshing
-          greeting = 'こんにちは (Konnichiwa)'
-          icon = '<i class="bi bi-sunset-fill text-warning me-3"></i>'
+          // 3. SORE -> Produktif / Refreshing
+          greetingJP = 'こんにちは'
+          greetingID = 'Selamat Sore'
+          iconClass = 'bi-sunset-fill text-warning' // Matahari terbenam
           quote =
             'Matahari sudah mulai condong. Lelah itu wajar, tapi jangan biarkan target harian Sou Matome-mu terlewat begitu saja. Tetap fokus menuju garis finis!'
-          bannerClass = 'bg-gradient style-sore' // Oranye senja (Gunakan class kustom atau warna gelap)
-          // Catatan: Jika tidak ada CSS 'style-sore', bisa gunakan 'bg-warning text-dark' bawaan bootstrap
+          bannerClass = 'style-sore text-white' // Menggunakan warna senja kustom
         } else if (h >= 18 && h < 23) {
-          // 4. MALAM (18:00 - 22:59) -> Tenang & Evaluasi
-          greeting = 'こんばんは (Konbanwa)'
-          icon = '<i class="bi bi-moon-stars-fill text-warning me-3"></i>'
+          // 4. MALAM -> Tenang & Evaluasi
+          greetingJP = 'こんばんは'
+          greetingID = 'Selamat Malam'
+          iconClass = 'bi-moon-stars-fill text-warning' // Bulan & Bintang
           quote =
-            'Selamat malam. Suasana tenang malam hari sangat cocok untuk mengevaluasi daftar kosakata yang belum kamu hafal hari ini. Mari tutup hari dengan pencapaian!'
-          bannerClass = 'bg-gradient text-bg-dark' // Biru sangat gelap / Hitam Elegan
+            'Suasana tenang malam hari sangat cocok untuk mengevaluasi daftar kosakata yang belum kamu hafal hari ini. Mari tutup hari dengan pencapaian!'
+          bannerClass = 'bg-gradient bg-dark border-bottom border-secondary'
         } else {
-          // 5. TENGAH MALAM (23:00 - 04:59) -> Peringatan Kesehatan tidur
-          greeting = 'こんばんは (Konbanwa)'
-          icon = '<i class="bi bi-moon-fill text-secondary me-3"></i>'
+          // 5. TENGAH MALAM -> Peringatan Kesehatan tidur
+          greetingJP = 'おやすみなさい'
+          greetingID = 'Selamat Beristirahat'
+          iconClass = 'bi-cloud-moon-fill text-info' // Bulan berawan teduh
           quote =
-            'Sudah larut malam. Ingat, belajar berlebihan di waktu yang salah justru bisa memperburuk kualitas tidur dan daya ingatmu. Tubuhmu butuh istirahat, besok kita lanjutkan lagi. おやすみなさい。'
-          bannerClass = 'bg-dark border border-secondary' // Gelap pekat dengan outline tipis
+            'Sudah larut malam. Belajar berlebihan di waktu yang salah justru bisa memperburuk kualitas tidur dan daya ingatmu. Tubuhmu butuh istirahat, besok kita lanjutkan lagi.'
+          bannerClass = 'bg-dark border border-secondary text-secondary'
         }
 
-        // Terapkan perubahan teks ke DOM
-        document.getElementById('greeting').innerHTML = icon + greeting
+        // Terapkan perubahan teks ke DOM dengan struktur HTML yang cantik
+        document.getElementById('greeting').innerHTML = `
+    <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
+      <div class="greeting-icon-box d-flex align-items-center justify-content-center bg-white bg-opacity-25 rounded-circle shadow-sm">
+        <i class="bi ${iconClass} fs-2"></i>
+      </div>
+      <div class="text-start">
+        <small class="d-block fs-6 opacity-75 fw-light text-uppercase tracking-wider mb-0">${greetingID}</small>
+        <span class="d-block fs-2 fw-bold kanji-text">${greetingJP}</span>
+      </div>
+    </div>
+  `
+
         document.getElementById('hero-quote').innerText = quote
 
         // Atur transisi warna background banner agar halus saat berganti jam
         const banner = document.getElementById('hero-banner')
         if (banner) {
-          // Reset class warna sebelumnya agar tidak menumpuk
           banner.className =
-            'p-5 text-center text-md-start text-white position-relative overflow-hidden rounded-4 shadow-sm ' +
+            'p-5 text-center text-md-start position-relative overflow-hidden rounded-4 shadow-sm ' +
             bannerClass
         }
       }
-
       // Jalankan interval per detik
       setInterval(updateTime, 1000)
       // Eksekusi langsung di awal agar halaman tidak kosongan saat dimuat pertama kali
