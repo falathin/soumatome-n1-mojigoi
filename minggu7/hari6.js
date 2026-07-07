@@ -1,0 +1,310 @@
+// Gunakan window.vocabData array agar file JS lain bisa di-push juga nantinya
+window.vocabData = window.vocabData || [];
+
+const kosakata_m7h6 = [
+  // --- GAMBAR 1 ---
+  {
+    id: 'm7h6_1',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '差し出す',
+    furigana: 'さしだす',
+    arti: 'Mengulurkan / Menyerahkan',
+    penjelasan: 'Tindakan mengulurkan tangan atau menyerahkan sesuatu (seperti dokumen, kartu nama, atau barang) ke arah orang lain agar diterima oleh pihak tersebut.',
+    contoh1: '名刺を差し出す。\n(Mengulurkan atau menyerahkan kartu nama.)',
+    contoh2: '窓から顔を差し出す。\n(Mengeluarkan/mengulurkan wajah dari jendela.)'
+  },
+  {
+    id: 'm7h6_2',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '差し引く',
+    furigana: 'さしひく',
+    arti: 'Memotong / Mengurangi',
+    penjelasan: 'Mengurangi sejumlah nilai atau jumlah tertentu dari total keseluruhan. Sangat sering digunakan dalam konteks pemotongan gaji, pajak, atau perhitungan biaya (deduksi).',
+    contoh1: '給料から税金を差し引く。\n(Memotong pajak dari gaji bulanan.)',
+    contoh2: '点数を差し引く。\n(Mengurangi poin atau nilai ujian.)'
+  },
+  {
+    id: 'm7h6_3',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '差し支える',
+    furigana: 'さしつかえる',
+    arti: 'Mengganggu / Menghambat',
+    penjelasan: 'Suatu kondisi atau tindakan yang memberikan dampak buruk, menghambat kelancaran, atau menjadi rintangan bagi hal lain di kemudian hari sehingga aktivitas tersebut tidak berjalan maksimal.',
+    contoh1: '夜更かしは翌日の仕事に差し支える。\n(Begadang akan mengganggu pekerjaan di keesokan harinya.)',
+    contoh2: '体調が悪いと勉強に差し支える。\n(Kondisi badan yang buruk akan menghambat aktivitas belajar.)'
+  },
+  {
+    id: 'm7h6_4',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '寄りかかる',
+    furigana: 'よりかかる',
+    arti: 'Bersandar / Bergantung',
+    penjelasan: 'Menyandarkan berat badan secara fisik pada benda lain seperti dinding atau tiang. Secara kiasan, kata ini berarti bergantung atau mengandalkan bantuan orang lain (seperti orang tua) secara berlebihan.',
+    contoh1: '壁に寄りかかる。\n(Menyandarkan tubuh di dinding.)',
+    contoh2: '親に寄りかかって生活する。\n(Hidup dengan bergantung pada orang tua.)'
+  },
+  {
+    id: 'm7h6_5',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '寄り添う',
+    furigana: 'よりそう',
+    arti: 'Berdampingan / Mendekat',
+    penjelasan: 'Berada sangat dekat secara fisik di samping seseorang. Selain itu, secara emosional berarti mendampingi, memberikan dukungan batin, dan menunjukkan empati kepada orang yang sedang kesulitan.',
+    contoh1: '寄り添って座る。\n(Duduk saling berdampingan dan merapat.)',
+    contoh2: '悲しむ友人に寄り添う。\n(Mendampingi secara batin teman yang sedang bersedih.)'
+  },
+  {
+    id: 'm7h6_6',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '寄せ集める',
+    furigana: 'よせあつめる',
+    arti: 'Mengumpulkan / Menghimpun',
+    penjelasan: 'Tindakan mengumpulkan berbagai macam benda, informasi, atau orang dari berbagai tempat yang tersebar menjadi satu kesatuan atau satu kelompok besar.',
+    contoh1: 'ごみを寄せ集める。\n(Mengumpulkan sampah-sampah yang berserakan.)',
+    contoh2: '残り物を寄せ集めて夕食を作る。\n(Membuat makan malam dengan mengumpulkan sisa-sisa bahan makanan.)'
+  },
+  {
+    id: 'm7h6_7',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '押し切る',
+    furigana: 'おしきる',
+    arti: 'Menerobos (penolakan) / Bersikeras',
+    penjelasan: 'Memaksakan kehendak atau terus maju melakukan suatu tindakan meskipun ada penolakan yang kuat, tentangan, atau kondisi yang tidak menguntungkan dari pihak lain.',
+    contoh1: '反対を押し切る。\n(Bersikeras dan menerobos penolakan / menolak peduli pada rintangan.)',
+    contoh2: '親の猛反対を押し切って留学した。\n(Menerobos penolakan keras orang tua dan tetap pergi sekolah ke luar negeri.)'
+  },
+  {
+    id: 'm7h6_8',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '押し込む',
+    furigana: 'おしこむ',
+    arti: 'Mendorong masuk / Memaksa masuk',
+    penjelasan: 'Memasukkan sesuatu barang atau kerumunan orang ke dalam sebuah wadah atau ruang yang sudah sempit dengan paksa dan dorongan fisik yang kuat.',
+    contoh1: '乗客を電車に押し込む。\n(Mendorong dan memaksa masuk penumpang ke dalam kereta api yang padat.)',
+    contoh2: '荷物を無理やりカバンに押し込む。\n(Memasukkan barang bawaan ke dalam tas dengan paksa.)'
+  },
+  {
+    id: 'm7h6_9',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '押し寄せる',
+    furigana: 'おしよせる',
+    arti: 'Menerjang / Melanda / Mendatangi',
+    penjelasan: 'Menggambarkan gerakan sesuatu dalam jumlah besar (seperti gelombang ombak laut atau kerumunan massa yang masif) yang datang mendekat dan melanda suatu area secara bertubi-tubi.',
+    contoh1: '波が押し寄せる。\n(Gelombang ombak menerjang dan mengalir deras ke tepian.)',
+    contoh2: 'ファンが会場に押し寄せた。\n(Para penggemar berbondong-bondong membanjiri dan mendatangi arena.)'
+  },
+  {
+    id: 'm7h6_10',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '成り立つ',
+    furigana: 'なりたつ',
+    arti: 'Terwujud / Terdiri dari / Berjalan',
+    penjelasan: 'Kata ini memiliki beberapa makna: 1) Suatu kesepakatan atau negosiasi berhasil dicapai/terwujud; 2) Suatu bisnis/kehidupan dapat bertahan atau berjalan secara finansial; 3) Suatu kelompok terbentuk atau terdiri dari elemen tertentu.',
+    contoh1: '交渉が成り立つ。\n(Negosiasi telah berhasil mencapai kesepakatan / terwujud.)',
+    contoh2: 'この会は30人のメンバーから成り立っている。\n(Kelompok/perkumpulan ini terdiri dari 30 orang anggota.)'
+  },
+  {
+    id: 'm7h6_11',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '出直す',
+    furigana: 'でなおす',
+    arti: 'Datang kembali / Memulai kembali',
+    penjelasan: 'Bisa berarti kembali lagi ke suatu tempat di waktu yang berbeda karena tujuan belum tercapai saat itu. Bisa juga digunakan sebagai ungkapan kiasan untuk mengulangi suatu usaha atau proses dari titik nol (awal).',
+    contoh1: 'また出直して参ります。\n(Saya akan datang berkunjung kembali di lain waktu.)',
+    contoh2: '一から出直す。\n(Memulai kembali segala usaha dan rencana dari awal/nol.)'
+  },
+  {
+    id: 'm7h6_12',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '使いこなす',
+    furigana: 'つかいこなす',
+    arti: 'Menguasai / Mahir menggunakan',
+    penjelasan: 'Kemampuan untuk menggunakan dan mempraktikkan sesuatu yang sulit, rumit, atau canggih (seperti bahasa asing, alat berat, atau perangkat lunak) dengan sangat lancar dan ahli layaknya profesional.',
+    contoh1: '3ヵ国語を使いこなす。\n(Mahir menguasai dan menggunakan 3 bahasa asing dengan fasih.)',
+    contoh2: '最新のパソコンを使いこなす。\n(Mahir dan ahli menggunakan komputer model terbaru beserta fitur-fiturnya.)'
+  },
+  {
+    id: 'm7h6_13',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: 'たどり着く',
+    furigana: 'たどりつく',
+    arti: 'Tiba / Sampai (setelah bersusah payah)',
+    penjelasan: 'Menunjukkan keberhasilan mencapai suatu tempat, titik penyelesaian, atau tujuan akhir setelah melewati perjalanan panjang yang melelahkan, sempat tersesat, atau menghadapi berbagai kesulitan.',
+    contoh1: '頂上にたどり着く。\n(Berhasil tiba di puncak gunung setelah bersusah payah mendaki.)',
+    contoh2: '苦労の末、やっと解決策にたどり着いた。\n(Setelah melalui berbagai rintangan, akhirnya sampai pada solusi yang dicari.)'
+  },
+  {
+    id: 'm7h6_14',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '結び付く',
+    furigana: 'むすびつく',
+    arti: 'Terhubung / Berujung pada / Menghasilkan',
+    penjelasan: 'Menggambarkan kondisi di mana suatu tindakan, kejadian, atau hal saling berkaitan erat satu sama lain secara logis dan pada akhirnya berujung atau membuahkan suatu hasil/konsekuensi tertentu.',
+    contoh1: '努力が成功に結び付く。\n(Usaha keras terhubung dan membuahkan kesuksesan yang diidamkan.)',
+    contoh2: 'その事件は二人の関係に結びついている。\n(Kejadian tersebut berkaitan erat dengan hubungan mereka berdua.)'
+  },
+  {
+    id: 'm7h6_15',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '着飾る',
+    furigana: 'きかざる',
+    arti: 'Berdandan / Berpakaian bagus',
+    penjelasan: 'Tindakan memakai pakaian yang mewah, indah, dan merias diri secara visual dengan sangat rapi atau elegan. Biasanya dilakukan untuk menghadiri acara-acara khusus, formal, atau perayaan.',
+    contoh1: '着飾ってパーティーに行く。\n(Berdandan dan mengenakan pakaian terbaik untuk pergi ke acara pesta.)',
+    contoh2: '彼女は美しく着飾っていた。\n(Dia berdandan dan berpakaian dengan sangat cantik nan elegan.)'
+  },
+  {
+    id: 'm7h6_16',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '乗っ取る',
+    furigana: 'のっとる',
+    arti: 'Mengambil alih / Membajak',
+    penjelasan: 'Menguasai secara paksa atau tidak sah suatu hal yang sebenarnya adalah milik pihak lain. Konteksnya bisa merampas tampuk kepemimpinan/kepemilikan sebuah perusahaan (takeover), atau membajak kendaraan berat seperti pesawat.',
+    contoh1: '会社を乗っ取る。\n(Mengambil alih kekuasaan perusahaan milik orang lain secara paksa atau licik.)',
+    contoh2: '飛行機を乗っ取る。\n(Membajak sebuah pesawat terbang penumpang.)'
+  },
+  {
+    id: 'm7h6_17',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '消し去る',
+    furigana: 'けしさる',
+    arti: 'Menghapus (sepenuhnya) / Menghilangkan',
+    penjelasan: 'Tindakan menghapus ingatan memori, noda masa lalu, atau jejak keberadaan fisik sesuatu secara total hingga benar-benar bersih dan tidak tersisa sedikit pun di permukaan atau pikiran.',
+    contoh1: '過去を消し去る。\n(Menghapus jejak atau memori masa lalu sepenuhnya.)',
+    contoh2: '嫌な記憶を頭から消し去りたい。\n(Saya ingin menghilangkan memori kejadian buruk tersebut dari dalam pikiran saya.)'
+  },
+  {
+    id: 'm7h6_18',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '言い張る',
+    furigana: 'いいはる',
+    arti: 'Bersikeras / Ngotot',
+    penjelasan: 'Sikap keras kepala dalam mempertahankan pendapat, alasan, argumen, atau pendiriannya sendiri dengan kuat, dan menolak untuk mengalah meskipun pada kenyataannya mungkin dirinya yang salah (sinonim: 言い通す).',
+    contoh1: '知らないと言い張る。\n(Terus bersikeras dan ngotot mengatakan bahwa dirinya tidak tahu menahu soal itu.)',
+    contoh2: '自分が正しいと言い張る。\n(Terus mempertahankan argumen dengan ngotot bahwa pendiriannya yang paling benar.)'
+  },
+
+  // --- GAMBAR 2 ---
+  {
+    id: 'm7h6_19',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '待ち望む',
+    furigana: 'まちのぞむ',
+    arti: 'Sangat menantikan / Mendambakan',
+    penjelasan: 'Sikap menunggu kedatangan seseorang, menantikan tibanya suatu hari yang spesial, atau mengharapkan kejadian penting dengan penuh antusias, rindu, dan harapan besar.',
+    contoh1: '再会の日を待ち望む。\n(Sangat menantikan dan mendambakan hari di mana kita bisa berjumpa kembali.)',
+    contoh2: '待ち望んでいた子供が生まれた。\n(Anak yang selama ini sangat didamba-dambakan akhirnya lahir ke dunia.)'
+  },
+  {
+    id: 'm7h6_20',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '触れ合う',
+    furigana: 'ふれあう',
+    arti: 'Saling bersentuhan / Berinteraksi (perasaan)',
+    penjelasan: 'Secara harfiah bermakna kontak fisik secara langsung dengan makhluk hidup lain. Secara psikologis atau kiasan, berarti interaksi antarmanusia di mana hati, empati, dan perasaan mereka saling terhubung satu sama lain.',
+    contoh1: '心が触れ合う。\n(Hati dan perasaan saling bersentuhan, memunculkan komunikasi batin yang kuat.)',
+    contoh2: '動物と触れ合う。\n(Berinteraksi dan saling bersentuhan secara langsung dengan hewan-hewan.)'
+  },
+  {
+    id: 'm7h6_21',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '切り替える',
+    furigana: 'きりかえる',
+    arti: 'Beralih / Mengganti',
+    penjelasan: 'Tindakan mengubah atau memutar arah mekanik dari satu sistem ke keadaan yang lain (seperti menekan tuas saklar). Juga dipakai untuk mentalitas, yaitu mengubah mindset (cara pandang) untuk melupakan hal negatif dan fokus ke hal baru.',
+    contoh1: 'スイッチを切り替える。\n(Mengganti atau menekan saklar ke posisi yang berbeda.)',
+    contoh2: '頭を切り替えて次の試験に臨む。\n(Beralih pikiran dari kegagalan sebelumnya dan fokus untuk menghadapi ujian berikutnya.)'
+  },
+  {
+    id: 'm7h6_22',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: 'やり遂げる',
+    furigana: 'やりとげる',
+    arti: 'Menyelesaikan sampai tuntas',
+    penjelasan: 'Melaksanakan dan menyelesaikan suatu tugas, rencana, misi, atau pekerjaan yang menantang dari awal hingga benar-benar tuntas dengan sempurna dan memuaskan (sinonim dengan やり通す).',
+    contoh1: '計画をやり遂げる。\n(Menyelesaikan dan mengeksekusi rencana tersebut sampai tuntas seratus persen.)',
+    contoh2: '困難な仕事を最後までやり遂げた。\n(Telah berhasil menyelesaikan pekerjaan yang rumit dan penuh tantangan hingga akhir.)'
+  },
+  {
+    id: 'm7h6_23',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '備え付ける',
+    furigana: 'そなえつける',
+    arti: 'Memasang / Melengkapi',
+    penjelasan: 'Tindakan memasang atau menempatkan peralatan elektronik, perabotan, atau fasilitas fungsional tertentu secara permanen pada suatu lokasi (seperti ruangan) agar siap digunakan oleh siapa saja.',
+    contoh1: '教室にテレビを備え付ける。\n(Memasang serta melengkapi fasilitas televisi di dalam ruang kelas.)',
+    contoh2: '各部屋にエアコンが備え付けられている。\n(Mesin pendingin ruangan/AC telah terpasang dan melengkapi setiap kamar.)'
+  },
+  {
+    id: 'm7h6_24',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '呼び止める',
+    furigana: 'よびとめる',
+    arti: 'Memanggil untuk menghentikan / Mencegat',
+    penjelasan: 'Memanggil seseorang yang sedang asyik berjalan kaki, mengemudi, atau lewat, dengan tujuan agar ia menghentikan lajunya sejenak, biasanya karena ada suatu urusan yang ingin dibicarakan.',
+    contoh1: '見知らぬ人に呼び止められる。\n(Dicegat atau dipanggil paksa untuk berhenti oleh orang yang sama sekali tidak dikenal.)',
+    contoh2: '警察に呼び止められた。\n(Diberhentikan atau dicegat oleh petugas polisi di jalan.)'
+  },
+  {
+    id: 'm7h6_25',
+    minggu: '7',
+    hari: '6',
+    kategori: 'kata kerja',
+    kanji: '盛り上がる',
+    furigana: 'もりあがる',
+    arti: 'Menonjol (otot) / Menjadi meriah (suasana)',
+    penjelasan: 'Memiliki dua makna utama. Pertama, secara visual bagian fisik (seperti tumpukan tanah atau otot) membesar dan menonjol ke atas. Kedua, suasana sebuah acara komunal (seperti pesta atau konser) grafiknya memuncak dan menjadi sangat riuh/meriah.',
+    contoh1: '腕の筋肉が盛り上がる。\n(Otot bicep di lengan membesar dan menonjol terlihat jelas.)',
+    contoh2: '宴会が盛り上がる。\n(Suasana pesta perayaan memuncak dan menjadi sangat meriah.)'
+  }
+];
+
+window.vocabData.push(...kosakata_m7h6);
