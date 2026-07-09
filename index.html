@@ -30,302 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --jp-red: #bc002d;
-        --jp-red-dark: #8c0022;
-        --jp-red-light: #fbe6e9;
-        --jp-blue-dark: #1d3557;
-        --jp-blue-wave: #457b9d;
-        --jp-cream: #fdfbf7;
-      }
-
-      /* Menggunakan Flexbox untuk memastikan footer selalu di bawah 
-       dan tidak ada ruang kosong jika konten sedikit */
-      body {
-        background-color: var(--jp-cream);
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        color: #2b2d42;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      main {
-        flex: 1 0 auto; /* Membiarkan bagian utama mengisi ruang yang ada */
-      }
-
-      /* Penyelarasan font khusus teks Jepang agar terlihat otentik */
-      h2,
-      .kanji-text {
-        font-family: 'Noto Sans JP', sans-serif;
-      }
-
-      /* Navbar Custom - Sticky Top agar tidak ada gap putih saat scroll */
-      .navbar-jp {
-        background: linear-gradient(
-          135deg,
-          var(--jp-blue-dark) 0%,
-          #112239 100%
-        );
-        border-bottom: 4px solid var(--jp-red);
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
-
-      /* Notice Pengembangan */
-      .dev-notice {
-        background-color: #ffecd1;
-        color: #d07a00;
-        font-size: 0.85rem;
-        text-align: center;
-        padding: 8px;
-        font-weight: 600;
-      }
-
-      /* Hero Section dengan Tema Matahari & Ombak */
-      .hero-banner {
-        background: linear-gradient(
-          135deg,
-          var(--jp-blue-dark) 0%,
-          var(--jp-blue-wave) 100%
-        );
-        position: relative;
-        overflow: hidden;
-        border-radius: 24px;
-        box-shadow: 0 10px 30px rgba(29, 53, 87, 0.15);
-      }
-
-      /* Elemen Animasi Lingkaran Matahari Merah */
-      .hero-sun {
-        position: absolute;
-        top: 50%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        width: 280px;
-        height: 280px;
-        background: radial-gradient(
-          circle,
-          rgba(188, 0, 45, 0.4) 0%,
-          rgba(188, 0, 45, 0) 70%
-        );
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 1;
-        animation: pulseSun 6s infinite ease-in-out;
-      }
-
-      @keyframes pulseSun {
-        0% {
-          transform: translate(-50%, -50%) scale(1);
-          opacity: 0.5;
-        }
-        50% {
-          transform: translate(-50%, -50%) scale(1.2);
-          opacity: 0.8;
-        }
-        100% {
-          transform: translate(-50%, -50%) scale(1);
-          opacity: 0.5;
-        }
-      }
-
-      /* Floating Clock Card */
-      .clock-badge {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #ffffff;
-        border-radius: 50px;
-        padding: 10px 24px;
-        font-size: 1.25rem;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .bi-clock-animated {
-        display: inline-block;
-        animation: bounceIcon 2s infinite ease-in-out;
-      }
-
-      @keyframes bounceIcon {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-4px);
-        }
-      }
-
-      /* Filter Section Styling */
-      .filter-card {
-        background-color: #ffffff;
-        border: 1px solid rgba(29, 53, 87, 0.08);
-        border-radius: 20px;
-        box-shadow: 0 5px 20px rgba(29, 53, 87, 0.04);
-      }
-
-      .form-select,
-      .form-control {
-        border: 1px solid #e2e8f0;
-        padding: 0.6rem 1rem;
-        border-radius: 12px;
-        transition: all 0.2s ease;
-      }
-
-      .form-select:focus,
-      .form-control:focus {
-        border-color: var(--jp-blue-wave);
-        box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.15);
-      }
-
-      /* Kosakata Card Custom Styling */
-      .vocab-card {
-        background: #ffffff;
-        border: none;
-        border-top: 5px solid var(--jp-red) !important;
-        border-radius: 20px !important;
-        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-          box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        overflow: hidden;
-      }
-
-      .vocab-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(29, 53, 87, 0.12) !important;
-      }
-
-      /* Animasi Muncul Kartu Semakin Halus */
-      .animate-card-fade {
-        animation: cardEntrance 0.4s ease-out forwards;
-      }
-
-      @keyframes cardEntrance {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Badge Custom */
-      .badge-kategori {
-        background-color: var(--jp-red-light);
-        color: var(--jp-red-dark);
-        font-weight: 600;
-        border: 1px solid rgba(188, 0, 45, 0.15);
-      }
-
-      .badge-waktu {
-        background-color: rgba(69, 123, 157, 0.1);
-        color: var(--jp-blue-dark);
-        font-weight: 600;
-      }
-
-      /* Kalimat Contoh Section */
-      .contoh-box {
-        background-color: #f8fafc;
-        border-left: 3px solid var(--jp-blue-wave) !important;
-      }
-
-      /* Button Status Group Custom */
-      .btn-status-group {
-        border-radius: 30px;
-        overflow: hidden;
-        border: 1px solid #e2e8f0;
-      }
-
-      .btn-status-group .btn {
-        border: none;
-        font-size: 0.85rem;
-        padding: 8px 12px;
-        font-weight: 600;
-        transition: all 0.2s ease;
-      }
-
-      /* Footer Custom */
-      .footer-jp {
-        background: #112239;
-        color: #ffffff;
-        border-top: 4px solid var(--jp-red);
-        flex-shrink: 0; /* Mencegah footer menyusut */
-      }
-
-      .donation-btn {
-        background-color: var(--jp-red);
-        color: white;
-        border: none;
-        padding: 8px 20px;
-        border-radius: 20px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .donation-btn:hover {
-        background-color: var(--jp-red-dark);
-        color: white;
-        transform: scale(1.05);
-      }
-
-      /* --- TAMBAHAN BARU: Gaya Desain Greeting Premium & Transisi --- */
-
-      /* Gradasi Warna Kustom Sore (Senja Elegan) */
-      .style-sore {
-        background: linear-gradient(
-          135deg,
-          #e67e22 0%,
-          #2c3e50 100%
-        ) !important;
-      }
-
-      /* Efek Transisi Mulus Saat Latar Belakang Hero Banner Berubah Sesuai Jam */
-      #hero-banner {
-        transition: background 1.2s ease-in-out, color 0.6s ease-in-out,
-          border 0.6s ease-in-out;
-      }
-
-      /* Box Wadah Ikon dengan Efek Kaca (Glassmorphism) */
-      .greeting-icon-box {
-        width: 60px;
-        height: 60px;
-        min-width: 60px; /* Menjaga bentuk bundar konstan di layar kecil */
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-      }
-
-      /* Animasi Berdenyut Halus Khusus Ikon Siang Hari */
-      .animate-pulse {
-        animation: pulseIcon 3s infinite ease-in-out;
-      }
-
-      @keyframes pulseIcon {
-        0%,
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-        50% {
-          transform: scale(1.15);
-          opacity: 0.85;
-        }
-      }
-
-      /* Pengaturan Spasi Sub-Teks Ucapan Indonesia */
-      .tracking-wider {
-        letter-spacing: 1px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="dev-notice w-100">
@@ -334,14 +39,26 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-jp shadow-sm py-3">
-      <div class="container">
+      <div class="container d-flex justify-content-between align-items-center">
         <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#">
           <i class="bi bi-journal-bookmark-fill text-white me-2"></i>
           <span>総<span style="color: var(--jp-red)">まとめ</span></span>
         </a>
-        <span class="navbar-text text-white-50 small d-none d-sm-inline"
-          >文字語彙 - Master JLPT N1 Vocabulary</span
-        >
+
+        <div class="d-flex align-items-center">
+          <span class="navbar-text text-white-50 small d-none d-sm-inline me-3"
+            >文字語彙 - Master JLPT N1 Vocabulary</span
+          >
+          <!-- Dark Mode Toggle Button Modern -->
+          <button
+            id="theme-toggle"
+            class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center"
+            style="width: 42px; height: 42px; transition: all 0.2s"
+            title="Toggle Dark/Light Mode"
+          >
+            <i class="bi bi-moon-fill" id="theme-icon"></i>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -674,16 +391,71 @@
     <script src="minggu8/hari6.js"></script>
     <script src="minggu8/hari7.js"></script>
     <script>
+      // ==========================================================================
+      // --- LOGIKA UTAMA TRANSMISI DARK MODE (MANUAL & SYSTEM LEVEL SYNC) ---
+      // ==========================================================================
+      const htmlElement = document.documentElement
+      const themeToggleBtn = document.getElementById('theme-toggle')
+      const themeIcon = document.getElementById('theme-icon')
+
+      function setTheme(theme) {
+        htmlElement.setAttribute('data-theme', theme)
+        localStorage.setItem('app_theme', theme)
+
+        if (theme === 'dark') {
+          themeIcon.className = 'bi bi-sun-fill text-warning'
+          themeToggleBtn.className =
+            'btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center'
+        } else {
+          themeIcon.className = 'bi bi-moon-fill'
+          themeToggleBtn.className =
+            'btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center'
+        }
+      }
+
+      function initTheme() {
+        const savedTheme = localStorage.getItem('app_theme')
+        if (savedTheme) {
+          setTheme(savedTheme)
+        } else {
+          // Menyesuaikan otomatis preferensi sistem OS / Browser bawaan
+          const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches
+          setTheme(prefersDark ? 'dark' : 'light')
+        }
+      }
+
+      // Selalu awasi perubahan skema warna sistem secara realtime
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', e => {
+          if (!localStorage.getItem('app_theme')) {
+            setTheme(e.matches ? 'dark' : 'light')
+          }
+        })
+
+      themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme')
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark')
+      })
+
+      // Jalankan sistem proteksi tema sebelum komponen dirender penuh
+      initTheme()
+
+      // ==========================================================================
+      // --- LOGIKA DIGI-CLOCK & DINAMIS GREETING BANNER ---
+      // ==========================================================================
       function updateTime() {
         const now = new Date()
         const h = now.getHours()
         const m = now.getMinutes().toString().padStart(2, '0')
         const s = now.getSeconds().toString().padStart(2, '0')
 
-        // Update Jam Digital
-        document.getElementById('clock').innerText = `${h
-          .toString()
-          .padStart(2, '0')}:${m}:${s}`
+        const clockEl = document.getElementById('clock')
+        if (clockEl) {
+          clockEl.innerText = `${h.toString().padStart(2, '0')}:${m}:${s}`
+        }
 
         let greetingJP = ''
         let greetingID = ''
@@ -691,65 +463,63 @@
         let quote = ''
         let bannerClass = ''
 
-        // Logika pembagian waktu, quotes khusus, dan skema warna banner
         if (h >= 5 && h < 11) {
-          // 1. PAGI -> Berenergi & Segar
           greetingJP = 'おはようございます'
           greetingID = 'Selamat Pagi'
-          iconClass = 'bi-sunrise-fill text-warning' // Efek matahari terbit
+          iconClass = 'bi-sunrise-fill text-warning'
           quote =
-            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日mo一日頑張riまsyoう！'
-          bannerClass = 'bg-gradient bg-primary'
+            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日も一日頑張りましょう！'
+          bannerClass = 'bg-gradient bg-primary text-white'
         } else if (h >= 11 && h < 15) {
-          // 2. SIANG -> Fokus & Konsisten
           greetingJP = 'こんにちは'
           greetingID = 'Selamat Siang'
-          iconClass = 'bi-sun-fill text-warning animate-pulse' // Matahari terik
+          iconClass = 'bi-sun-fill text-warning animate-pulse'
           quote =
             'Sudah siang! Istirahat sejenak di tengah kesibukanmu untuk mengulang beberapa baris Moji Goi. Consistency is key, sedikit demi sedikit pasti bisa!'
-          bannerClass = 'bg-gradient bg-info text-dark'
+          bannerClass = 'bg-gradient bg-info text-white'
         } else if (h >= 15 && h < 18) {
-          // 3. SORE -> Produktif / Refreshing
           greetingJP = 'こんにちは'
           greetingID = 'Selamat Sore'
-          iconClass = 'bi-sunset-fill text-warning' // Matahari terbenam
+          iconClass = 'bi-sunset-fill text-warning'
           quote =
             'Matahari sudah mulai condong. Lelah itu wajar, tapi jangan biarkan target harian Sou Matome-mu terlewat begitu saja. Tetap fokus menuju garis finis!'
-          bannerClass = 'style-sore text-white' // Menggunakan warna senja kustom
+          bannerClass = 'style-sore text-white'
         } else if (h >= 18 && h < 23) {
-          // 4. MALAM -> Tenang & Evaluasi
           greetingJP = 'こんばんは'
           greetingID = 'Selamat Malam'
-          iconClass = 'bi-moon-stars-fill text-warning' // Bulan & Bintang
+          iconClass = 'bi-moon-stars-fill text-warning'
           quote =
             'Suasana tenang malam hari sangat cocok untuk mengevaluasi daftar kosakata yang belum kamu hafal hari ini. Mari tutup hari dengan pencapaian!'
-          bannerClass = 'bg-gradient bg-dark border-bottom border-secondary'
+          bannerClass =
+            'bg-gradient bg-dark border-bottom border-secondary text-white'
         } else {
-          // 5. TENGAH MALAM -> Peringatan Kesehatan tidur
           greetingJP = 'おやすみなさい'
           greetingID = 'Selamat Beristirahat'
-          iconClass = 'bi-cloud-moon-fill text-info' // Bulan berawan teduh
+          iconClass = 'bi-cloud-moon-fill text-info'
           quote =
             'Sudah larut malam. Belajar berlebihan di waktu yang salah justru bisa memperburuk kualitas tidur dan daya ingatmu. Tubuhmu butuh istirahat, besok kita lanjutkan lagi.'
           bannerClass = 'bg-dark border border-secondary text-secondary'
         }
 
-        // Terapkan perubahan teks ke DOM dengan struktur HTML yang cantik
-        document.getElementById('greeting').innerHTML = `
-    <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
-      <div class="greeting-icon-box d-flex align-items-center justify-content-center bg-white bg-opacity-25 rounded-circle shadow-sm">
-        <i class="bi ${iconClass} fs-2"></i>
-      </div>
-      <div class="text-start">
-        <small class="d-block fs-6 opacity-75 fw-light text-uppercase tracking-wider mb-0">${greetingID}</small>
-        <span class="d-block fs-2 fw-bold kanji-text">${greetingJP}</span>
-      </div>
-    </div>
-  `
+        const greetingEl = document.getElementById('greeting')
+        if (greetingEl) {
+          greetingEl.innerHTML = `
+            <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
+              <div class="greeting-icon-box d-flex align-items-center justify-content-center bg-white bg-opacity-25 rounded-circle shadow-sm">
+                <i class="bi ${iconClass} fs-2"></i>
+              </div>
+              <div class="text-start">
+                <small class="d-block fs-6 opacity-75 fw-light text-uppercase tracking-wider mb-0">${greetingID}</small>
+                <span class="d-block fs-2 fw-bold kanji-text">${greetingJP}</span>
+              </div>
+            </div>`
+        }
 
-        document.getElementById('hero-quote').innerText = quote
+        const quoteEl = document.getElementById('hero-quote')
+        if (quoteEl) {
+          quoteEl.innerText = quote
+        }
 
-        // Atur transisi warna background banner agar halus saat berganti jam
         const banner = document.getElementById('hero-banner')
         if (banner) {
           banner.className =
@@ -757,14 +527,16 @@
             bannerClass
         }
       }
-      // Jalankan interval per detik
+
       setInterval(updateTime, 1000)
-      // Eksekusi langsung di awal agar halaman tidak kosongan saat dimuat pertama kali
       updateTime()
 
-      // --- Logika Render Kartu Kosakata ---
+      // ==========================================================================
+      // --- LOGIKA RENDER DATA KOSAKATA & FILTRASI ENGINE ---
+      // ==========================================================================
       function renderCards() {
         const container = document.getElementById('vocab-container')
+        if (!container) return
         container.innerHTML = ''
 
         const searchTxt = document
@@ -821,7 +593,6 @@
         filtered.forEach((item, index) => {
           const itemStatus = statuses[item.id] || 'tidak_hafal'
 
-          // Styling Tombol Status Berdasarkan Pilihan Aktif
           const btnTidakHafal =
             itemStatus === 'tidak_hafal'
               ? 'btn-danger text-white'
@@ -881,7 +652,7 @@
                                 )}</span></div>
                             </div>
                         </div>
-                        <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <div class="card-footer border-0 p-4 pt-0">
                             <div class="btn-group w-100 shadow-sm btn-status-group" role="group">
                                 <button type="button" class="btn ${btnTidakHafal}" onclick="setStatus('${
             item.id
@@ -901,21 +672,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                `
+                </div>`
           container.insertAdjacentHTML('beforeend', cardHTML)
         })
       }
 
-      // --- Simpan Status Hafalan ke LocalStorage ---
       function setStatus(id, status) {
         let statuses = JSON.parse(localStorage.getItem('vocabStatus')) || {}
         statuses[id] = status
         localStorage.setItem('vocabStatus', JSON.stringify(statuses))
-        renderCards() // Refresh UI instan tanpa reload halaman
+        renderCards()
       }
 
-      // --- Simpan dan Muat Status Filter dari LocalStorage ---
       function saveFilters() {
         const filters = {
           search: document.getElementById('search-input').value,
@@ -930,42 +698,46 @@
       function loadFilters() {
         const savedFilters = JSON.parse(localStorage.getItem('vocabFilters'))
         if (savedFilters) {
-          document.getElementById('search-input').value =
-            savedFilters.search || ''
-          document.getElementById('filter-minggu').value =
-            savedFilters.minggu || 'all'
-          document.getElementById('filter-hari').value =
-            savedFilters.hari || 'all'
-          document.getElementById('filter-kategori').value =
-            savedFilters.kategori || 'all'
-          document.getElementById('filter-status').value =
-            savedFilters.status || 'all'
+          const searchEl = document.getElementById('search-input')
+          if (searchEl) searchEl.value = savedFilters.search || ''
+
+          const mingguEl = document.getElementById('filter-minggu')
+          if (mingguEl) mingguEl.value = savedFilters.minggu || 'all'
+
+          const hariEl = document.getElementById('filter-hari')
+          if (hariEl) hariEl.value = savedFilters.hari || 'all'
+
+          const kategoriEl = document.getElementById('filter-kategori')
+          if (kategoriEl) kategoriEl.value = savedFilters.kategori || 'all'
+
+          const statusEl = document.getElementById('filter-status')
+          if (statusEl) statusEl.value = savedFilters.status || 'all'
         }
       }
 
-      // --- Listener Event Filter ---
-      const filterIds = [
-        'search-input',
-        'filter-minggu',
-        'filter-hari',
-        'filter-kategori',
-        'filter-status'
-      ]
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterIds = [
+          'search-input',
+          'filter-minggu',
+          'filter-hari',
+          'filter-kategori',
+          'filter-status'
+        ]
 
-      filterIds.forEach(id => {
-        const element = document.getElementById(id)
-        // Gunakan event 'input' khusus untuk kolom pencarian agar real-time saat mengetik
-        const eventType = id === 'search-input' ? 'input' : 'change'
-
-        element.addEventListener(eventType, () => {
-          saveFilters()
-          renderCards()
+        filterIds.forEach(id => {
+          const element = document.getElementById(id)
+          if (element) {
+            const eventType = id === 'search-input' ? 'input' : 'change'
+            element.addEventListener(eventType, () => {
+              saveFilters()
+              renderCards()
+            })
+          }
         })
-      })
 
-      // --- Render Awal saat Halaman Dimuat ---
-      loadFilters() // Load posisi filter terakhir sebelum merender kartu
-      renderCards()
+        loadFilters()
+        renderCards()
+      })
     </script>
   </body>
 </html>
