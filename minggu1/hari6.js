@@ -9,7 +9,7 @@ const kosakata_m1h6 = [
     id: 'm1h6_1',
     minggu: '1',
     hari: '6',
-    kategori: 'frasa (kata sifat)',
+    kategori: 'kata sifat',
     kanji: '体がだるい',
     furigana: 'からだがだるい',
     arti: 'Badan terasa lesu / lemas',
