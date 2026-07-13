@@ -145,8 +145,62 @@
                   <option value="4">Hari 4</option>
                   <option value="5">Hari 5</option>
                   <option value="6">Hari 6</option>
-                </select>
+                  </select>
               </div>
+              <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                  const filterMinggu = document.getElementById("filter-minggu");
+                  const filterHari = document.getElementById("filter-hari");
+
+                  // Fungsi untuk memperbarui opsi Hari 7
+                  function updateHari7() {
+                      const mingguValue = filterMinggu.value;
+
+                      // Cek dan hapus opsi Hari 7 jika sebelumnya sudah ada (reset)
+                      const existingHari7 = filterHari.querySelector('option[value="7"]');
+                      if (existingHari7) {
+                          existingHari7.remove();
+                      }
+
+                      // Jika filter minggu BUKAN "Semua Minggu" (all), tambahkan Hari 7
+                      if (mingguValue !== 'all') {
+                          const optionHari7 = document.createElement("option");
+                          optionHari7.value = "7";
+                          optionHari7.textContent = "Hari 7 (Exam)";
+                          
+                          // Tambahkan sedikit penanda warna atau styling jika diperlukan (opsional)
+                          optionHari7.style.fontWeight = "bold";
+                          optionHari7.style.color = "blue";
+                          
+                          filterHari.appendChild(optionHari7);
+                      }
+                  }
+
+                  // Panggil fungsi sekali saat halaman pertama dimuat
+                  updateHari7();
+
+                  // Dengarkan perubahan pada dropdown "Minggu"
+                  filterMinggu.addEventListener("change", function() {
+                      // Jika user ganti minggu, pastikan pilihan hari tidak nyangkut di hari 7 
+                      // (kembalikan ke Hari 1 atau Semua Hari sebagai default)
+                      if (filterHari.value === "7") {
+                          filterHari.value = "1"; 
+                      }
+                      updateHari7();
+                  });
+
+                  // Dengarkan perubahan pada dropdown "Hari"
+                  filterHari.addEventListener("change", function() {
+                      if (this.value === "7") {
+                          const mingguValue = filterMinggu.value;
+                          if (mingguValue !== 'all') {
+                              // Redirect ke halaman exam sesuai minggu
+                              window.location.href = `exam/minggu${mingguValue}.html`;
+                          }
+                      }
+                  });
+              });
+              </script>
               <div class="col-md-3 col-lg-2">
                 <select id="filter-kategori" class="form-select">
                   <option value="all">Semua Kategori</option>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLPT N1 Simulator - Minggu 2</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Warna Merah Khas JLPT */
+            --jlpt-red: #e60012;
+            --jlpt-red-dark: #b3000e;
+            --jlpt-red-light: #ffe5e6;
+            --transition-speed: 0.3s;
+        }
+
+        body {
+            /* Motif Jepang Halus di Background */
+            background-color: #f4f6f9;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e60012' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            font-family: 'Noto Sans JP', 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        /* Override Bootstrap Primary Color dengan JLPT Red */
+        .text-primary { color: var(--jlpt-red) !important; }
+        .bg-primary { background-color: var(--jlpt-red) !important; }
+        .border-primary { border-color: var(--jlpt-red) !important; }
+        
+        .btn-primary {
+            background-color: var(--jlpt-red);
+            border-color: var(--jlpt-red);
+            color: white;
+            box-shadow: 0 4px 10px rgba(230, 0, 18, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: var(--jlpt-red-dark);
+            border-color: var(--jlpt-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(230, 0, 18, 0.4);
+        }
+        
+        .btn-outline-primary {
+            color: var(--jlpt-red);
+            border-color: var(--jlpt-red);
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--jlpt-red);
+            color: white;
+        }
+
+        /* Styling Kartu */
+        .card-exam {
+            border: none;
+            border-radius: 16px;
+            border-top: 6px solid var(--jlpt-red);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        [data-bs-theme="dark"] body {
+            background-color: #121212;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        [data-bs-theme="dark"] .card-exam {
+            background-color: #1e1e1e;
+            border-top: 6px solid var(--jlpt-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Tombol Opsi Jawaban */
+        .btn-option {
+            border-radius: 12px;
+            border-width: 2px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.25s ease;
+            font-size: 1.05rem;
+            color: inherit;
+            background-color: transparent;
+            border-color: #dee2e6;
+        }
+
+        [data-bs-theme="dark"] .btn-option { border-color: #444; color: #f8f9fa; }
+
+        .btn-option:hover:not(:disabled) {
+            transform: scale(1.02);
+            border-color: var(--jlpt-red);
+            background-color: var(--jlpt-red-light);
+            color: #333;
+        }
+        [data-bs-theme="dark"] .btn-option:hover:not(:disabled) {
+            background-color: rgba(230, 0, 18, 0.2);
+            color: #fff;
+        }
+
+        /* Kustomisasi Mode Terpilih (Mode Asli) */
+        .btn-selected {
+            background-color: var(--jlpt-red) !important;
+            color: white !important;
+            border-color: var(--jlpt-red) !important;
+            box-shadow: 0 4px 10px rgba(230, 0, 18, 0.3);
+        }
+
+        /* Nomor Opsi pada Tombol */
+        .opt-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            color: #495057;
+            font-weight: bold;
+            margin-right: 12px;
+            transition: all 0.3s ease;
+        }
+        [data-bs-theme="dark"] .opt-number { background-color: #333; color: #fff; }
+        .btn-selected .opt-number, .btn-success .opt-number, .btn-danger .opt-number {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        /* Animasi Benar/Salah */
+        @keyframes pulse-success {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.7); }
+            50% { transform: scale(1.03); background-color: #198754; color: white; box-shadow: 0 0 0 10px rgba(25, 135, 84, 0); }
+            100% { transform: scale(1); background-color: #198754; color: white; border-color: #198754; }
+        }
+
+        @keyframes shake-error {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+            50% { background-color: #dc3545; color: white; }
+            100% { background-color: #dc3545; color: white; border-color: #dc3545; }
+        }
+
+        .animate-correct { animation: pulse-success 0.5s ease-out forwards; }
+        .animate-wrong { animation: shake-error 0.5s ease-in-out forwards; }
+
+        /* Timer Pulse */
+        @keyframes pulse-danger {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .timer-warning { animation: pulse-danger 1s infinite; background-color: #dc3545 !important; }
+
+        /* Theme Switcher Widget */
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--bs-body-bg);
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: 2px solid var(--jlpt-red);
+        }
+
+        .btn-theme {
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            color: var(--bs-body-color);
+            transition: all 0.3s;
+        }
+
+        .btn-theme.active {
+            background: var(--jlpt-red);
+            color: white;
+            box-shadow: 0 2px 8px rgba(230, 0, 18, 0.4);
+        }
+        
+        .explanation-box {
+            border-left: 5px solid var(--jlpt-red);
+            background-color: var(--jlpt-red-light);
+            border-radius: 0 12px 12px 0;
+            color: #333;
+        }
+        [data-bs-theme="dark"] .explanation-box {
+            background-color: rgba(230, 0, 18, 0.1);
+            color: #eee;
+        }
+
+        .explanation-list li { margin-bottom: 6px; }
+        .soal-text { font-size: 1.25rem; font-weight: 700; color: inherit; }
+        .badge-soal { background-color: var(--jlpt-red); font-size: 1rem; }
+    </style>
+</head>
+<body>
+
+    <div class="theme-switcher d-flex gap-1">
+        <button class="btn-theme" id="btn-theme-light" onclick="setTheme('light')" title="Light Mode">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="btn-theme" id="btn-theme-dark" onclick="setTheme('dark')" title="Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="btn-theme" id="btn-theme-system" onclick="setTheme('system')" title="System Theme">
+            <i class="fas fa-desktop"></i>
+        </button>
+    </div>
+
+    <div class="container py-5" id="app">
+        </div>
+
+    <script>
+        const hari2_data = [
+            { id: 1, text: "一度払い込んだ入学金は、（  ）理由があっても返金しません。", options: ["ものすごい", "なにげない", "いかなる", "ややこしい"], answer: 2, explanation: "Uang pangkal tidak akan dikembalikan dengan alasan APAPUN.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ものすごい:</strong> Luar biasa / sangat hebat.</li><li><strong>2. なにげない:</strong> Tidak disengaja / biasa saja.</li><li><strong>3. いかなる:</strong> Tepat. Artinya 'apapun' (biasanya diikuti kata benda seperti 理由/alasan).</li><li><strong>4. ややこしい:</strong> Rumit / membingungkan.</li></ul>" },
+            { id: 2, text: "母はいつも「お金がない、お金がない」と（  ）いる。", options: ["ぼやいて", "とぼけて", "ぼけて", "こりて"], answer: 0, explanation: "Ibu selalu MENGELUH tidak ada uang.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ぼやいて:</strong> Tepat. ぼやく artinya mengeluh/menggerutu.</li><li><strong>2. とぼけて:</strong> Berpura-pura tidak tahu (play dumb).</li><li><strong>3. ぼけて:</strong> Pikun / gambar blur.</li><li><strong>4. こりて:</strong> Jera / kapok.</li></ul>" },
+            { id: 3, text: "彼女はいま、ロックに（  ）います。", options: ["かたよって", "意気込んで", "かぶれて", "ばれて"], answer: 2, explanation: "Dia sekarang sedang TERGILA-GILA/sangat terpengaruh oleh musik rock.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. かたよって:</strong> Condong / tidak seimbang.</li><li><strong>2. 意気込んで:</strong> Antusias / bersemangat (ikigomu).</li><li><strong>3. かぶれて:</strong> Tepat. かぶれる berarti terpengaruh kuat/tergila-gila pada sesuatu (bisa juga berarti alergi/ruam).</li><li><strong>4. ばれて:</strong> Terbongkar (rahasia).</li></ul>" },
+            { id: 4, text: "凶悪犯は（  ）逮捕されてしまった。", options: ["なにげなく", "そっけなく", "みっともなく", "あっけなく"], answer: 3, explanation: "Penjahat keji itu tertangkap DENGAN MUDAH (tanpa perlawanan berarti).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. なにげなく:</strong> Tanpa sengaja / biasa saja.</li><li><strong>2. そっけなく:</strong> Terasa dingin / cuek.</li><li><strong>3. みっともなく:</strong> Memalukan / tidak pantas dilihat.</li><li><strong>4. あっけなく:</strong> Tepat. Berakhir terlalu cepat/mudah dari yang dibayangkan.</li></ul>" },
+            { id: 5, text: "このアイスクリームはとても（  ）舌触りですね。", options: ["あざやかな", "のどかな", "すみやかな", "なめらかな"], answer: 3, explanation: "Es krim ini memiliki tekstur (di lidah) yang sangat LEMBUT/HALUS.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. あざやかな:</strong> Cerah / jelas (warna/ingatan).</li><li><strong>2. のどかな:</strong> Damai / tenang (suasana desa/cuaca).</li><li><strong>3. すみやかな:</strong> Cepat / segera.</li><li><strong>4. なめらかな:</strong> Tepat. Halus / lembut (smooth).</li></ul>" },
+            { id: 6, text: "母の愛情の（  ）手作りのマフラー。", options: ["からんだ", "ばれた", "つきた", "こもった"], answer: 3, explanation: "Syal buatan tangan yang DIPENUHI kasih sayang ibu.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. からんだ:</strong> Terlilit / terjalin.</li><li><strong>2. ばれた:</strong> Ketahuan / terbongkar.</li><li><strong>3. つきた:</strong> Habis (waktu/tenaga).</li><li><strong>4. こもった:</strong> Tepat. こもる berarti dipenuhi dengan (perasaan/kasih sayang).</li></ul>" },
+            { id: 7, text: "地震で倒れたビルの下から（  ）声が聞こえる。", options: ["うつろな", "かすかな", "あらゆる", "はんぱな"], answer: 1, explanation: "Terdengar suara yang Lirih/SAYUP-SAYUP dari bawah gedung yang runtuh.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. うつろな:</strong> Kosong / hampa (tatapan mata).</li><li><strong>2. かすかな:</strong> Tepat. Sayup-sayup / redup / samar (suara/cahaya).</li><li><strong>3. あらゆる:</strong> Segala / semua.</li><li><strong>4. はんぱな:</strong> Setengah-setengah / tanggung.</li></ul>" },
+            { id: 8, text: "津波はその地方に大きな被害を（  ）。", options: ["もたらした", "はかどった", "引きずった", "かさばった"], answer: 0, explanation: "Tsunami itu MEMBAWA/MENYEBABKAN kerusakan besar pada daerah tersebut.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. もたらした:</strong> Tepat. Membawa / mendatangkan (akibat/hasil).</li><li><strong>2. はかどった:</strong> Berjalan lancar (pekerjaan/belajar).</li><li><strong>3. 引きずった:</strong> Menyeret.</li><li><strong>4. かさばった:</strong> Memakan tempat / tebal.</li></ul>" },
+            { id: 9, text: "近所に雷が落ちて、（  ）音がした。", options: ["はなはだしい", "ものすごい", "すばしっこい", "おびただしい"], answer: 1, explanation: "Petir menyambar di dekat sini, suaranya SANGAT DAHSYAT.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. はなはだしい:</strong> Sangat parah/ekstrem (biasanya hal negatif: kesalahpahaman dll).</li><li><strong>2. ものすごい:</strong> Tepat. Sangat hebat/dahsyat/menakutkan (suara/tenaga).</li><li><strong>3. すばしっこい:</strong> Gesit / lincah.</li><li><strong>4. おびただしい:</strong> Sangat banyak (jumlah).</li></ul>" },
+            { id: 10, text: "安かったから仕方がないかもしれないが、このソファーは作りがとても（  ）です。", options: ["雑", "露骨", "巧妙", "不気味"], answer: 0, explanation: "Mungkin wajar karena murah, tapi pembuatan sofa ini sangat KASAR/ASAL-ASALAN.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 雑 (ざつ):</strong> Tepat. Kasar / sembarangan / asal-asalan.</li><li><strong>2. 露骨 (ろこつ):</strong> Terang-terangan / tanpa tedeng aling-aling.</li><li><strong>3. 巧妙 (こうみょう):</strong> Cerdik / terampil (dalam menipu dll).</li><li><strong>4. 不気味 (ぶきみ):</strong> Menyeramkan / firasat buruk.</li></ul>" },
+            { id: 11, text: "【気が抜けてぼんやりしている】", options: ["うぬぼれる", "こだわる", "ぼうぜんとする", "おびえる"], answer: 2, explanation: "Makna kehilangan semangat / melamun kebingungan.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. うぬぼれる:</strong> Sombong / besar kepala.</li><li><strong>2. こだわる:</strong> Terlalu memikirkan hal kecil / perfeksionis.</li><li><strong>3. ぼうぜんとする:</strong> Tepat. Tercengang / melamun kosong (呆然とする).</li><li><strong>4. おびえる:</strong> Ketakutan.</li></ul>" },
+            { id: 12, text: "【丸くてかわいらしい様子】", options: ["なめらかな", "つぶらな", "すみやかな", "のどかな"], answer: 1, explanation: "Makna bentuk bulat dan lucu (biasanya untuk mata).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. なめらかな:</strong> Lembut / halus.</li><li><strong>2. つぶらな:</strong> Tepat. Bulat dan imut (つぶらな瞳 = mata bulat lucu).</li><li><strong>3. すみやかな:</strong> Segera.</li><li><strong>4. のどかな:</strong> Damai.</li></ul>" },
+            { id: 13, text: "【複雑でわかりにくい様子】", options: ["けがらわしい", "みすぼらしい", "ややこしい", "まぎらわしい"], answer: 2, explanation: "Makna rumit dan sulit dimengerti.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. けがらわしい:</strong> Menjijikkan / kotor.</li><li><strong>2. みすぼらしい:</strong> Kumal / lusuh.</li><li><strong>3. ややこしい:</strong> Tepat. Rumit / kompleks.</li><li><strong>4. まぎらわしい:</strong> Membingungkan (karena mirip).</li></ul>" },
+            { id: 14, text: "【こわれやすい様子】", options: ["もろい", "しぶい", "あやうい", "あっけない"], answer: 0, explanation: "Makna mudah rusak atau rapuh.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. もろい:</strong> Tepat. Rapuh / mudah hancur.</li><li><strong>2. しぶい:</strong> Sepat / pahit / pelit / keren (desain kuno).</li><li><strong>3. あやうい:</strong> Berbahaya / terancam.</li><li><strong>4. あっけない:</strong> Berakhir terlalu cepat (antiklimaks).</li></ul>" },
+            { id: 15, text: "【新鮮で生き生きしている様子】", options: ["はなばなしい", "みずみずしい", "きらびやか", "すみやか"], answer: 1, explanation: "Makna segar dan penuh kehidupan.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. はなばなしい:</strong> Cemerlang / gemilang.</li><li><strong>2. みずみずしい:</strong> Tepat. Segar (biasanya sayur/buah/kulit muda).</li><li><strong>3. きらびやか:</strong> Gemerlap / berkilauan.</li><li><strong>4. すみやか:</strong> Segera.</li></ul>" },
+            { id: 16, text: "ジョギングをしたら、「とても疲れた」。", options: ["ばてた", "とぼけた", "たるんだ", "こもった"], answer: 0, explanation: "Kata yang maknanya paling dekat dengan 'sangat lelah'.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ばてた:</strong> Tepat. Sangat lelah/kehabisan tenaga.</li><li><strong>2. とぼけた:</strong> Pura-pura bodoh.</li><li><strong>3. たるんだ:</strong> Kendur (kulit/disiplin).</li><li><strong>4. こもった:</strong> Dipenuhi / berdiam diri di dalam.</li></ul>" },
+            { id: 17, text: "私はスポーツは何でも得意だが、水泳だけは田中さんに「負ける」。", options: ["おびえる", "いかれる", "さえない", "かなわない"], answer: 3, explanation: "Kata yang maknanya paling dekat dengan 'kalah' (tidak bisa menandingi).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. おびえる:</strong> Ketakutan.</li><li><strong>2. いかれる:</strong> Rusak / gila (slang).</li><li><strong>3. さえない:</strong> Kurang menarik / muram.</li><li><strong>4. かなわない:</strong> Tepat. Tidak tertandingi / tidak bisa menang dari.</li></ul>" },
+            { id: 18, text: "それはどこにでもいる「平凡な」虫です。", options: ["あっけない", "ありふれた", "まぎらわしい", "あやふやな"], answer: 1, explanation: "Kata yang maknanya paling dekat dengan 'biasa/umum'.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. あっけない:</strong> Terlalu cepat berakhir.</li><li><strong>2. ありふれた:</strong> Tepat. Biasa saja / pasaran / sangat umum.</li><li><strong>3. まぎらわしい:</strong> Membingungkan karena mirip.</li><li><strong>4. あやふやな:</strong> Tidak jelas / ambigu.</li></ul>" },
+            { id: 19, text: "久しぶりに会った高校時代の同級生は、とても「実際の年齢より上に見えた」。", options: ["ぼやけて", "ばけて", "はげて", "ふけて"], answer: 3, explanation: "Kata yang maknanya paling dekat dengan 'terlihat lebih tua'.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ぼやけて:</strong> Blur / tidak fokus.</li><li><strong>2. ばけて:</strong> Menyamar / berubah wujud.</li><li><strong>3. はげて:</strong> Botak / terkelupas (cat).</li><li><strong>4. ふけて:</strong> Tepat. Terlihat tua (老ける).</li></ul>" },
+            { id: 20, text: "そのスケート選手は最初のジャンプを「失敗して」しまった。", options: ["しくじって", "さっして", "どもって", "とまどって"], answer: 0, explanation: "Kata yang maknanya paling dekat dengan 'gagal/salah'.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. しくじって:</strong> Tepat. Melakukan kesalahan / gagal (しくじる).</li><li><strong>2. さっして:</strong> Memaklumi / menebak (察する).</li><li><strong>3. どもって:</strong> Gagap / terbata-bata.</li><li><strong>4. とまどって:</strong> Bingung (tidak tahu harus berbuat apa).</li></ul>" },
+            { id: 21, text: "かさばる", options: ["今月は食事代が「かさばって」しまった。", "雨が降ってきたので「かさばって」歩いた。", "袋が大きく、「かさばって」持ちにくい。", "住宅がたくさん「かさばって」いる。"], answer: 2, explanation: "Penggunaan yang tepat untuk かさばる (memakan tempat / bulky/besar ukurannya).<br>Opsi 1 salah, seharusnya かさんで (biaya menumpuk).<br>Opsi 3 paling tepat: 'Tasnya besar dan memakan tempat, jadi susah dibawa.'" },
+            { id: 22, text: "どもる", options: ["社長との面談で、緊張のあまり「どもって」しまった。", "家に明かりが「どもって」いる。", "年をとって頭がだんだん「どもって」きた。", "調子の悪かったパソコンがついに「どもった」。"], answer: 0, explanation: "Penggunaan yang tepat untuk どもる (berbicara gagap).<br>Opsi 1 paling tepat: 'Saking gugupnya wawancara dengan direktur, jadi gagap.'<br>Opsi 2 salah (seharusnya ともって - menyala). Opsi 3 salah (ぼけて - pikun)." },
+            { id: 23, text: "そっけない", options: ["家の裏で「そっけない」音がする。", "その事件は「そっけなく」解決した。", "相当がんばっても「そっけなく」合格できないでしょう。", "怒った妻は「勝手にすれば？」と「そっけない」返事をした。"], answer: 3, explanation: "Penggunaan yang tepat untuk そっけない (dingin / cuek / tidak ramah).<br>Opsi 4 paling tepat: Istri yang marah memberi jawaban cuek 'Terserah kamu.'<br>Opsi 2 salah (seharusnya あっけなく - selesai begitu saja)." },
+            { id: 24, text: "すたれる", options: ["長い間水をあげなかったから、植木が「すたれて」しまった。", "彼の考え方は「すたれて」いて、年寄りはもちろん若者にも理解できない。", "あんなにはやったゲームだが、あっという間に「すたれて」しまった。", "「知らない」と「すたれて」もだめだよ。みんな知っているんだから。"], answer: 2, explanation: "Penggunaan yang tepat untuk すたれる (ketinggalan zaman / tidak populer lagi).<br>Opsi 3 paling tepat: 'Game yang tadinya sangat hits itu, dalam sekejap jadi tidak populer lagi.'<br>Opsi 1 salah (seharusnya 枯れて - layu/mati)." },
+            { id: 25, text: "ひさしい", options: ["「ひさしく」素晴らしい映画を見た。", "そういえば、「ひさしく」すきやきを食べていないなあ。", "彼は自分の意見を「ひさしく」述べた。", "「ひさしく」ない関係の人には、メールアドレスを知らせていない。"], answer: 1, explanation: "Penggunaan yang tepat untuk ひさしい (sudah lama - long time).<br>Opsi 2 paling tepat: 'Ngomong-ngomong, sudah lama tidak makan sukiyaki.'<br>Opsi 4 salah (seharusnya 親しくない - tidak akrab)." }
+        ];
+    </script>
+
+    <script>
+        // --- 1. THEME MANAGEMENT ---
+        function getSavedTheme() {
+            return localStorage.getItem('jlpt_theme') || 'system';
+        }
+
+        function setTheme(theme) {
+            localStorage.setItem('jlpt_theme', theme);
+            
+            document.querySelectorAll('.btn-theme').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-theme-${theme}`).classList.add('active');
+
+            if (theme === 'system') {
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.setAttribute('data-bs-theme', systemPrefersDark ? 'dark' : 'light');
+            } else {
+                document.documentElement.setAttribute('data-bs-theme', theme);
+            }
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (getSavedTheme() === 'system') setTheme('system');
+        });
+
+        setTheme(getSavedTheme());
+
+        // --- 2. STATE MANAGEMENT ---
+        let state = JSON.parse(sessionStorage.getItem('jlpt_session_minggu2')) || {
+            mode: null,          
+            answers: {},         
+            timeRemaining: 900,  
+            isFinished: false,
+            lastClicked: null    
+        };
+        let timerInterval;
+
+        const saveState = () => sessionStorage.setItem('jlpt_session_minggu2', JSON.stringify(state));
+
+        const resetSession = () => {
+            if(confirm("Yakin ingin keluar? Riwayat ujian saat ini akan terhapus.")) {
+                state = { mode: null, answers: {}, timeRemaining: 900, isFinished: false, lastClicked: null };
+                saveState();
+                clearInterval(timerInterval);
+                renderHome();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+        
+        const returnToIndex = () => {
+            window.location.href = "../index.html";
+        };
+
+        const app = document.getElementById('app');
+
+        // --- 3. RENDERING ENGINE ---
+        function renderHome() {
+            app.innerHTML = `
+                <div class="card card-exam mx-auto" style="max-width: 650px;">
+                    <div class="card-body text-center p-4 p-md-5">
+                        <div class="mb-4 text-primary">
+                            <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white mb-3 shadow" style="width: 80px; height: 80px;">
+                                <i class="fas fa-torii-gate fa-2x"></i>
+                            </div>
+                            <h1 class="display-6 fw-bold mb-1" style="letter-spacing: -1px;">日本語能力試験 <span class="text-dark" data-bs-theme="dark" style="color: inherit;">N1</span></h1>
+                        </div>
+                        <h5 class="text-secondary mb-4 fw-bold">SOU MATOME - 第2週 いろいろ表現しよう②</h5>
+                        <p class="mb-4 text-muted">Silakan pilih mode simulasi. <br class="d-none d-md-block">Uji kemampuan tata bahasa dan kosakata Anda sekarang.</p>
+                        
+                        <div class="d-grid gap-3 mb-4">
+                            <button onclick="startQuiz('asli')" class="btn btn-outline-primary btn-lg p-3 p-md-4 text-start position-relative shadow-sm rounded-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 me-md-4 shadow" style="min-width: 50px; height: 50px;">
+                                        <i class="fas fa-file-signature fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1 fw-bold">Mode Ujian Asli (本試験)</h5>
+                                        <small style="font-size: 0.85rem;">15 Menit | Bisa perbaiki jawaban | Evaluasi Akhir</small>
+                                    </div>
+                                </div>
+                            </button>
+                            <button onclick="startQuiz('latihan')" class="btn btn-outline-success btn-lg p-3 p-md-4 text-start position-relative shadow-sm rounded-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3 me-md-4 shadow" style="min-width: 50px; height: 50px;">
+                                        <i class="fas fa-book-reader fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1 fw-bold">Mode Latihan (練習)</h5>
+                                        <small style="font-size: 0.85rem;">Santai | Langsung cek benar/salah & penjelasan</small>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        
+                        <hr class="my-4">
+                        <button onclick="returnToIndex()" class="btn btn-light border w-100 fw-bold rounded-pill text-muted">
+                            <i class="fas fa-arrow-left me-2"></i> Kembali ke Menu Utama (.index.html)
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function startQuiz(mode) {
+            state.mode = mode;
+            state.isFinished = false;
+            state.lastClicked = null;
+            saveState();
+            
+            if (mode === 'asli' && !timerInterval) {
+                timerInterval = setInterval(updateTimer, 1000);
+            }
+            renderQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateTimer() {
+            if (state.timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                alert("Waktu Habis! Ujian otomatis dikumpulkan.");
+                finishQuiz();
+                return;
+            }
+            state.timeRemaining--;
+            saveState();
+            
+            const timerEl = document.getElementById('timer-display');
+            if (timerEl) {
+                const m = Math.floor(state.timeRemaining / 60).toString().padStart(2, '0');
+                const s = (state.timeRemaining % 60).toString().padStart(2, '0');
+                
+                if (state.timeRemaining < 180) { // Kurang dari 3 menit
+                    timerEl.classList.remove('bg-primary');
+                    timerEl.classList.add('timer-warning');
+                }
+                timerEl.innerHTML = `<i class="fas fa-stopwatch me-1"></i> ${m}:${s}`;
+            }
+        }
+
+        window.selectOption = function(qId, optIndex) {
+            if (state.isFinished) return;
+            
+            const isCorrect = hari2_data.find(q => q.id === qId).answer === optIndex;
+            
+            state.answers[qId] = optIndex;
+            state.lastClicked = { qId, optIndex, isCorrect }; 
+            
+            saveState();
+            renderQuiz();
+        };
+
+        function renderQuiz() {
+            if (state.isFinished) return renderResult();
+
+            let scoreLatihan = calculateScore();
+            let totalAnswered = Object.keys(state.answers).length;
+            let progress = (totalAnswered / hari2_data.length) * 100;
+
+            let html = `
+                <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center mb-4 sticky-top bg-body pt-3 pb-2 z-3" style="margin-top:-20px;">
+                    <button onclick="resetSession()" class="btn btn-outline-secondary rounded-pill shadow-sm">
+                        <i class="fas fa-times me-1"></i> Batal
+                    </button>
+                    ${state.mode === 'asli' 
+                        ? `<span class="badge bg-primary fs-5 shadow px-3 py-2 rounded-pill" id="timer-display">
+                            <i class="fas fa-stopwatch me-1"></i> ${Math.floor(state.timeRemaining / 60).toString().padStart(2, '0')}:${(state.timeRemaining % 60).toString().padStart(2, '0')}
+                           </span>`
+                        : `<span class="badge bg-success fs-5 shadow px-3 py-2 rounded-pill"><i class="fas fa-star me-1 text-warning"></i> Skor: ${scoreLatihan.total}</span>`
+                    }
+                </div>
+
+                <div class="card card-exam mb-4 border-0">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-3 ${state.mode === 'asli' ? 'text-primary' : 'text-success'}">
+                            <i class="${state.mode === 'asli' ? 'fas fa-pen-nib' : 'fas fa-dumbbell'} me-2"></i>
+                            ${state.mode === 'asli' ? '本試験 (Ujian Asli) - 第2週' : '練習 (Mode Latihan) - 第2週'}
+                        </h4>
+                        <div class="progress" style="height: 12px; border-radius: 10px; background-color: var(--bs-secondary-bg);">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated ${state.mode === 'asli' ? 'bg-primary' : 'bg-success'}" 
+                                 style="width: ${progress}%"></div>
+                        </div>
+                        <div class="text-end mt-2 fw-bold text-muted small">${totalAnswered} / ${hari2_data.length} Terjawab</div>
+                    </div>
+                </div>
+            `;
+
+            hari2_data.forEach((q, index) => {
+                const userAnswer = state.answers[q.id];
+                html += `
+                    <div class="card card-exam mb-4" id="q${q.id}">
+                        <div class="card-body p-3 p-md-4">
+                            <div class="d-flex align-items-start mb-4">
+                                <span class="badge badge-soal rounded-pill me-3 shadow-sm py-2 px-3">${index + 1}</span> 
+                                <span class="soal-text lh-base">${q.text}</span>
+                            </div>
+                            <div class="row g-3 ms-md-4">
+                `;
+
+                q.options.forEach((opt, oIndex) => {
+                    let btnClass = '';
+                    let animateClass = '';
+                    
+                    if (state.mode === 'asli') {
+                        if (userAnswer === oIndex) btnClass = 'btn-selected'; 
+                    } else if (state.mode === 'latihan') {
+                        if (userAnswer === oIndex) {
+                            btnClass = (oIndex === q.answer) ? 'btn-success text-white' : 'btn-danger text-white';
+                        } else if (userAnswer !== undefined && oIndex === q.answer) {
+                            btnClass = 'border-success text-success fw-bold bg-success bg-opacity-10';
+                        }
+                    }
+
+                    if (state.lastClicked && state.lastClicked.qId === q.id && state.lastClicked.optIndex === oIndex && state.mode === 'latihan') {
+                        animateClass = state.lastClicked.isCorrect ? 'animate-correct' : 'animate-wrong';
+                    }
+
+                    html += `
+                        <div class="col-12 col-md-6 d-grid">
+                            <button onclick="selectOption(${q.id}, ${oIndex})" 
+                                    class="btn btn-option border p-3 d-flex align-items-center ${btnClass} ${animateClass}">
+                                <span class="opt-number shadow-sm">${oIndex + 1}</span>
+                                <span>${opt}</span>
+                            </button>
+                        </div>
+                    `;
+                });
+
+                if (state.mode === 'latihan' && userAnswer !== undefined) {
+                    const isCorrect = userAnswer === q.answer;
+                    html += `
+                        <div class="col-12 mt-4 ms-md-4 w-auto">
+                            <div class="p-3 explanation-box shadow-sm">
+                                <h6 class="${isCorrect ? 'text-success' : 'text-danger'} fw-bold mb-2">
+                                    <i class="${isCorrect ? 'fas fa-check-circle' : 'fas fa-times-circle'} me-1"></i>
+                                    ${isCorrect ? 'Jawaban Tepat!' : 'Jawaban Kurang Tepat.'}
+                                </h6>
+                                <div class="small lh-lg">
+                                    ${q.explanation}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                html += `</div></div></div>`;
+            });
+
+            html += `
+                <div class="text-center mt-5 mb-5 pb-5">
+                    <button onclick="confirmFinish()" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow fw-bold fs-5">
+                        <i class="fas fa-paper-plane me-2"></i> Kumpulkan Ujian
+                    </button>
+                </div>
+            `;
+
+            app.innerHTML = html;
+        }
+
+        function calculateScore() {
+            let correct = 0, wrong = 0;
+            for (let qId in state.answers) {
+                const q = hari2_data.find(x => x.id == qId);
+                if (state.answers[qId] === q.answer) correct++;
+                else wrong++;
+            }
+            return { correct, wrong, total: correct - wrong }; 
+        }
+
+        window.confirmFinish = function() {
+            const answered = Object.keys(state.answers).length;
+            if (answered < hari2_data.length) {
+                if(!confirm(`Ada soal yang belum dijawab (${answered}/${hari2_data.length}). Yakin ingin mengumpulkan sekarang?`)) {
+                    return;
+                }
+            } else {
+                if(!confirm("Kumpulkan dan lihat hasil akhir?")) return;
+            }
+            finishQuiz();
+        };
+
+        window.finishQuiz = function() {
+            state.isFinished = true;
+            clearInterval(timerInterval);
+            saveState();
+            renderResult();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        function renderResult() {
+            const result = calculateScore();
+            const answeredCount = Object.keys(state.answers).length;
+            const unanswered = hari2_data.length - answeredCount;
+            
+            let grade = '不合格 (F)';
+            let gradeColor = 'text-danger';
+            let icon = 'fa-times-circle';
+            
+            if (result.total >= 20) { grade = '秀 (A+)'; gradeColor = 'text-success'; icon = 'fa-crown text-warning'; }
+            else if (result.total >= 15) { grade = '優 (A)'; gradeColor = 'text-primary'; icon = 'fa-medal text-primary'; }
+            else if (result.total >= 10) { grade = '良 (B)'; gradeColor = 'text-info'; icon = 'fa-thumbs-up text-info'; }
+            else if (result.total >= 5) { grade = '可 (C)'; gradeColor = 'text-warning'; icon = 'fa-check text-warning'; }
+            else if (result.total >= 0) { grade = '不可 (D)'; gradeColor = 'text-danger'; icon = 'fa-exclamation-triangle text-danger'; }
+
+            let html = `
+                <div class="card card-exam border-0 mb-5 text-center overflow-hidden">
+                    <div class="bg-primary text-white py-4 shadow-sm">
+                        <h2 class="fw-bold m-0"><i class="fas fa-poll me-2"></i> Hasil Simulasi N1 - 第2週</h2>
+                    </div>
+                    <div class="card-body p-4 p-md-5">
+                        <i class="fas ${icon} fa-5x mb-3 drop-shadow"></i>
+                        <h1 class="display-3 fw-bold mb-1 ${gradeColor}">${grade}</h1>
+                        <h4 class="mb-4 text-muted fw-bold">Skor Anda: <span class="${gradeColor}">${result.total}</span> / 25</h4>
+                        
+                        <div class="row justify-content-center mb-5 g-3">
+                            <div class="col-4 col-md-3">
+                                <div class="bg-success text-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center">
+                                    <i class="fas fa-check-circle fa-2x mb-2 opacity-75"></i>
+                                    <h6 class="mb-1">Benar</h6>
+                                    <h3 class="m-0 fw-bold">${result.correct}</h3>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-3">
+                                <div class="bg-danger text-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center">
+                                    <i class="fas fa-times-circle fa-2x mb-2 opacity-75"></i>
+                                    <h6 class="mb-1">Salah</h6>
+                                    <h3 class="m-0 fw-bold">${result.wrong}</h3>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-3">
+                                <div class="bg-secondary text-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center">
+                                    <i class="fas fa-minus-circle fa-2x mb-2 opacity-75"></i>
+                                    <h6 class="mb-1">Kosong</h6>
+                                    <h3 class="m-0 fw-bold">${unanswered}</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="resetSession()" class="btn btn-outline-primary btn-lg px-5 rounded-pill shadow-sm fw-bold">
+                            <i class="fas fa-redo-alt me-2"></i> Ulangi Simulasi
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-4 border-bottom border-primary border-2 pb-2">
+                    <i class="fas fa-list-check fa-2x me-3 text-primary"></i>
+                    <h3 class="fw-bold m-0 text-primary">Evaluasi Detail</h3>
+                </div>
+            `;
+
+            hari2_data.forEach((q, index) => {
+                const userAnswer = state.answers[q.id];
+                const isCorrect = userAnswer === q.answer;
+                const isUnanswered = userAnswer === undefined;
+                
+                let borderClass = isUnanswered ? 'border-secondary' : (isCorrect ? 'border-success' : 'border-danger');
+                let badgeStatus = isUnanswered 
+                    ? '<span class="badge bg-secondary rounded-pill px-3"><i class="fas fa-minus me-1"></i> Kosong</span>' 
+                    : (isCorrect ? '<span class="badge bg-success rounded-pill px-3"><i class="fas fa-check me-1"></i> Benar</span>' : '<span class="badge bg-danger rounded-pill px-3"><i class="fas fa-times me-1"></i> Salah</span>');
+
+                html += `
+                    <div class="card card-exam mb-4 shadow-sm border-0" style="border-left: 6px solid ${isUnanswered ? '#6c757d' : (isCorrect ? '#198754' : '#dc3545')} !important; border-top: none;">
+                        <div class="card-body p-4">
+                            <h5 class="mb-3 lh-base">
+                                ${badgeStatus} <span class="ms-2 fw-bold text-muted">No. ${index + 1}</span>
+                            </h5>
+                            <h5 class="fw-bold mb-4">${q.text}</h5>
+                            
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-4 bg-light text-dark h-100 ${!isUnanswered && !isCorrect ? 'border border-danger border-2' : 'border border-light'}">
+                                        <small class="text-muted d-block mb-2 fw-bold"><i class="fas fa-user-edit me-1"></i> Jawaban Anda:</small>
+                                        <strong class="${isCorrect ? 'text-success' : (!isUnanswered ? 'text-danger' : 'text-muted')} fs-6">
+                                            ${isUnanswered ? '<em>Tidak dijawab</em>' : (userAnswer + 1) + '. ' + q.options[userAnswer]}
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-4 bg-light text-dark h-100 border border-success border-2" style="background-color: rgba(25,135,84,0.05) !important;">
+                                        <small class="text-success d-block mb-2 fw-bold"><i class="fas fa-key me-1"></i> Kunci Jawaban:</small>
+                                        <strong class="text-success fs-6">
+                                            ${(q.answer + 1)}. ${q.options[q.answer]}
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="explanation-box p-3 rounded-3">
+                                <span class="badge bg-primary mb-2">解説 (Penjelasan)</span>
+                                <div class="lh-lg small">${q.explanation}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `<div class="mb-5 pb-5"></div>`;
+            app.innerHTML = html;
+        }
+
+        // --- 4. INIT ---
+        if (state.mode && !state.isFinished) {
+            if (state.mode === 'asli' && !timerInterval) {
+                timerInterval = setInterval(updateTimer, 1000);
+            }
+            renderQuiz();
+        } else if (state.isFinished) {
+            renderResult();
+        } else {
+            renderHome();
+        }
+    </script>
+</body>
+</html>
