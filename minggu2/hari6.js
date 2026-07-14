@@ -13,7 +13,7 @@ const kosakata_m2h6 = [
     arti: 'Sangat hebat / Dahsyat / Luar biasa',
     penjelasan: 'Kata sifat-i yang digunakan untuk menekankan tingkat kekuatan, jumlah, atau intensitas sesuatu yang melebihi batas normal. Bisa digunakan untuk hal positif maupun negatif.',
     contoh1: '外はものすごい風だ。\n(Di luar anginnya sangat dahsyat/kencang.)',
-    contoh2: ''
+    contoh2: 'あの新人歌手は、ものすごい歌唱力を持っている。\n(Penyanyi pendatang baru itu memiliki kemampuan bernyanyi yang sangat luar biasa.)'
   },
   {
     id: 'm2h6_2',
@@ -23,9 +23,9 @@ const kosakata_m2h6 = [
     kanji: 'おびただしい',
     furigana: 'おびただしい',
     arti: 'Sangat banyak (jumlahnya)',
-    penjelasan: 'Menggambarkan jumlah yang luar biasa banyak hingga memberikan kesan yang kuat. Sering kali (meski tidak selalu) digunakan dalam konteks hal yang kurang menyenangkan atau berlebihan.',
+    penjelasan: 'Menggambarkan jumlah yang luar biasa banyak hingga memberikan kesan yang kuat. Sering kali (meski tidak selalu) digunakan dalam konteks hal yang kurang menyenangkan, berlebihan, atau berantakan.',
     contoh1: 'おびただしい数の虫\n(Serangga dalam jumlah yang sangat banyak.)',
-    contoh2: ''
+    contoh2: '事故の現場には、おびただしい量の血が流れていた。\n(Di tempat kejadian kecelakaan, darah dalam jumlah yang sangat banyak mengalir.)'
   },
   {
     id: 'm2h6_3',
@@ -35,9 +35,9 @@ const kosakata_m2h6 = [
     kanji: '甚だしい',
     furigana: 'はなはだしい',
     arti: 'Sangat parah / Ekstrem / Keterlaluan',
-    penjelasan: 'Menunjukkan tingkat suatu keadaan yang sangat berlebihan atau menyimpang jauh dari standar yang wajar. Umumnya digunakan untuk hal-hal yang bersifat negatif (seperti kebodohan, kerugian, atau ketidaksopanan).',
+    penjelasan: 'Menunjukkan tingkat suatu keadaan yang sangat berlebihan atau menyimpang jauh dari standar yang wajar. Umumnya digunakan untuk hal-hal yang bersifat negatif (seperti kebodohan, kerugian, ketidaksopanan, atau kesalahpahaman).',
     contoh1: '彼は非常識も甚だしい。\n(Dia itu sangat amat tidak tahu aturan / keterlaluan kurang ajarnya.)',
-    contoh2: ''
+    contoh2: '確認不足による、会社の損失は甚だしい。\n(Kerugian perusahaan akibat kurangnya konfirmasi sangatlah parah/ekstrem.)'
   },
   {
     id: 'm2h6_4',
@@ -49,7 +49,7 @@ const kosakata_m2h6 = [
     arti: 'Menakjubkan / Luar biasa mencolok',
     penjelasan: 'Merujuk pada perkembangan, kemajuan, atau prestasi yang sangat brilian, cepat, dan jelas terlihat sehingga membuat orang yang melihatnya takjub.',
     contoh1: '目覚ましい活躍\n(Pencapaian/kiprah yang sangat menakjubkan.)',
-    contoh2: ''
+    contoh2: 'この国は近年、目覚ましい経済発展を遂げている。\n(Negara ini telah mencapai pertumbuhan ekonomi yang sangat menakjubkan dalam beberapa tahun terakhir.)'
   },
   {
     id: 'm2h6_5',
@@ -61,7 +61,7 @@ const kosakata_m2h6 = [
     arti: 'Tanpa batas / Tak terhingga',
     penjelasan: 'Kondisi di mana tidak ada ujung, batas, atau akhirnya. Kata ini mengekspresikan kelapangan, jumlah, atau waktu yang seolah-olah tidak ada habisnya.',
     contoh1: '限りなく広がる大草原\n(Padang rumput luas yang membentang tanpa batas.)',
-    contoh2: ''
+    contoh2: '科学の可能性は無限に広がっている。\n(Kemungkinan dalam dunia sains berkembang tanpa batas/tak terhingga.)'
   },
   {
     id: 'm2h6_6',
@@ -73,7 +73,7 @@ const kosakata_m2h6 = [
     arti: 'Tak berujung / Tiada akhir',
     penjelasan: 'Sangat mirip dengan "kagirinaku", digunakan untuk mendeskripsikan ruang, jarak, waktu, atau impian yang sangat luas/panjang hingga ujungnya (果て) tidak terlihat.',
     contoh1: '果てしない大地\n(Daratan yang luas tak berujung.)',
-    contoh2: ''
+    contoh2: '宇宙は果てしない広がりを持っている。\n(Alam semesta memiliki luas yang tak berujung/tiada akhir.)'
   },
   {
     id: 'm2h6_7',
@@ -83,9 +83,9 @@ const kosakata_m2h6 = [
     kanji: '極めて',
     furigana: 'きわめて',
     arti: 'Sangat / Amat / Ekstrem',
-    penjelasan: 'kata keterangan formal untuk mengekspresikan tingkat yang paling tinggi (very/extremely). Sering digunakan dalam berita, tulisan formal, atau presentasi bisnis.',
+    penjelasan: 'Kata keterangan formal untuk mengekspresikan tingkat yang paling tinggi (very/extremely). Sering digunakan dalam berita, tulisan formal, laporan ilmiah, atau presentasi bisnis.',
     contoh1: '極めて重要な問題\n(Masalah yang amat sangat penting.)',
-    contoh2: ''
+    contoh2: '新しい治療法の開発は、極めて困難な道のりだった。\n(Pengembangan metode pengobatan baru adalah jalan yang amat sangat sulit.)'
   },
   {
     id: 'm2h6_8',
@@ -97,7 +97,7 @@ const kosakata_m2h6 = [
     arti: 'Mutlak / Jauh lebih (dibandingkan yang lain) / Pastinya',
     penjelasan: 'Digunakan saat membandingkan sesuatu untuk menegaskan bahwa satu pilihan memiliki keunggulan atau perbedaan yang sangat mutlak dan tidak bisa dibantah dibandingkan pilihan lainnya.',
     contoh1: 'その店の客は若い人が断然多い。\n(Pelanggan di toko itu sudah pasti/mutlak kebanyakan adalah anak muda.)',
-    contoh2: ''
+    contoh2: 'ビールを飲むなら、生ビールの方が断然美味しい。\n(Kalau mau minum bir, bir draf/segar mutlak jauh lebih enak.)'
   },
   {
     id: 'm2h6_9',
@@ -109,7 +109,7 @@ const kosakata_m2h6 = [
     arti: 'Berantakan / Sangat (Slang) / Kacau',
     penjelasan: 'Memiliki dua arti utama. Pertama: Keadaan yang hancur lebur, kacau balau, atau tidak masuk akal. Kedua (dalam percakapan sehari-hari/slang): Sangat/banget, setara dengan "totemo" tapi lebih kasual.',
     contoh1: '車がめちゃくちゃに壊れる。\n(Mobilnya hancur berantakan.)',
-    contoh2: 'めちゃくちゃおいしい。\n(Enak bangeeet. *Sering dipakai di percakapan sehari-hari)'
+    contoh2: '彼の話の順番はめちゃくちゃで、さっぱり理解できない。\n(Urutan bicaranya sangat kacau/berantakan, sehingga sama sekali tidak bisa dipahami.)'
   },
   {
     id: 'm2h6_10',
@@ -121,7 +121,7 @@ const kosakata_m2h6 = [
     arti: 'Sempurna',
     penjelasan: 'Kondisi di mana sama sekali tidak ada cacat, kekurangan, atau kesalahan sedikit pun. Semuanya berjalan 100% ideal.',
     contoh1: '完ぺきな演技\n(Akting/penampilan yang sempurna.)',
-    contoh2: ''
+    contoh2: '彼女はフランス語を完ぺきにマスターした。\n(Dia telah menguasai bahasa Prancis dengan sempurna.)'
   },
   {
     id: 'm2h6_11',
@@ -131,9 +131,9 @@ const kosakata_m2h6 = [
     kanji: '強烈(な)',
     furigana: 'きょうれつ(な)',
     arti: 'Kuat / Tajam / Intens',
-    penjelasan: 'Menyatakan bahwa suatu stimulus (seperti kesan, bau, cahaya, pukulan, atau rasa) sangat kuat, tajam, dan meninggalkan dampak yang mendalam pada indera atau perasaan.',
+    penjelasan: 'Menyatakan bahwa suatu stimulus (seperti kesan, bau, cahaya, pukulan, warna, atau rasa) sangat kuat, tajam, dan meninggalkan dampak yang mendalam pada indera atau perasaan.',
     contoh1: '強烈な印象\n(Kesan yang sangat kuat/mendalam.)',
-    contoh2: ''
+    contoh2: 'このスパイスは強烈なにおいがする。\n(Rempah-rempah ini memiliki aroma/bau yang sangat menyengat/tajam.)'
   },
   {
     id: 'm2h6_12',
@@ -145,7 +145,7 @@ const kosakata_m2h6 = [
     arti: 'Ganas / Dahsyat / Mati-matian',
     penjelasan: 'Derajat kecepatan, semangat, kekuatan, atau intensitas yang sangat luar biasa hebatnya (fierce/intense). Sering dipakai untuk cuaca (badai), kecepatan, atau cara kerja yang gila-gilaan.',
     contoh1: '猛烈に働く\n(Bekerja dengan mati-matian / gila-gilaan.)',
-    contoh2: ''
+    contoh2: '台風が猛烈な勢いで近づいている。\n(Topan sedang mendekat dengan kekuatan/kecepatan yang sangat dahsyat.)'
   },
   {
     id: 'm2h6_13',
@@ -157,7 +157,7 @@ const kosakata_m2h6 = [
     arti: 'Mendominasi / Mayoritas mutlak / Luar biasa',
     penjelasan: 'Perbedaan atau kekuatan yang sangat jauh dibandingkan lawan atau hal lainnya, sehingga menekan/mendominasi sepenuhnya tanpa memberi celah saingan (overwhelming).',
     contoh1: '反対意見が圧倒的に多い。\n(Pendapat yang menolak secara mutlak lebih dominan/banyak.)',
-    contoh2: ''
+    contoh2: '彼は他の選手に圧倒的な実力の差を見せつけた。\n(Dia menunjukkan perbedaan kemampuan yang luar biasa/mendominasi kepada atlet lainnya.)'
   },
   {
     id: 'm2h6_14',
@@ -169,7 +169,7 @@ const kosakata_m2h6 = [
     arti: 'Ekstrem / Berlebihan / Condong ke satu sisi',
     penjelasan: 'Kondisi, pemikiran, atau tindakan yang menyimpang jauh dari standar wajar (tengah-tengah) dan terlalu berat/condong ke salah satu ujung (misal: terlalu mahal, terlalu pelit, pemikiran terlalu radikal).',
     contoh1: '極端な意見\n(Pendapat yang ekstrem/berlebihan.)',
-    contoh2: ''
+    contoh2: '極端なダイエットは体に悪い影響を与える。\n(Diet yang ekstrem/berlebihan memberikan pengaruh buruk bagi tubuh.)'
   },
   {
     id: 'm2h6_15',
@@ -181,7 +181,7 @@ const kosakata_m2h6 = [
     arti: 'Besar-besaran / Drastis / Signifikan',
     penjelasan: 'Biasanya digunakan untuk perubahan angka, nilai, skala, atau ukuran yang lonjakan/penurunannya sangat besar dan signifikan (drastically/substantially).',
     contoh1: '大幅に増加する\n(Meningkat secara drastis / besar-besaran.)',
-    contoh2: ''
+    contoh2: '来月から、電気料金が大幅に値上げされるそうだ。\n(Katanya, mulai bulan depan tarif listrik akan dinaikkan secara drastis/signifikan.)'
   },
   {
     id: 'm2h6_16',
@@ -193,7 +193,7 @@ const kosakata_m2h6 = [
     arti: 'Sisa / Tanggung / Tidak genap',
     penjelasan: 'Sesuatu yang jumlahnya tidak utuh, ganjil, tersisa sedikit, atau serba nanggung sehingga sulit untuk dimanfaatkan atau diselesaikan dengan baik.',
     contoh1: '半端な布\n(Kain perca / kain sisa yang ukurannya nanggung.)',
-    contoh2: ''
+    contoh2: '小銭が半端に残ってしまった。\n(Uang receh tersisa dalam jumlah yang nanggung/tanggung.)'
   },
   {
     id: 'm2h6_17',
@@ -205,7 +205,7 @@ const kosakata_m2h6 = [
     arti: 'Setengah-setengah / Nanggung / Tidak tuntas',
     penjelasan: 'Melakukan pekerjaan atau suatu keadaan yang berhenti di tengah jalan, tidak diselesaikan sampai akhir, atau dilakukan tanpa keseriusan penuh (half-hearted).',
     contoh1: '工事が中途半端に終わる\n(Pekerjaan konstruksinya selesai dalam keadaan nanggung / setengah jalan.)',
-    contoh2: ''
+    contoh2: '中途半端な気持ちで練習しても、上手にはなれない。\n(Meskipun berlatih dengan perasaan setengah-setengah/nanggung, kamu tidak akan bisa menjadi mahir.)'
   },
   {
     id: 'm2h6_18',
@@ -217,7 +217,7 @@ const kosakata_m2h6 = [
     arti: 'Samar-samar / Sayup-sayup',
     penjelasan: 'Sesuatu (seperti suara, bau, cahaya, atau ingatan) yang sangat lemah, nyaris tidak terasa atau terlihat, tetapi masih ada wujudnya (faint/slight).',
     contoh1: 'かすかに聞こえる\n(Terdengar sayup-sayup / samar-samar.)',
-    contoh2: ''
+    contoh2: '遠くの山に、かすかな光が見えた。\n(Di gunung yang jauh, terlihat cahaya samar-samar.)'
   },
   {
     id: 'm2h6_19',
@@ -229,7 +229,7 @@ const kosakata_m2h6 = [
     arti: 'Sedikit / Beberapa',
     penjelasan: 'Bahasa tulisan/formal untuk menyatakan jumlah atau tingkat yang sedikit (tidak banyak tapi ada). Setara dengan kata "sukoshi" atau "ikuraka".',
     contoh1: '若干名の社員を募集する\n(Merekrut beberapa / sejumlah kecil karyawan.)',
-    contoh2: ''
+    contoh2: '当初の予定より、到着が若干遅れる見込みです。\n(Kedatangan diperkirakan akan sedikit terlambat dari jadwal semula.)'
   },
   {
     id: 'm2h6_20',
@@ -241,7 +241,7 @@ const kosakata_m2h6 = [
     arti: 'Bagaimanapun / Apa pun (jenisnya/kondisinya)',
     penjelasan: 'Kata yang menerangkan kata benda (Rentaishi) yang sifatnya sangat formal. Artinya sama dengan "donna". Digunakan untuk menyatakan "dalam keadaan/jenis apa pun (tidak terkecuali)".',
     contoh1: 'いかなるときも全力を尽くそう。\n(Di saat/keadaan bagaimanapun, mari kerahkan tenaga sepenuhnya.)',
-    contoh2: ''
+    contoh2: 'いかなる理由があろうとも、暴力は許されない。\n(Apa pun alasannya, kekerasan tidak dapat dimaafkan.)'
   },
   {
     id: 'm2h6_21',
@@ -253,7 +253,7 @@ const kosakata_m2h6 = [
     arti: 'Setiap / Semua (yang memungkinkan)',
     penjelasan: 'Sama seperti "ikanaru", ini adalah Rentaishi. Artinya mencakup seluruh subjek tanpa ada yang terlewatkan (every possible / all).',
     contoh1: 'あらゆる機会を利用する\n(Memanfaatkan setiap/segala macam peluang yang ada.)',
-    contoh2: ''
+    contoh2: '問題解決のために、あらゆる手段を尽くした。\n(Untuk menyelesaikan masalah, kami telah mengerahkan segala/semua cara yang memungkinkan.)'
   },
   {
     id: 'm2h6_22',
@@ -265,7 +265,7 @@ const kosakata_m2h6 = [
     arti: 'Di mana-mana / Di setiap tempat',
     penjelasan: 'Keterangan yang menunjukkan cakupan wilayah. Artinya suatu keadaan, kejadian, atau benda tersebut bisa ditemukan di semua lokasi tanpa kecuali (everywhere).',
     contoh1: 'いたるところで歓迎される\n(Disambut dengan hangat di mana-mana / di setiap tempat.)',
-    contoh2: ''
+    contoh2: '春になると、この街のいたるところに花が咲く。\n(Ketika musim semi tiba, bunga-bunga bermekaran di mana-mana di kota ini.)'
   },
 
   // --- GAMBAR 2 ---
@@ -279,7 +279,7 @@ const kosakata_m2h6 = [
     arti: 'Berlebihan / Melebih-lebihkan / Lebay',
     penjelasan: 'Menggambarkan cara bicara, reaksi, atau tindakan yang diekspresikan lebih besar, lebih parah, atau lebih meriah daripada fakta atau keadaan aslinya (exaggerated).',
     contoh1: '彼の話は大げさだ。\n(Ceritanya itu terlalu berlebihan/dilebih-lebihkan.)',
-    contoh2: ''
+    contoh2: 'かすり傷なのに、大げさに痛がる。\n(Padahal cuma luka gores biasa, tapi reaksinya kesakitan secara berlebihan/lebay.)'
   },
   {
     id: 'm2h6_24',
@@ -291,7 +291,7 @@ const kosakata_m2h6 = [
     arti: 'Secara garis besar / Kasar (tidak mendetail)',
     penjelasan: 'Melihat, mengerjakan, atau menjelaskan sesuatu secara menyeluruh dan garis besarnya saja tanpa mempedulikan atau masuk ke detail-detail kecil yang rumit (rough/broad).',
     contoh1: '要点を大まかに話す\n(Membicarakan poin pentingnya secara garis besar saja.)',
-    contoh2: ''
+    contoh2: '旅行の計画を大まかに立てる。\n(Membuat rencana perjalanan secara garis besar saja.)'
   },
   {
     id: 'm2h6_25',
@@ -315,7 +315,7 @@ const kosakata_m2h6 = [
     arti: 'Kira-kira / Kurang lebih / Perkiraan',
     penjelasan: 'Menunjukkan tebakan atau estimasi (terutama terkait jumlah, angka, atau tebakan situasi) yang tidak dihitung secara presisi, melainkan secara kasar saja (approximately).',
     contoh1: 'おおよその見当をつける\n(Membuat perkiraan kasar / menerka-nerka secara garis besar.)',
-    contoh2: ''
+    contoh2: '工事の費用は、おおよそ10万円かかる見込みだ。\n(Biaya pengerjaan konstruksi diperkirakan memakan biaya kurang lebih/kira-kira 100.000 yen.)'
   },
   {
     id: 'm2h6_27',
@@ -325,9 +325,9 @@ const kosakata_m2h6 = [
     kanji: 'おおむね',
     furigana: 'おおむね',
     arti: 'Pada umumnya / Secara garis besar (Mayoritas)',
-    penjelasan: 'kata keterangan formal. Digunakan untuk menyatakan bahwa sebagian besar (sekitar 80-90%) sepakat atau berada dalam kondisi tertentu, tanpa melihat pengecualian minor.',
+    penjelasan: 'Kata keterangan formal. Digunakan untuk menyatakan bahwa sebagian besar (sekitar 80-90%) sepakat atau berada dalam kondisi tertentu, tanpa melihat pengecualian minor.',
     contoh1: 'おおむね賛成である\n(Pada umumnya / sebagian besar setuju.)',
-    contoh2: ''
+    contoh2: '新しい計画の準備は、おおむね完了している。\n(Persiapan rencana baru pada umumnya/sebagian besar sudah selesai.)'
   }
 ];
 

@@ -10,10 +10,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '何気ない',
     furigana: 'なにげない',
-    arti: 'Tidak disengaja / Bersahaja',
-    penjelasan: 'Menggambarkan sesuatu tindakan, kata-kata, atau kelakuan yang dilakukan tanpa niat khusus, secara santai, atau tidak disengaja. Namun, kadang-kadang perkara yang "tidak disengaja" ini boleh memberi kesan mendalam kepada orang lain (seperti menyinggung perasaan).',
+    arti: 'Tidak disengaja / Biasa saja',
+    penjelasan: 'Menggambarkan tindakan, kata-kata, atau sikap yang dilakukan secara spontan tanpa niat atau maksud tertentu. Seringkali hal yang dianggap "biasa saja" ini bisa memberikan kesan mendalam atau tanpa sadar menyinggung perasaan orang lain.',
     contoh1: '何気ない言葉に傷つく。\n(Terluka oleh kata-kata yang tidak disengaja.)',
-    contoh2: ''
+    contoh2: '彼の何気ない一言が、私を勇気づけた。\n(Satu patah kata darinya yang diucapkan biasa saja, telah memberiku keberanian.)'
   },
   {
     id: 'm2h5_2',
@@ -22,10 +22,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'あっけない',
     furigana: 'あっけない',
-    arti: 'Terlalu singkat / Mengecewakan (kerana cepat berakhir)',
-    penjelasan: 'Merujuk kepada perasaan tidak puas hati, hampa, atau kecewa kerana sesuatu perkara (seperti perlawanan, kehidupan, atau acara) berakhir dengan lebih cepat, mudah, atau ringkas daripada yang dijangkakan.',
+    arti: 'Terlalu cepat berakhir / Mengecewakan',
+    penjelasan: 'Menggambarkan perasaan hampa, tidak puas, atau kecewa karena sesuatu (seperti pertandingan, acara, atau kehidupan) berakhir dengan sangat cepat atau terlalu mudah di luar dugaan.',
     contoh1: 'あっけない人生。\n(Kehidupan yang berlalu dengan begitu singkat / mengecewakan.)',
-    contoh2: ''
+    contoh2: '決勝戦はあっけなく終わってしまった。\n(Pertandingan final itu berakhir dengan terlalu cepat dan mengecewakan.)'
   },
   {
     id: 'm2h5_3',
@@ -34,10 +34,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'みすぼらしい',
     furigana: 'みすぼらしい',
-    arti: 'Lusuh / Buruk rupa',
-    penjelasan: 'Digunakan untuk menerangkan keadaan fizikal (seperti bangunan, pakaian, atau penampilan seseorang) yang kelihatan sangat usang, buruk, miskin, dan tidak terurus.',
-    contoh1: 'みすぼらしい家。\n(Rumah yang lusuh dan buruk.)',
-    contoh2: ''
+    arti: 'Lusuh / Jelek / Tidak terawat',
+    penjelasan: 'Digunakan untuk menggambarkan penampilan fisik (seperti pakaian, bangunan, atau penampilan seseorang) yang terlihat sangat usang, kotor, miskin, dan tidak enak dipandang.',
+    contoh1: 'みすぼらしい家。\n(Rumah yang lusuh dan tidak terawat.)',
+    contoh2: '彼はみすぼらしい服を着ていた。\n(Dia mengenakan pakaian yang lusuh dan jelek.)'
   },
   {
     id: 'm2h5_4',
@@ -46,10 +46,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'みっともない',
     furigana: 'みっともない',
-    arti: 'Memalukan / Tidak senonoh',
-    penjelasan: 'Sifat, tingkah laku, atau penampilan yang tidak pantas dan memalukan jika dilihat oleh orang lain. Ia merosakkan imej atau martabat diri.',
-    contoh1: 'みっともない態度。\n(Sikap yang memalukan / tidak senonoh untuk dilihat.)',
-    contoh2: ''
+    arti: 'Memalukan / Tidak pantas',
+    penjelasan: 'Menunjukkan penampilan, sikap, atau perilaku yang sangat tidak pantas dan memalukan jika dilihat orang lain. Sesuatu yang dapat merusak citra atau harga diri.',
+    contoh1: 'みっともない態度。\n(Sikap yang memalukan / tidak pantas untuk dilihat.)',
+    contoh2: 'いい年をして人前で泣くなんてみっともない。\n(Menangis di depan umum di usia sedewasa ini sungguh memalukan.)'
   },
   {
     id: 'm2h5_5',
@@ -59,9 +59,9 @@ const kosakata_m2h5 = [
     kanji: '汚らわしい',
     furigana: 'けがらわしい',
     arti: 'Menjijikkan / Kotor (secara moral)',
-    penjelasan: 'Sesuatu yang dianggap sangat kotor, hina, atau tidak bermoral. Tahap kejijikannya sangat tinggi sehingga seseorang itu merasa tidak mahu langsung melihat, mendengar, atau menyentuhnya.',
-    contoh1: '汚らわしい行為。\n(Perbuatan yang kotor dan menjijikkan dari segi moral.)',
-    contoh2: ''
+    penjelasan: 'Sesuatu yang dianggap sangat kotor, hina, atau tidak bermoral. Kejijikannya berada pada tahap di mana seseorang merasa tidak sudi untuk melihat, mendengar, atau menyentuhnya.',
+    contoh1: '汚らわしい行為。\n(Perbuatan yang kotor dan menjijikkan secara moral.)',
+    contoh2: 'そんな汚らわしい話は聞きたくない。\n(Aku sama sekali tidak ingin mendengar cerita menjijikkan seperti itu.)'
   },
   {
     id: 'm2h5_6',
@@ -70,10 +70,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '乏しい',
     furigana: 'とぼしい',
-    arti: 'Kurang / Terhad / Miskin',
-    penjelasan: 'Menunjukkan keadaan di mana sesuatu yang penting (seperti sumber alam, pengalaman, wang, atau pengetahuan) berada pada tahap yang sangat kurang, terhad, atau tidak mencukupi.',
+    arti: 'Kurang / Terbatas / Miskin (akan sesuatu)',
+    penjelasan: 'Menunjukkan keadaan di mana sesuatu yang penting atau dibutuhkan (seperti sumber daya alam, pengalaman, pengetahuan, atau dana) jumlahnya sangat sedikit, kurang, atau tidak mencukupi.',
     contoh1: 'わが国は資源に乏しい。\n(Negara kita kekurangan sumber daya alam.)',
-    contoh2: ''
+    contoh2: '彼はまだ経験が乏しいが、やる気はある。\n(Dia memang masih kurang pengalaman, tetapi memiliki semangat yang tinggi.)'
   },
   {
     id: 'm2h5_7',
@@ -82,10 +82,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'あくどい',
     furigana: 'あくどい',
-    arti: 'Kejam / Licik / Kotor',
-    penjelasan: 'Cara, taktik, atau perbuatan yang sangat jahat, licik, memeras gila-gila, dan melampaui batas etika. Sering digunakan dalam konteks perniagaan, penipuan, atau jenayah.',
-    contoh1: 'あくどい商売。\n(Perniagaan yang menggunakan cara licik dan kotor.)',
-    contoh2: ''
+    arti: 'Kejam / Licik / Jahat',
+    penjelasan: 'Merujuk pada cara, taktik, atau perbuatan yang sangat licik, jahat, dan melampaui batas kewajaran. Sangat sering digunakan untuk menggambarkan penipuan, kejahatan, atau praktik bisnis yang kotor.',
+    contoh1: 'あくどい商売。\n(Perniagaan yang menggunakan taktik licik dan kotor.)',
+    contoh2: 'あくどい手口で高齢者からお金を騙し取る。\n(Menipu dan merampas uang dari lansia dengan taktik yang sangat licik.)'
   },
   {
     id: 'm2h5_8',
@@ -94,10 +94,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '危うい',
     furigana: 'あやうい',
-    arti: 'Berbahaya / Terancam',
-    penjelasan: 'Keadaan yang berada di pinggir bahaya atau kegagalan. Jika tidak berhati-hati atau keadaan tidak berubah, sesuatu yang buruk pasti akan berlaku.',
-    contoh1: 'このままでは合格が危うい。\n(Jika keadaan berterusan begini, peluang untuk lulus adalah terancam/tipis.)',
-    contoh2: ''
+    arti: 'Berbahaya / Kritis / Terancam',
+    penjelasan: 'Keadaan kritis yang berada di ambang bahaya atau kegagalan. Jika dibiarkan atau tidak berhati-hati, sesuatu yang buruk pasti akan terjadi.',
+    contoh1: 'このままでは合格が危うい。\n(Jika terus begini, peluang untuk lulus sangat terancam / kritis.)',
+    contoh2: '事故で重傷を負い、命が危うい状態だ。\n(Mengalami luka berat akibat kecelakaan, kondisinya sangat kritis/nyawanya terancam.)'
   },
   {
     id: 'm2h5_9',
@@ -106,10 +106,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'ややこしい',
     furigana: 'ややこしい',
-    arti: 'Rumit / Mengelirukan',
-    penjelasan: 'Sesuatu yang sangat kompleks, berselirat, atau sukar diselesaikan kerana melibatkan terlalu banyak unsur atau masalah. Selalu digunakan untuk hubungan manusia atau urusan yang renyah.',
-    contoh1: 'ややこしい関係。\n(Hubungan yang rumit dan kusut.)',
-    contoh2: ''
+    arti: 'Rumit / Membingungkan / Ruwet',
+    penjelasan: 'Sesuatu yang sangat kompleks, berbelit-belit, dan sulit diselesaikan karena melibatkan banyak unsur. Sering digunakan untuk hubungan antarmanusia, prosedur, atau penjelasan yang memusingkan.',
+    contoh1: 'ややこしい関係。\n(Hubungan yang rumit dan ruwet.)',
+    contoh2: '話がややこしくなってきたので、一度整理しよう。\n(Karena pembicaraannya mulai menjadi rumit/berbelit-belit, mari kita susun ulang dulu.)'
   },
   {
     id: 'm2h5_10',
@@ -118,10 +118,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '素っ気ない',
     furigana: 'そっけない',
-    arti: 'Dingin / Acuh tak acuh',
-    penjelasan: 'Sikap, layanan, atau cara menjawab yang pendek, dingin, dan tidak menunjukkan sebarang kemesraan atau minat terhadap pihak lawan bicara.',
-    contoh1: '素っ気ない返事。\n(Jawapan yang pendek, dingin dan acuh tak acuh.)',
-    contoh2: ''
+    arti: 'Dingin / Acuh tak acuh / Cuek',
+    penjelasan: 'Sikap, perilaku, atau cara menjawab yang singkat, dingin, dan sama sekali tidak menunjukkan keramahan, kepedulian, atau minat terhadap lawan bicaranya.',
+    contoh1: '素っ気ない返事。\n(Jawaban yang singkat, dingin, dan acuh tak acuh.)',
+    contoh2: '彼女は素っ気ない態度で私を無視した。\n(Dia mengabaikanku dengan sikap yang dingin dan cuek.)'
   },
   {
     id: 'm2h5_11',
@@ -131,9 +131,9 @@ const kosakata_m2h5 = [
     kanji: 'もろい',
     furigana: 'もろい',
     arti: 'Rapuh / Mudah hancur',
-    penjelasan: 'Merujuk kepada struktur objek fizikal yang sangat mudah pecah, hancur, atau patah. Ia juga boleh digunakan secara metafora untuk hati, perasaan, atau hubungan yang mudah goyah.',
-    contoh1: 'もろく壊れやすいワイングラス。\n(Gelas wain yang rapuh dan sangat mudah pecah.)',
-    contoh2: ''
+    penjelasan: 'Merujuk pada struktur objek fisik yang sangat mudah pecah, runtuh, atau hancur. Bisa juga digunakan secara metafora untuk menggambarkan hati, tekad, atau mental yang mudah goyah.',
+    contoh1: 'もろく壊れやすいワイングラス。\n(Gelas wine yang rapuh dan sangat mudah pecah.)',
+    contoh2: '彼は自信満々に見えるが、実は精神的にもろいところがある。\n(Dia terlihat sangat percaya diri, namun sebenarnya memiliki sisi mental yang rapuh.)'
   },
   {
     id: 'm2h5_12',
@@ -142,10 +142,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '紛らわしい',
     furigana: 'まぎらわしい',
-    arti: 'Mengelirukan',
-    penjelasan: 'Keadaan di mana dua perkara kelihatan sangat serupa bentuk, bunyi, atau maknanya sehingga mudah menyebabkan seseorang salah sangka, tersilap, atau keliru.',
-    contoh1: '紛らわしい言葉。\n(Perkataan yang mengelirukan kerana bunyinya/maksudnya serupa.)',
-    contoh2: ''
+    arti: 'Membingungkan (karena mirip)',
+    penjelasan: 'Keadaan di mana dua hal atau lebih terlihat/terdengar sangat mirip secara bentuk, bunyi, atau makna, sehingga sangat mudah membuat orang salah sangka, keliru, atau tertukar.',
+    contoh1: '紛らわしい言葉。\n(Perkataan yang membingungkan karena bentuk atau bunyinya mirip.)',
+    contoh2: '本物と偽物のパッケージが非常に紛らわしい。\n(Kemasan barang asli dan palsunya sangat membingungkan karena persis sama.)'
   },
   {
     id: 'm2h5_13',
@@ -154,10 +154,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '久しい',
     furigana: 'ひさしい',
-    arti: 'Sudah lama (masa berlalu)',
-    penjelasan: 'Menunjukkan bahawa tempoh masa yang sangat panjang telah berlalu sejak kali terakhir sesuatu kejadian itu berlaku. Sering digunakan bersama bentuk negatif.',
+    arti: 'Sudah lama (waktu berlalu)',
+    penjelasan: 'Menunjukkan bahwa jangka waktu yang cukup panjang telah berlalu sejak suatu kejadian terakhir kali terjadi. Sering digunakan untuk mengungkapkan durasi yang lama, baik dalam kalimat positif maupun negatif.',
     contoh1: '彼に久しく会っていない。\n(Saya sudah sangat lama tidak berjumpa dengannya.)',
-    contoh2: ''
+    contoh2: '故郷を離れて久しい。\n(Sudah lama sekali waktu berlalu sejak aku meninggalkan kampung halaman.)'
   },
   {
     id: 'm2h5_14',
@@ -167,9 +167,9 @@ const kosakata_m2h5 = [
     kanji: 'たやすい',
     furigana: 'たやすい',
     arti: 'Mudah / Gampang',
-    penjelasan: 'Sesuatu yang boleh dicapai atau dilakukan dengan sangat mudah tanpa memerlukan banyak tenaga, masa, atau pemikiran yang mendalam.',
-    contoh1: 'たやすく引き受ける。\n(Menerima atau bersetuju melakukan sesuatu dengan mudah tanpa berfikir panjang.)',
-    contoh2: ''
+    penjelasan: 'Sesuatu yang bisa dicapai, diselesaikan, atau dilakukan dengan sangat mudah tanpa memerlukan banyak tenaga, usaha, atau pemikiran yang mendalam. Bersinonim dengan "簡単" (kantan).',
+    contoh1: 'たやすく引き受ける。\n(Menerima atau menyanggupi sesuatu dengan sangat mudah tanpa berpikir panjang.)',
+    contoh2: 'その問題はたやすく解決できた。\n(Masalah tersebut bisa diselesaikan dengan mudah.)'
   },
   {
     id: 'm2h5_15',
@@ -178,10 +178,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '平たい',
     furigana: 'ひらたい',
-    arti: 'Rata / Pipih',
-    penjelasan: 'Keadaan bentuk sesuatu benda yang permukaannya rata, pipih, tidak cembung atau tidak berlekuk. Ia mempunyai maksud yang sama dengan 平らな (taira na).',
-    contoh1: '平たい石（＝平らな）。\n(Batu yang permukaannya rata / pipih.)',
-    contoh2: ''
+    arti: 'Rata / Pipih / Sederhana (kiasan)',
+    penjelasan: 'Bentuk fisik suatu benda yang permukaannya rata, pipih, dan tidak cembung. Bisa juga digunakan dalam kiasan "平たい言葉" yang berarti bahasa yang sederhana dan mudah dipahami oleh orang awam.',
+    contoh1: '平たい石。\n(Batu yang permukaannya rata / pipih.)',
+    contoh2: '専門用語を使わず、平たい言葉で説明してください。\n(Tolong jelaskan menggunakan bahasa yang sederhana/awam tanpa menggunakan istilah teknis.)'
   },
   {
     id: 'm2h5_16',
@@ -191,9 +191,9 @@ const kosakata_m2h5 = [
     kanji: 'はかない',
     furigana: 'はかない',
     arti: 'Fana / Sementara / Singkat',
-    penjelasan: 'Menggambarkan sesuatu yang sangat rapuh, tidak kekal lama, mudah hilang, atau cepat berakhir seperti nyawa manusia, mimpi, atau harapan.',
+    penjelasan: 'Menggambarkan sesuatu yang sangat rapuh, tidak kekal, mudah hilang, atau cepat berakhir. Biasanya digunakan secara puitis untuk nyawa manusia, mimpi, harapan, atau cinta.',
     contoh1: 'はかない命。\n(Nyawa yang fana / singkat dan mudah melayang.)',
-    contoh2: ''
+    contoh2: '私の初恋は、はかなく散ってしまった。\n(Cinta pertamaku telah hancur dan berlalu dengan begitu singkat/fana.)'
   },
   {
     id: 'm2h5_17',
@@ -202,10 +202,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'あやふや',
     furigana: 'あやふや',
-    arti: 'Kabur / Tidak pasti / Ragu-ragu',
-    penjelasan: 'Sikap, ingatan, pendirian, atau maklumat yang tidak jelas, tidak tetap, dan tidak dapat dipastikan kebenarannya. Menunjukkan ketegasan yang kurang.',
-    contoh1: 'あやふやな態度をとる。\n(Menunjukkan sikap yang tidak pasti / berteka-teki.)',
-    contoh2: ''
+    arti: 'Kabur / Tidak pasti / Ambigu',
+    penjelasan: 'Menggambarkan ingatan, informasi, pendirian, atau sikap yang tidak jelas, tidak pasti, dan ambigu. Sering dipakai ketika seseorang sengaja tidak memberikan jawaban yang tegas.',
+    contoh1: 'あやふやな態度をとる。\n(Menunjukkan sikap yang ambigu / tidak pasti.)',
+    contoh2: '記憶があやふやで、昨日のことをよく思い出せない。\n(Ingatanku kabur/tidak pasti, aku tidak bisa mengingat kejadian kemarin dengan baik.)'
   },
   {
     id: 'm2h5_18',
@@ -215,9 +215,9 @@ const kosakata_m2h5 = [
     kanji: 'うつろ',
     furigana: 'うつろ',
     arti: 'Kosong / Hampa',
-    penjelasan: 'Keadaan di mana terdapat kekosongan di dalam sesuatu. Paling kerap digunakan untuk pandangan mata yang kelihatan kosong, seolah-olah jiwanya tiada di situ atau hilang fokus/semangat.',
+    penjelasan: 'Keadaan kosong atau hampa di dalam sesuatu. Paling sering digunakan untuk menggambarkan tatapan mata atau ekspresi wajah yang tampak kosong, kehilangan fokus, atau seolah kehilangan semangat hidup.',
     contoh1: 'うつろな瞳。\n(Pandangan mata yang kosong / hilang fokus.)',
-    contoh2: ''
+    contoh2: 'ショックのあまり、彼はうつろな顔をして座っていた。\n(Karena terlalu syok, dia duduk dengan ekspresi wajah yang kosong/hampa.)'
   },
   {
     id: 'm2h5_19',
@@ -226,10 +226,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'こっけい',
     furigana: 'こっけい',
-    arti: 'Lucu / Menggelikan / Konyol',
-    penjelasan: 'Penampilan, perbuatan, atau kata-kata yang kelihatan kelakar, bodoh, atau tidak munasabah sehingga membuatkan orang yang melihat/mendengarnya tertawa.',
-    contoh1: 'こっけいな姿。\n(Penampilan atau gaya yang lucu/menggelikan.)',
-    contoh2: 'こっけいな話。\n(Cerita yang lucu atau konyol.)'
+    arti: 'Lucu / Konyol / Menggelikan',
+    penjelasan: 'Penampilan, tingkah laku, atau kata-kata yang terlihat sangat konyol, aneh, atau tidak masuk akal sehingga membuat orang yang melihat atau mendengarnya tertawa (terkadang bernada ejekan).',
+    contoh1: 'こっけいな姿。\n(Penampilan atau gaya yang konyol/menggelikan.)',
+    contoh2: '彼の言い訳はあまりにもこっけいで、笑ってしまった。\n(Alasannya terlalu konyol/menggelikan, sehingga aku tak sengaja tertawa.)'
   },
   {
     id: 'm2h5_20',
@@ -239,9 +239,9 @@ const kosakata_m2h5 = [
     kanji: 'ちっぽけ',
     furigana: 'ちっぽけ',
     arti: 'Sangat kecil / Remeh / Kerdil',
-    penjelasan: 'Sesuatu yang fizikalnya sangat kecil ukurannya, atau sesuatu abstrak (seperti kewujudan, nilai, dan impian) yang dianggap tidak mempunyai nilai atau kepentingan yang besar.',
-    contoh1: 'ちっぽけな夢。\n(Impian yang sangat kecil / remeh.)',
-    contoh2: ''
+    penjelasan: 'Merujuk pada sesuatu yang ukurannya sangat kecil, atau sesuatu yang abstrak (seperti masalah, keberadaan, kebanggaan) yang dianggap sama sekali tidak penting, remeh, dan tidak bernilai besar.',
+    contoh1: 'ちっぽけな夢。\n(Impian yang dianggap sangat kecil / remeh.)',
+    contoh2: '宇宙の大きさに比べれば、人間の悩みなどちっぽけなものだ。\n(Dibandingkan dengan luasnya alam semesta, masalah manusia adalah hal yang sangat remeh/kerdil.)'
   },
   {
     id: 'm2h5_21',
@@ -250,10 +250,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'ぞんざい',
     furigana: 'ぞんざい',
-    arti: 'Kasar / Sembarangan / Tidak sopan',
-    penjelasan: 'Cara bertutur, bekerja, atau melayan orang/benda dengan kasar, sambil lewa, tidak sopan, dan tidak menunjukkan rasa hormat atau kehati-hatian.',
+    arti: 'Kasar / Sembarangan / Ceroboh',
+    penjelasan: 'Cara berbicara, bekerja, atau memperlakukan orang/barang secara kasar, asal-asalan, tidak sopan, dan tidak menunjukkan rasa hormat atau kehati-hatian sama sekali.',
     contoh1: 'ぞんざいな言葉遣い。\n(Penggunaan kata-kata yang kasar dan tidak sopan.)',
-    contoh2: ''
+    contoh2: '借りた本をぞんざいに扱ってはいけない。\n(Tidak boleh memperlakukan buku pinjaman secara sembarangan/kasar.)'
   },
   {
     id: 'm2h5_22',
@@ -263,9 +263,9 @@ const kosakata_m2h5 = [
     kanji: '不気味',
     furigana: 'ぶきみ',
     arti: 'Menyeramkan / Aneh / Firasat buruk',
-    penjelasan: 'Sesuatu suasana, bentuk, atau fenomena yang membuatkan seseorang berasa seram sejuk, takut, atau tidak selesa kerana wujudnya aura yang misteri atau aneh.',
-    contoh1: '不気味な生き物。\n(Makhluk yang menyeramkan dan aneh.)',
-    contoh2: ''
+    penjelasan: 'Sesuatu (seperti suasana, pemandangan, atau suara) yang membuat seseorang merasa merinding, takut, atau tidak nyaman karena adanya aura misterius atau firasat bahwa hal buruk akan terjadi.',
+    contoh1: '不気味な生き物。\n(Makhluk yang bentuknya menyeramkan dan aneh.)',
+    contoh2: '誰もいない夜の学校は、静まり返っていて不気味だった。\n(Sekolah di malam hari yang tidak ada siapa-siapa itu sunyi senyap dan terasa menyeramkan.)'
   },
   {
     id: 'm2h5_23',
@@ -274,10 +274,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '不細工',
     furigana: 'ぶさいく',
-    arti: 'Buruk rupa / Jelek / Kekok',
-    penjelasan: 'Bentuk wajah, rupa fizikal, atau hasil kerja tangan yang tidak cantik, tidak seimbang (proporsional), atau kelihatan sangat kekok potongannya.',
-    contoh1: '不細工な形。\n(Bentuk yang buruk rupa / jelek.)',
-    contoh2: ''
+    arti: 'Jelek / Buruk rupa / Bentuknya canggung',
+    penjelasan: 'Bentuk fisik, wajah, atau hasil karya tangan yang tidak proporsional, potongannya kasar, atau terlihat jelek. (Hati-hati, kata ini sangat menyinggung jika ditujukan untuk wajah seseorang).',
+    contoh1: '不細工な形。\n(Bentuk yang buruk rupa / potongannya tidak proporsional.)',
+    contoh2: '初めて作ったケーキは不細工だったが、味は良かった。\n(Kue yang pertama kali kubuat bentuknya jelek, tetapi rasanya enak.)'
   },
   {
     id: 'm2h5_24',
@@ -286,10 +286,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '無茶',
     furigana: 'むちゃ',
-    arti: 'Tidak masuk akal / Melulu',
-    penjelasan: 'Tindakan, permintaan, atau kata-kata yang tidak bertepatan dengan logik, sangat melampaui batas, atau dilakukan secara semberono tanpa memikirkan kesan akibatnya.',
-    contoh1: '無茶なことを言う。\n(Mengatakan sesuatu yang tidak masuk akal / mengarut.)',
-    contoh2: ''
+    arti: 'Tidak masuk akal / Melulu / Gegabah',
+    penjelasan: 'Tindakan, tuntutan, atau pernyataan yang sama sekali tidak logis, melampaui batas kewajaran, atau dilakukan dengan gegabah tanpa memikirkan konsekuensinya.',
+    contoh1: '無茶なことを言う。\n(Mengatakan sesuatu yang tidak masuk akal / sembarangan.)',
+    contoh2: '初心者がいきなり雪山に登るなんて無茶だ。\n(Pemula tiba-tiba mendaki gunung salju adalah tindakan yang gegabah/tidak masuk akal.)'
   },
 
   // --- GAMBAR 3: Kata Sifat-na Lanjutan ---
@@ -300,10 +300,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '雑',
     furigana: 'ざつ',
-    arti: 'Cincai / Sambil lewa / Kasar',
-    penjelasan: 'Merujuk kepada hasil kerja atau cara kerja yang dilakukan tanpa ketelitian, semberono, selekeh, dan tidak teliti.',
-    contoh1: '彼の仕事は雑だ。\n(Hasil kerjanya sangat cincai/sambil lewa.)',
-    contoh2: ''
+    arti: 'Asal-asalan / Kasar / Tidak teliti',
+    penjelasan: 'Merujuk pada hasil kerja, pembuatan, atau penanganan sesuatu yang dilakukan secara semberono, tidak rapi, dan kurang ketelitian.',
+    contoh1: '彼の仕事は雑だ。\n(Hasil kerjanya sangat asal-asalan/kurang teliti.)',
+    contoh2: '雑な扱いをしたせいで、カメラが壊れてしまった。\n(Kameranya rusak karena diperlakukan secara kasar/asal-asalan.)'
   },
   {
     id: 'm2h5_26',
@@ -313,9 +313,9 @@ const kosakata_m2h5 = [
     kanji: '露骨',
     furigana: 'ろこつ',
     arti: 'Terang-terangan / Nyata / Terbuka',
-    penjelasan: 'Menunjukkan perasaan (biasanya perasaan negatif seperti kebencian atau ketidakpuasan) secara langsung, ketara, dan terbuka tanpa cuba diselindungkan langsung.',
+    penjelasan: 'Menunjukkan perasaan (terutama yang negatif seperti kebencian atau rasa tidak nyaman) atau maksud tertentu secara langsung, terbuka, dan jelas tanpa ada usaha untuk menutup-nutupinya.',
     contoh1: '露骨に嫌がる。\n(Menunjukkan rasa tidak suka secara terang-terangan.)',
-    contoh2: ''
+    contoh2: '彼女は私の提案に対して、露骨に不快な顔をした。\n(Dia menunjukkan wajah tidak senang secara terang-terangan terhadap usulanku.)'
   },
   {
     id: 'm2h5_27',
@@ -324,10 +324,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '念入り',
     furigana: 'ねんいり',
-    arti: 'Sangat teliti / Berhati-hati',
-    penjelasan: 'Melakukan persiapan, perancangan, atau sesuatu kerja dengan memfokuskan perhatian yang sangat mendalam kepada setiap butiran (detail) supaya tiada kesilapan berlaku.',
-    contoh1: '念入りな計画。\n(Pelan atau rancangan yang dibuat dengan sangat teliti.)',
-    contoh2: ''
+    arti: 'Sangat teliti / Berhati-hati / Ekstra cermat',
+    penjelasan: 'Melakukan persiapan, perancangan, atau pemeriksaan dengan sangat cermat dan memperhatikan setiap detail yang paling kecil sekalipun untuk memastikan tidak ada kesalahan.',
+    contoh1: '念入りな計画。\n(Rencana yang disusun dengan sangat teliti dan hati-hati.)',
+    contoh2: '外出する前に、念入りに戸締まりをチェックした。\n(Sebelum pergi keluar, saya memeriksa kunci pintu dengan sangat teliti.)'
   },
   {
     id: 'm2h5_28',
@@ -336,10 +336,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: '密か',
     furigana: 'ひそか',
-    arti: 'Rahsia / Tersembunyi / Diam-diam',
-    penjelasan: 'Tindakan atau perasaan yang dilakukan atau disimpan secara diam-diam supaya tidak disedari atau diketahui oleh orang lain.',
-    contoh1: '密かな楽しみ。\n(Keseronokan atau hobi yang dirahsiakan/dilakukan secara diam-diam.)',
-    contoh2: ''
+    arti: 'Rahasia / Tersembunyi / Diam-diam',
+    penjelasan: 'Tindakan, rencana, atau perasaan yang dilakukan atau disimpan secara diam-diam dan sembunyi-sembunyi agar tidak diketahui atau disadari oleh orang lain.',
+    contoh1: '密かな楽しみ。\n(Kesenangan/hobi yang dirahasiakan dan dilakukan secara diam-diam.)',
+    contoh2: '彼は密かにライバルの会社に転職する準備を進めている。\n(Dia sedang mempersiapkan kepindahan kerja ke perusahaan saingan secara diam-diam.)'
   },
   {
     id: 'm2h5_29',
@@ -348,10 +348,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'おろそか',
     furigana: 'おろそか',
-    arti: 'Terabai / Lalai',
-    penjelasan: 'Keadaan di mana seseorang gagal memberi perhatian atau tidak menguruskan sesuatu yang penting (seperti tugas, pelajaran, atau kesihatan) dengan wajar.',
+    arti: 'Terabai / Lalai / Tidak diurus',
+    penjelasan: 'Keadaan di mana seseorang mengabaikan, menelantarkan, atau gagal memberikan perhatian yang cukup pada sesuatu yang seharusnya penting dan diprioritaskan (seperti tugas, pelajaran, atau kesehatan).',
     contoh1: '勉強がおろそかになる。\n(Pelajaran menjadi terabai.)',
-    contoh2: ''
+    contoh2: 'バイトに夢中で、健康管理がおろそかになっている。\n(Karena terlalu asyik kerja sambilan, manajemen kesehatanku jadi terabai.)'
   },
   {
     id: 'm2h5_30',
@@ -360,10 +360,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'まとも',
     furigana: 'まとも',
-    arti: 'Wajar & Layak / Secara langsung',
-    penjelasan: 'Perkataan ini mempunyai dua makna utama: 1. Sesuatu yang wajar, jujur, mengikut piawaian normal (decent). 2. Berhadapan atau menerima sesuatu dari arah depan secara langsung / tepat.',
-    contoh1: 'まともな仕事。\n(Pekerjaan yang wajar / dihormati / layak.)',
-    contoh2: '風をまともに受ける。\n(Menerima tiupan angin tepat secara langsung dari arah hadapan.)'
+    arti: 'Wajar & Layak / Normal / Secara langsung',
+    penjelasan: 'Perkataan ini memiliki dua makna utama: 1. Sesuatu yang wajar, layak, sesuai norma masyarakat (decent). 2. Menerima sesuatu secara langsung atau berhadapan tepat dari arah depan.',
+    contoh1: 'まともな仕事。\n(Pekerjaan yang wajar / layak / dihormati.)',
+    contoh2: '怒った彼とは、まともに話ができない。\n(Aku tidak bisa berbicara secara normal/wajar dengannya yang sedang marah.)'
   },
   {
     id: 'm2h5_31',
@@ -372,10 +372,10 @@ const kosakata_m2h5 = [
     kategori: 'kata sifat',
     kanji: 'ろくな～ない',
     furigana: 'ろくな～ない',
-    arti: 'Tidak memuaskan / Tidak senonoh / Tidak sempurna',
-    penjelasan: 'Struktur tatabahasa ini selalu dipadankan dengan kata kerja negatif (～ない). Ia digunakan untuk menyatakan bahawa sesuatu itu gagal mencapai tahap minimum kelayakan, tidak berguna, atau tidak dilakukan secara sempurna.',
-    contoh1: 'それはろくな仕事ではない。\n(Itu bukanlah pekerjaan yang elok/senonoh.)',
-    contoh2: '朝からろくに食べていない。\n(Sejak pagi tadi tidak makan dengan betul/kenyang.)'
+    arti: 'Tidak memuaskan / Tidak layak / Tidak beres',
+    penjelasan: 'Pola tata bahasa ini selalu diikuti bentuk kata kerja negatif (～ない). Digunakan untuk menyatakan dengan nada keluhan bahwa sesuatu itu tidak beres, tidak berguna, tidak layak, atau tidak dilakukan dengan sempurna sebagaimana mestinya.',
+    contoh1: 'それはろくな仕事ではない。\n(Itu bukanlah pekerjaan yang layak/beres.)',
+    contoh2: 'あいつと関わると、ろくなことにならない。\n(Jika berurusan dengannya, tidak akan pernah terjadi hal yang beres/baik.)'
   }
 ];
 
