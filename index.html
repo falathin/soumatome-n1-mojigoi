@@ -49,6 +49,17 @@
           <span class="navbar-text text-white-50 small d-none d-sm-inline me-3"
             >文字語彙 - Master JLPT N1 Vocabulary</span
           >
+
+          <!-- Mode Hafal Toggle Button Modern -->
+          <button
+            id="study-mode-toggle"
+            class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2"
+            style="width: 42px; height: 42px; transition: all 0.2s"
+            title="Toggle Mode Hafal"
+          >
+            <i class="bi bi-eye-fill" id="study-mode-icon"></i>
+          </button>
+
           <!-- Dark Mode Toggle Button Modern -->
           <button
             id="theme-toggle"
@@ -145,61 +156,62 @@
                   <option value="4">Hari 4</option>
                   <option value="5">Hari 5</option>
                   <option value="6">Hari 6</option>
-                  </select>
+                </select>
               </div>
               <script>
-              document.addEventListener("DOMContentLoaded", function() {
-                  const filterMinggu = document.getElementById("filter-minggu");
-                  const filterHari = document.getElementById("filter-hari");
+                document.addEventListener('DOMContentLoaded', function () {
+                  const filterMinggu = document.getElementById('filter-minggu')
+                  const filterHari = document.getElementById('filter-hari')
 
                   // Fungsi untuk memperbarui opsi Hari 7
                   function updateHari7() {
-                      const mingguValue = filterMinggu.value;
+                    const mingguValue = filterMinggu.value
 
-                      // Cek dan hapus opsi Hari 7 jika sebelumnya sudah ada (reset)
-                      const existingHari7 = filterHari.querySelector('option[value="7"]');
-                      if (existingHari7) {
-                          existingHari7.remove();
-                      }
+                    // Cek dan hapus opsi Hari 7 jika sebelumnya sudah ada (reset)
+                    const existingHari7 =
+                      filterHari.querySelector('option[value="7"]')
+                    if (existingHari7) {
+                      existingHari7.remove()
+                    }
 
-                      // Jika filter minggu BUKAN "Semua Minggu" (all), tambahkan Hari 7
-                      if (mingguValue !== 'all') {
-                          const optionHari7 = document.createElement("option");
-                          optionHari7.value = "7";
-                          optionHari7.textContent = "Hari 7 (Exam)";
-                          
-                          // Tambahkan sedikit penanda warna atau styling jika diperlukan (opsional)
-                          optionHari7.style.fontWeight = "bold";
-                          optionHari7.style.color = "blue";
-                          
-                          filterHari.appendChild(optionHari7);
-                      }
+                    // Jika filter minggu BUKAN "Semua Minggu" (all), tambahkan Hari 7
+                    if (mingguValue !== 'all') {
+                      const optionHari7 = document.createElement('option')
+                      optionHari7.value = '7'
+                      optionHari7.textContent = 'Hari 7 (Exam)'
+
+                      // Tambahkan sedikit penanda warna atau styling jika diperlukan (opsional)
+                      optionHari7.style.fontWeight = 'bold'
+                      optionHari7.style.color = 'blue'
+
+                      filterHari.appendChild(optionHari7)
+                    }
                   }
 
                   // Panggil fungsi sekali saat halaman pertama dimuat
-                  updateHari7();
+                  updateHari7()
 
                   // Dengarkan perubahan pada dropdown "Minggu"
-                  filterMinggu.addEventListener("change", function() {
-                      // Jika user ganti minggu, pastikan pilihan hari tidak nyangkut di hari 7 
-                      // (kembalikan ke Hari 1 atau Semua Hari sebagai default)
-                      if (filterHari.value === "7") {
-                          filterHari.value = "1"; 
-                      }
-                      updateHari7();
-                  });
+                  filterMinggu.addEventListener('change', function () {
+                    // Jika user ganti minggu, pastikan pilihan hari tidak nyangkut di hari 7
+                    // (kembalikan ke Hari 1 atau Semua Hari sebagai default)
+                    if (filterHari.value === '7') {
+                      filterHari.value = '1'
+                    }
+                    updateHari7()
+                  })
 
                   // Dengarkan perubahan pada dropdown "Hari"
-                  filterHari.addEventListener("change", function() {
-                      if (this.value === "7") {
-                          const mingguValue = filterMinggu.value;
-                          if (mingguValue !== 'all') {
-                              // Redirect ke halaman exam sesuai minggu
-                              window.location.href = `exam/minggu${mingguValue}.html`;
-                          }
+                  filterHari.addEventListener('change', function () {
+                    if (this.value === '7') {
+                      const mingguValue = filterMinggu.value
+                      if (mingguValue !== 'all') {
+                        // Redirect ke halaman exam sesuai minggu
+                        window.location.href = `exam/minggu${mingguValue}.html`
                       }
-                  });
-              });
+                    }
+                  })
+                })
               </script>
               <div class="col-md-3 col-lg-2">
                 <select id="filter-kategori" class="form-select">
@@ -498,6 +510,47 @@
       initTheme()
 
       // ==========================================================================
+      // --- LOGIKA UTAMA MODE HAFAL (STUDY MODE ENGINE) ---
+      // ==========================================================================
+      let isStudyMode = localStorage.getItem('study_mode') === 'true'
+
+      function setStudyMode(active) {
+        isStudyMode = active
+        localStorage.setItem('study_mode', active)
+
+        const studyToggleBtn = document.getElementById('study-mode-toggle')
+        const studyIcon = document.getElementById('study-mode-icon')
+
+        if (studyToggleBtn && studyIcon) {
+          if (isStudyMode) {
+            studyIcon.className = 'bi bi-eye-slash-fill text-danger'
+            studyToggleBtn.className =
+              'btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
+            studyToggleBtn.setAttribute(
+              'title',
+              'Matikan Mode Hafal (Tampilkan Arti)'
+            )
+          } else {
+            studyIcon.className = 'bi bi-eye-fill'
+            studyToggleBtn.className =
+              'btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
+            studyToggleBtn.setAttribute(
+              'title',
+              'Aktifkan Mode Hafal (Sembunyikan Arti)'
+            )
+          }
+        }
+
+        // Render ulang kartu untuk menyembunyikan/menampilkan konten secara dinamis
+        if (
+          typeof renderCards === 'function' &&
+          document.getElementById('vocab-container')
+        ) {
+          renderCards()
+        }
+      }
+
+      // ==========================================================================
       // --- LOGIKA DIGI-CLOCK & DINAMIS GREETING BANNER ---
       // ==========================================================================
       function updateTime() {
@@ -522,7 +575,7 @@
           greetingID = 'Selamat Pagi'
           iconClass = 'bi-sunrise-fill text-warning'
           quote =
-            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日も一日頑張りましょう！'
+            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日om一日頑張りましょう！'
           bannerClass = 'bg-gradient bg-primary text-white'
         } else if (h >= 11 && h < 15) {
           greetingJP = 'こんにちは'
@@ -660,6 +713,25 @@
               ? 'btn-success text-white'
               : 'btn-outline-success'
 
+          // Pemisahan baris kalimat asli Jepang dengan baris terjemahan bahasa Indonesianya
+          const ex1Parts = item.contoh1.split('\n')
+          const ex1HTML = isStudyMode
+            ? ex1Parts[0]
+            : `${ex1Parts[0]}${
+                ex1Parts[1]
+                  ? `<br><span class="text-secondary fw-normal">${ex1Parts[1]}</span>`
+                  : ''
+              }`
+
+          const ex2Parts = item.contoh2.split('\n')
+          const ex2HTML = isStudyMode
+            ? ex2Parts[0]
+            : `${ex2Parts[0]}${
+                ex2Parts[1]
+                  ? `<br><span class="text-secondary fw-normal">${ex2Parts[1]}</span>`
+                  : ''
+              }`
+
           const cardHTML = `
                 <div class="col-md-6 col-lg-4 animate-card-fade" style="animation-delay: ${
                   index * 0.03
@@ -684,26 +756,22 @@
                                 <h2 class="fw-bold text-dark mb-2 fs-1">${
                                   item.kanji
                                 }</h2>
-                                <h5 class="fw-bold mb-0 text-decoration-none" style="color: var(--jp-blue-dark);">${
-                                  item.arti
-                                }</h5>
+                                <h5 class="fw-bold mb-0 text-decoration-none ${
+                                  isStudyMode ? 'd-none' : ''
+                                }" style="color: var(--jp-blue-dark);">${
+            item.arti
+          }</h5>
                             </div>
                             
-                            <p class="card-text small text-secondary text-center border-bottom pb-3 mb-3 flex-grow-1">${
-                              item.penjelasan
-                            }</p>
+                            <p class="card-text small text-secondary text-center border-bottom pb-3 mb-3 flex-grow-1 ${
+                              isStudyMode ? 'd-none' : ''
+                            }">${item.penjelasan}</p>
                             
                             <div class="p-3 rounded-3 small mb-3 border contoh-box">
                                 <div class="mb-2 fw-bold text-dark"><i class="bi bi-journal-text text-danger me-2"></i>Contoh Kalimat:</div>
-                                <div class="mb-2 lh-base fw-medium">${item.contoh1.replace(
-                                  '\n',
-                                  '<br><span class="text-secondary fw-normal">'
-                                )}</span></div>
+                                <div class="mb-2 lh-base fw-medium">${ex1HTML}</div>
                                 <hr class="my-2 opacity-25">
-                                <div class="lh-base fw-medium">${item.contoh2.replace(
-                                  '\n',
-                                  '<br><span class="text-secondary fw-normal">'
-                                )}</span></div>
+                                <div class="lh-base fw-medium">${ex2HTML}</div>
                             </div>
                         </div>
                         <div class="card-footer border-0 p-4 pt-0">
@@ -788,6 +856,17 @@
             })
           }
         })
+
+        // Inisialisasi Event Listener tombol Mode Hafal setelah DOM siap
+        const studyBtn = document.getElementById('study-mode-toggle')
+        if (studyBtn) {
+          studyBtn.addEventListener('click', () => {
+            setStudyMode(!isStudyMode)
+          })
+        }
+
+        // Sinkronisasi status visual awal Mode Hafal
+        setStudyMode(isStudyMode)
 
         loadFilters()
         renderCards()
