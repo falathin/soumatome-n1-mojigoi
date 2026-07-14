@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafalan Bunpou N1 - Nihongo no Mori</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>"
+    />
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Minimal Utility Style -->
+    <style>
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+      }
+      /* Smooth horizontal scroll for category tabs on mobile */
+      .scroll-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap !important;
+        padding-bottom: 5px;
+        scrollbar-width: none;
+      }
+      .scroll-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      /* Status button transition */
+      .btn-status {
+        transition: all 0.2s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-body-tertiary transition-colors">
+    <!-- Navbar & Theme Toggle -->
+    <nav
+      class="navbar navbar-expand-lg bg-success text-white shadow-sm sticky-top"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <!-- Left Side: Back Button & Brand -->
+        <div class="d-flex align-items-center">
+          <a
+            href="../index.html"
+            class="btn btn-outline-light btn-sm rounded-pill px-3 me-3"
+          >
+            <i class="bi bi-arrow-left"></i>
+          </a>
+          <a class="navbar-brand fw-bold m-0" href="#">
+            <i class="bi bi-tree-fill text-warning me-2"></i>N1 文法マスター
+          </a>
+        </div>
+
+        <!-- Right Side: Theme Toggle -->
+        <div class="d-flex align-items-center">
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-light btn-sm rounded-pill px-3"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              <i class="bi bi-moon-stars-fill me-1" id="theme-icon"></i>
+              <span id="theme-text" class="d-none d-sm-inline">Mode</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+              <li>
+                <button class="dropdown-item" onclick="setTheme('light')">
+                  <i class="bi bi-sun-fill me-2 text-warning"></i> Light
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" onclick="setTheme('dark')">
+                  <i class="bi bi-moon-stars-fill me-2 text-info"></i> Dark
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" onclick="setTheme('auto')">
+                  <i class="bi bi-circle-half me-2"></i> System
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header
+      class="py-4 bg-success bg-gradient text-white text-center shadow-sm"
+    >
+      <div class="container" data-aos="fade-down">
+        <h2 class="fw-bold mb-2">
+          <i class="bi bi-book-half"></i> N1 Bunpou Tracker
+        </h2>
+        <p class="mb-0 fs-6">Hafalkan pola kalimat N1, tandai progresmu!</p>
+
+        <!-- Progress Bar -->
+        <div class="mt-3 mx-auto" style="max-width: 600px">
+          <div class="d-flex justify-content-between small fw-bold mb-1">
+            <span id="progress-text-blm" class="text-danger-emphasis"
+              >Belum: 0</span
+            >
+            <span id="progress-text-agak" class="text-warning-emphasis"
+              >Agak: 0</span
+            >
+            <span id="progress-text-hafal" class="text-white">Hafal: 0</span>
+          </div>
+          <div class="progress" style="height: 10px">
+            <div
+              id="pb-hafal"
+              class="progress-bar bg-info"
+              style="width: 0%"
+            ></div>
+            <div
+              id="pb-agak"
+              class="progress-bar bg-warning"
+              style="width: 0%"
+            ></div>
+            <div
+              id="pb-blm"
+              class="progress-bar bg-danger"
+              style="width: 100%"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Controls: Search & Filter -->
+    <div class="container mt-4 mb-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-2 justify-content-center">
+        <div class="col-md-6 col-12">
+          <div class="input-group shadow-sm">
+            <span class="input-group-text bg-white text-success border-success"
+              ><i class="bi bi-search"></i
+            ></span>
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control border-success"
+              placeholder="Cari bahasa Jepang atau artinya..."
+              onkeyup="handleSearch()"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <select
+            id="statusFilter"
+            class="form-select border-success shadow-sm"
+            onchange="handleFilter()"
+          >
+            <option value="all">📚 Tampilkan Semua Status</option>
+            <option value="0">❌ Belum Hafal</option>
+            <option value="1">⚠️ Agak Hafal</option>
+            <option value="2">✅ Sudah Hafal</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="container mb-4" data-aos="fade-up" data-aos-delay="200">
+      <ul
+        class="nav nav-pills scroll-tabs d-flex shadow-sm p-2 bg-success-subtle rounded-4"
+        id="categoryTabs"
+      >
+        <!-- Tabs injected by JS -->
+      </ul>
+    </div>
+
+    <!-- Grammar Cards Container -->
+    <main class="container mb-5">
+      <div
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+        id="grammar-container"
+      >
+        <!-- Cards injected by JS -->
+      </div>
+      <!-- Empty State -->
+      <div id="empty-state" class="text-center py-5 d-none">
+        <h1 class="display-1 text-muted"><i class="bi bi-emoji-frown"></i></h1>
+        <h4 class="text-muted mt-3">Tidak ada data yang cocok.</h4>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 text-center mt-auto">
+      <div class="container">
+        <p class="mb-0 small">
+          &copy; 2026 N1 Bunpou Tracker | Ganbatte Kudasai!
+          <i class="bi bi-emoji-smile"></i>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // --- 1. THEME MANAGEMENT ---
+      const setTheme = theme => {
+        if (
+          theme === 'auto' &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+        ) {
+          document.documentElement.setAttribute('data-bs-theme', 'dark')
+        } else {
+          document.documentElement.setAttribute(
+            'data-bs-theme',
+            theme === 'auto' ? 'light' : theme
+          )
+        }
+        localStorage.setItem('theme', theme)
+        updateThemeUI(theme)
+      }
+      const updateThemeUI = theme => {
+        const icon = document.getElementById('theme-icon')
+        if (theme === 'light')
+          icon.className = 'bi bi-sun-fill text-warning me-1'
+        else if (theme === 'dark')
+          icon.className = 'bi bi-moon-stars-fill text-info me-1'
+        else icon.className = 'bi bi-circle-half me-1'
+      }
+      setTheme(localStorage.getItem('theme') || 'auto')
+
+      // --- 2. DATA SOURCE ---
+      const categories = [
+        { id: 'cat-1', icon: 'bi-arrow-left-right', title: '逆接 (Tapi)' },
+        { id: 'cat-2', icon: 'bi-arrow-right', title: '順接 (Sebab)' },
+        { id: 'cat-3', icon: 'bi-stars', title: '比較/強調' },
+        { id: 'cat-4', icon: 'bi-clock-history', title: '時点 (Waktu)' },
+        { id: 'cat-5', icon: 'bi-emoji-dizzy', title: 'わるい (Buruk)' },
+        { id: 'cat-6', icon: 'bi-bullseye', title: '目的 (Tujuan)' },
+        { id: 'cat-7', icon: 'bi-hourglass-split', title: '時間 (Saat)' },
+        { id: 'cat-8', icon: 'bi-question-diamond', title: '仮定 (Syarat)' },
+        { id: 'cat-9', icon: 'bi-slash-circle', title: '関係ない' },
+        { id: 'cat-10', icon: 'bi-person-badge', title: '敬語 (Keigo)' }
+      ]
+
+      const bunpouData = [
+        // Cat 1
+        {
+          cat: 'cat-1',
+          id: '1',
+          ja: '~ようが~まいが',
+          idn: 'Mau ... ataupun tidak ...',
+          ex: [
+            {
+              j: '雨が降ろうが降るまいが、試合は行われます。',
+              i: 'Baik hujan maupun tidak, pertandingan akan tetap dilaksanakan.'
+            },
+            {
+              j: '彼が来ようが来まいが、出発する。',
+              i: 'Mau dia datang atau tidak, kita akan berangkat.'
+            },
+            {
+              j: '誰が何と言おうが、私の決意は変わらない。',
+              i: 'Siapapun mau bilang apa, tekadku tak berubah.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-1',
+          id: '2',
+          ja: '~とはいえ',
+          idn: 'Meskipun / Walaupun begitu',
+          ex: [
+            {
+              j: '春とはいえ、まだ寒い日が続いている。',
+              i: 'Meskipun musim semi, hari-hari dingin masih berlanjut.'
+            },
+            {
+              j: '兄弟とはいえ、性格は全く違う。',
+              i: 'Walaupun bersaudara, sifat mereka benar-benar berbeda.'
+            },
+            {
+              j: '社長とはいえ、彼は決して偉ぶらない。',
+              i: 'Meskipun dia direktur, dia tak pernah sombong.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-1',
+          id: '3',
+          ja: '~ようにも~ない',
+          idn: 'Meskipun ingin... tapi tidak bisa',
+          ex: [
+            {
+              j: 'お金がなくて、家を買おうにも買えない。',
+              i: 'Karena tak ada uang, meski ingin beli rumah saya tidak bisa.'
+            },
+            {
+              j: '頭が痛くて、起き上がろうにも起き上がれない。',
+              i: 'Kepalaku sakit, meski ingin bangun aku tak sanggup.'
+            },
+            {
+              j: '連絡先を知らないので、知らせようにも知らせられない。',
+              i: 'Karena tak tahu kontaknya, meski ingin memberitahu, aku tak bisa.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-1',
+          id: '4',
+          ja: '~か（のか）と思いきや',
+          idn: 'Kukira... eh ternyata malah...',
+          ex: [
+            {
+              j: '不合格かと思いきや、見事に合格していた。',
+              i: 'Kukira tidak lulus, eh ternyata lulus.'
+            },
+            {
+              j: '晴れるかと思いきや、突然雨が降り出した。',
+              i: 'Kukira akan cerah, eh malah hujan.'
+            },
+            {
+              j: '彼は怒るかと思いきや、逆に笑い出した。',
+              i: 'Kukira dia akan marah, eh ternyata dia malah tertawa.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-1',
+          id: '5',
+          ja: '~たところで',
+          idn: 'Meskipun... (hasilnya akan percuma)',
+          ex: [
+            {
+              j: '今から走ったところで、間に合わないだろう。',
+              i: 'Meskipun lari sekarang, tak akan keburu.'
+            },
+            {
+              j: 'いくら謝ったところで、彼女は許してくれない。',
+              i: 'Meskipun minta maaf berulang kali, dia tak akan memaafkanku.'
+            },
+            {
+              j: '後悔したところで、過去は変えられない。',
+              i: 'Meskipun menyesal, masa lalu tak bisa diubah.'
+            }
+          ]
+        },
+
+        // Cat 2
+        {
+          cat: 'cat-2',
+          id: '6',
+          ja: '~ばこそ',
+          idn: 'Justru karena...',
+          ex: [
+            {
+              j: '君の将来を思えばこそ、厳しく言うのだ。',
+              i: 'Justru karena memikirkan masa depanmu, aku bicara tegas.'
+            },
+            {
+              j: '愛していればこそ、別れを決意した。',
+              i: 'Justru karena mencintainya, aku memutuskan berpisah.'
+            },
+            {
+              j: '健康であればこそ、仕事が頑張れる。',
+              i: 'Justru karena sehatlah, kita bisa semangat bekerja.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-2',
+          id: '7',
+          ja: '~ゆえ',
+          idn: 'Karena / Oleh karena (Formal)',
+          ex: [
+            {
+              j: '悪天候ゆえ、本日のイベントは中止となります。',
+              i: 'Oleh karena cuaca buruk, event dibatalkan.'
+            },
+            {
+              j: '貧しさゆえに、彼は進学を諦めた。',
+              i: 'Karena kemiskinan, dia menyerah untuk lanjut sekolah.'
+            },
+            {
+              j: '若さゆえの過ちだったと反省している。',
+              i: 'Aku introspeksi bahwa itu adalah kesalahan karena masa muda.'
+            }
+          ]
+        },
+
+        // Cat 3
+        {
+          cat: 'cat-3',
+          id: '8',
+          ja: '~たりとも',
+          idn: 'Bahkan (1 unit) pun tidak',
+          ex: [
+            {
+              j: '１日たりとも君を忘れたことはない。',
+              i: 'Bahkan sehari pun aku tak pernah melupakanmu.'
+            },
+            {
+              j: '１円たりとも無駄にはできない。',
+              i: 'Bahkan satu yen pun tak boleh disia-siakan.'
+            },
+            {
+              j: '一瞬たりとも気を抜いてはいけない。',
+              i: 'Sesaat pun tidak boleh lengah.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '9',
+          ja: '~はおろか',
+          idn: 'Jangankan... (yang lebih rendah pun tidak)',
+          ex: [
+            {
+              j: '漢字はおろか、ひらがなも書けない。',
+              i: 'Jangankan Kanji, Hiragana pun tak bisa.'
+            },
+            {
+              j: '車はおろか、自転車さえ持っていない。',
+              i: 'Jangankan mobil, sepeda saja tak punya.'
+            },
+            {
+              j: '走ることはおろか歩くこともできない。',
+              i: 'Jangankan berlari, berjalan pun tak bisa.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '10',
+          ja: '~もさることながら',
+          idn: 'Tentu saja A, tapi B juga',
+          ex: [
+            {
+              j: '味もさることながら、サービスが素晴らしい。',
+              i: 'Tentu saja rasanya, tapi pelayanannya juga luar biasa.'
+            },
+            {
+              j: 'デザインもさることながら、機能性が高い。',
+              i: 'Tentu saja desainnya, tapi fungsionalitasnya juga tinggi.'
+            },
+            {
+              j: '両親の希望もさることながら、本人の意志が大切だ。',
+              i: 'Harapan ortu penting, tapi kemauan sendiri yang paling penting.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '11',
+          ja: '~をおいて他にはない',
+          idn: 'Tidak ada yang lain selain...',
+          ex: [
+            { j: '彼をおいて他にいない。', i: 'Tidak ada lagi selain dia.' },
+            {
+              j: 'あなたをおいて他にいません。',
+              i: 'Tidak ada yang lain selain dirimu.'
+            },
+            {
+              j: 'ここをおいて他には見られない。',
+              i: 'Tak bisa dilihat di tempat lain selain di sini.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '12',
+          ja: '~ならでは',
+          idn: 'Khas / Hanya ada pada...',
+          ex: [
+            {
+              j: '京都ならではの料理です。',
+              i: 'Masakan khas (yang hanya ada di) Kyoto.'
+            },
+            { j: '彼ならではのアイデアだ。', i: 'Ide khas dari dia.' },
+            {
+              j: '専門店ならではの品揃えですね。',
+              i: 'Kelengkapan barang khas toko khusus.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '13',
+          ja: '~あるまじき',
+          idn: 'Tidak sepantasnya',
+          ex: [
+            {
+              j: '教師としてあるまじき行為だ。',
+              i: 'Tindakan yang tak sepantasnya bagi guru.'
+            },
+            {
+              j: 'プロにあるまじきミス。',
+              i: 'Kesalahan yang tak sepantasnya bagi pro.'
+            },
+            {
+              j: '許すまじき犯罪だ。',
+              i: 'Kejahatan yang tak pantas dimaafkan.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '14',
+          ja: '~にひきかえ',
+          idn: 'Sangat kontras dengan...',
+          ex: [
+            {
+              j: '兄にひきかえ、弟は遊んでばかりいる。',
+              i: 'Sangat kontras dengan kakaknya, adiknya cuma main.'
+            },
+            {
+              j: '昨日にひきかえ、今日は快晴だ。',
+              i: 'Kontras dengan kemarin, hari ini cerah.'
+            },
+            {
+              j: '前作の不評にひきかえ、今作は大ヒット。',
+              i: 'Kontras dengan karya lalu yang buruk, karya ini sukses.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '15',
+          ja: '~といったらない',
+          idn: 'Sangat... / Bukan main',
+          ex: [
+            {
+              j: 'その時の恥ずかしさといったらない。',
+              i: 'Rasa maluku saat itu bukan main.'
+            },
+            {
+              j: '美しさといったらなかった。',
+              i: 'Keindahannya sangat luar biasa.'
+            },
+            {
+              j: '徹夜明けの眠さといったらない。',
+              i: 'Kantuk setelah begadang bukan main rasanya.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '16',
+          ja: '~極まりない',
+          idn: 'Sangat... (hal negatif)',
+          ex: [
+            { j: '迷惑極まりない。', i: 'Sangat mengganggu sekali.' },
+            {
+              j: '危険極まりない行為だ。',
+              i: 'Tindakan yang sangat berbahaya.'
+            },
+            { j: '態度は失礼極まりない。', i: 'Sikapnya sangat tak sopan.' }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '17',
+          ja: '~てやまない',
+          idn: 'Sangat / Tak henti-henti (doa)',
+          ex: [
+            {
+              j: 'ご活躍を祈ってやみません。',
+              i: 'Tak henti-henti mendoakan kesuksesan.'
+            },
+            { j: '平和を願ってやまない。', i: 'Sangat berharap dunia damai.' },
+            {
+              j: '親は子供の幸せを願ってやまない。',
+              i: 'Orang tua tak henti mendoakan kebahagiaan anak.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '18',
+          ja: '~を禁じえない',
+          idn: 'Tak bisa menahan (perasaan)',
+          ex: [
+            { j: '涙を禁じえなかった。', i: 'Tak bisa menahan air mata.' },
+            {
+              j: '驚きを禁じえなかった。',
+              i: 'Tak bisa menahan rasa kagum/kaget.'
+            },
+            { j: '怒りを禁じえない。', i: 'Tak bisa menahan kemarahan.' }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '19',
+          ja: '~とは',
+          idn: 'Sungguh mengejutkan bahwa...',
+          ex: [
+            {
+              j: '合格するとは、思ってもみなかった。',
+              i: 'Mengejutkan aku lulus, tak terbayangkan.'
+            },
+            {
+              j: '彼が犯人だったとは、驚きだ。',
+              i: 'Mengejutkan pelakunya dia.'
+            },
+            {
+              j: 'ハワイがこれほど美しいとは！',
+              i: 'Tak kusangka Hawaii seindah ini!'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '20',
+          ja: '~にたえない',
+          idn: 'Sangat (merasakan) / Tak tahan melihat',
+          ex: [
+            {
+              j: '感謝にたえません。',
+              i: 'Sangat bersyukur (tak tertahankan).'
+            },
+            { j: '見るにたえないものだった。', i: 'Tak tahan untuk dilihat.' },
+            {
+              j: '横柄な態度は、見るにたえない。',
+              i: 'Sikap angkuhnya tak tahan untuk dilihat.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-3',
+          id: '21',
+          ja: '~てまで',
+          idn: 'Sampai rela... (lewat batas)',
+          ex: [
+            {
+              j: '借金してまで、車を買いたいとは思わない。',
+              i: 'Tak ingin beli mobil sampai rela berhutang.'
+            },
+            {
+              j: '嘘をついてまで、意見を通すのは良くない。',
+              i: 'Memaksakan pendapat sampai rela berbohong itu tak baik.'
+            },
+            {
+              j: '健康を壊してまで働く必要はない。',
+              i: 'Tak perlu kerja sampai merusak kesehatan.'
+            }
+          ]
+        },
+
+        // Cat 4
+        {
+          cat: 'cat-4',
+          id: '22',
+          ja: '~てからというもの',
+          idn: 'Semenjak... (ada perubahan besar)',
+          ex: [
+            {
+              j: '子供が生まれてからというもの、家にいる。',
+              i: 'Semenjak anak lahir, saya selalu di rumah.'
+            },
+            {
+              j: 'パソコンを買ってからというもの、仕事が早くなった。',
+              i: 'Semenjak beli PC, kerja jadi cepat.'
+            },
+            {
+              j: '彼と出会ってからというもの、人生が明るくなった。',
+              i: 'Semenjak bertemu dia, hidupku cerah.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-4',
+          id: '23',
+          ja: '~をもって',
+          idn: 'Terhitung mulai / Dengan ini (Resmi)',
+          ex: [
+            {
+              j: '本日をもって、閉店させていただきます。',
+              i: 'Terhitung hari ini, toko ditutup.'
+            },
+            {
+              j: 'これをもって、会議を終了いたします。',
+              i: 'Dengan ini, rapat diakhiri.'
+            },
+            {
+              j: '３月３１日をもって退職します。',
+              i: 'Pensiun terhitung tanggal 31 Maret.'
+            }
+          ]
+        },
+
+        // Cat 5
+        {
+          cat: 'cat-5',
+          id: '24',
+          ja: '~に至っては',
+          idn: 'Bahkan pada kasus (yang paling ekstrem)...',
+          ex: [
+            {
+              j: '先月に至ってはゼロだった。',
+              i: 'Bahkan bulan lalu saja sampai nol.'
+            },
+            {
+              j: '山田に至ってはまだ来ていない。',
+              i: 'Bahkan Yamada saja sampai belum datang.'
+            },
+            {
+              j: '卵に至っては2倍の値段になった。',
+              i: 'Pada kasus telur harganya sampai 2x lipat.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-5',
+          id: '25',
+          ja: '~ものを',
+          idn: 'Padahal seandainya... (Penyesalan)',
+          ex: [
+            {
+              j: '言ってくれれば手伝ったものを。',
+              i: 'Padahal seandainya bilang, pasti kubantu.'
+            },
+            {
+              j: '早く出発していれば間に合ったものを。',
+              i: 'Padahal kalau berangkat cepat pasti keburu.'
+            },
+            {
+              j: '寝ていれば治るものを、無理するから悪化した。',
+              i: 'Padahal kalau tidur pasti sembuh, memaksakan makanya memburuk.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-5',
+          id: '26',
+          ja: '~ではあるまいし',
+          idn: 'Bukannya... / Kan bukan...',
+          ex: [
+            {
+              j: '子供ではあるまいし、自分でやりなさい。',
+              i: 'Kan bukan anak kecil, kerjakan sendiri.'
+            },
+            {
+              j: '神様じゃあるまいし、未来はわからない。',
+              i: 'Aku kan bukan Tuhan, mana kutahu masa depan.'
+            },
+            {
+              j: '初めてじゃあるまいし、迷うはずがない。',
+              i: 'Bukannya baru pertama kali, tak mungkin nyasar.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-5',
+          id: '27',
+          ja: '~ようものなら',
+          idn: 'Kalau sampai... (akibat fatal)',
+          ex: [
+            {
+              j: '反抗しようものなら、クビになる。',
+              i: 'Kalau sampai membantah, akan dipecat.'
+            },
+            {
+              j: '秘密を話そうものなら、全員が知る。',
+              i: 'Kalau sampai bicara rahasia, semua pasti tahu.'
+            },
+            {
+              j: 'ミスをしようものなら、怒られる。',
+              i: 'Kalau sampai buat salah, pasti dimarahi.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-5',
+          id: '28',
+          ja: '~が最後',
+          idn: 'Sekalinya... (maka selesailah)',
+          ex: [
+            {
+              j: '始めたが最後、やめられなくなる。',
+              i: 'Sekalinya mulai, tak akan bisa berhenti.'
+            },
+            {
+              j: 'マイクを握ったが最後、離さない。',
+              i: 'Sekalinya pegang mic, tak mau lepas.'
+            },
+            {
+              j: 'ボタンを押したが最後、データは消去される。',
+              i: 'Sekalinya ditekan, semua data terhapus.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-5',
+          id: '29',
+          ja: '~ばそれまでだ',
+          idn: 'Kalau... ya tamatlah',
+          ex: [
+            {
+              j: '死んでしまえばそれまでだ。',
+              i: 'Kalau mati ya selesai sudah.'
+            },
+            { j: '遅れればそれまでだ。', i: 'Kalau telat ya percuma saja.' },
+            {
+              j: '実行しなければそれまでだ。',
+              i: 'Kalau tak dieksekusi ya tamatlah.'
+            }
+          ]
+        },
+
+        {
+          cat: 'cat-5',
+          id: '30',
+          ja: '~を余儀なくされる',
+          idn: 'Terpaksa harus...',
+          ex: [
+            {
+              j: 'うるさい隣人のせいで、引っ越しを余儀なくされた。',
+              i: 'Karena tetangga yang berisik, terpaksa harus pindah rumah.'
+            },
+            {
+              j: 'やっとプロ野球選手になったが、大怪我をして引退を余儀なくされた。',
+              i: 'Akhirnya berhasil menjadi pemain bisbol profesional, tetapi karena cedera parah, terpaksa harus pensiun.'
+            },
+            {
+              j: 'イベントは、大雨により延期を余儀なくされた。',
+              i: 'Acara tersebut terpaksa ditunda karena hujan deras.'
+            }
+          ]
+        },
+
+        // Cat 6
+        {
+          cat: 'cat-6',
+          id: '31',
+          ja: '~んがため',
+          idn: 'Demi / Untuk tujuan (Tekad)',
+          ex: [
+            {
+              j: '夢を実現せんがため、海外へ渡った。',
+              i: 'Demi mewujudkan mimpi, dia ke luar negeri.'
+            },
+            {
+              j: '勝たんがため、厳しい練習に耐えている。',
+              i: 'Demi menang, dia bertahan latihan keras.'
+            },
+            {
+              j: '真実を明らかかせんがため、私は戦う。',
+              i: 'Demi mengungkap kebenaran, aku berjuang.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-6',
+          id: '32',
+          ja: '~べく',
+          idn: 'Dengan tujuan untuk...',
+          ex: [
+            {
+              j: '医者になるべく、猛勉強している。',
+              i: 'Dengan tujuan jadi dokter, dia belajar keras.'
+            },
+            {
+              j: '恩師に会うべく、故郷へ帰った。',
+              i: 'Dengan tujuan menemui guru, aku pulang kampung.'
+            },
+            {
+              j: '目標を達成すべく、頑張る。',
+              i: 'Untuk mencapai target, kami berjuang.'
+            }
+          ]
+        },
+
+        // Cat 7
+        {
+          cat: 'cat-7',
+          id: '33',
+          ja: '~や否や',
+          idn: 'Begitu / Seketika setelah...',
+          ex: [
+            {
+              j: '帰宅するや否や、ベッドに倒れ込んだ。',
+              i: 'Begitu pulang, langsung ambruk ke kasur.'
+            },
+            {
+              j: 'ベルが鳴るや否や、飛び出した。',
+              i: 'Seketika bel bunyi, langsung berhamburan.'
+            },
+            {
+              j: 'ニュースを聞くや否や、泣き出した。',
+              i: 'Begitu dengar berita, langsung nangis.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-7',
+          id: '34',
+          ja: '~たところ / 途端',
+          idn: 'Begitu melakukan... ternyata...',
+          ex: [
+            {
+              j: '相談したところ、良いアドバイスをもらえた。',
+              i: 'Begitu konsultasi, dapat saran bagus.'
+            },
+            {
+              j: '食べた途端、口が燃えるようだった。',
+              i: 'Begitu makan, mulut terasa terbakar.'
+            },
+            {
+              j: '窓を開けたところ、冷風が入ってきた。',
+              i: 'Begitu buka jendela, angin dingin masuk.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-7',
+          id: '35',
+          ja: '~んばかり',
+          idn: 'Seolah hampir... / Hampir saja...',
+          ex: [
+            {
+              j: '「出て行け」と言わんばかりの顔。',
+              i: "Wajah seolah hampir bilang 'Keluar!'."
+            },
+            {
+              j: '泣き出さんばかりの表情。',
+              i: 'Ekspresi seolah hampir nangis.'
+            },
+            {
+              j: '破裂せんばかりに膨らんでいる。',
+              i: 'Mengembang seolah hampir meletus.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-7',
+          id: '36',
+          ja: '~かたわら',
+          idn: 'Di samping (A), juga melakukan (B)',
+          ex: [
+            {
+              j: '会社員として働くかたわら、小説を書く。',
+              i: 'Di samping jadi pegawai, juga menulis novel.'
+            },
+            {
+              j: '家事のかたわら、英語を勉強する。',
+              i: 'Di samping urus rumah, ibu belajar Inggris.'
+            },
+            {
+              j: '教えるかたわら、研究も続ける。',
+              i: 'Sembari mengajar, aku lanjut penelitian.'
+            }
+          ]
+        },
+
+        // Cat 8
+        {
+          cat: 'cat-8',
+          id: '37',
+          ja: '~なくして',
+          idn: 'Tanpa... (maka tidak bisa...)',
+          ex: [
+            {
+              j: '協力なくして、成功はない。',
+              i: 'Tanpa kerja sama, tak ada kesuksesan.'
+            },
+            {
+              j: '努力なくして、栄光はない。',
+              i: 'Tanpa usaha, tak ada kejayaan.'
+            },
+            {
+              j: '愛なくして、人生は意味を持たない。',
+              i: 'Tanpa cinta, hidup tak ada arti.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-8',
+          id: '38',
+          ja: '~ことなしに（は）',
+          idn: 'Tanpa melakukan...',
+          ex: [
+            {
+              j: '許可を得ることなしに、入ってはいけない。',
+              i: 'Tanpa dapat izin, dilarang masuk.'
+            },
+            {
+              j: '失敗を経験することなしに、成功は得られない。',
+              i: 'Tanpa gagal, sukses tak bisa diraih.'
+            },
+            {
+              j: '気持ちを考えることなしに発言するべきではない。',
+              i: 'Tak seharusnya bicara tanpa memikirkan perasaan.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-8',
+          id: '39',
+          ja: '~とあっては',
+          idn: 'Jika kondisinya... (maka tentu...)',
+          ex: [
+            {
+              j: '社長の命令とあっては、従わざるを得ない。',
+              i: 'Jika ini perintah direktur, harus dipatuhi.'
+            },
+            {
+              j: '無料とあっては、行くしかない。',
+              i: 'Mumpung gratis, tentu harus pergi.'
+            },
+            {
+              j: 'アイドルのコンサートとあっては、ファンが殺到する。',
+              i: 'Jika ini konser idol, wajar fans membludak.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-8',
+          id: '40',
+          ja: '~いかん',
+          idn: 'Tergantung pada...',
+          ex: [
+            {
+              j: '結果いかんで、卒業が決まる。',
+              i: 'Tergantung hasil, kelulusan diputuskan.'
+            },
+            {
+              j: '天気いかんで、中止になるかもしれない。',
+              i: 'Tergantung cuaca, mungkin dibatalkan.'
+            },
+            {
+              j: '理由のいかんを問わず、遅刻はダメ。',
+              i: 'Apapun alasannya, telat tak diizinkan.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-8',
+          id: '41',
+          ja: '~ようによっては',
+          idn: 'Tergantung cara... / Bisa jadi...',
+          ex: [
+            {
+              j: '見ようによっては犬に見える。',
+              i: 'Tergantung cara lihat, bisa terlihat anjing.'
+            },
+            {
+              j: '考えようによっては、良い経験だ。',
+              i: 'Tergantung pemikiran, ini pengalaman baik.'
+            },
+            {
+              j: '使いようによっては、まだ役に立つ。',
+              i: 'Tergantung cara pakai, masih bisa berguna.'
+            }
+          ]
+        },
+
+        // Cat 9
+        {
+          cat: 'cat-9',
+          id: '42',
+          ja: '~をよそに',
+          idn: 'Tanpa mempedulikan / Mengabaikan',
+          ex: [
+            {
+              j: '心配をよそに、危険な旅に出た。',
+              i: 'Mengabaikan kekhawatiran, dia pergi bahaya.'
+            },
+            {
+              j: '反対をよそに、建設が始まった。',
+              i: 'Mengabaikan penolakan, pembangunan dimulai.'
+            },
+            {
+              j: '忠告をよそに、またミスをした。',
+              i: 'Tanpa peduli peringatan, dia salah lagi.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-9',
+          id: '43',
+          ja: '~をものともせず',
+          idn: 'Tanpa menghiraukan (hambatan)',
+          ex: [
+            {
+              j: '怪我をものともせず、走り抜いた。',
+              i: 'Tanpa hiraukan luka, dia lari sampai akhir.'
+            },
+            {
+              j: '批判をものともせず、信念を貫いた。',
+              i: 'Tanpa hiraukan kritik, dia pegang teguh niatnya.'
+            },
+            {
+              j: '悪天候をものともせず、頂上を目指した。',
+              i: 'Tanpa hiraukan cuaca buruk, menuju puncak.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-9',
+          id: '44',
+          ja: '~までもなく',
+          idn: 'Tak perlu sampai... (karena jelas)',
+          ex: [
+            {
+              j: '言うまでもなく、健康が一番だ。',
+              i: 'Tak perlu dibilang lagi, sehat itu utama.'
+            },
+            {
+              j: '聞くまでもなく、表情でわかった。',
+              i: 'Tak perlu dengar, tahu dari ekspresinya.'
+            },
+            {
+              j: '調べるまでもなく、嘘だとわかる。',
+              i: 'Tak perlu diperiksa, jelas itu bohong.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-9',
+          id: '45',
+          ja: '~ないまでも',
+          idn: 'Meskipun tak sampai... (setidaknya...)',
+          ex: [
+            {
+              j: '満点は取れないまでも、合格したい。',
+              i: 'Meski tak sempurna, setidaknya ingin lulus.'
+            },
+            {
+              j: '毎日とは言わないまでも、週３は運動して。',
+              i: 'Meski tak tiap hari, setidaknya olahraga 3x seminggu.'
+            },
+            {
+              j: 'プロになれないまでも、趣味として続けたい。',
+              i: 'Meski tak jadi pro, setidaknya lanjut sebagai hobi.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-9',
+          id: '46',
+          ja: '~といったところ',
+          idn: 'Kira-kira / Paling-paling...',
+          ex: [
+            {
+              j: '腕前は、家庭料理といったところだ。',
+              i: 'Kemampuan masakku paling sebatas masakan rumahan.'
+            },
+            {
+              j: '休日は、映画か寝るかといったところです。',
+              i: 'Hari libur kira-kira nonton atau tidur.'
+            },
+            {
+              j: '参加者は20人といったところだろう。',
+              i: 'Pesertanya kira-kira 20 orang.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-9',
+          id: '47',
+          ja: '~なりに',
+          idn: 'Sesuai dengan / Sebatas kemampuannya...',
+          ex: [
+            {
+              j: '子供には子供なりの悩みがある。',
+              i: 'Anak-anak punya masalah sesuai kapasitas anak.'
+            },
+            {
+              j: '私なりに一生懸命考えた結果です。',
+              i: 'Hasil pikiranku sebatas kemampuanku.'
+            },
+            {
+              j: '古い車だが、それなりに走る。',
+              i: 'Meski mobil tua, bisa melaju sebatas kapasitasnya.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-9',
+          id: '48',
+          ja: '~ともなると',
+          idn: 'Kalau sudah tingkat/situasi... (wajar...)',
+          ex: [
+            {
+              j: 'プロともなると、練習量が違う。',
+              i: 'Kalau sudah pro, porsi latihan beda.'
+            },
+            {
+              j: '12月ともなると、寒くなる。',
+              i: 'Kalau sudah Desember, tiba-tiba dingin.'
+            },
+            {
+              j: '部長ともなると、責任も重くなる。',
+              i: 'Kalau posisi manajer, tanggung jawab berat.'
+            }
+          ]
+        },
+
+        // Cat 10
+        {
+          cat: 'cat-10',
+          id: '49',
+          ja: '~（さ）せていただく',
+          idn: 'Izinkan saya (Merendahkan Diri)',
+          ex: [
+            {
+              j: '司会を務めさせていただきます。',
+              i: 'Izinkan saya bertugas jadi MC.'
+            },
+            {
+              j: '後ほど連絡させていただきます。',
+              i: 'Saya akan hubungi nanti.'
+            },
+            {
+              j: '参加させていただきます。',
+              i: 'Dengan senang hati, saya ikut.'
+            }
+          ]
+        },
+        {
+          cat: 'cat-10',
+          id: '50',
+          ja: '~お/ご~願う',
+          idn: 'Mohon dengan hormat',
+          ex: [
+            {
+              j: 'おタバコはご遠慮願います。',
+              i: 'Mohon hormat untuk tak merokok.'
+            },
+            {
+              j: 'サインをお願い願えますか？',
+              i: 'Bolehkah saya mohon tanda tangan di sini?'
+            },
+            {
+              j: '早急なご対応をお願い願います。',
+              i: 'Mohon tindak lanjut secepatnya.'
+            }
+          ]
+        }
+      ]
+
+      // --- 3. STATE & RENDER LOGIC ---
+      // Load hafalan state (0: Belum, 1: Agak, 2: Hafal)
+      let hafalanState =
+        JSON.parse(localStorage.getItem('bunpouState_N1')) || {}
+      bunpouData.forEach(item => {
+        if (hafalanState[item.id] === undefined) hafalanState[item.id] = 0 // Default: 0
+      })
+
+      let currentCat = 'all'
+      let searchQuery = ''
+      let currentStatus = 'all'
+
+      // Render Tabs
+      const renderTabs = () => {
+        const tabsContainer = document.getElementById('categoryTabs')
+        let tabsHtml = `<li class="nav-item"><button class="nav-link active rounded-pill fw-bold" onclick="setCategory('all')" id="tab-all"><i class="bi bi-grid-fill me-1"></i>Semua</button></li>`
+
+        categories.forEach(cat => {
+          tabsHtml += `<li class="nav-item"><button class="nav-link rounded-pill text-nowrap fw-semibold" onclick="setCategory('${cat.id}')" id="tab-${cat.id}"><i class="bi ${cat.icon} me-1"></i>${cat.title}</button></li>`
+        })
+        tabsContainer.innerHTML = tabsHtml
+      }
+
+      const setCategory = catId => {
+        currentCat = catId
+        document
+          .querySelectorAll('#categoryTabs .nav-link')
+          .forEach(btn =>
+            btn.classList.remove('active', 'bg-success', 'text-white')
+          )
+        const activeTab = document.getElementById(`tab-${catId}`)
+        activeTab.classList.add('active', 'bg-success', 'text-white')
+        renderCards()
+      }
+
+      const handleSearch = () => {
+        searchQuery = document.getElementById('searchInput').value.toLowerCase()
+        renderCards()
+      }
+
+      const handleFilter = () => {
+        currentStatus = document.getElementById('statusFilter').value
+        renderCards()
+      }
+
+      const updateStatus = (id, status) => {
+        hafalanState[id] = status
+        localStorage.setItem('bunpouState_N1', JSON.stringify(hafalanState))
+        updateProgress()
+
+        // Visual Update UI without re-rendering everything to avoid layout jump
+        const btnBelum = document.getElementById(`btn-belum-${id}`)
+        const btnAgak = document.getElementById(`btn-agak-${id}`)
+        const btnHafal = document.getElementById(`btn-hafal-${id}`)
+        const cardHeader = document.getElementById(`card-header-${id}`)
+
+        btnBelum.className = `btn btn-sm btn-status ${
+          status === 0 ? 'btn-danger' : 'btn-outline-danger'
+        }`
+        btnAgak.className = `btn btn-sm btn-status ${
+          status === 1 ? 'btn-warning text-dark' : 'btn-outline-warning'
+        }`
+        btnHafal.className = `btn btn-sm btn-status ${
+          status === 2 ? 'btn-info text-white' : 'btn-outline-info'
+        }`
+
+        cardHeader.className = `card-header text-white py-3 transition-colors ${
+          status === 2
+            ? 'bg-info'
+            : status === 1
+            ? 'bg-warning text-dark'
+            : 'bg-success'
+        }`
+
+        // If user is filtering by status, re-render to hide the card immediately
+        if (currentStatus !== 'all') {
+          setTimeout(renderCards, 300) // slight delay for visual feedback
+        }
+      }
+
+      const updateProgress = () => {
+        let s0 = 0,
+          s1 = 0,
+          s2 = 0
+        Object.values(hafalanState).forEach(val => {
+          if (val === 0) s0++
+          else if (val === 1) s1++
+          else if (val === 2) s2++
+        })
+        const total = s0 + s1 + s2
+
+        document.getElementById('progress-text-blm').innerText = `Belum: ${s0}`
+        document.getElementById('progress-text-agak').innerText = `Agak: ${s1}`
+        document.getElementById(
+          'progress-text-hafal'
+        ).innerText = `Hafal: ${s2}`
+
+        document.getElementById('pb-hafal').style.width = `${
+          (s2 / total) * 100
+        }%`
+        document.getElementById('pb-agak').style.width = `${
+          (s1 / total) * 100
+        }%`
+        document.getElementById('pb-blm').style.width = `${(s0 / total) * 100}%`
+      }
+
+      const renderCards = () => {
+        const container = document.getElementById('grammar-container')
+        const emptyState = document.getElementById('empty-state')
+        container.innerHTML = ''
+
+        let filteredData = bunpouData.filter(item => {
+          const matchCat = currentCat === 'all' || item.cat === currentCat
+          const matchSearch =
+            item.ja.toLowerCase().includes(searchQuery) ||
+            item.idn.toLowerCase().includes(searchQuery) ||
+            item.id === searchQuery
+          const matchStatus =
+            currentStatus === 'all' || hafalanState[item.id] == currentStatus
+          return matchCat && matchSearch && matchStatus
+        })
+
+        if (filteredData.length === 0) {
+          emptyState.classList.remove('d-none')
+        } else {
+          emptyState.classList.add('d-none')
+
+          filteredData.forEach((item, index) => {
+            const status = hafalanState[item.id]
+            let headerColor =
+              status === 2
+                ? 'bg-info'
+                : status === 1
+                ? 'bg-warning text-dark'
+                : 'bg-success text-white'
+
+            let exHtml = ''
+            item.ex.forEach((ex, idx) => {
+              exHtml += `
+                            <div class="mb-2 p-2 bg-success-subtle rounded-3 border border-success-subtle small">
+                                <div class="d-flex">
+                                    <span class="badge bg-success me-2 mt-1 px-1">${
+                                      idx + 1
+                                    }</span>
+                                    <div>
+                                        <div class="fw-bold text-dark">${
+                                          ex.j
+                                        }</div>
+                                        <div class="text-muted"><i class="bi bi-translate me-1"></i>${
+                                          ex.i
+                                        }</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `
+            })
+
+            const cardHtml = `
+                        <div class="col" data-aos="fade-up" data-aos-delay="${
+                          (index % 3) * 50
+                        }">
+                            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column">
+                                <div id="card-header-${
+                                  item.id
+                                }" class="card-header py-3 ${headerColor} transition-colors">
+                                    <h5 class="card-title mb-0 fw-bold d-flex align-items-center">
+                                        <span class="badge bg-light text-dark me-2">#${
+                                          item.id
+                                        }</span>
+                                        ${item.ja}
+                                    </h5>
+                                </div>
+                                <div class="card-body flex-grow-1">
+                                    <h6 class="text-primary-emphasis fw-bold mb-3 border-bottom pb-2">
+                                        <i class="bi bi-lightbulb-fill text-warning me-1"></i> ${
+                                          item.idn
+                                        }
+                                    </h6>
+                                    ${exHtml}
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0 pb-3 pt-0">
+                                    <div class="btn-group w-100 shadow-sm" role="group">
+                                        <button id="btn-belum-${
+                                          item.id
+                                        }" class="btn btn-sm btn-status ${
+              status === 0 ? 'btn-danger' : 'btn-outline-danger'
+            }" onclick="updateStatus('${
+              item.id
+            }', 0)"><i class="bi bi-x-circle me-1"></i>Belum</button>
+                                        <button id="btn-agak-${
+                                          item.id
+                                        }" class="btn btn-sm btn-status ${
+              status === 1 ? 'btn-warning text-dark' : 'btn-outline-warning'
+            }" onclick="updateStatus('${
+              item.id
+            }', 1)"><i class="bi bi-exclamation-triangle me-1"></i>Agak</button>
+                                        <button id="btn-hafal-${
+                                          item.id
+                                        }" class="btn btn-sm btn-status ${
+              status === 2 ? 'btn-info text-white' : 'btn-outline-info'
+            }" onclick="updateStatus('${
+              item.id
+            }', 2)"><i class="bi bi-check-circle me-1"></i>Hafal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+            container.insertAdjacentHTML('beforeend', cardHtml)
+          })
+        }
+        AOS.refresh()
+      }
+
+      // INIT
+      document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({ duration: 600, once: true, offset: 30 })
+        renderTabs()
+        setCategory('all')
+        updateProgress()
+      })
+    </script>
+  </body>
+</html>
