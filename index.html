@@ -50,7 +50,7 @@
             >文字語彙 - Master JLPT N1 Vocabulary</span
           >
 
-          <!-- Mode Hafal Toggle Button Modern -->
+          <!-- Mode Hafal Toggle Button Modern (Tepat di sebelah kiri Dark Mode) -->
           <button
             id="study-mode-toggle"
             class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2"
@@ -528,7 +528,7 @@
               'btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
             studyToggleBtn.setAttribute(
               'title',
-              'Matikan Mode Hafal (Tampilkan Arti)'
+              'Matikan Mode Hafal (Tampilkan Semua)'
             )
           } else {
             studyIcon.className = 'bi bi-eye-fill'
@@ -536,7 +536,7 @@
               'btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
             studyToggleBtn.setAttribute(
               'title',
-              'Aktifkan Mode Hafal (Sembunyikan Arti)'
+              'Aktifkan Mode Hafal (Hanya Kanji)'
             )
           }
         }
@@ -575,7 +575,7 @@
           greetingID = 'Selamat Pagi'
           iconClass = 'bi-sunrise-fill text-warning'
           quote =
-            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日om一日頑張りましょう！'
+            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日も一日頑張りましょう！'
           bannerClass = 'bg-gradient bg-primary text-white'
         } else if (h >= 11 && h < 15) {
           greetingJP = 'こんにちは'
@@ -713,7 +713,7 @@
               ? 'btn-success text-white'
               : 'btn-outline-success'
 
-          // Pemisahan baris kalimat asli Jepang dengan baris terjemahan bahasa Indonesianya
+          // Mengambil baris kalimat asli Jepang untuk contoh kalimat
           const ex1Parts = item.contoh1.split('\n')
           const ex1HTML = isStudyMode
             ? ex1Parts[0]
@@ -750,9 +750,13 @@
                             </div>
                             
                             <div class="text-center mb-4 mt-2">
-                                <p class="text-muted mb-1 small fw-semibold tracking-wide" style="letter-spacing: 0.5px;">${
-                                  item.furigana
-                                }</p>
+                                <!-- Furigana disembunyikan total saat mode hafal -->
+                                <p class="text-muted mb-1 small fw-semibold tracking-wide ${
+                                  isStudyMode ? 'd-none' : ''
+                                }" style="letter-spacing: 0.5px;">${
+            item.furigana
+          }</p>
+                                <!-- Hanya Kanji yang tetap tampil -->
                                 <h2 class="fw-bold text-dark mb-2 fs-1">${
                                   item.kanji
                                 }</h2>
@@ -767,7 +771,10 @@
                               isStudyMode ? 'd-none' : ''
                             }">${item.penjelasan}</p>
                             
-                            <div class="p-3 rounded-3 small mb-3 border contoh-box">
+                            <!-- Box contoh kalimat disembunyikan total saat mode hafal -->
+                            <div class="p-3 rounded-3 small mb-3 border contoh-box ${
+                              isStudyMode ? 'd-none' : ''
+                            }">
                                 <div class="mb-2 fw-bold text-dark"><i class="bi bi-journal-text text-danger me-2"></i>Contoh Kalimat:</div>
                                 <div class="mb-2 lh-base fw-medium">${ex1HTML}</div>
                                 <hr class="my-2 opacity-25">
