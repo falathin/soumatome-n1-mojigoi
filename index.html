@@ -1525,6 +1525,65 @@
         loadFilters()
         renderCards()
       })
+
+      // Ganti nama fungsi ini sesuai dengan fungsi render kamu yang asli (misal: renderVocab, tampilkanData, dll)
+      function renderDataKeLayar(dataArray) {
+        // 1. Tentukan wadahnya (Ganti '#vocab-container' sesuai ID wadah di HTML kamu)
+        const container = document.querySelector('#vocab-container')
+        if (!container) return
+
+        // 2. Kosongkan wadah setiap kali fungsi dipanggil
+        container.innerHTML = ''
+
+        // 3. Setup variabel untuk cicilan (chunk)
+        let indexData = 0
+        const chunkSize = 20 // Render 20 data per kedipan mata (bikin enteng)
+
+        // 4. Fungsi dalam fungsi untuk nyicil render
+        function renderCicilan() {
+          let chunkHTML = ''
+          let batasAkhir = Math.min(indexData + chunkSize, dataArray.length)
+
+          // Looping cuma buat 20 data aja
+          for (; indexData < batasAkhir; indexData++) {
+            let item = dataArray[indexData]
+            let index = indexData
+
+            // ==========================================================
+            // PASTE KODE IF (isTableView) { ... } ELSE { ... } KAMU DI SINI
+            // ==========================================================
+            if (isTableView) {
+              // HTML Tabel Desktop
+              chunkHTML += `
+                    <tr class="vocab-table-row" data-vocab-id="${item.id}">
+                        </tr>
+                `
+            } else {
+              // HTML List Mobile
+              chunkHTML += `
+                    <div class="col-12 animate-card-fade mb-2" data-vocab-id="${
+                      item.id
+                    }" style="animation-delay: ${
+                index > 20 ? 0 : index * 0.03
+              }s;">
+                        </div>
+                `
+            }
+            // ==========================================================
+          }
+
+          // 5. Suntik HTML ke wadah tanpa nimpa yang udah di-render sebelumnya
+          container.insertAdjacentHTML('beforeend', chunkHTML)
+
+          // 6. Kalau data masih ada sisa, suruh browser render sisanya di antrean berikutnya (Ini kunci biar gak nge-lag!)
+          if (indexData < dataArray.length) {
+            window.requestAnimationFrame(renderCicilan)
+          }
+        }
+
+        // 7. Mulai render cicilan pertama
+        renderCicilan()
+      }
     </script>
   </body>
 </html>
