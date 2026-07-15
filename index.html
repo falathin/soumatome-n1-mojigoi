@@ -468,6 +468,122 @@
     <script src="minggu8/hari7.js"></script>
     <script>
       // ==========================================================================
+      // --- LOGIKA TEXT-TO-SPEECH (SUARA AI GOOGLE JEPANG) ---
+      // ==========================================================================
+      // Pancing browser untuk memuat daftar suara (voices) di awal
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.onvoiceschanged = () => {
+          window.speechSynthesis.getVoices()
+        }
+      }
+
+      function speakText(text) {
+        if (!('speechSynthesis' in window)) {
+          alert('Maaf, browser Anda tidak mendukung fitur suara.')
+          return
+        }
+
+        // Hentikan suara yang sedang berjalan agar tidak tumpang tindih
+        window.speechSynthesis.cancel()
+
+        const utterance = new SpeechSynthesisUtterance(text)
+        utterance.lang = 'ja-JP' // Set bahasa Jepang
+        utterance.rate = 0.85 // Sedikit diperlambat agar artikulasi lebih jelas dan natural
+        utterance.pitch = 1.0
+
+        // Ambil semua daftar suara yang tersedia di perangkat/browser
+        const voices = window.speechSynthesis.getVoices()
+
+        // Filter khusus suara Jepang
+        const jpVoices = voices.filter(
+          voice => voice.lang.includes('ja') || voice.lang.includes('JP')
+        )
+
+        if (jpVoices.length > 0) {
+          // Prioritaskan suara asli Google (paling jernih) jika tersedia
+          const googleVoice = jpVoices.find(
+            v => v.name.includes('Google') || v.name.includes('Online')
+          )
+          if (googleVoice) {
+            utterance.voice = googleVoice
+          } else {
+            utterance.voice = jpVoices[0] // Fallback ke suara default OS
+          }
+        }
+
+        // Mainkan suara
+        window.speechSynthesis.speak(utterance)
+      }
+
+      // Fungsi Pembacaan Lengkap dengan Auto-Translate Penjelasan
+      async function playVocabAudio(id) {
+        const item = window.vocabData.find(v => v.id === id)
+        if (!item) return
+
+        // Ubah icon menjadi loading (opsional untuk UX)
+        const btn = document.querySelector(
+          `button[onclick="playVocabAudio('${id}')"]`
+        )
+        const originalIcon = btn ? btn.innerHTML : ''
+        if (btn) {
+          btn.innerHTML =
+            '<span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span>'
+        }
+
+        try {
+          // 1. Baca Kanji/Kosakata
+          let textToSpeak = item.kanji + '。'
+
+          // 2. Auto Translate Penjelasan (Indonesia ke Jepang Mudah)
+          if (item.penjelasan) {
+            // Memanfaatkan Google Translate API publik secara langsung
+            const res = await fetch(
+              `https://translate.googleapis.com/translate_a/single?client=gtx&sl=id&tl=ja&dt=t&q=${encodeURIComponent(
+                item.penjelasan
+              )}`
+            )
+            const data = await res.json()
+            const translatedPenjelasan = data[0][0][0] // Mengambil hasil terjemahan string
+
+            // Tambahkan frasa "Imi wa, ..." (Artinya adalah...)
+            textToSpeak += '意味は、' + translatedPenjelasan + '。'
+          }
+
+          // 3. Ekstrak bagian kalimat bahasa Jepangnya saja (hilangkan terjemahan dalam kurung)
+          const extractJP = str => {
+            if (!str) return ''
+            return str.split('\n')[0].trim() // Ambil baris pertama sebelum line-break (\n)
+          }
+
+          const ex1 = extractJP(item.contoh1)
+          const ex2 = extractJP(item.contoh2)
+
+          if (ex1 || ex2) textToSpeak += '例文。' // Tambahkan kata "Reibun" (Contoh kalimat)
+          if (ex1) textToSpeak += ex1 + '。'
+          if (ex2) textToSpeak += ex2 + '。'
+
+          // Mulai Text-to-Speech dengan teks bahasa Jepang yang sudah dirangkai
+          speakText(textToSpeak)
+        } catch (error) {
+          console.error('Gagal menerjemahkan penjelasan:', error)
+          // Fallback (Jika no-internet/API error): Hanya baca Kanji dan Contoh Kalimat Jepang
+          let fallbackText = item.kanji + '。'
+          const extractJP = str => (str ? str.split('\n')[0].trim() : '')
+          const ex1 = extractJP(item.contoh1)
+          const ex2 = extractJP(item.contoh2)
+          if (ex1 || ex2) fallbackText += '例文。'
+          if (ex1) fallbackText += ex1 + '。'
+          if (ex2) fallbackText += ex2 + '。'
+          speakText(fallbackText)
+        } finally {
+          // Kembalikan icon ke semula
+          if (btn) {
+            btn.innerHTML = originalIcon
+          }
+        }
+      }
+
+      // ==========================================================================
       // --- LOGIKA UTAMA TRANSMISI DARK MODE (MANUAL & SYSTEM LEVEL SYNC) ---
       // ==========================================================================
       const htmlElement = document.documentElement
@@ -724,7 +840,7 @@
               : 'btn-outline-success'
 
           // Mengambil baris kalimat asli Jepang untuk contoh kalimat
-          const ex1Parts = item.contoh1.split('\n')
+          const ex1Parts = (item.contoh1 || '').split('\n')
           const ex1HTML = isStudyMode
             ? ex1Parts[0]
             : `${ex1Parts[0]}${
@@ -733,7 +849,7 @@
                   : ''
               }`
 
-          const ex2Parts = item.contoh2.split('\n')
+          const ex2Parts = (item.contoh2 || '').split('\n')
           const ex2HTML = isStudyMode
             ? ex2Parts[0]
             : `${ex2Parts[0]}${
@@ -759,7 +875,15 @@
                                 </span>
                             </div>
                             
-                            <div class="text-center mb-4 mt-2">
+                            <div class="text-center mb-4 mt-2 position-relative">
+                                <!-- TOMBOL AUDIO TEXT TO SPEECH AUTO TRANSLATE -->
+                                <button class="btn btn-light border shadow-sm rounded-circle position-absolute top-0 end-0" 
+                                        style="width: 40px; height: 40px;" 
+                                        onclick="playVocabAudio('${item.id}')" 
+                                        title="Dengarkan Pengucapan Lengkap">
+                                    <i class="bi bi-volume-up-fill text-primary"></i>
+                                </button>
+
                                 <!-- Furigana disembunyikan total saat mode hafal -->
                                 <p class="text-muted mb-1 small fw-semibold tracking-wide ${
                                   isStudyMode ? 'd-none' : ''
