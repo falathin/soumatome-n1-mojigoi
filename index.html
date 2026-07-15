@@ -476,139 +476,200 @@
     <script src="minggu8/hari5.js"></script>
     <script src="minggu8/hari6.js"></script>
     <script src="minggu8/hari7.js"></script>
-<script>
+    <script>
       // ==========================================================================
-      // --- INJECT CSS SECARA DINAMIS (RESPONSIF & DARK MODE ADAPTIVE) ---
+      // --- INJECT CSS SECARA DINAMIS (SUPER COMPACT, RESPONSIF & DARK MODE) ---
       // ==========================================================================
-      if (!document.getElementById('table-hover-style')) {
-        const style = document.createElement('style')
-        style.id = 'table-hover-style'
-        style.innerHTML = `
-            /* Transisi Halus untuk Row Tabel */
-            .vocab-table-row { 
-                transition: background-color 0.2s ease, transform 0.2s ease; 
+if (!document.getElementById('table-hover-style')) {
+    const style = document.createElement('style')
+    style.id = 'table-hover-style'
+    style.innerHTML = `
+        /* Tabel Ultra-Kompak */
+        .table-compact td {
+            padding: 0.4rem 0.5rem !important;
+            vertical-align: middle !important;
+        }
+        .table-compact th {
+            padding: 0.5rem !important;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Transisi Halus untuk Row Tabel */
+        .vocab-table-row { 
+            transition: background-color 0.2s ease; 
+        }
+        .vocab-table-row:hover { 
+            background-color: rgba(0, 0, 0, 0.03) !important; 
+        }
+        [data-theme="dark"] .vocab-table-row:hover {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        /* Logika Pemotongan Teks di Tampilan Desktop */
+        .hover-expand {
+            max-width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+        .vocab-table-row:hover .hover-expand {
+            max-width: 100%;
+            white-space: normal;
+            overflow: visible;
+        }
+
+        /* Logika Container Contoh Kalimat saat Hover (Desktop) */
+        .hover-details {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin-top 0.25s ease;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .vocab-table-row:hover .hover-details {
+            max-height: 400px;
+            opacity: 1;
+            margin-top: 0.5rem;
+        }
+        [data-theme="dark"] .hover-details {
+            background-color: #2b3035 !important;
+            color: #f8f9fa !important;
+            border-color: #495057 !important;
+        }
+
+        /* ==========================================================================
+           DUKUNGAN DARK MODE UNTUK SELURUH AREA TABEL (DESKTOP)
+           ========================================================================== */
+        [data-theme="dark"] #vocab-container table {
+            background-color: #1e1e1e !important;
+            color: #f8f9fa !important;
+            border-color: #373b3e !important;
+        }
+        [data-theme="dark"] .table-compact th {
+            background-color: #1a1d20 !important;
+            color: #f8f9fa !important;
+            border-color: #373b3e !important;
+        }
+        [data-theme="dark"] .vocab-table-row td {
+            background-color: #212529 !important;
+            border-color: #373b3e !important;
+        }
+
+        /* SOLUSI UTAMA: 
+           Paksa semua teks di kolom isi (Tag, Kanji, Furigana, Arti) menjadi terang.
+           Kita kecualikan kolom paling kanan (.status-col) agar tombol status tidak rusak.
+        */
+        [data-theme="dark"] .vocab-table-row td:not(.status-col),
+        [data-theme="dark"] .vocab-table-row td:not(.status-col) * {
+            color: #f8f9fa !important;
+        }
+
+        /* Supaya teks penjelasan/sub-text yang sifatnya sekunder (muted) tetap punya 
+           tingkat kontras yang enak dibaca (tidak terlalu terang benderang), kita beri warna abu-abu terang.
+        */
+        [data-theme="dark"] .vocab-table-row td:not(.status-col) .text-muted,
+        [data-theme="dark"] .vocab-table-row td:not(.status-col) .text-secondary,
+        [data-theme="dark"] .vocab-table-row td:not(.status-col) .text-black-50,
+        [data-theme="dark"] .vocab-table-row td:not(.status-col) small {
+            color: #adb5bd !important;
+        }
+
+        /* Box Contoh Penggunaan (Hover Details) di Dark Mode */
+        [data-theme="dark"] .hover-details,
+        [data-theme="dark"] .hover-details * {
+            color: #f8f9fa !important;
+        }
+        [data-theme="dark"] .hover-details .text-muted,
+        [data-theme="dark"] .hover-details .text-secondary {
+            color: #adb5bd !important;
+        }
+
+        /* ==========================================================================
+           DESAIN RESPONSIVE: MENGUBAH TABEL MENJADI KARTU KOMPAK DI MOBILE (<= 768px)
+           ========================================================================== */
+        @media (max-width: 768px) {
+            #vocab-container table thead {
+                display: none !important;
             }
-            .vocab-table-row:hover { 
-                background-color: rgba(0, 0, 0, 0.02) !important; 
+            #vocab-container table, 
+            #vocab-container tbody {
+                display: block !important;
+                width: 100% !important;
             }
-            [data-theme="dark"] .vocab-table-row:hover {
-                background-color: rgba(255, 255, 255, 0.04) !important;
+            .vocab-table-row {
+                display: block !important;
+                width: 100% !important;
+                border: 1px solid rgba(0, 0, 0, 0.08) !important;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                padding: 10px !important;
+                background-color: var(--bs-card-bg, #fff);
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+                position: relative;
+            }
+            [data-theme="dark"] .vocab-table-row {
+                border-color: rgba(255, 255, 255, 0.08) !important;
+                background-color: #212529 !important;
+            }
+            .vocab-table-row td {
+                display: block !important;
+                width: 100% !important;
+                padding: 4px 0 !important;
+                border: none !important;
+                text-align: left !important;
+            }
+            
+            /* Layout Mengambang untuk Mobile (Lebih Rapat) */
+            .vocab-table-row .play-col {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: auto !important;
+                padding: 0 !important;
+                z-index: 2;
+            }
+            .vocab-table-row .cat-col {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+                padding-bottom: 6px !important;
+                margin-bottom: 6px;
+            }
+            [data-theme="dark"] .vocab-table-row .cat-col {
+                border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+            }
+            .vocab-table-row .kanji-col {
+                padding-top: 2px !important;
+            }
+            .vocab-table-row .status-col {
+                margin-top: 8px;
+                border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+                padding-top: 8px !important;
+            }
+            [data-theme="dark"] .vocab-table-row .status-col {
+                border-top-color: rgba(255, 255, 255, 0.08) !important;
             }
 
-            /* Logika Pemotongan Teks di Tampilan Desktop */
+            /* Ekspansi Detail Otomatis di Mobile */
             .hover-expand {
-                max-width: 280px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: block;
-                transition: all 0.3s ease;
+                max-width: 100% !important;
+                white-space: normal !important;
+                overflow: visible !important;
             }
-            .vocab-table-row:hover .hover-expand {
-                max-width: 100%;
-                white-space: normal;
-                overflow: visible;
-            }
-
-            /* Logika Container Contoh Kalimat saat Hover (Desktop) */
             .hover-details {
-                max-height: 0;
-                opacity: 0;
-                overflow: hidden;
-                transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin-top 0.25s ease;
-                background-color: #f8f9fa;
-                color: #212529;
+                max-height: none !important;
+                opacity: 1 !important;
+                margin-top: 8px !important;
+                display: block !important;
             }
-            .vocab-table-row:hover .hover-details {
-                max-height: 350px;
-                opacity: 1;
-                margin-top: 0.75rem;
-            }
-            [data-theme="dark"] .hover-details {
-                background-color: #2b3035 !important;
-                color: #f8f9fa !important;
-                border-color: #495057 !important;
-            }
-
-            /* ==========================================================================
-               DESAIN RESPONSIVE: MENGUBAH TABEL MENJADI KARTU ELEGAN DI MOBILE (<= 768px)
-               ========================================================================== */
-            @media (max-width: 768px) {
-                #vocab-container table thead {
-                    display: none !important;
-                }
-                #vocab-container table, 
-                #vocab-container tbody {
-                    display: block !important;
-                    width: 100% !important;
-                }
-                .vocab-table-row {
-                    display: block !important;
-                    width: 100% !important;
-                    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-                    border-radius: 12px;
-                    margin-bottom: 16px;
-                    padding: 16px !important;
-                    background-color: var(--bs-card-bg, #fff);
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-                    position: relative;
-                }
-                [data-theme="dark"] .vocab-table-row {
-                    border-color: rgba(255, 255, 255, 0.08) !important;
-                }
-                .vocab-table-row td {
-                    display: block !important;
-                    width: 100% !important;
-                    padding: 6px 0 !important;
-                    border: none !important;
-                    text-align: left !important;
-                }
-                
-                /* Layout Mengambang untuk Mobile */
-                .vocab-table-row .play-col {
-                    position: absolute;
-                    top: 12px;
-                    right: 12px;
-                    width: auto !important;
-                    padding: 0 !important;
-                    z-index: 2;
-                }
-                .vocab-table-row .cat-col {
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-                    padding-bottom: 10px !important;
-                    margin-bottom: 8px;
-                }
-                [data-theme="dark"] .vocab-table-row .cat-col {
-                    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
-                }
-                .vocab-table-row .kanji-col {
-                    padding-top: 4px !important;
-                }
-                .vocab-table-row .status-col {
-                    margin-top: 12px;
-                    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
-                    padding-top: 12px !important;
-                }
-                [data-theme="dark"] .vocab-table-row .status-col {
-                    border-top-color: rgba(255, 255, 255, 0.08) !important;
-                }
-
-                /* Ekspansi Detail Otomatis di Mobile */
-                .hover-expand {
-                    max-width: 100% !important;
-                    white-space: normal !important;
-                    overflow: visible !important;
-                }
-                .hover-details {
-                    max-height: none !important;
-                    opacity: 1 !important;
-                    margin-top: 10px !important;
-                    display: block !important;
-                }
-            }
-        `
-        document.head.appendChild(style)
-      }
+        }
+    `
+    document.head.appendChild(style)
+}
 
       // ==========================================================================
       // --- LOGIKA TEXT-TO-SPEECH (SUARA AI GOOGLE JEPANG) ---
@@ -626,8 +687,8 @@
         }
         window.speechSynthesis.cancel()
         const utterance = new SpeechSynthesisUtterance(text)
-        utterance.lang = 'ja-JP' 
-        utterance.rate = 0.85 
+        utterance.lang = 'ja-JP'
+        utterance.rate = 0.85
         utterance.pitch = 1.0
 
         const voices = window.speechSynthesis.getVoices()
@@ -645,18 +706,22 @@
       }
 
       // ==========================================================================
-      // FITUR OPTIMASI 1: CACHE TRANSLATION 
+      // FITUR OPTIMASI 1: CACHE TRANSLATION
       // ==========================================================================
-      const translationCache = JSON.parse(localStorage.getItem('tts_translation_cache')) || {}
+      const translationCache =
+        JSON.parse(localStorage.getItem('tts_translation_cache')) || {}
 
       async function playVocabAudio(id) {
         const item = window.vocabData.find(v => v.id === id)
         if (!item) return
 
-        const btn = document.querySelector(`[data-vocab-id="${id}"] button[onclick^="playVocabAudio"]`)
+        const btn = document.querySelector(
+          `[data-vocab-id="${id}"] button[onclick^="playVocabAudio"]`
+        )
         const originalIcon = btn ? btn.innerHTML : ''
         if (btn) {
-          btn.innerHTML = '<span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span>'
+          btn.innerHTML =
+            '<span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true" style="width: 1rem; height: 1rem;"></span>'
         }
 
         try {
@@ -666,20 +731,27 @@
             if (translationCache[item.penjelasan]) {
               translatedPenjelasan = translationCache[item.penjelasan]
             } else {
-              const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=id&tl=ja&dt=t&q=${encodeURIComponent(item.penjelasan)}`)
+              const res = await fetch(
+                `https://translate.googleapis.com/translate_a/single?client=gtx&sl=id&tl=ja&dt=t&q=${encodeURIComponent(
+                  item.penjelasan
+                )}`
+              )
               const data = await res.json()
-              translatedPenjelasan = data[0][0][0] 
+              translatedPenjelasan = data[0][0][0]
               translationCache[item.penjelasan] = translatedPenjelasan
-              localStorage.setItem('tts_translation_cache', JSON.stringify(translationCache))
+              localStorage.setItem(
+                'tts_translation_cache',
+                JSON.stringify(translationCache)
+              )
             }
             textToSpeak += '意味は、' + translatedPenjelasan + '。'
           }
 
-          const extractJP = str => str ? str.split('\n')[0].trim() : ''
+          const extractJP = str => (str ? str.split('\n')[0].trim() : '')
           const ex1 = extractJP(item.contoh1)
           const ex2 = extractJP(item.contoh2)
 
-          if (ex1 || ex2) textToSpeak += '例文。' 
+          if (ex1 || ex2) textToSpeak += '例文。'
           if (ex1) textToSpeak += ex1 + '。'
           if (ex2) textToSpeak += ex2 + '。'
 
@@ -711,10 +783,12 @@
         localStorage.setItem('app_theme', theme)
         if (theme === 'dark') {
           themeIcon.className = 'bi bi-sun-fill text-warning'
-          themeToggleBtn.className = 'btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center'
+          themeToggleBtn.className =
+            'btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center'
         } else {
           themeIcon.className = 'bi bi-moon-fill'
-          themeToggleBtn.className = 'btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center'
+          themeToggleBtn.className =
+            'btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center'
         }
       }
 
@@ -723,14 +797,19 @@
         if (savedTheme) {
           setTheme(savedTheme)
         } else {
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches
           setTheme(prefersDark ? 'dark' : 'light')
         }
       }
 
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        if (!localStorage.getItem('app_theme')) setTheme(e.matches ? 'dark' : 'light')
-      })
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', e => {
+          if (!localStorage.getItem('app_theme'))
+            setTheme(e.matches ? 'dark' : 'light')
+        })
 
       if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
@@ -762,7 +841,10 @@
           }
         }
 
-        if (typeof renderCards === 'function' && document.getElementById('vocab-container')) {
+        if (
+          typeof renderCards === 'function' &&
+          document.getElementById('vocab-container')
+        ) {
           const anchor = getTopVisibleCard()
           renderCards()
           restoreScrollAnchor(anchor)
@@ -775,7 +857,7 @@
       function getTopVisibleCard() {
         const container = document.getElementById('vocab-container')
         if (!container) return null
-        
+
         const cards = container.querySelectorAll('[data-vocab-id]')
         if (cards.length === 0) return null
 
@@ -826,15 +908,26 @@
         if (studyToggleBtn && studyIcon) {
           if (isStudyMode) {
             studyIcon.className = 'bi bi-eye-slash-fill text-danger'
-            studyToggleBtn.className = 'btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
-            studyToggleBtn.setAttribute('title', 'Matikan Mode Hafal (Tampilkan Semua)')
+            studyToggleBtn.className =
+              'btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
+            studyToggleBtn.setAttribute(
+              'title',
+              'Matikan Mode Hafal (Tampilkan Semua)'
+            )
           } else {
             studyIcon.className = 'bi bi-eye-fill'
-            studyToggleBtn.className = 'btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
-            studyToggleBtn.setAttribute('title', 'Aktifkan Mode Hafal (Hanya Kanji)')
+            studyToggleBtn.className =
+              'btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center me-2'
+            studyToggleBtn.setAttribute(
+              'title',
+              'Aktifkan Mode Hafal (Hanya Kanji)'
+            )
           }
         }
-        if (typeof renderCards === 'function' && document.getElementById('vocab-container')) {
+        if (
+          typeof renderCards === 'function' &&
+          document.getElementById('vocab-container')
+        ) {
           const anchor = getTopVisibleCard()
           renderCards()
           restoreScrollAnchor(anchor)
@@ -851,19 +944,50 @@
         const s = now.getSeconds().toString().padStart(2, '0')
 
         const clockEl = document.getElementById('clock')
-        if (clockEl) clockEl.innerText = `${h.toString().padStart(2, '0')}:${m}:${s}`
+        if (clockEl)
+          clockEl.innerText = `${h.toString().padStart(2, '0')}:${m}:${s}`
 
-        let greetingJP = '', greetingID = '', iconClass = '', quote = '', bannerClass = ''
+        let greetingJP = '',
+          greetingID = '',
+          iconClass = '',
+          quote = '',
+          bannerClass = ''
         if (h >= 5 && h < 11) {
-          greetingJP = 'おはようございます'; greetingID = 'Selamat Pagi'; iconClass = 'bi-sunrise-fill text-warning'; quote = 'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日も一日頑張りましょう！'; bannerClass = 'bg-gradient bg-primary text-white'
+          greetingJP = 'おはようございます'
+          greetingID = 'Selamat Pagi'
+          iconClass = 'bi-sunrise-fill text-warning'
+          quote =
+            'Awali hari dengan semangat baru. Pikiran yang segar adalah modal terbaik untuk menyerap Kosakata N1 hari ini. 今日も一日頑張りましょう！'
+          bannerClass = 'bg-gradient bg-primary text-white'
         } else if (h >= 11 && h < 15) {
-          greetingJP = 'こんにちは'; greetingID = 'Selamat Siang'; iconClass = 'bi-sun-fill text-warning animate-pulse'; quote = 'Sudah siang! Istirahat sejenak di tengah kesibukanmu untuk mengulang beberapa baris Moji Goi. Consistency is key!'; bannerClass = 'bg-gradient bg-info text-white'
+          greetingJP = 'こんにちは'
+          greetingID = 'Selamat Siang'
+          iconClass = 'bi-sun-fill text-warning animate-pulse'
+          quote =
+            'Sudah siang! Istirahat sejenak di tengah kesibukanmu untuk mengulang beberapa baris Moji Goi. Consistency is key!'
+          bannerClass = 'bg-gradient bg-info text-white'
         } else if (h >= 15 && h < 18) {
-          greetingJP = 'こんにちは'; greetingID = 'Selamat Sore'; iconClass = 'bi-sunset-fill text-warning'; quote = 'Matahari sudah mulai condong. Lelah itu wajar, tapi jangan biarkan target harian Sou Matome-mu terlewat.'; bannerClass = 'style-sore text-white'
+          greetingJP = 'こんにちは'
+          greetingID = 'Selamat Sore'
+          iconClass = 'bi-sunset-fill text-warning'
+          quote =
+            'Matahari sudah mulai condong. Lelah itu wajar, tapi jangan biarkan target harian Sou Matome-mu terlewat.'
+          bannerClass = 'style-sore text-white'
         } else if (h >= 18 && h < 23) {
-          greetingJP = 'こんばんは'; greetingID = 'Selamat Malam'; iconClass = 'bi-moon-stars-fill text-warning'; quote = 'Suasana tenang malam hari sangat cocok untuk mengevaluasi daftar kosakata. Mari tutup hari dengan pencapaian!'; bannerClass = 'bg-gradient bg-dark border-bottom border-secondary text-white'
+          greetingJP = 'こんばんは'
+          greetingID = 'Selamat Malam'
+          iconClass = 'bi-moon-stars-fill text-warning'
+          quote =
+            'Suasana tenang malam hari sangat cocok untuk mengevaluasi daftar kosakata. Mari tutup hari dengan pencapaian!'
+          bannerClass =
+            'bg-gradient bg-dark border-bottom border-secondary text-white'
         } else {
-          greetingJP = 'おやすみなさい'; greetingID = 'Selamat Beristirahat'; iconClass = 'bi-cloud-moon-fill text-info'; quote = 'Sudah larut malam. Tubuhmu butuh istirahat, besok kita lanjutkan lagi.'; bannerClass = 'bg-dark border border-secondary text-secondary'
+          greetingJP = 'おやすみなさい'
+          greetingID = 'Selamat Beristirahat'
+          iconClass = 'bi-cloud-moon-fill text-info'
+          quote =
+            'Sudah larut malam. Tubuhmu butuh istirahat, besok kita lanjutkan lagi.'
+          bannerClass = 'bg-dark border border-secondary text-secondary'
         }
 
         const greetingEl = document.getElementById('greeting')
@@ -882,7 +1006,10 @@
         const quoteEl = document.getElementById('hero-quote')
         if (quoteEl) quoteEl.innerText = quote
         const banner = document.getElementById('hero-banner')
-        if (banner) banner.className = 'p-5 text-center text-md-start position-relative overflow-hidden rounded-4 shadow-sm ' + bannerClass
+        if (banner)
+          banner.className =
+            'p-5 text-center text-md-start position-relative overflow-hidden rounded-4 shadow-sm ' +
+            bannerClass
       }
       setInterval(updateTime, 1000)
       updateTime()
@@ -895,7 +1022,9 @@
         if (!container) return
         container.innerHTML = ''
 
-        const searchTxt = document.getElementById('search-input').value.toLowerCase()
+        const searchTxt = document
+          .getElementById('search-input')
+          .value.toLowerCase()
         const filterMinggu = document.getElementById('filter-minggu').value
         const filterHari = document.getElementById('filter-hari').value
         const filterKategori = document.getElementById('filter-kategori').value
@@ -906,14 +1035,25 @@
 
         let filtered = window.vocabData.filter(item => {
           const itemStatus = statuses[item.id] || 'tidak_hafal'
-          const matchSearch = item.kanji.toLowerCase().includes(searchTxt) || item.furigana.toLowerCase().includes(searchTxt) || item.arti.toLowerCase().includes(searchTxt)
-          const matchMinggu = filterMinggu === 'all' || item.minggu === filterMinggu
+          const matchSearch =
+            item.kanji.toLowerCase().includes(searchTxt) ||
+            item.furigana.toLowerCase().includes(searchTxt) ||
+            item.arti.toLowerCase().includes(searchTxt)
+          const matchMinggu =
+            filterMinggu === 'all' || item.minggu === filterMinggu
           const matchHari = filterHari === 'all' || item.hari === filterHari
-          const matchKategori = filterKategori === 'all' || item.kategori === filterKategori
+          const matchKategori =
+            filterKategori === 'all' || item.kategori === filterKategori
           let matchStatus = true
           if (filterStatus !== 'all') matchStatus = itemStatus === filterStatus
 
-          return matchSearch && matchMinggu && matchHari && matchKategori && matchStatus
+          return (
+            matchSearch &&
+            matchMinggu &&
+            matchHari &&
+            matchKategori &&
+            matchStatus
+          )
         })
 
         if (filtered.length === 0) {
@@ -928,91 +1068,144 @@
 
         let allCardsHTML = ''
 
-        // --- PEMBUKAAN TABEL (JIKA MODE TABEL ACTIVE) ---
+        // --- PEMBUKAAN TABEL (JIKA MODE TABEL ACTIVE - SUPER KOMPAK) ---
         if (isTableView) {
-            allCardsHTML = `
+          allCardsHTML = `
             <div class="col-12 animate-card-fade">
                 <div class="card shadow-sm border-0">
                     <div class="card-body p-0">
                         <div class="table-responsive">
-                            <table class="table align-middle mb-0" style="min-width: 100%; table-layout: fixed;">
+                            <table class="table table-sm table-compact align-middle mb-0" style="min-width: 100%; table-layout: fixed;">
                                 <thead class="table-light border-bottom">
                                     <tr>
-                                        <th scope="col" class="text-center" style="width: 70px;">Play</th>
-                                        <th scope="col" style="width: 140px;">Kategori</th>
-                                        <th scope="col" style="width: 150px;">Kanji</th>
-                                        <th scope="col" style="width: 150px;" class="${isStudyMode ? 'd-none' : ''}">Furigana</th>
-                                        <th scope="col" style="width: 35%;" class="${isStudyMode ? 'd-none' : ''}">Arti & Penjelasan</th>
-                                        <th scope="col" class="text-center" style="width: 180px;">Status Hafalan</th>
+                                        <th scope="col" class="text-center" style="width: 50px;"><i class="bi bi-play-fill"></i></th>
+                                        <th scope="col" style="width: 100px;">Tag</th>
+                                        <th scope="col" style="width: 130px;">Kanji</th>
+                                        <th scope="col" style="width: 130px;" class="${
+                                          isStudyMode ? 'd-none' : ''
+                                        }">Furigana</th>
+                                        <th scope="col" style="width: 40%;" class="${
+                                          isStudyMode ? 'd-none' : ''
+                                        }">Arti & Penjelasan</th>
+                                        <th scope="col" class="text-center" style="width: 120px;">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-            `;
+            `
         }
 
         // --- GENERATE HTML ELEMEN ---
         filtered.forEach((item, index) => {
-            const itemStatus = statuses[item.id] || 'tidak_hafal'
-            const btnTidakHafal = itemStatus === 'tidak_hafal' ? 'btn-danger text-white' : 'btn-outline-danger'
-            const btnAgakHafal = itemStatus === 'agak_hafal' ? 'btn-warning text-dark' : 'btn-outline-warning'
-            const btnHafal = itemStatus === 'hafal' ? 'btn-success text-white' : 'btn-outline-success'
+          const itemStatus = statuses[item.id] || 'tidak_hafal'
+          const btnTidakHafal =
+            itemStatus === 'tidak_hafal'
+              ? 'btn-danger text-white'
+              : 'btn-outline-danger'
+          const btnAgakHafal =
+            itemStatus === 'agak_hafal'
+              ? 'btn-warning text-dark'
+              : 'btn-outline-warning'
+          const btnHafal =
+            itemStatus === 'hafal'
+              ? 'btn-success text-white'
+              : 'btn-outline-success'
 
-            // Parse Kalimat Contoh
-            const ex1Parts = (item.contoh1 || '').split('\n')
-            const ex1HTML = isStudyMode ? ex1Parts[0] : `${ex1Parts[0]}${ex1Parts[1] ? `<br><span class="text-secondary fw-normal">${ex1Parts[1]}</span>` : ''}`
-            const ex2Parts = (item.contoh2 || '').split('\n')
-            const ex2HTML = isStudyMode ? ex2Parts[0] : `${ex2Parts[0]}${ex2Parts[1] ? `<br><span class="text-secondary fw-normal">${ex2Parts[1]}</span>` : ''}`
+          // Parse Kalimat Contoh
+          const ex1Parts = (item.contoh1 || '').split('\n')
+          const ex1HTML = isStudyMode
+            ? ex1Parts[0]
+            : `${ex1Parts[0]}${
+                ex1Parts[1]
+                  ? `<br><span class="text-secondary fw-normal opacity-75">${ex1Parts[1]}</span>`
+                  : ''
+              }`
+          const ex2Parts = (item.contoh2 || '').split('\n')
+          const ex2HTML = isStudyMode
+            ? ex2Parts[0]
+            : `${ex2Parts[0]}${
+                ex2Parts[1]
+                  ? `<br><span class="text-secondary fw-normal opacity-75">${ex2Parts[1]}</span>`
+                  : ''
+              }`
 
-            if (isTableView) {
-                // TAMPILAN BARIS TABEL DETAIL (DENGAN IDENTIFIKATOR DATA-VOCAB-ID)
-                allCardsHTML += `
+          if (isTableView) {
+            // TAMPILAN BARIS TABEL DETAIL (PADAT)
+            allCardsHTML += `
                 <tr class="vocab-table-row" data-vocab-id="${item.id}">
-                    <td class="text-center align-top pt-3 play-col">
-                        <button class="btn btn-light border shadow-sm rounded-circle" style="width: 35px; height: 35px; padding:0;" onclick="playVocabAudio('${item.id}')" title="Dengarkan">
-                            <i class="bi bi-volume-up-fill text-primary"></i>
+                    <td class="text-center play-col">
+                        <button class="btn btn-light border shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 28px; height: 28px; padding:0;" onclick="playVocabAudio('${
+                          item.id
+                        }')" title="Dengarkan">
+                            <i class="bi bi-volume-up-fill text-primary" style="font-size: 0.9rem;"></i>
                         </button>
                     </td>
-                    <td class="align-top pt-3 cat-col">
-                        <span class="badge badge-kategori border text-capitalize d-inline-block mb-1"><i class="bi bi-tag-fill me-1"></i>${item.kategori}</span>
-                        <div class="small fw-semibold text-secondary">M${item.minggu} - H${item.hari}</div>
+                    <td class="cat-col">
+                        <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25 text-capitalize d-block mb-1 text-truncate" style="font-size: 0.7rem; padding: 0.2rem 0.4rem;">${
+                          item.kategori
+                        }</span>
+                        <div class="fw-semibold text-muted" style="font-size: 0.75rem;">M${
+                          item.minggu
+                        }-H${item.hari}</div>
                     </td>
-                    <td class="align-top pt-3 kanji-col">
-                        <span class="fs-4 fw-bold text-dark">${item.kanji}</span>
+                    <td class="kanji-col">
+                        <span class="fs-5 fw-bold text-dark">${
+                          item.kanji
+                        }</span>
                     </td>
-                    <td class="align-top pt-3 furi-col ${isStudyMode ? 'd-none' : ''}">
-                        <span class="fw-semibold text-muted" style="letter-spacing: 0.5px;">${item.furigana}</span>
+                    <td class="furi-col ${isStudyMode ? 'd-none' : ''}">
+                        <span class="fw-semibold text-muted" style="font-size: 0.85rem; letter-spacing: 0.5px;">${
+                          item.furigana
+                        }</span>
                     </td>
-                    <td class="align-top pt-3 detail-col ${isStudyMode ? 'd-none' : ''}">
-                        <div class="fw-bold mb-1" style="color: var(--jp-blue-dark);">${item.arti}</div>
-                        <div class="small text-secondary hover-expand">${item.penjelasan}</div>
+                    <td class="detail-col ${isStudyMode ? 'd-none' : ''}">
+                        <div class="fw-bold mb-0" style="color: var(--jp-blue-dark); font-size: 0.9rem;">${
+                          item.arti
+                        }</div>
+                        <div class="text-secondary hover-expand lh-sm">${
+                          item.penjelasan
+                        }</div>
                         
-                        <!-- Box Detail Kalimat yang Muncul/Slide saat Hover -->
-                        <div class="hover-details bg-light bg-opacity-50 rounded border shadow-sm p-3">
-                            <div class="fw-bold text-dark mb-2 border-bottom border-secondary border-opacity-25 pb-1" style="font-size: 0.8rem;">
-                                <i class="bi bi-journal-text text-danger me-1"></i>Contoh Penggunaan:
+                        <!-- Box Detail Kalimat (Slide Expand) -->
+                        <div class="hover-details bg-light bg-opacity-50 rounded border shadow-sm p-2">
+                            <div class="fw-bold text-dark mb-1 border-bottom border-secondary border-opacity-25 pb-1" style="font-size: 0.75rem;">
+                                <i class="bi bi-journal-text text-danger me-1"></i>Contoh Penggunaan
                             </div>
-                            <div class="small lh-sm text-dark">${ex1HTML}</div>
-                            ${ex2Parts[0] ? `<hr class="my-2 opacity-25"><div class="small lh-sm text-dark">${ex2HTML}</div>` : ''}
+                            <div class="lh-sm text-dark" style="font-size: 0.8rem;">${ex1HTML}</div>
+                            ${
+                              ex2Parts[0]
+                                ? `<hr class="my-1 opacity-25"><div class="lh-sm text-dark" style="font-size: 0.8rem;">${ex2HTML}</div>`
+                                : ''
+                            }
                         </div>
                     </td>
-                    <td class="text-center align-top pt-3 status-col">
+                    <td class="text-center status-col">
                         <div class="btn-group w-100 shadow-sm" role="group">
-                            <button type="button" class="btn btn-sm ${btnTidakHafal}" onclick="setStatus('${item.id}', 'tidak_hafal')" title="Tidak Hafal"><i class="bi bi-x-circle-fill"></i></button>
-                            <button type="button" class="btn btn-sm ${btnAgakHafal}" onclick="setStatus('${item.id}', 'agak_hafal')" title="Agak Hafal"><i class="bi bi-dash-circle-fill"></i></button>
-                            <button type="button" class="btn btn-sm ${btnHafal}" onclick="setStatus('${item.id}', 'hafal')" title="Hafal"><i class="bi bi-check-circle-fill"></i></button>
+                            <button type="button" class="btn btn-sm ${btnTidakHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${
+              item.id
+            }', 'tidak_hafal')" title="Tidak Hafal"><i class="bi bi-x-lg" style="font-size: 0.75rem;"></i></button>
+                            <button type="button" class="btn btn-sm ${btnAgakHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${
+              item.id
+            }', 'agak_hafal')" title="Agak Hafal"><i class="bi bi-dash-lg" style="font-size: 0.75rem;"></i></button>
+                            <button type="button" class="btn btn-sm ${btnHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${
+              item.id
+            }', 'hafal')" title="Hafal"><i class="bi bi-check-lg" style="font-size: 0.75rem;"></i></button>
                         </div>
                     </td>
                 </tr>
-                `;
-            } else {
-                // TAMPILAN CARD DEFAULT
-                allCardsHTML += `
-                <div class="col-md-6 col-lg-4 animate-card-fade" data-vocab-id="${item.id}" style="animation-delay: ${index > 20 ? 0 : index * 0.03}s;">
+                `
+          } else {
+            // TAMPILAN CARD DEFAULT (TIDAK BERUBAH)
+            allCardsHTML += `
+                <div class="col-md-6 col-lg-4 animate-card-fade" data-vocab-id="${
+                  item.id
+                }" style="animation-delay: ${index > 20 ? 0 : index * 0.03}s;">
                     <div class="card h-100 shadow-sm vocab-card">
                         <div class="card-body p-4 d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <span class="badge badge-kategori border text-capitalize px-3 py-2 rounded-pill">
-                                    <i class="bi bi-tag-fill me-1"></i>${item.kategori}
+                                    <i class="bi bi-tag-fill me-1"></i>${
+                                      item.kategori
+                                    }
                                 </span>
                                 <span class="badge badge-waktu border px-3 py-2 rounded-pill">
                                     M${item.minggu} - H${item.hari}
@@ -1026,34 +1219,58 @@
                                         title="Dengarkan Pengucapan Lengkap">
                                     <i class="bi bi-volume-up-fill text-primary"></i>
                                 </button>
-                                <p class="text-muted mb-1 small fw-semibold tracking-wide ${isStudyMode ? 'd-none' : ''}" style="letter-spacing: 0.5px;">${item.furigana}</p>
-                                <h2 class="fw-bold text-dark mb-2 fs-1">${item.kanji}</h2>
-                                <h5 class="fw-bold mb-0 text-decoration-none ${isStudyMode ? 'd-none' : ''}" style="color: var(--jp-blue-dark);">${item.arti}</h5>
+                                <p class="text-muted mb-1 small fw-semibold tracking-wide ${
+                                  isStudyMode ? 'd-none' : ''
+                                }" style="letter-spacing: 0.5px;">${
+              item.furigana
+            }</p>
+                                <h2 class="fw-bold text-dark mb-2 fs-1">${
+                                  item.kanji
+                                }</h2>
+                                <h5 class="fw-bold mb-0 text-decoration-none ${
+                                  isStudyMode ? 'd-none' : ''
+                                }" style="color: var(--jp-blue-dark);">${
+              item.arti
+            }</h5>
                             </div>
                             
-                            <p class="card-text small text-secondary text-center border-bottom pb-3 mb-3 flex-grow-1 ${isStudyMode ? 'd-none' : ''}">${item.penjelasan}</p>
+                            <p class="card-text small text-secondary text-center border-bottom pb-3 mb-3 flex-grow-1 ${
+                              isStudyMode ? 'd-none' : ''
+                            }">${item.penjelasan}</p>
                             
-                            <div class="p-3 rounded-3 small mb-3 border contoh-box ${isStudyMode ? 'd-none' : ''}">
+                            <div class="p-3 rounded-3 small mb-3 border contoh-box ${
+                              isStudyMode ? 'd-none' : ''
+                            }">
                                 <div class="mb-2 fw-bold text-dark"><i class="bi bi-journal-text text-danger me-2"></i>Contoh Kalimat:</div>
                                 <div class="mb-2 lh-base fw-medium">${ex1HTML}</div>
-                                ${ex2Parts[0] ? `<hr class="my-2 opacity-25"><div class="lh-base fw-medium">${ex2HTML}</div>` : ''}
+                                ${
+                                  ex2Parts[0]
+                                    ? `<hr class="my-2 opacity-25"><div class="lh-base fw-medium">${ex2HTML}</div>`
+                                    : ''
+                                }
                             </div>
                         </div>
                         <div class="card-footer border-0 p-4 pt-0">
                             <div class="btn-group w-100 shadow-sm btn-status-group" role="group">
-                                <button type="button" class="btn ${btnTidakHafal}" onclick="setStatus('${item.id}', 'tidak_hafal')"><i class="bi bi-x-circle-fill me-1"></i>Tidak</button>
-                                <button type="button" class="btn ${btnAgakHafal}" onclick="setStatus('${item.id}', 'agak_hafal')"><i class="bi bi-dash-circle-fill me-1"></i>Agak</button>
-                                <button type="button" class="btn ${btnHafal}" onclick="setStatus('${item.id}', 'hafal')"><i class="bi bi-check-circle-fill me-1"></i>Hafal</button>
+                                <button type="button" class="btn ${btnTidakHafal}" onclick="setStatus('${
+              item.id
+            }', 'tidak_hafal')"><i class="bi bi-x-circle-fill me-1"></i>Tidak</button>
+                                <button type="button" class="btn ${btnAgakHafal}" onclick="setStatus('${
+              item.id
+            }', 'agak_hafal')"><i class="bi bi-dash-circle-fill me-1"></i>Agak</button>
+                                <button type="button" class="btn ${btnHafal}" onclick="setStatus('${
+              item.id
+            }', 'hafal')"><i class="bi bi-check-circle-fill me-1"></i>Hafal</button>
                             </div>
                         </div>
                     </div>
                 </div>`
-            }
+          }
         })
 
         // --- PENUTUPAN TABEL ---
         if (isTableView) {
-            allCardsHTML += `</tbody></table></div></div></div>`;
+          allCardsHTML += `</tbody></table></div></div></div>`
         }
 
         container.innerHTML = allCardsHTML
@@ -1066,7 +1283,7 @@
         let statuses = JSON.parse(localStorage.getItem('vocabStatus')) || {}
         statuses[id] = status
         localStorage.setItem('vocabStatus', JSON.stringify(statuses))
-        
+
         // Buat pengunci target scroll spesifik pada elemen yang diklik pengguna
         const targetElement = document.querySelector(`[data-vocab-id="${id}"]`)
         const anchor = {
@@ -1075,7 +1292,7 @@
         }
 
         renderCards()
-        restoreScrollAnchor(anchor) 
+        restoreScrollAnchor(anchor)
       }
 
       function saveFilters() {
@@ -1092,11 +1309,16 @@
       function loadFilters() {
         const savedFilters = JSON.parse(localStorage.getItem('vocabFilters'))
         if (savedFilters) {
-          const searchEl = document.getElementById('search-input'); if (searchEl) searchEl.value = savedFilters.search || ''
-          const mingguEl = document.getElementById('filter-minggu'); if (mingguEl) mingguEl.value = savedFilters.minggu || 'all'
-          const hariEl = document.getElementById('filter-hari'); if (hariEl) hariEl.value = savedFilters.hari || 'all'
-          const kategoriEl = document.getElementById('filter-kategori'); if (kategoriEl) kategoriEl.value = savedFilters.kategori || 'all'
-          const statusEl = document.getElementById('filter-status'); if (statusEl) statusEl.value = savedFilters.status || 'all'
+          const searchEl = document.getElementById('search-input')
+          if (searchEl) searchEl.value = savedFilters.search || ''
+          const mingguEl = document.getElementById('filter-minggu')
+          if (mingguEl) mingguEl.value = savedFilters.minggu || 'all'
+          const hariEl = document.getElementById('filter-hari')
+          if (hariEl) hariEl.value = savedFilters.hari || 'all'
+          const kategoriEl = document.getElementById('filter-kategori')
+          if (kategoriEl) kategoriEl.value = savedFilters.kategori || 'all'
+          const statusEl = document.getElementById('filter-status')
+          if (statusEl) statusEl.value = savedFilters.status || 'all'
         }
       }
 
@@ -1104,7 +1326,9 @@
         let timer
         return (...args) => {
           clearTimeout(timer)
-          timer = setTimeout(() => { func.apply(this, args) }, timeout)
+          timer = setTimeout(() => {
+            func.apply(this, args)
+          }, timeout)
         }
       }
 
@@ -1114,26 +1338,40 @@
       }, 250)
 
       document.addEventListener('DOMContentLoaded', () => {
-        const filterIds = ['search-input', 'filter-minggu', 'filter-hari', 'filter-kategori', 'filter-status']
+        const filterIds = [
+          'search-input',
+          'filter-minggu',
+          'filter-hari',
+          'filter-kategori',
+          'filter-status'
+        ]
         filterIds.forEach(id => {
           const element = document.getElementById(id)
           if (element) {
             const eventType = id === 'search-input' ? 'input' : 'change'
-            element.addEventListener(eventType, () => { processFilterChange() })
+            element.addEventListener(eventType, () => {
+              processFilterChange()
+            })
           }
         })
 
         const studyBtn = document.getElementById('study-mode-toggle')
-        if (studyBtn) studyBtn.addEventListener('click', () => { setStudyMode(!isStudyMode) })
+        if (studyBtn)
+          studyBtn.addEventListener('click', () => {
+            setStudyMode(!isStudyMode)
+          })
 
         const viewBtn = document.getElementById('view-mode-toggle')
-        if (viewBtn) viewBtn.addEventListener('click', () => { setViewMode(!isTableView) })
+        if (viewBtn)
+          viewBtn.addEventListener('click', () => {
+            setViewMode(!isTableView)
+          })
 
         setStudyMode(isStudyMode)
-        setViewMode(isTableView) 
+        setViewMode(isTableView)
         loadFilters()
         renderCards()
       })
-</script>
+    </script>
   </body>
 </html>
