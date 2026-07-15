@@ -466,7 +466,7 @@
     <script src="minggu8/hari5.js"></script>
     <script src="minggu8/hari6.js"></script>
     <script src="minggu8/hari7.js"></script>
-    <script>
+<script>
       // ==========================================================================
       // --- LOGIKA TEXT-TO-SPEECH (SUARA AI GOOGLE JEPANG) ---
       // ==========================================================================
@@ -656,6 +656,59 @@
       initTheme()
 
       // ==========================================================================
+      // --- HELPER SCROLL ANCHORING (Anti Lompat/Scroll Kejauhan) ---
+      // ==========================================================================
+      // Fungsi untuk mencari kartu yang paling mendekati bagian atas layar (viewport) saat ini
+      function getTopVisibleCard() {
+        const container = document.getElementById('vocab-container')
+        if (!container) return null
+        
+        const cards = container.querySelectorAll('.vocab-card')
+        if (cards.length === 0) return null
+
+        let closestCard = null
+        let closestTop = Infinity
+        let closestId = null
+        let relativeOffset = 0
+
+        cards.forEach(card => {
+          const rect = card.getBoundingClientRect()
+          const absTop = Math.abs(rect.top) // Jarak absolut dari atas layar
+          if (absTop < closestTop) {
+            closestTop = absTop
+            closestCard = card
+          }
+        })
+
+        if (closestCard) {
+          // Ambil ID kartu dari tombol play audio yang unik di dalam kartu tersebut
+          const playBtn = closestCard.querySelector('button[onclick^="playVocabAudio"]')
+          if (playBtn) {
+            const match = playBtn.getAttribute('onclick').match(/'([^']+)'/)
+            if (match) closestId = match[1]
+          }
+          relativeOffset = closestCard.getBoundingClientRect().top
+        }
+
+        return { id: closestId, offset: relativeOffset }
+      }
+
+      // Fungsi untuk mengembalikan posisi scroll layar ke kartu jangkar semula
+      function restoreScrollAnchor(anchor) {
+        if (!anchor || !anchor.id) return
+        
+        const btn = document.querySelector(`button[onclick="playVocabAudio('${anchor.id}')"]`)
+        if (btn) {
+          const card = btn.closest('.vocab-card')
+          if (card) {
+            const currentCardTop = card.getBoundingClientRect().top
+            const diff = currentCardTop - anchor.offset
+            window.scrollBy(0, diff) // Geser posisi scroll window secara presisi
+          }
+        }
+      }
+
+      // ==========================================================================
       // --- LOGIKA UTAMA MODE HAFAL (STUDY MODE ENGINE) ---
       // ==========================================================================
       let isStudyMode = localStorage.getItem('study_mode') === 'true'
@@ -692,7 +745,9 @@
           typeof renderCards === 'function' &&
           document.getElementById('vocab-container')
         ) {
+          const anchor = getTopVisibleCard() // Simpan posisi card aktif sebelum render
           renderCards()
+          restoreScrollAnchor(anchor) // Kembalikan posisi scroll setelah render
         }
       }
 
@@ -973,7 +1028,10 @@
         let statuses = JSON.parse(localStorage.getItem('vocabStatus')) || {}
         statuses[id] = status
         localStorage.setItem('vocabStatus', JSON.stringify(statuses))
+        
+        const anchor = getTopVisibleCard() // Simpan posisi card aktif sebelum di-update
         renderCards()
+        restoreScrollAnchor(anchor) // Kembalikan posisi scroll agar presisi
       }
 
       function saveFilters() {
