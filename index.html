@@ -515,6 +515,12 @@
         window.speechSynthesis.speak(utterance)
       }
 
+      // ==========================================================================
+      // FITUR OPTIMASI 1: CACHE TRANSLATION (Anti-Lag Internet)
+      // ==========================================================================
+      const translationCache =
+        JSON.parse(localStorage.getItem('tts_translation_cache')) || {}
+
       // Fungsi Pembacaan Lengkap dengan Auto-Translate Penjelasan
       async function playVocabAudio(id) {
         const item = window.vocabData.find(v => v.id === id)
@@ -531,19 +537,33 @@
         }
 
         try {
-          // 1. Baca Kanji/Kosakata
-          let textToSpeak = item.kanji + '。'
+          // 1. Baca Furigana (Mencegah salah baca Kanji oleh TTS)
+          let textToSpeak = item.furigana + '。'
 
           // 2. Auto Translate Penjelasan (Indonesia ke Jepang Mudah)
           if (item.penjelasan) {
-            // Memanfaatkan Google Translate API publik secara langsung
-            const res = await fetch(
-              `https://translate.googleapis.com/translate_a/single?client=gtx&sl=id&tl=ja&dt=t&q=${encodeURIComponent(
-                item.penjelasan
-              )}`
-            )
-            const data = await res.json()
-            const translatedPenjelasan = data[0][0][0] // Mengambil hasil terjemahan string
+            let translatedPenjelasan = ''
+
+            // Cek apakah penjelasan ini sudah pernah ditranslate sebelumnya (cek cache)
+            if (translationCache[item.penjelasan]) {
+              translatedPenjelasan = translationCache[item.penjelasan]
+            } else {
+              // Memanfaatkan Google Translate API publik secara langsung JIKA belum di-cache
+              const res = await fetch(
+                `https://translate.googleapis.com/translate_a/single?client=gtx&sl=id&tl=ja&dt=t&q=${encodeURIComponent(
+                  item.penjelasan
+                )}`
+              )
+              const data = await res.json()
+              translatedPenjelasan = data[0][0][0] // Mengambil hasil terjemahan string
+
+              // Simpan ke cache agar klik berikutnya bebas lag/tanpa internet
+              translationCache[item.penjelasan] = translatedPenjelasan
+              localStorage.setItem(
+                'tts_translation_cache',
+                JSON.stringify(translationCache)
+              )
+            }
 
             // Tambahkan frasa "Imi wa, ..." (Artinya adalah...)
             textToSpeak += '意味は、' + translatedPenjelasan + '。'
@@ -565,9 +585,9 @@
           // Mulai Text-to-Speech dengan teks bahasa Jepang yang sudah dirangkai
           speakText(textToSpeak)
         } catch (error) {
-          console.error('Gagal menerjemahkan penjelasan:', error)
-          // Fallback (Jika no-internet/API error): Hanya baca Kanji dan Contoh Kalimat Jepang
-          let fallbackText = item.kanji + '。'
+          console.error('Gagal menerjemahkan penjelasan atau offline:', error)
+          // Fallback (Jika no-internet/API error/belum ada cache): Hanya baca Furigana dan Contoh Kalimat Jepang
+          let fallbackText = item.furigana + '。'
           const extractJP = str => (str ? str.split('\n')[0].trim() : '')
           const ex1 = extractJP(item.contoh1)
           const ex2 = extractJP(item.contoh2)
@@ -770,6 +790,8 @@
       function renderCards() {
         const container = document.getElementById('vocab-container')
         if (!container) return
+
+        // Kosongkan container terlebih dahulu
         container.innerHTML = ''
 
         const searchTxt = document
@@ -823,6 +845,11 @@
           return
         }
 
+        // FITUR OPTIMASI 2: BATCH DOM RENDERING (Anti Device Kentang Lag)
+        // Kita tumpuk semua HTML di dalam variable string terlebih dahulu,
+        // baru dimasukkan ke DOM sekaligus di akhir.
+        let allCardsHTML = ''
+
         filtered.forEach((item, index) => {
           const itemStatus = statuses[item.id] || 'tidak_hafal'
 
@@ -858,9 +885,10 @@
                   : ''
               }`
 
+          // String Literal
           const cardHTML = `
                 <div class="col-md-6 col-lg-4 animate-card-fade" style="animation-delay: ${
-                  index * 0.03
+                  index > 20 ? 0 : index * 0.03 // Optimasi ringan animasi hanya untuk 20 data pertama
                 }s;">
                     <div class="card h-100 shadow-sm vocab-card">
                         <div class="card-body p-4 d-flex flex-column">
@@ -876,7 +904,6 @@
                             </div>
                             
                             <div class="text-center mb-4 mt-2 position-relative">
-                                <!-- TOMBOL AUDIO TEXT TO SPEECH AUTO TRANSLATE -->
                                 <button class="btn btn-light border shadow-sm rounded-circle position-absolute top-0 end-0" 
                                         style="width: 40px; height: 40px;" 
                                         onclick="playVocabAudio('${item.id}')" 
@@ -884,13 +911,11 @@
                                     <i class="bi bi-volume-up-fill text-primary"></i>
                                 </button>
 
-                                <!-- Furigana disembunyikan total saat mode hafal -->
                                 <p class="text-muted mb-1 small fw-semibold tracking-wide ${
                                   isStudyMode ? 'd-none' : ''
                                 }" style="letter-spacing: 0.5px;">${
             item.furigana
           }</p>
-                                <!-- Hanya Kanji yang tetap tampil -->
                                 <h2 class="fw-bold text-dark mb-2 fs-1">${
                                   item.kanji
                                 }</h2>
@@ -905,7 +930,6 @@
                               isStudyMode ? 'd-none' : ''
                             }">${item.penjelasan}</p>
                             
-                            <!-- Box contoh kalimat disembunyikan total saat mode hafal -->
                             <div class="p-3 rounded-3 small mb-3 border contoh-box ${
                               isStudyMode ? 'd-none' : ''
                             }">
@@ -936,8 +960,13 @@
                         </div>
                     </div>
                 </div>`
-          container.insertAdjacentHTML('beforeend', cardHTML)
+
+          // Masukkan string card ke kumpulan allCardsHTML
+          allCardsHTML += cardHTML
         })
+
+        // Memasukkan hasil html ke DOM dalam sekali jalan
+        container.innerHTML = allCardsHTML
       }
 
       function setStatus(id, status) {
@@ -978,6 +1007,23 @@
         }
       }
 
+      // FITUR OPTIMASI 3: DEBOUNCE FUNCTION (Anti-Lag Saat Mengetik)
+      function debounce(func, timeout = 300) {
+        let timer
+        return (...args) => {
+          clearTimeout(timer)
+          timer = setTimeout(() => {
+            func.apply(this, args)
+          }, timeout)
+        }
+      }
+
+      // Bungkus proses simpan dan render di dalam Debounce
+      const processFilterChange = debounce(() => {
+        saveFilters()
+        renderCards()
+      }, 250) // Delay 250 milidetik setelah user berhenti ketik baru di-render
+
       document.addEventListener('DOMContentLoaded', () => {
         const filterIds = [
           'search-input',
@@ -991,9 +1037,9 @@
           const element = document.getElementById(id)
           if (element) {
             const eventType = id === 'search-input' ? 'input' : 'change'
+            // Gunakan debounced render untuk menghindari lag parah saat filter
             element.addEventListener(eventType, () => {
-              saveFilters()
-              renderCards()
+              processFilterChange()
             })
           }
         })
