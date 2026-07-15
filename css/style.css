@@ -484,3 +484,29 @@ h2,
   color: var(--jp-kin-gold) !important;
   border-bottom: 1px solid #3E2B15;
 }
+
+/* --- FIX TOTAL UNTUK BADGE & ELEMEN BOOTSTRAP --- */
+
+/* Memaksa badge agar mengikuti skema warna dark mode */
+[data-theme='dark'] .badge {
+    background-color: rgba(147, 181, 225, 0.15) !important; /* Warna biru lembut */
+    color: #93B5E1 !important; /* Teks warna moonlight blue */
+    border: 1px solid rgba(147, 181, 225, 0.2) !important;
+}
+
+/* Memastikan teks di dalam tabel tidak putih terang/butek */
+[data-theme='dark'] table td, 
+[data-theme='dark'] table th {
+    color: #CED4DA !important; /* Abu-abu terang yang nyaman di mata */
+}
+
+/* Fix khusus untuk tombol di dalam tabel jika masih ada latar putih */
+[data-theme='dark'] .btn-link {
+    color: #93B5E1 !important;
+}
+
+/* Tambahan: Pastikan baris tabel (row) benar-benar gelap */
+[data-theme='dark'] tbody tr {
+    background-color: #16181D !important;
+    border-color: #2D313A !important;
+}

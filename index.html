@@ -963,35 +963,36 @@
       // ==========================================================================
       // --- SYSTEM ANCHORING UTAMA (PREVENT SCREEN JUMPING) ---
       // ==========================================================================
-      function getTopVisibleCard() {
-        const container = document.getElementById('vocab-container')
-        if (!container) return null
+// Mengambil data elemen yang paling terlihat di layar
+function getTopVisibleCard() {
+    const cards = document.querySelectorAll('[data-vocab-id]');
+    let closest = null;
+    let minDistance = Infinity;
 
-        const cards = container.querySelectorAll('[data-vocab-id]')
-        if (cards.length === 0) return null
-
-        let closestCard = null
-        let closestTop = Infinity
-
-        cards.forEach(card => {
-          const rect = card.getBoundingClientRect()
-          // Offset 90px sebagai kompensasi tinggi Sticky Navbar di atas layar
-          const distance = Math.abs(rect.top - 90)
-          if (distance < closestTop) {
-            closestTop = distance
-            closestCard = card
-          }
-        })
-
-        if (closestCard) {
-          return {
-            id: closestCard.getAttribute('data-vocab-id'),
-            offset: closestCard.getBoundingClientRect().top
-          }
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        // Cari elemen yang posisi top-nya paling dekat dengan 0 (atas layar)
+        if (Math.abs(rect.top) < minDistance) {
+            minDistance = Math.abs(rect.top);
+            closest = {
+                id: card.getAttribute('data-vocab-id'),
+                offset: rect.top
+            };
         }
-        return null
-      }
+    });
+    return closest;
+}
 
+// Memulihkan posisi scroll ke elemen target
+function restoreScrollAnchor(anchor) {
+    if (!anchor) return;
+    const target = document.querySelector(`[data-vocab-id="${anchor.id}"]`);
+    if (target) {
+        const rect = target.getBoundingClientRect();
+        // Scroll kembali ke elemen tersebut dengan penyesuaian offset
+        window.scrollBy(0, rect.top - anchor.offset);
+    }
+}
       function restoreScrollAnchor(anchor) {
         if (!anchor || !anchor.id) return
         const card = document.querySelector(`[data-vocab-id="${anchor.id}"]`)
@@ -1245,7 +1246,7 @@
                         <button class="btn btn-light border shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 28px; height: 28px; padding:0;" onclick="playVocabAudio('${
                           item.id
                         }')" title="Dengarkan">
-                            <i class="bi bi-volume-up-fill" style="font-size:0.9rem; color:var(--bs-primary);"></i>
+                            <i class="bi bi-volume-up-fill text-primary" style="font-size: 0.9rem;"></i>
                         </button>
                     </td>
                     <td class="cat-col">
