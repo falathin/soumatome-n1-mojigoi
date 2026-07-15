@@ -7,7 +7,7 @@ const kosakata_m3h3 = [
     id: 'm3h3_1',
     minggu: '3',
     hari: '3',
-    kategori: 'Onomatope / kata keterangan',
+    kategori: 'Onomatope',
     kanji: 'じっくり',
     furigana: 'じっくり',
     arti: 'Dengan teliti / Masak-masak',
