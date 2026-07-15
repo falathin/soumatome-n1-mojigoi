@@ -1385,23 +1385,25 @@
         container.innerHTML = allCardsHTML
 
         // --- TAMBAHAN UNTUK MEMULIHKAN KONTROL TTS ---
-    if (typeof activeTtsId !== 'undefined' && activeTtsId) {
-        // Hapus cache agar tombol digambar ulang di DOM yang baru
-        if (typeof originalButtonHTML !== 'undefined') {
-             delete originalButtonHTML[activeTtsId];
-        }
-        
-        // Panggil kembali fungsi kontrol agar muncul di DOM baru
-        showTTSControls(activeTtsId);
-        
-        // Pastikan ikon kembali ke 'Play' jika posisi sedang di-pause
-        if (typeof isTtsPaused !== 'undefined' && isTtsPaused) {
-            const pauseIcon = document.querySelector(`#tts-controls-${activeTtsId} .btn-pause-resume i`);
+        if (typeof activeTtsId !== 'undefined' && activeTtsId) {
+          // Hapus cache agar tombol digambar ulang di DOM yang baru
+          if (typeof originalButtonHTML !== 'undefined') {
+            delete originalButtonHTML[activeTtsId]
+          }
+
+          // Panggil kembali fungsi kontrol agar muncul di DOM baru
+          showTTSControls(activeTtsId)
+
+          // Pastikan ikon kembali ke 'Play' jika posisi sedang di-pause
+          if (typeof isTtsPaused !== 'undefined' && isTtsPaused) {
+            const pauseIcon = document.querySelector(
+              `#tts-controls-${activeTtsId} .btn-pause-resume i`
+            )
             if (pauseIcon) {
-                pauseIcon.className = 'bi bi-play-fill';
+              pauseIcon.className = 'bi bi-play-fill'
             }
+          }
         }
-    }
       }
 
       // ==========================================================================
