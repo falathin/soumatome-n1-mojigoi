@@ -181,7 +181,7 @@ const kosakata_m2h2 = [
     arti: 'Menjadi lembap / Makmur',
     penjelasan: 'Secara fisik berarti mendapatkan kandungan air atau kelembapan yang cukup (untuk kulit, tanaman, atau tanah kering). Secara abstrak/ekonomi berarti menerima keuntungan finansial melimpah sehingga mendatangkan kemakmuran.',
     contoh1: '肌が潤う\n(Kulit menjadi lembap.)',
-    contoh2: '新 stasiun ができたおかげで、地元の経済が豊かに潤った。\n(Berkat dibangunnya stasiun baru, ekonomi lokal menjadi sangat makmur.)'
+    contoh2: '新駅ができたおかげで、地元の経済が豊かに潤った。\n(Berkat dibangunnya stasiun baru, ekonomi lokal menjadi sangat makmur.)'
   },
   {
     id: 'm2h2_16',
