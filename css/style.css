@@ -346,6 +346,21 @@ h2,
   background-color: #1A1C23 !important;
 }
 
+/* FIX IKON AUDIO (VOLUME) & TEXT-PRIMARY DI DARK MODE */
+[data-theme='dark'] i.bi-volume-up-fill.text-primary,
+[data-theme='dark'] i.text-primary {
+  color: #93B5E1 !important; /* Moonlight Blue yang elegan */
+  text-shadow: 0 0 12px rgba(147, 181, 225, 0.5); /* Glowing effect */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+[data-theme='dark'] i.bi-volume-up-fill.text-primary:hover,
+[data-theme='dark'] i.text-primary:hover {
+  color: #FFFFFF !important; /* Berubah putih terang saat di-hover */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
 /* Teks Kanji & Arti Kosakata */
 [data-theme='dark'] .vocab-card .text-dark,
 [data-theme='dark'] .vocab-card h2.text-dark {
