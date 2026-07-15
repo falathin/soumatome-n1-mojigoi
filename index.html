@@ -480,10 +480,10 @@
       // ==========================================================================
       // --- INJECT CSS SECARA DINAMIS (SUPER COMPACT, RESPONSIF & DARK MODE) ---
       // ==========================================================================
-if (!document.getElementById('table-hover-style')) {
-    const style = document.createElement('style')
-    style.id = 'table-hover-style'
-    style.innerHTML = `
+      if (!document.getElementById('table-hover-style')) {
+        const style = document.createElement('style')
+        style.id = 'table-hover-style'
+        style.innerHTML = `
         /* Tabel Ultra-Kompak */
         .table-compact td {
             padding: 0.4rem 0.5rem !important;
@@ -668,24 +668,119 @@ if (!document.getElementById('table-hover-style')) {
             }
         }
     `
-    document.head.appendChild(style)
-}
+        document.head.appendChild(style)
+      }
 
       // ==========================================================================
-      // --- LOGIKA TEXT-TO-SPEECH (SUARA AI GOOGLE JEPANG) ---
+      // --- STATE GLOBAL UNTUK KONTROL TTS ---
       // ==========================================================================
+      let activeTtsId = null // Menyimpan ID kosakata yang sedang bersuara
+      let originalButtonHTML = {} // Menyimpan markup tombol asli
+      let isTtsPaused = false // STATE BARU: Pelacak akurat untuk pause/resume
+
       if ('speechSynthesis' in window) {
         window.speechSynthesis.onvoiceschanged = () => {
           window.speechSynthesis.getVoices()
         }
       }
 
-      function speakText(text) {
+      // --- Fungsi Menampilkan Control Group TTS ---
+      function showTTSControls(id) {
+        const btn = document.querySelector(
+          `[data-vocab-id="${id}"] button[onclick^="playVocabAudio"]`
+        )
+        if (!btn) return
+
+        if (!originalButtonHTML[id]) {
+          originalButtonHTML[id] = btn.outerHTML
+        }
+
+        // Hapus 'bg-white' agar background bisa dikontrol oleh CSS (untuk Dark Mode)
+        const controlsHTML = `
+    <div id="tts-controls-${id}" class="btn-group btn-group-sm border border-secondary border-opacity-25 rounded-pill overflow-hidden shadow-sm d-inline-flex align-items-center tts-control-group" style="padding: 2px;">
+      <button class="btn btn-link btn-pause-resume p-1 text-primary border-0" onclick="togglePauseTTS('${id}')" title="Pause / Resume" style="line-height: 1;">
+        <i class="bi bi-pause-fill" style="font-size: 0.95rem;"></i>
+      </button>
+      <button class="btn btn-link p-1 text-warning border-0" onclick="replayTTS('${id}')" title="Ulangi" style="line-height: 1;">
+        <i class="bi bi-arrow-counterclockwise" style="font-size: 0.9rem;"></i>
+      </button>
+      <button class="btn btn-link p-1 text-danger border-0" onclick="cancelTTS('${id}')" title="Berhenti" style="line-height: 1;">
+        <i class="bi bi-x-circle-fill" style="font-size: 0.9rem;"></i>
+      </button>
+    </div>
+  `
+
+        btn.outerHTML = controlsHTML
+      }
+
+      // --- Fungsi Mengembalikan Tombol Speaker Asli ---
+      function restoreOriginalButton(id) {
+        const controls = document.getElementById(`tts-controls-${id}`)
+        if (controls && originalButtonHTML[id]) {
+          controls.outerHTML = originalButtonHTML[id]
+          delete originalButtonHTML[id]
+        }
+        if (activeTtsId === id) {
+          activeTtsId = null
+        }
+        isTtsPaused = false // Reset state saat tombol kembali
+      }
+
+      // --- Fungsi Kontrol 1: Pause & Resume Toggle (DIREVISI) ---
+      function togglePauseTTS(id) {
+        const pauseIcon = document.querySelector(
+          `#tts-controls-${id} .btn-pause-resume i`
+        )
+        if (!pauseIcon) return
+
+        // Gunakan state mandiri kita, bukan bawaan API yang sering ngaco
+        if (isTtsPaused) {
+          window.speechSynthesis.resume()
+          pauseIcon.className = 'bi bi-pause-fill'
+          isTtsPaused = false
+        } else {
+          window.speechSynthesis.pause()
+          pauseIcon.className = 'bi bi-play-fill'
+          isTtsPaused = true
+        }
+      }
+
+      // --- Fungsi Kontrol 2: Replay (Ulang dari awal) ---
+      function replayTTS(id) {
+        window.speechSynthesis.cancel()
+        restoreOriginalButton(id)
+        setTimeout(() => {
+          playVocabAudio(id)
+        }, 100)
+      }
+
+      // --- Fungsi Kontrol 3: Cancel (Berhenti total) ---
+      function cancelTTS(id) {
+        window.speechSynthesis.cancel()
+        restoreOriginalButton(id)
+      }
+
+      // ==========================================================================
+      // --- INTI ENGINE TEXT-TO-SPEECH ---
+      // ==========================================================================
+      function speakText(text, id) {
         if (!('speechSynthesis' in window)) {
           alert('Maaf, browser Anda tidak mendukung fitur suara.')
           return
         }
-        window.speechSynthesis.cancel()
+
+        // Jika API macet di state pause dari sesi sebelumnya, pancing untuk jalan dulu
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume()
+        }
+
+        if (activeTtsId && activeTtsId !== id) {
+          window.speechSynthesis.cancel()
+          restoreOriginalButton(activeTtsId)
+        }
+
+        activeTtsId = id
+        isTtsPaused = false // Reset state tiap mulai baru
         const utterance = new SpeechSynthesisUtterance(text)
         utterance.lang = 'ja-JP'
         utterance.rate = 0.85
@@ -702,11 +797,23 @@ if (!document.getElementById('table-hover-style')) {
           )
           utterance.voice = googleVoice ? googleVoice : jpVoices[0]
         }
+
+        utterance.onstart = () => {
+          showTTSControls(id)
+        }
+        utterance.onend = () => {
+          restoreOriginalButton(id)
+        }
+        utterance.onerror = e => {
+          console.error('TTS Error:', e)
+          restoreOriginalButton(id)
+        }
+
         window.speechSynthesis.speak(utterance)
       }
 
       // ==========================================================================
-      // FITUR OPTIMASI 1: CACHE TRANSLATION
+      // FITUR TRANSLATION CACHE & PRE-PROCESS PLAY
       // ==========================================================================
       const translationCache =
         JSON.parse(localStorage.getItem('tts_translation_cache')) || {}
@@ -718,7 +825,11 @@ if (!document.getElementById('table-hover-style')) {
         const btn = document.querySelector(
           `[data-vocab-id="${id}"] button[onclick^="playVocabAudio"]`
         )
-        const originalIcon = btn ? btn.innerHTML : ''
+
+        if (btn && !originalButtonHTML[id]) {
+          originalButtonHTML[id] = btn.outerHTML
+        }
+
         if (btn) {
           btn.innerHTML =
             '<span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true" style="width: 1rem; height: 1rem;"></span>'
@@ -755,7 +866,7 @@ if (!document.getElementById('table-hover-style')) {
           if (ex1) textToSpeak += ex1 + '。'
           if (ex2) textToSpeak += ex2 + '。'
 
-          speakText(textToSpeak)
+          speakText(textToSpeak, id)
         } catch (error) {
           console.error('Gagal menerjemahkan penjelasan:', error)
           let fallbackText = item.furigana + '。'
@@ -765,12 +876,10 @@ if (!document.getElementById('table-hover-style')) {
           if (ex1 || ex2) fallbackText += '例文。'
           if (ex1) fallbackText += ex1 + '。'
           if (ex2) fallbackText += ex2 + '。'
-          speakText(fallbackText)
-        } finally {
-          if (btn) btn.innerHTML = originalIcon
+
+          speakText(fallbackText, id)
         }
       }
-
       // ==========================================================================
       // --- LOGIKA UTAMA TRANSMISI DARK MODE ---
       // ==========================================================================
@@ -1143,7 +1252,7 @@ if (!document.getElementById('table-hover-style')) {
                         <span class="badge rounded-pill px-3 py-1 bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25">${
                           item.kategori
                         }</span>
-                        <div class="fw-semibold text-muted" style="font-size: 0.75rem;">M${
+                        <div class="fw-semibold text-muted"style="font-size: 0.75rem;">M${
                           item.minggu
                         }-H${item.hari}</div>
                     </td>
@@ -1274,6 +1383,25 @@ if (!document.getElementById('table-hover-style')) {
         }
 
         container.innerHTML = allCardsHTML
+
+        // --- TAMBAHAN UNTUK MEMULIHKAN KONTROL TTS ---
+    if (typeof activeTtsId !== 'undefined' && activeTtsId) {
+        // Hapus cache agar tombol digambar ulang di DOM yang baru
+        if (typeof originalButtonHTML !== 'undefined') {
+             delete originalButtonHTML[activeTtsId];
+        }
+        
+        // Panggil kembali fungsi kontrol agar muncul di DOM baru
+        showTTSControls(activeTtsId);
+        
+        // Pastikan ikon kembali ke 'Play' jika posisi sedang di-pause
+        if (typeof isTtsPaused !== 'undefined' && isTtsPaused) {
+            const pauseIcon = document.querySelector(`#tts-controls-${activeTtsId} .btn-pause-resume i`);
+            if (pauseIcon) {
+                pauseIcon.className = 'bi bi-play-fill';
+            }
+        }
+    }
       }
 
       // ==========================================================================

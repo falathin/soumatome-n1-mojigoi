@@ -284,6 +284,40 @@ h2,
   letter-spacing: 1.5px;
 }
 
+/* --- Styling Khusus Ikon Audio (Speaker) --- */
+.speaker-icon {
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s ease, filter 0.3s ease, transform 0.2s ease;
+}
+
+.speaker-icon:hover {
+  transform: scale(1.15);
+}
+
+/* --- Styling Khusus Tombol Kontrol TTS --- */
+.tts-control-group {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #ffffff;
+  display: inline-flex;
+  gap: 4px;
+}
+
+.tts-control-group .btn-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% !important;
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.tts-control-group .btn-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
 /* ==========================================================================
    --- TSUKIMI (MOONLIGHT) PREMIUM DARK MODE ---
    --- EYE CATCHING & HIGH CONTRAST ENHANCEMENTS ---
@@ -346,20 +380,35 @@ h2,
   background-color: #1A1C23 !important;
 }
 
-/* FIX IKON AUDIO (VOLUME) & TEXT-PRIMARY DI DARK MODE */
+/* --- FIX IKON AUDIO (VOLUME) & TEXT-PRIMARY DI DARK MODE --- */
+[data-theme='dark'] .speaker-icon,
 [data-theme='dark'] i.bi-volume-up-fill.text-primary,
 [data-theme='dark'] i.text-primary {
   color: #93B5E1 !important; /* Moonlight Blue yang elegan */
-  text-shadow: 0 0 12px rgba(147, 181, 225, 0.5); /* Glowing effect */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  cursor: pointer;
+  filter: drop-shadow(0 0 6px rgba(147, 181, 225, 0.6)); /* Glowing effect */
 }
 
+[data-theme='dark'] .speaker-icon:hover,
 [data-theme='dark'] i.bi-volume-up-fill.text-primary:hover,
 [data-theme='dark'] i.text-primary:hover {
   color: #FFFFFF !important; /* Berubah putih terang saat di-hover */
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(147, 181, 225, 0.8));
 }
+
+/* --- FIX TTS CONTROL GROUP DARK MODE --- */
+[data-theme='dark'] .tts-control-group {
+  background-color: #1A1C23 !important; /* Latar gelap yang elegan */
+  border-color: #2D313A !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+}
+
+[data-theme='dark'] .tts-control-group .btn-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .tts-control-group .text-primary { color: #93B5E1 !important; }
+[data-theme='dark'] .tts-control-group .text-warning { color: #DCA646 !important; }
+[data-theme='dark'] .tts-control-group .text-danger { color: #E06C75 !important; }
 
 /* Teks Kanji & Arti Kosakata */
 [data-theme='dark'] .vocab-card .text-dark,
