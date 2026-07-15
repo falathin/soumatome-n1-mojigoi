@@ -671,7 +671,7 @@
         document.head.appendChild(style)
       }
 
-      // ==========================================================================
+// ==========================================================================
       // --- STATE GLOBAL UNTUK KONTROL TTS ---
       // ==========================================================================
       let activeTtsId = null // Menyimpan ID kosakata yang sedang bersuara
@@ -879,8 +879,7 @@
 
           speakText(fallbackText, id)
         }
-      }
-      // ==========================================================================
+      }      // ==========================================================================
       // --- LOGIKA UTAMA TRANSMISI DARK MODE ---
       // ==========================================================================
       const htmlElement = document.documentElement
@@ -1238,84 +1237,58 @@ function restoreScrollAnchor(anchor) {
                   : ''
               }`
 
-          if (isTableView) {
-            // TAMPILAN BARIS TABEL DETAIL (PADAT)
+if (isTableView) {
+            // TAMPILAN BARIS TABEL DETAIL (Desktop - Tidak Terlalu Kosong)
             allCardsHTML += `
                 <tr class="vocab-table-row" data-vocab-id="${item.id}">
                     <td class="text-center play-col">
-                        <button class="btn btn-light border shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 28px; height: 28px; padding:0;" onclick="playVocabAudio('${
-                          item.id
-                        }')" title="Dengarkan">
+                        <button class="btn btn-light border shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 28px; height: 28px; padding:0;" onclick="playVocabAudio('${item.id}')" title="Dengarkan">
                             <i class="bi bi-volume-up-fill text-primary" style="font-size: 0.9rem;"></i>
                         </button>
                     </td>
                     <td class="cat-col">
-                        <span class="badge rounded-pill px-3 py-1 bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25">${
-                          item.kategori
-                        }</span>
-                        <div class="fw-semibold text-muted"style="font-size: 0.75rem;">M${
-                          item.minggu
-                        }-H${item.hari}</div>
+                        <span class="badge rounded-pill px-3 py-1 bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25">${item.kategori}</span>
+                        <div class="fw-semibold text-muted"style="font-size: 0.75rem;">M${item.minggu}-H${item.hari}</div>
                     </td>
                     <td class="kanji-col">
-                        <span class="fs-5 fw-bold text-dark">${
-                          item.kanji
-                        }</span>
+                        <span class="fs-5 fw-bold text-dark">${item.kanji}</span>
                     </td>
-                    <td class="furi-col ${isStudyMode ? 'd-none' : ''}">
-                        <span class="fw-semibold text-muted" style="font-size: 0.85rem; letter-spacing: 0.5px;">${
-                          item.furigana
-                        }</span>
+                    
+                    <td class="furi-col" ${isStudyMode ? 'style="display: none !important;"' : ''}>
+                        <span class="fw-semibold text-muted" style="font-size: 0.85rem; letter-spacing: 0.5px;">${item.furigana}</span>
                     </td>
-                    <td class="detail-col ${isStudyMode ? 'd-none' : ''}">
-                        <div class="fw-bold mb-0" style="color: var(--jp-blue-dark); font-size: 0.9rem;">${
-                          item.arti
-                        }</div>
-                        <div class="text-secondary hover-expand lh-sm">${
-                          item.penjelasan
-                        }</div>
+                    
+                    <td class="detail-col" ${isStudyMode ? 'style="display: none !important;"' : ''}>
+                        <div class="fw-bold mb-0" style="color: var(--jp-blue-dark); font-size: 0.9rem;">${item.arti}</div>
+                        <div class="text-secondary hover-expand lh-sm">${item.penjelasan}</div>
                         
-                        <!-- Box Detail Kalimat (Slide Expand) -->
-                        <div class="hover-details bg-light bg-opacity-50 rounded border shadow-sm p-2">
+                        <div class="hover-details bg-light bg-opacity-50 rounded border shadow-sm p-2 mt-1">
                             <div class="fw-bold text-dark mb-1 border-bottom border-secondary border-opacity-25 pb-1" style="font-size: 0.75rem;">
                                 <i class="bi bi-journal-text text-danger me-1"></i>Contoh Penggunaan
                             </div>
                             <div class="lh-sm text-dark" style="font-size: 0.8rem;">${ex1HTML}</div>
-                            ${
-                              ex2Parts[0]
-                                ? `<hr class="my-1 opacity-25"><div class="lh-sm text-dark" style="font-size: 0.8rem;">${ex2HTML}</div>`
-                                : ''
-                            }
+                            ${ex2Parts[0] ? `<hr class="my-1 opacity-25"><div class="lh-sm text-dark" style="font-size: 0.8rem;">${ex2HTML}</div>` : ''}
                         </div>
                     </td>
+                    
                     <td class="text-center status-col">
                         <div class="btn-group w-100 shadow-sm" role="group">
-                            <button type="button" class="btn btn-sm ${btnTidakHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${
-              item.id
-            }', 'tidak_hafal')" title="Tidak Hafal"><i class="bi bi-x-lg" style="font-size: 0.75rem;"></i></button>
-                            <button type="button" class="btn btn-sm ${btnAgakHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${
-              item.id
-            }', 'agak_hafal')" title="Agak Hafal"><i class="bi bi-dash-lg" style="font-size: 0.75rem;"></i></button>
-                            <button type="button" class="btn btn-sm ${btnHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${
-              item.id
-            }', 'hafal')" title="Hafal"><i class="bi bi-check-lg" style="font-size: 0.75rem;"></i></button>
+                            <button type="button" class="btn btn-sm ${btnTidakHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${item.id}', 'tidak_hafal')" title="Tidak Hafal"><i class="bi bi-x-lg" style="font-size: 0.75rem;"></i></button>
+                            <button type="button" class="btn btn-sm ${btnAgakHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${item.id}', 'agak_hafal')" title="Agak Hafal"><i class="bi bi-dash-lg" style="font-size: 0.75rem;"></i></button>
+                            <button type="button" class="btn btn-sm ${btnHafal}" style="padding: 0.15rem 0;" onclick="setStatus('${item.id}', 'hafal')" title="Hafal"><i class="bi bi-check-lg" style="font-size: 0.75rem;"></i></button>
                         </div>
                     </td>
                 </tr>
                 `
           } else {
-            // TAMPILAN CARD DEFAULT (TIDAK BERUBAH)
+            // TAMPILAN CARD DEFAULT (HP / Layar Kecil)
             allCardsHTML += `
-                <div class="col-md-6 col-lg-4 animate-card-fade" data-vocab-id="${
-                  item.id
-                }" style="animation-delay: ${index > 20 ? 0 : index * 0.03}s;">
+                <div class="col-md-6 col-lg-4 animate-card-fade" data-vocab-id="${item.id}" style="animation-delay: ${index > 20 ? 0 : index * 0.03}s;">
                     <div class="card h-100 shadow-sm vocab-card">
                         <div class="card-body p-4 d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <span class="badge badge-kategori border text-capitalize px-3 py-2 rounded-pill">
-                                    <i class="bi bi-tag-fill me-1"></i>${
-                                      item.kategori
-                                    }
+                                    <i class="bi bi-tag-fill me-1"></i>${item.kategori}
                                 </span>
                                 <span class="badge badge-waktu border px-3 py-2 rounded-pill">
                                     M${item.minggu} - H${item.hari}
@@ -1329,48 +1302,33 @@ function restoreScrollAnchor(anchor) {
                                         title="Dengarkan Pengucapan Lengkap">
                                     <i class="bi bi-volume-up-fill text-primary"></i>
                                 </button>
-                                <p class="text-muted mb-1 small fw-semibold tracking-wide ${
-                                  isStudyMode ? 'd-none' : ''
-                                }" style="letter-spacing: 0.5px;">${
-              item.furigana
-            }</p>
-                                <h2 class="fw-bold text-dark mb-2 fs-1">${
-                                  item.kanji
-                                }</h2>
-                                <h5 class="fw-bold mb-0 text-decoration-none ${
-                                  isStudyMode ? 'd-none' : ''
-                                }" style="color: var(--jp-blue-dark);">${
-              item.arti
-            }</h5>
+                                
+                                <p class="text-muted mb-1 small fw-semibold tracking-wide" 
+                                   ${isStudyMode ? 'style="display: none !important;"' : ''} 
+                                   style="letter-spacing: 0.5px;">${item.furigana}</p>
+                                
+                                <h2 class="fw-bold text-dark mb-2 fs-1">${item.kanji}</h2>
+                                
+                                <h5 class="fw-bold mb-0 text-decoration-none" 
+                                    ${isStudyMode ? 'style="display: none !important;"' : ''} 
+                                    style="color: var(--jp-blue-dark);">${item.arti}</h5>
                             </div>
                             
-                            <p class="card-text small text-secondary text-center border-bottom pb-3 mb-3 flex-grow-1 ${
-                              isStudyMode ? 'd-none' : ''
-                            }">${item.penjelasan}</p>
+                            <p class="card-text small text-secondary text-center border-bottom pb-3 mb-3 flex-grow-1" 
+                               ${isStudyMode ? 'style="display: none !important;"' : ''}>${item.penjelasan}</p>
                             
-                            <div class="p-3 rounded-3 small mb-3 border contoh-box ${
-                              isStudyMode ? 'd-none' : ''
-                            }">
+                            <div class="p-3 rounded-3 small mb-3 border contoh-box" 
+                                 ${isStudyMode ? 'style="display: none !important;"' : ''}>
                                 <div class="mb-2 fw-bold text-dark"><i class="bi bi-journal-text text-danger me-2"></i>Contoh Kalimat:</div>
                                 <div class="mb-2 lh-base fw-medium">${ex1HTML}</div>
-                                ${
-                                  ex2Parts[0]
-                                    ? `<hr class="my-2 opacity-25"><div class="lh-base fw-medium">${ex2HTML}</div>`
-                                    : ''
-                                }
+                                ${ex2Parts[0] ? `<hr class="my-2 opacity-25"><div class="lh-base fw-medium">${ex2HTML}</div>` : ''}
                             </div>
                         </div>
                         <div class="card-footer border-0 p-4 pt-0">
                             <div class="btn-group w-100 shadow-sm btn-status-group" role="group">
-                                <button type="button" class="btn ${btnTidakHafal}" onclick="setStatus('${
-              item.id
-            }', 'tidak_hafal')"><i class="bi bi-x-circle-fill me-1"></i>Tidak</button>
-                                <button type="button" class="btn ${btnAgakHafal}" onclick="setStatus('${
-              item.id
-            }', 'agak_hafal')"><i class="bi bi-dash-circle-fill me-1"></i>Agak</button>
-                                <button type="button" class="btn ${btnHafal}" onclick="setStatus('${
-              item.id
-            }', 'hafal')"><i class="bi bi-check-circle-fill me-1"></i>Hafal</button>
+                                <button type="button" class="btn ${btnTidakHafal}" onclick="setStatus('${item.id}', 'tidak_hafal')"><i class="bi bi-x-circle-fill me-1"></i>Tidak</button>
+                                <button type="button" class="btn ${btnAgakHafal}" onclick="setStatus('${item.id}', 'agak_hafal')"><i class="bi bi-dash-circle-fill me-1"></i>Agak</button>
+                                <button type="button" class="btn ${btnHafal}" onclick="setStatus('${item.id}', 'hafal')"><i class="bi bi-check-circle-fill me-1"></i>Hafal</button>
                             </div>
                         </div>
                     </div>
