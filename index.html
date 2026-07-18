@@ -477,7 +477,7 @@
     <script src="minggu8/hari6.js"></script>
     <script src="minggu8/hari7.js"></script>
     <script>
-      // ==========================================================================
+// ==========================================================================
       // --- INJECT CSS SECARA DINAMIS (SUPER COMPACT, RESPONSIF & DARK MODE) ---
       // ==========================================================================
       if (!document.getElementById('table-hover-style')) {
@@ -500,6 +500,7 @@
         .vocab-table-row { 
             transition: background-color 0.2s ease; 
         }
+        /* Highlight background baris tetap instan saat di-hover */
         .vocab-table-row:hover { 
             background-color: rgba(0, 0, 0, 0.03) !important; 
         }
@@ -518,30 +519,38 @@
             /* Saat kursor keluar: animasi cepat 0.3s, tanpa delay (0s) */
             transition: max-width 0.3s ease 0s; 
         }
-        .vocab-table-row:hover .hover-expand {
+        
+        /* MENGGUNAKAN CLASS .hover-active DARI JAVASCRIPT */
+        .vocab-table-row.hover-active .hover-expand {
             max-width: 100%;
             white-space: normal;
             overflow: visible;
-            /* Saat di-hover: animasi 0.7s, delay 1s */
-            transition: max-width 0.7s ease 1s; 
+            /* Karena JS sudah memberi delay 1s, delay CSS dihapus (diubah 0s) agar animasi langsung jalan */
+            transition: max-width 0.7s ease 0s; 
         }
 
-        /* Logika Container Contoh Kalimat saat Hover (Desktop) */
+        /* Container Contoh Kalimat saat Hover (Desktop) */
         .hover-details {
             max-height: 0;
             opacity: 0;
             overflow: hidden;
             background-color: #f8f9fa;
             color: #212529;
-            /* Saat kursor keluar: tutup cepat 0.3s, tanpa delay (0s) */
-            transition: max-height 0.3s ease 0s, opacity 0.3s ease 0s, margin-top 0.3s ease 0s;
+
+            /* Saat kursor keluar: 1 detik */
+            transition: max-height 1s ease, opacity 1s ease, margin-top 1s ease;
         }
-        .vocab-table-row:hover .hover-details {
+
+        /* MENGGUNAKAN CLASS .hover-active DARI JAVASCRIPT */
+        .vocab-table-row.hover-active .hover-details {
             max-height: 400px;
             opacity: 1;
             margin-top: 0.5rem;
-            /* Saat di-hover: animasi 0.7s, delay 1s sebelum mulai */
-            transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1) 1s, opacity 0.7s ease 1s, margin-top 0.7s ease 1s;
+
+            /* Saat aktif: 1 detik */
+            transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 1s ease,
+                        margin-top 1s ease;
         }
         [data-theme="dark"] .hover-details {
             background-color: #2b3035 !important;
@@ -672,8 +681,55 @@
                 transition: none !important;
             }
         }
-    `
+        `
         document.head.appendChild(style)
+
+        // ==========================================================================
+        // --- LOGIKA JAVASCRIPT UNTUK DELAY HOVER 1 DETIK (HANYA DESKTOP) ---
+        // ==========================================================================
+        let hoverDelayTimer = null;
+        let activeHoverRow = null;
+
+        // Mendeteksi kursor masuk ke dalam area baris (menggunakan event delegation)
+        document.addEventListener('mouseover', function(e) {
+            // Abaikan jika di mobile (agar perilaku mobile tetap default)
+            if (window.innerWidth <= 768) return;
+            
+            const row = e.target.closest('.vocab-table-row');
+            // Jika kursor masuk ke baris baru yang belum aktif
+            if (row && row !== activeHoverRow) {
+                activeHoverRow = row;
+                clearTimeout(hoverDelayTimer); // Reset timer jika ada
+                
+                // Mulai timer 1 detik
+                hoverDelayTimer = setTimeout(() => {
+                    if (activeHoverRow) {
+                        activeHoverRow.classList.add('hover-active'); // Memicu ekspansi
+                    }
+                }, 1000);
+            }
+        });
+
+        // Mendeteksi kursor keluar dari area baris
+        document.addEventListener('mouseout', function(e) {
+            // Abaikan jika di mobile
+            if (window.innerWidth <= 768) return;
+            
+            const row = e.target.closest('.vocab-table-row');
+            // Pastikan kursor benar-benar keluar dari baris sepenuhnya, bukan sekadar ke elemen anaknya
+            if (row && (!e.relatedTarget || !row.contains(e.relatedTarget))) {
+                // Hentikan eksekusi penambahan class jika kursor keluar sebelum 1 detik
+                clearTimeout(hoverDelayTimer);
+                
+                // Langsung hapus class agar konten menutup
+                row.classList.remove('hover-active');
+                
+                // Reset state baris aktif
+                if (activeHoverRow === row) {
+                    activeHoverRow = null;
+                }
+            }
+        });
       }
       // ==========================================================================
       // --- STATE GLOBAL UNTUK KONTROL TTS ---
