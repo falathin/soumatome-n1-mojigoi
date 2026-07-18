@@ -477,7 +477,7 @@
     <script src="minggu8/hari6.js"></script>
     <script src="minggu8/hari7.js"></script>
     <script>
-      // ==========================================================================
+// ==========================================================================
       // --- INJECT CSS SECARA DINAMIS (SUPER COMPACT, RESPONSIF & DARK MODE) ---
       // ==========================================================================
       if (!document.getElementById('table-hover-style')) {
@@ -514,13 +514,16 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: block;
-            transition: all 0.3s ease;
             font-size: 0.85rem;
+            /* Saat kursor keluar: animasi cepat 0.3s, tanpa delay (0s) */
+            transition: max-width 0.3s ease 0s; 
         }
         .vocab-table-row:hover .hover-expand {
             max-width: 100%;
             white-space: normal;
             overflow: visible;
+            /* Saat di-hover: animasi 0.7s, delay 1s */
+            transition: max-width 0.7s ease 1s; 
         }
 
         /* Logika Container Contoh Kalimat saat Hover (Desktop) */
@@ -528,14 +531,17 @@
             max-height: 0;
             opacity: 0;
             overflow: hidden;
-            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin-top 0.25s ease;
             background-color: #f8f9fa;
             color: #212529;
+            /* Saat kursor keluar: tutup cepat 0.3s, tanpa delay (0s) */
+            transition: max-height 0.3s ease 0s, opacity 0.3s ease 0s, margin-top 0.3s ease 0s;
         }
         .vocab-table-row:hover .hover-details {
             max-height: 400px;
             opacity: 1;
             margin-top: 0.5rem;
+            /* Saat di-hover: animasi 0.7s, delay 1s sebelum mulai */
+            transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1) 1s, opacity 0.7s ease 1s, margin-top 0.7s ease 1s;
         }
         [data-theme="dark"] .hover-details {
             background-color: #2b3035 !important;
@@ -562,17 +568,14 @@
         }
 
         /* SOLUSI UTAMA: 
-           Paksa semua teks di kolom isi (Tag, Kanji, Furigana, Arti) menjadi terang.
-           Kita kecualikan kolom paling kanan (.status-col) agar tombol status tidak rusak.
+           Paksa semua teks di kolom isi menjadi terang, kecualikan kolom status.
         */
         [data-theme="dark"] .vocab-table-row td:not(.status-col),
         [data-theme="dark"] .vocab-table-row td:not(.status-col) * {
             color: #f8f9fa !important;
         }
 
-        /* Supaya teks penjelasan/sub-text yang sifatnya sekunder (muted) tetap punya 
-           tingkat kontras yang enak dibaca (tidak terlalu terang benderang), kita beri warna abu-abu terang.
-        */
+        /* Warna teks sekunder di dark mode */
         [data-theme="dark"] .vocab-table-row td:not(.status-col) .text-muted,
         [data-theme="dark"] .vocab-table-row td:not(.status-col) .text-secondary,
         [data-theme="dark"] .vocab-table-row td:not(.status-col) .text-black-50,
@@ -654,23 +657,24 @@
                 border-top-color: rgba(255, 255, 255, 0.08) !important;
             }
 
-            /* Ekspansi Detail Otomatis di Mobile */
+            /* Ekspansi Detail Otomatis di Mobile (Tanpa Delay) */
             .hover-expand {
                 max-width: 100% !important;
                 white-space: normal !important;
                 overflow: visible !important;
+                transition: none !important;
             }
             .hover-details {
                 max-height: none !important;
                 opacity: 1 !important;
                 margin-top: 8px !important;
                 display: block !important;
+                transition: none !important;
             }
         }
     `
         document.head.appendChild(style)
       }
-
       // ==========================================================================
       // --- STATE GLOBAL UNTUK KONTROL TTS ---
       // ==========================================================================
