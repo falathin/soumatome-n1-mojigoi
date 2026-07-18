@@ -477,7 +477,7 @@
     <script src="minggu8/hari6.js"></script>
     <script src="minggu8/hari7.js"></script>
     <script>
-// ==========================================================================
+      // ==========================================================================
       // --- INJECT CSS SECARA DINAMIS (SUPER COMPACT, RESPONSIF & DARK MODE) ---
       // ==========================================================================
       if (!document.getElementById('table-hover-style')) {
@@ -687,50 +687,51 @@
         // ==========================================================================
         // --- LOGIKA JAVASCRIPT UNTUK DELAY HOVER 1 DETIK (HANYA DESKTOP) ---
         // ==========================================================================
-        let hoverDelayTimer = null;
-        let activeHoverRow = null;
+        let hoverDelayTimer = null
+        let activeHoverRow = null
 
         // Mendeteksi kursor masuk ke dalam area baris (menggunakan event delegation)
-        document.addEventListener('mouseover', function(e) {
-            // Abaikan jika di mobile (agar perilaku mobile tetap default)
-            if (window.innerWidth <= 768) return;
-            
-            const row = e.target.closest('.vocab-table-row');
-            // Jika kursor masuk ke baris baru yang belum aktif
-            if (row && row !== activeHoverRow) {
-                activeHoverRow = row;
-                clearTimeout(hoverDelayTimer); // Reset timer jika ada
-                
-                // Mulai timer 1 detik
-                hoverDelayTimer = setTimeout(() => {
-                    if (activeHoverRow) {
-                        activeHoverRow.classList.add('hover-active'); // Memicu ekspansi
-                    }
-                }, 1000);
-            }
-        });
+        document.addEventListener('mouseover', function (e) {
+          // Abaikan jika di mobile (agar perilaku mobile tetap default)
+          if (window.innerWidth <= 768) return
+
+          const row = e.target.closest('.vocab-table-row')
+          // Jika kursor masuk ke baris baru yang belum aktif
+          if (row && row !== activeHoverRow) {
+            activeHoverRow = row
+            clearTimeout(hoverDelayTimer) // Reset timer jika ada
+
+            // Mulai timer 1 detik
+            hoverDelayTimer = setTimeout(() => {
+              if (activeHoverRow) {
+                activeHoverRow.classList.add('hover-active') // Memicu ekspansi
+              }
+            }, 1000)
+          }
+        })
 
         // Mendeteksi kursor keluar dari area baris
-        document.addEventListener('mouseout', function(e) {
-            // Abaikan jika di mobile
-            if (window.innerWidth <= 768) return;
-            
-            const row = e.target.closest('.vocab-table-row');
-            // Pastikan kursor benar-benar keluar dari baris sepenuhnya, bukan sekadar ke elemen anaknya
-            if (row && (!e.relatedTarget || !row.contains(e.relatedTarget))) {
-                // Hentikan eksekusi penambahan class jika kursor keluar sebelum 1 detik
-                clearTimeout(hoverDelayTimer);
-                
-                // Langsung hapus class agar konten menutup
-                row.classList.remove('hover-active');
-                
-                // Reset state baris aktif
-                if (activeHoverRow === row) {
-                    activeHoverRow = null;
-                }
+        document.addEventListener('mouseout', function (e) {
+          // Abaikan jika di mobile
+          if (window.innerWidth <= 768) return
+
+          const row = e.target.closest('.vocab-table-row')
+          // Pastikan kursor benar-benar keluar dari baris sepenuhnya, bukan sekadar ke elemen anaknya
+          if (row && (!e.relatedTarget || !row.contains(e.relatedTarget))) {
+            // Hentikan eksekusi penambahan class jika kursor keluar sebelum 1 detik
+            clearTimeout(hoverDelayTimer)
+
+            // Langsung hapus class agar konten menutup
+            row.classList.remove('hover-active')
+
+            // Reset state baris aktif
+            if (activeHoverRow === row) {
+              activeHoverRow = null
             }
-        });
+          }
+        })
       }
+
       // ==========================================================================
       // --- STATE GLOBAL UNTUK KONTROL TTS ---
       // ==========================================================================
