@@ -10,10 +10,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '当日',
     furigana: 'とうじつ',
-    arti: 'Hari kejadian / Hari tersebut',
-    penjelasan: 'Merujuk kepada hari yang telah ditetapkan secara resmi untuk sesuatu acara, majlis, ujian, atau janji temu berlangsung. Digunakan untuk membincangkan keadaan atau tindakan pada hari tersebut.',
-    contoh1: '試験の当日。\n(Hari kejadian peperiksaan.)',
-    contoh2: '当日は晴れるといいですね。\n(Diharapkan cuaca cerah pada hari kejadian nanti.)'
+    arti: 'Hari H / Hari kejadian',
+    penjelasan: 'Merujuk pada hari di mana sebuah acara, ujian, atau janji temu yang sudah ditetapkan benar-benar terjadi.',
+    contoh1: '試験の当日。\n(Hari H ujian.)',
+    contoh2: '当日は晴れるといいですね。\n(Semoga cuacanya cerah ya pas hari H nanti.)'
   },
   {
     id: 'm5h1_2',
@@ -22,10 +22,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '当番',
     furigana: 'とうばん',
-    arti: 'Giliran bertugas',
-    penjelasan: 'Tugas harian atau rutin yang diberikan secara bergilir-gilir kepada ahli kumpulan, seperti membersihkan bilik darjah, membuang sampah, atau menjaga kaunter di tempat kerja.',
-    contoh1: '掃除当番。\n(Giliran bertugas membersihkan kawasan.)',
-    contoh2: '今日のゴミ捨て当番は誰ですか。\n(Siapakah yang mendapat giliran bertugas membuang sampah hari ini?)'
+    arti: 'Giliran tugas / Piket',
+    penjelasan: 'Tugas rutin harian yang diberikan secara bergiliran dalam sebuah kelompok, seperti piket kebersihan kelas, buang sampah, atau jaga loket.',
+    contoh1: '掃除当番。\n(Giliran piket bersih-bersih.)',
+    contoh2: '今日のゴミ捨て当番は誰ですか。\n(Siapa yang kebagian piket buang sampah hari ini?)'
   },
   {
     id: 'm5h1_3',
@@ -34,10 +34,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '当人',
     furigana: 'とうにん',
-    arti: 'Orang yang berkenaan',
-    penjelasan: 'Merujuk secara langsung kepada individu yang sedang dibincangkan, individu yang terlibat dalam sesuatu masalah, atau watak utama dalam satu insiden.',
-    contoh1: '当人に確認する。\n(Mengesahkan perkara tersebut terus dengan orang yang berkenaan.)',
-    contoh2: '周りは心配しているが、当人は気にしていない。\n(Orang sekeliling berasa risau, namun orang yang berkenaan nampaknya tidak peduli.)'
+    arti: 'Orang yang bersangkutan',
+    penjelasan: 'Merujuk langsung pada individu yang sedang dibicarakan, atau orang yang terlibat langsung dalam suatu masalah.',
+    contoh1: '当人に確認する。\n(Memastikan langsung kepada orang yang bersangkutan.)',
+    contoh2: '周りは心配しているが、当人は気にしていない。\n(Orang-orang sekitarnya khawatir, tapi orang yang bersangkutan malah santai saja.)'
   },
   {
     id: 'm5h1_4',
@@ -46,10 +46,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '当選',
     furigana: 'とうせん',
-    arti: 'Menang (pilihan raya / undian)',
-    penjelasan: 'Keadaan di mana seseorang dipilih dengan jayanya dalam pilihan raya umum, atau memenangi hadiah cabutan bertuah dan loteri. Lawannya ialah 落選 (rakusen) yang bermaksud kalah atau tidak terpilih.',
-    contoh1: '選挙で当選する。\n(Terpilih dan menang dalam pilihan raya.)',
-    contoh2: '宝くじに当選して驚いた。\n(Saya terkejut kerana memenangi cabutan loteri.)'
+    arti: 'Terpilih (pemilu) / Menang (undian)',
+    penjelasan: 'Kondisi di mana seseorang berhasil menang atau terpilih dalam pemilihan umum, atau memenangkan hadiah undian. Kebalikannya adalah 落選 (rakusen) yang berarti kalah atau tidak terpilih.',
+    contoh1: '選挙で当選する。\n(Terpilih/menang dalam pemilu.)',
+    contoh2: '宝くじに当選して驚いた。\n(Saya kaget karena menang undian lotre.)'
   },
   {
     id: 'm5h1_5',
@@ -58,10 +58,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '見当',
     furigana: 'けんとう',
-    arti: 'Jangkaan / Tekaan / Anggaran',
-    penjelasan: 'Membuat anggaran, ramalan, atau tekaan terhadap sesuatu perkara yang tidak pasti nilainya atau di mana arahnya. Sangat kerap digunakan dalam frasa "見当をつける" (meneka) atau "見当がつかない" (tidak dapat meneka).',
-    contoh1: '見当をつける。\n(Membuat tekaan atau jangkaan awal.)',
-    contoh2: '彼がどこにいるか全く見当がつかない。\n(Saya tidak mempunyai sebarang tekaan langsung di mana dia berada.)'
+    arti: 'Perkiraan / Tebakan / Dugaan',
+    penjelasan: 'Membuat perkiraan atau tebakan tentang sesuatu yang belum pasti. Sangat sering dipakai dalam frasa "見当をつける" (memperkirakan) atau "見当がつかない" (tidak ada bayangan/tebakan sama sekali).',
+    contoh1: '見当をつける。\n(Membuat perkiraan atau tebakan awal.)',
+    contoh2: '彼がどこにいるか全く見当がつかない。\n(Saya sama sekali tidak ada bayangan dia ada di mana.)'
   },
   {
     id: 'm5h1_6',
@@ -70,10 +70,10 @@ const kosakata_m5h1 = [
     kategori: 'kata sifat',
     kanji: '正当',
     furigana: 'せいとう',
-    arti: 'Wajar / Sah / Patut',
-    penjelasan: 'Sifat bagi sesuatu tindakan, alasan, atau penilaian yang sah dari segi undang-undang, mematuhi prinsip keadilan, bersesuaian dengan moral, atau mempunyai alasan yang munasabah dan kukuh.',
-    contoh1: '正当な理由。\n(Alasan yang munasabah dan wajar.)',
-    contoh2: '彼女の努力は正当に評価されるべきだ。\n(Usaha keras beliau sepatutnya dinilai secara adil dan wajar.)'
+    arti: 'Wajar / Sah / Masuk akal',
+    penjelasan: 'Sifat dari suatu tindakan, alasan, atau penilaian yang sah secara hukum, adil, sesuai moral, atau punya alasan yang kuat dan logis.',
+    contoh1: '正当な理由。\n(Alasan yang masuk akal dan wajar.)',
+    contoh2: '彼女の努力は正当に評価されるべきだ。\n(Kerja kerasnya pantas dinilai secara adil dan wajar.)'
   },
 
   // --- KANJI 身 (Mi) ---
@@ -84,10 +84,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '身の上',
     furigana: 'みのうえ',
-    arti: 'Nasib / Keadaan peribadi',
-    penjelasan: 'Segala hal yang berkaitan dengan nasib, takdir, perjalanan hidup, atau keadaan peribadi yang sedang dilalui oleh seseorang. Biasanya digunakan apabila berkongsi cerita peribadi atau kesedihan.',
-    contoh1: '身の上相談。\n(Sesi perundingan atau kaunseling mengenai masalah peribadi.)',
-    contoh2: '悲しい身の上話を聞いた。\n(Saya telah mendengar kisah nasib peribadinya yang menyedihkan.)'
+    arti: 'Nasib / Keadaan pribadi',
+    penjelasan: 'Segala hal yang berkaitan dengan nasib, takdir, perjalanan hidup, atau kondisi pribadi seseorang. Biasanya dipakai saat curhat atau berbagi cerita pribadi.',
+    contoh1: '身の上相談。\n(Sesi curhat/konsultasi mengenai masalah pribadi.)',
+    contoh2: '悲しい身の上話を聞いた。\n(Saya mendengar kisah nasib pribadinya yang menyedihkan.)'
   },
   {
     id: 'm5h1_8',
@@ -96,10 +96,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '身の回り',
     furigana: 'みのまわり',
-    arti: 'Barang peribadi / Persekitaran diri',
-    penjelasan: 'Perkara-perkara asas dalam kehidupan harian seseorang, atau barang-barang peribadi yang sering dipakai, dibawa, dan berada berhampiran dengan kehidupan individu tersebut.',
-    contoh1: '身の回りのもの。\n(Barang-barang keperluan peribadi.)',
-    contoh2: '祖母の身の回りの世話をする。\n(Mengurus dan menjaga keperluan harian nenek.)'
+    arti: 'Barang pribadi / Keperluan sehari-hari',
+    penjelasan: 'Hal-hal dasar dalam kehidupan sehari-hari, atau barang-barang pribadi yang sering dipakai, dibawa, dan ada di sekitar kita.',
+    contoh1: '身の回りのもの。\n(Barang-barang keperluan pribadi.)',
+    contoh2: '祖母の身の回りの世話をする。\n(Mengurus dan merawat keperluan sehari-hari nenek.)'
   },
   {
     id: 'm5h1_9',
@@ -108,10 +108,10 @@ const kosakata_m5h1 = [
     kategori: 'kata sifat',
     kanji: '身軽',
     furigana: 'みがる',
-    arti: 'Ringkas (berpakaian) / Tangkas',
-    penjelasan: 'Keadaan tubuh yang bebas dari bebanan fizikal, seperti memakai pakaian yang kasual dan ringan, membawa sedikit barang bawaan sahaja, atau pergerakan yang lincah dan tangkas.',
-    contoh1: '身軽な格好。\n(Cara berpakaian yang ringkas dan ringan.)',
-    contoh2: '荷物を預けて身軽になった。\n(Badan berasa ringan selepas meninggalkan barang bawaan di tempat simpanan.)'
+    arti: 'Ringan (bawaan) / Lincah',
+    penjelasan: 'Kondisi tubuh yang bebas dari beban fisik, seperti memakai pakaian santai, membawa sedikit barang bawaan, atau gerakan yang lincah dan tangkas.',
+    contoh1: '身軽な格好。\n(Cara berpakaian yang santai dan ringan.)',
+    contoh2: '荷物を預けて身軽になった。\n(Badan terasa ringan setelah menitipkan barang bawaan.)'
   },
   {
     id: 'm5h1_10',
@@ -120,10 +120,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '身動き',
     furigana: 'みうごき',
-    arti: 'Pergerakan badan',
-    penjelasan: 'Merujuk kepada keupayaan untuk menggerakkan anggota badan. Kata ini hampir sentiasa digunakan dengan kata kerja bentuk negatif "取れない" atau "できない" untuk menggambarkan keadaan tersekat fizikal atau jadual terlalu padat.',
-    contoh1: '身動きが取れない。\n(Tidak boleh bergerak sedikit pun / tersekat.)',
-    contoh2: '満員電車で身動きができなかった。\n(Saya tidak dapat menggerakkan badan lansung kerana berada di dalam kereta api yang sesak.)'
+    arti: 'Pergerakan tubuh',
+    penjelasan: 'Kemampuan untuk menggerakkan anggota badan. Hampir selalu dipakai dengan kata kerja bentuk negatif "取れない" atau "できない" untuk menggambarkan kondisi terjebak/tidak bisa bergerak karena sempit atau jadwal yang terlalu padat.',
+    contoh1: '身動きが取れない。\n(Tidak bisa bergerak sedikit pun / terjebak.)',
+    contoh2: '満員電車で身動きができなかった。\n(Saya tidak bisa bergerak sama sekali karena kereta yang penuh sesak.)'
   },
   {
     id: 'm5h1_11',
@@ -132,10 +132,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '身内',
     furigana: 'みうち',
-    arti: 'Keluarga / Sanak saudara',
-    penjelasan: 'Orang-orang yang mempunyai pertalian darah, saudara mara terdekat, atau ahli kumpulan sendiri yang dipercayai dalam organisasi. Ia membawa konotasi hubungan yang sangat rapat berbanding sekadar kenalan.',
-    contoh1: '身内だけで祝う。\n(Mengadakan majlis sambutan tertutup hanya bersama ahli keluarga.)',
-    contoh2: '身内の者から連絡がありました。\n(Saya menerima panggilan daripada saudara mara terdekat.)'
+    arti: 'Keluarga / Kerabat dekat',
+    penjelasan: 'Orang-orang yang punya hubungan darah, saudara dekat, atau "orang dalam" yang dipercaya dalam suatu organisasi. Kata ini memberi kesan hubungan yang sangat dekat dibanding sekadar kenalan.',
+    contoh1: '身内だけで祝う。\n(Merayakan secara tertutup hanya bersama keluarga/kerabat dekat.)',
+    contoh2: '身内の者から連絡がありました。\n(Saya mendapat kabar dari kerabat dekat.)'
   },
   {
     id: 'm5h1_12',
@@ -144,10 +144,10 @@ const kosakata_m5h1 = [
     kategori: 'kata sifat',
     kanji: '身近',
     furigana: 'みぢか',
-    arti: 'Lazim / Terdekat / Familiar',
-    penjelasan: 'Sesuatu yang wujud dalam persekitaran harian kita, biasa dijumpai, mudah didapati, atau terasa sangat dekat di hati tanpa perlu mencari terlalu jauh.',
-    contoh1: '身近な出来事。\n(Kejadian atau hal yang sangat lazim dalam kehidupan harian.)',
-    contoh2: '環境問題をもっと身近に感じてほしい。\n(Saya mahu anda semua merasakan isu alam sekitar sebagai sesuatu yang sangat dekat dengan diri anda.)'
+    arti: 'Dekat / Familier / Akrab',
+    penjelasan: 'Sesuatu yang ada di lingkungan kita sehari-hari, biasa ditemukan, mudah didapat, atau terasa sangat dekat di hati tanpa perlu dicari jauh-jauh.',
+    contoh1: '身近な出来事。\n(Kejadian atau hal yang familier di kehidupan sehari-hari.)',
+    contoh2: '環境問題をもっと身近に感じてほしい。\n(Saya ingin Anda semua merasakan isu lingkungan sebagai sesuatu yang dekat dengan kehidupan Anda.)'
   },
   {
     id: 'm5h1_13',
@@ -156,10 +156,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '身元',
     furigana: 'みもと',
-    arti: 'Identiti / Latar belakang',
-    penjelasan: 'Latar belakang asal usul, sejarah hidup, dan kepastian identiti sebenar seseorang. Selalu digunakan dalam situasi perundangan, siasatan jenayah, atau pencarian penjamin sewaktu mula bekerja.',
-    contoh1: '身元保証人。\n(Penjamin identiti peribadi.)',
-    contoh2: '警察が被害者の身元を調べている。\n(Pihak polis sedang menyiasat identiti mangsa.)'
+    arti: 'Identitas / Latar belakang',
+    penjelasan: 'Latar belakang asal usul, sejarah hidup, dan identitas asli seseorang. Sering dipakai dalam urusan hukum, penyelidikan polisi, atau penjamin saat mulai kerja.',
+    contoh1: '身元保証人。\n(Penjamin identitas pribadi.)',
+    contoh2: '警察が被害者の身元を調べている。\n(Polisi sedang menyelidiki identitas korban.)'
   },
   {
     id: 'm5h1_14',
@@ -168,10 +168,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '身分',
     furigana: 'みぶん',
-    arti: 'Status / Taraf sosial',
-    penjelasan: 'Taraf kedudukan seseorang di dalam masyarakat atau organisasi. Ia merangkumi pangkat, hak keistimewaan, atau gelaran resmi yang membezakannya dengan kelompok yang lain.',
-    contoh1: '身分が高い人。\n(Seseorang yang memiliki status atau taraf sosial yang tinggi.)',
-    contoh2: '身分を証明する書類を提出してください。\n(Sila kemukakan dokumen yang membuktikan status identiti anda.)'
+    arti: 'Status / Kedudukan sosial',
+    penjelasan: 'Posisi seseorang di dalam masyarakat atau organisasi. Ini mencakup pangkat, hak istimewa, atau gelar resmi yang membedakannya dengan orang lain.',
+    contoh1: '身分が高い人。\n(Orang yang punya status atau kedudukan sosial yang tinggi.)',
+    contoh2: '身分を証明する書類を提出してください。\n(Silakan kumpulkan dokumen yang membuktikan status identitas Anda.)'
   },
   {
     id: 'm5h1_15',
@@ -180,10 +180,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '生身',
     furigana: 'なまみ',
-    arti: 'Tubuh bernyawa / Fizikal manusia',
-    penjelasan: 'Merujuk kepada tubuh badan makhluk atau manusia yang diperbuat daripada daging dan darah yang masih hidup. Ia menonjolkan ciri yang boleh berasa sakit, keletihan, atau cedera berbanding jentera atau robot.',
-    contoh1: '生身の体。\n(Tubuh fizikal manusia yang hidup.)',
-    contoh2: 'いくら強くても彼は生身の人間だ。\n(Kuat macam mana pun, dia tetaplah seorang manusia yang bernyawa dan punya rasa penat.)'
+    arti: 'Tubuh bernyawa / Fisik manusia',
+    penjelasan: 'Merujuk pada tubuh makhluk atau manusia dari daging dan darah yang masih hidup. Menekankan sisi manusiawi yang bisa merasa sakit, lelah, atau terluka, berbeda dengan mesin atau robot.',
+    contoh1: '生身の体。\n(Tubuh fisik manusia yang hidup.)',
+    contoh2: 'いくら強くても彼は生身の人間だ。\n(Sekuat apa pun dia, dia tetaplah manusia biasa yang bisa lelah.)'
   },
   {
     id: 'm5h1_16',
@@ -192,10 +192,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '単身',
     furigana: 'たんしん',
-    arti: 'Tinggal berseorangan / Sendirian',
-    penjelasan: 'Keadaan hidup bersendirian atau bergerak ke suatu tempat jauh tanpa membawa serta ahli keluarga. Kebiasaannya merujuk kepada situasi pertukaran lokasi kerja yang memaksa bapa/ibu tinggal berasingan.',
-    contoh1: '単身赴任。\n(Berpindah kerja dan tinggal berseorangan berjauhan dari keluarga.)',
-    contoh2: '彼は単身で海外へ渡った。\n(Dia pergi merantau ke luar negara secara bersendirian.)'
+    arti: 'Sendirian / Sebatang kara',
+    penjelasan: 'Kondisi hidup atau pergi jauh sendirian tanpa membawa anggota keluarga. Biasanya merujuk pada situasi pindah tugas kerja yang memaksa seseorang tinggal terpisah dari keluarganya.',
+    contoh1: '単身赴任。\n(Pindah tugas kerja dan tinggal sendirian jauh dari keluarga.)',
+    contoh2: '彼は単身で海外へ渡った。\n(Dia merantau ke luar negeri sendirian.)'
   },
 
   // --- KANJI 取 (Tori) ---
@@ -206,10 +206,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '取り分',
     furigana: 'とりぶん',
-    arti: 'Bahagian / Habuan',
-    penjelasan: 'Jumlah perkongsian hasil keuntungan, wang, atau harta yang berhak diterima dan dituntut oleh setiap individu setelah berlakunya pembahagian secara berkumpulan.',
-    contoh1: '自分の取り分を主張する。\n(Menuntut bahagian atau habuan hak milik sendiri.)',
-    contoh2: '利益の取り分を平等にする。\n(Menyamaratakan pembahagian hasil keuntungan syarikat.)'
+    arti: 'Jatah / Bagian',
+    penjelasan: 'Jumlah bagian keuntungan, uang, atau harta yang berhak diterima dan dituntut oleh setiap orang setelah ada pembagian dalam kelompok.',
+    contoh1: '自分の取り分を主張する。\n(Menuntut jatah atau bagian milik sendiri.)',
+    contoh2: '利益の取り分を平等にする。\n(Membagi rata jatah keuntungan perusahaan.)'
   },
   {
     id: 'm5h1_18',
@@ -218,10 +218,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '下取り',
     furigana: 'したどり',
-    arti: 'Tukar beli (Trade-in)',
-    penjelasan: 'Satu proses di mana pembeli menyerahkan produk lama atau terpakai (seperti kenderaan atau peralatan elektronik) kepada penjual untuk mendapat potongan harga bagi barangan yang baharu.',
-    contoh1: '車を下取りしてもらう。\n(Menyerahkan kereta lama untuk proses tukar beli.)',
-    contoh2: '古いカメラを下取りに出して、新しいのを買った。\n(Saya menyerahkan kamera lama untuk ditukar beli dan membeli yang baharu.)'
+    arti: 'Tukar tambah (Trade-in)',
+    penjelasan: 'Proses di mana pembeli menyerahkan barang lama (seperti mobil atau elektronik) kepada penjual untuk mendapat potongan harga saat membeli barang baru.',
+    contoh1: '車を下取りしてもらう。\n(Menyerahkan mobil lama untuk tukar tambah.)',
+    contoh2: '古いカメラを下取りに出して、新しいのを買った。\n(Saya menyerahkan kamera lama untuk tukar tambah, lalu membeli yang baru.)'
   },
   {
     id: 'm5h1_19',
@@ -231,9 +231,9 @@ const kosakata_m5h1 = [
     kanji: '手取り',
     furigana: 'てどり',
     arti: 'Gaji bersih (Take-home pay)',
-    penjelasan: 'Jumlah wang gaji sebenar yang dimasukkan ke dalam akaun bank pekerja dan boleh dibelanjakan, setelah semua pemotongan mandatori (cukai, insurans, caruman) ditolak dari jumlah gaji kasar.',
+    penjelasan: 'Jumlah uang gaji yang benar-benar masuk ke rekening dan siap dipakai, setelah dipotong pajak, asuransi, dan lain-lain dari gaji kotor.',
     contoh1: '給料の手取り額。\n(Jumlah gaji bersih yang dibawa pulang.)',
-    contoh2: '税金が引かれて手取りが減った。\n(Gaji bersih saya berkurang setelah ditolak bayaran cukai.)'
+    contoh2: '税金が引かれて手取りが減った。\n(Gaji bersih saya berkurang setelah dipotong pajak.)'
   },
   {
     id: 'm5h1_20',
@@ -242,10 +242,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '日取り',
     furigana: 'ひどり',
-    arti: 'Penetapan tarikh',
-    penjelasan: 'Proses memilih, bersetuju, dan menetapkan satu tarikh yang spesifik untuk melaksanakan satu majlis besar, acara resmi, mesyuarat penting, atau majlis perkahwinan.',
-    contoh1: '結婚式の日取りを決める。\n(Menetapkan tarikh untuk melangsungkan majlis perkahwinan.)',
-    contoh2: '引っ越しの日取りを変更した。\n(Telah menukar penetapan tarikh untuk berpindah rumah.)'
+    arti: 'Penentuan tanggal',
+    penjelasan: 'Proses memilih, menyepakati, dan menetapkan tanggal pasti untuk acara besar, rapat penting, atau pesta pernikahan.',
+    contoh1: '結婚式の日取りを決める。\n(Menentukan tanggal untuk pesta pernikahan.)',
+    contoh2: '引っ越しの日取りを変更した。\n(Saya sudah mengubah tanggal untuk pindahan rumah.)'
   },
   {
     id: 'm5h1_21',
@@ -254,10 +254,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '取材',
     furigana: 'しゅざい',
-    arti: 'Pengumpulan berita / Temu bual',
-    penjelasan: 'Tindakan yang dilakukan oleh pemberita, wartawan, atau penulis untuk mencari fakta, membuat liputan di tempat kejadian, atau menemu bual orang penting bagi menghasilkan berita dan artikel.',
-    contoh1: '事件を取材する。\n(Mengumpulkan maklumat berita mengenai insiden jenayah tersebut.)',
-    contoh2: '彼は有名な雑誌の取材を受けた。\n(Dia telah ditemu bual untuk liputan majalah terkenal.)'
+    arti: 'Liputan / Wawancara',
+    penjelasan: 'Tindakan wartawan, jurnalis, atau penulis untuk mencari fakta, meliput langsung ke lapangan, atau mewawancarai orang untuk bahan berita dan artikel.',
+    contoh1: '事件を取材する。\n(Meliput informasi terkait kasus kejahatan tersebut.)',
+    contoh2: '彼は有名な雑誌の取材を受けた。\n(Dia diwawancarai untuk liputan majalah terkenal.)'
   },
 
   // --- KANJI 根 (Kon/Ne) ---
@@ -269,9 +269,9 @@ const kosakata_m5h1 = [
     kanji: '根気',
     furigana: 'こんき',
     arti: 'Kesabaran / Kegigihan',
-    penjelasan: 'Tahap ketahanan mental dan sifat sabar seseorang yang tidak mudah putus asa apabila melakukan kerja yang mengambil masa panjang, rumit, atau menjemukan.',
-    contoh1: '根気がいる仕事。\n(Satu tugas/kerja yang sangat menuntut kesabaran dan kegigihan.)',
-    contoh2: '彼は根気よく最後までやり遂げた。\n(Dia berjaya menghabiskan semuanya dengan gigih dan sabar sehingga ke akhir.)'
+    penjelasan: 'Ketahanan mental dan kesabaran seseorang yang tidak mudah menyerah saat mengerjakan sesuatu yang butuh waktu lama, rumit, atau membosankan.',
+    contoh1: '根気がいる仕事。\n(Pekerjaan yang butuh kesabaran dan kegigihan ekstra.)',
+    contoh2: '彼は根気よく最後までやり遂げた。\n(Dia berhasil menyelesaikan semuanya dengan sabar dan gigih sampai akhir.)'
   },
   {
     id: 'm5h1_23',
@@ -280,10 +280,10 @@ const kosakata_m5h1 = [
     kategori: 'kata sifat',
     kanji: '根本的',
     furigana: 'こんぽんてき',
-    arti: 'Asas (fundamental)',
-    penjelasan: 'Merujuk kepada bahagian paling dasar atau akar umbi yang menjadi teras penting. Sesuatu yang mesti diubah atau diperbaiki secara total dari bawah supaya keseluruhan masalah dapat diselesaikan.',
-    contoh1: '根本的な誤り。\n(Satu kesilapan yang mendasar / fundamental.)',
-    contoh2: '問題を根本的に解決する必要がある。\n(Terdapat keperluan untuk menyelesaikan masalah ini dari akar umbinya secara fundamental.)'
+    arti: 'Mendasar (Fundamental)',
+    penjelasan: 'Merujuk pada bagian paling dasar atau akar masalah. Sesuatu yang harus diubah atau diperbaiki secara total dari akarnya agar masalah beres seutuhnya.',
+    contoh1: '根本的な誤り。\n(Kesalahan yang sangat mendasar / fundamental.)',
+    contoh2: '問題を根本的に解決する必要がある。\n(Ada kebutuhan untuk menyelesaikan masalah ini dari akar-akarnya.)'
   },
   {
     id: 'm5h1_24',
@@ -292,10 +292,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '根回し',
     furigana: 'ねまわし',
-    arti: 'Persiapan awal belakang tabir',
-    penjelasan: 'Strategi berbincang, melobi, dan mendapatkan sokongan daripada pihak-pihak berkepentingan secara tidak resmi di belakang tabir sebelum sesuatu keputusan atau rancangan resmi diumumkan.',
-    contoh1: '関係者に根回しする。\n(Membuat rundingan/persiapan awal di belakang tabir dengan pihak yang terlibat.)',
-    contoh2: '会議の前に根回しをしておく。\n(Menyiapkan lobi dan rundingan sebelum mesyuarat bermula supaya segalanya berjalan lancar.)'
+    arti: 'Lobi-lobi / Persiapan di balik layar',
+    penjelasan: 'Strategi berdiskusi, melobi, dan mencari dukungan dari pihak-pihak terkait secara diam-diam (di balik layar) sebelum sebuah keputusan atau rencana resmi diumumkan.',
+    contoh1: '関係者に根回しする。\n(Melakukan lobi/persiapan awal di balik layar dengan pihak-pihak terkait.)',
+    contoh2: '会議の前に根回しをしておく。\n(Melakukan lobi-lobi sebelum rapat dimulai agar semuanya lancar.)'
   },
 
   // --- KANJI 向 (Mu/Kou) ---
@@ -306,10 +306,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '出向く',
     furigana: 'でむく',
-    arti: 'Pergi ke / Berkunjung ke',
-    penjelasan: 'Tindakan proaktif pergi atau bergerak secara fizikal ke sesuatu lokasi (seperti tempat kejadian jenayah, pejabat pelanggan, atau mesyuarat luar) untuk menguruskan sesuatu dengan mata kepala sendiri.',
-    contoh1: '現場に出向く。\n(Pergi turun ke tapak lokasi kejadian.)',
-    contoh2: '社長自ら相手の会社へ出向いた。\n(Presiden syarikat dengan sendirinya telah berkunjung ke pejabat pihak lawan.)'
+    arti: 'Pergi ke / Mendatangi',
+    penjelasan: 'Tindakan proaktif untuk datang atau bergerak langsung ke suatu lokasi (seperti TKP, kantor klien, dll) guna mengurus sesuatu secara langsung.',
+    contoh1: '現場に出向く。\n(Turun langsung ke lokasi kejadian.)',
+    contoh2: '社長自ら相手の会社へ出向いた。\n(Presiden perusahaan turun tangan sendiri mendatangi kantor pihak lawan.)'
   },
   {
     id: 'm5h1_26',
@@ -318,10 +318,10 @@ const kosakata_m5h1 = [
     kategori: 'kata sifat',
     kanji: '前向き',
     furigana: 'まえむき',
-    arti: 'Positif / Memandang ke hadapan',
-    penjelasan: 'Sikap atau cara pemikiran yang konstruktif, optimis, dan mahu bergerak mencari jalan penyelesaian. Ia bertentangan dengan sikap pesimis atau suka memikirkan perkara yang lepas.',
-    contoh1: '前向きに考える。\n(Berfikir secara positif dan membina.)',
-    contoh2: '新しいプロジェクトに前向きに取り組む。\n(Mengendalikan projek baharu dengan semangat optimis yang memandang ke hadapan.)'
+    arti: 'Positif / Optimis (Berorientasi ke depan)',
+    penjelasan: 'Sikap atau cara berpikir yang optimis, konstruktif, dan mau bergerak mencari solusi. Lawan dari sikap pesimis atau yang suka mengungkit masa lalu.',
+    contoh1: '前向きに考える。\n(Berpikir secara positif dan optimis.)',
+    contoh2: '新しいプロジェクトに前向きに取り組む。\n(Mengerjakan proyek baru dengan semangat optimis yang berorientasi ke depan.)'
   },
   {
     id: 'm5h1_27',
@@ -330,10 +330,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '表向き',
     furigana: 'おもてむき',
-    arti: 'Alasan resmi / Secara zahir',
-    penjelasan: 'Fakta, kenyataan, atau alasan yang sengaja diperlihatkan dan dihebahkan kepada pihak umum sebagai penutup. Namun secara hakikatnya, situasi dalaman atau kebenarannya berbeza dengan apa yang diumum.',
-    contoh1: '表向きの理由。\n(Kenyataan alasan resmi / untuk mengaburi mata orang.)',
-    contoh2: '表向きは仲が良いが、実は対立している。\n(Secara zahirnya mereka kelihatan rapat, namun hakikatnya mereka sedang berkonflik.)'
+    arti: 'Alasan resmi / Tampaknya (di luar)',
+    penjelasan: 'Fakta atau alasan yang sengaja ditunjukkan ke publik sebagai kedok. Padahal, kenyataan aslinya atau situasi di dalamnya berbeda dengan yang diumumkan.',
+    contoh1: '表向きの理由。\n(Alasan resmi / sekadar alasan untuk di luar saja.)',
+    contoh2: '表向きは仲が良いが、実は対立している。\n(Di luarnya sih kelihatan akrab, tapi aslinya mereka bermusuhan.)'
   },
   {
     id: 'm5h1_28',
@@ -343,9 +343,9 @@ const kosakata_m5h1 = [
     kanji: '向上',
     furigana: 'こうじょう',
     arti: 'Peningkatan / Kemajuan',
-    penjelasan: 'Proses kemajuan ke arah tahap yang lebih baik dan tinggi, sama ada dari sudut kemampuan, pencapaian akademik, kemahiran, hasil kualiti produk, mahupun taraf kualiti kehidupan seseorang.',
-    contoh1: '学力が向上する。\n(Pencapaian markah akademik semakin meningkat.)',
-    contoh2: 'サービスの向上に努める。\n(Berusaha bersungguh-sungguh demi meningkatkan kemajuan mutu perkhidmatan.)'
+    penjelasan: 'Proses maju ke tingkat yang lebih baik dan tinggi, entah itu dalam hal kemampuan, nilai akademik, keahlian, kualitas produk, ataupun taraf hidup.',
+    contoh1: '学力が向上する。\n(Nilai prestasi akademik meningkat.)',
+    contoh2: 'サービスの向上に努める。\n(Berusaha keras demi meningkatkan kualitas pelayanan.)'
   },
 
   // --- KANJI 前 (Mae/Zen) ---
@@ -356,10 +356,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '前置き',
     furigana: 'まえおき',
-    arti: 'Pengenalan / Mukadimah',
-    penjelasan: 'Ayat pengenalan, mukadimah, atau kata alu-aluan yang diucapkan pada awal bicara sebelum penceramah atau penulis masuk secara resmi ke topik isi utama yang sebenar.',
-    contoh1: '前置きが長い。\n(Mukadimah atau pengenalannya terlampau panjang.)',
-    contoh2: '前置きは省いて本題に入りましょう。\n(Mari kita langkau mukadimah tersebut dan terus masuk ke topik isi utama.)'
+    arti: 'Pengantar / Mukadimah / Basa-basi',
+    penjelasan: 'Kalimat pembuka, mukadimah, atau basa-basi yang diucapkan di awal sebelum pembicara atau penulis masuk ke topik/inti pembicaraan yang sebenarnya.',
+    contoh1: '前置きが長い。\n(Pengantar/basa-basinya kepanjangan.)',
+    contoh2: '前置きは省いて本題に入りましょう。\n(Ayo lewati basa-basinya dan langsung masuk ke topik utama.)'
   },
   {
     id: 'm5h1_30',
@@ -368,10 +368,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '前借り',
     furigana: 'まえがり',
-    arti: 'Pinjam awal / Pendahuluan wang',
-    penjelasan: 'Tindakan pekerja atau pihak yang memohon untuk mengeluarkan dan meminjam wang (seperti wang gaji bulanan mereka sendiri) sebelum tarikh pembayaran resmi sebenar tiba.',
-    contoh1: '給料を前借りする。\n(Mendapatkan dan meminjam awal wang gaji bulanan.)',
-    contoh2: '会社に頼んでお金を前借りした。\n(Saya telah meminta syarikat untuk memberikan pinjaman wang gaji secara pendahuluan.)'
+    arti: 'Kasbon / Pinjam uang di muka',
+    penjelasan: 'Tindakan pekerja meminjam uang (seperti meminjam gaji bulanan sendiri) sebelum tanggal gajian resmi tiba.',
+    contoh1: '給料を前借りする。\n(Kasbon / meminjam gaji bulanan di muka.)',
+    contoh2: '会社に頼んでお金を前借りした。\n(Saya meminta perusahaan untuk memberikan kasbon gaji.)'
   },
   {
     id: 'm5h1_31',
@@ -380,10 +380,10 @@ const kosakata_m5h1 = [
     kategori: 'kata kerja',
     kanji: '前払い',
     furigana: 'まえばらい',
-    arti: 'Bayaran pendahuluan (Deposit/In advance)',
-    penjelasan: 'Peraturan atau amalan membayar sejumlah wang harga, yuran, atau deposit kepada pihak penjual sebelum barangan pesanan selamat diterima di tangan.',
-    contoh1: '料金を前払いする。\n(Membayar harga perkhidmatan/barangan lebih awal dari tarikh.)',
-    contoh2: 'ネットショッピングで前払いを選んだ。\n(Saya telah memilih sistem bayaran pendahuluan semasa beli-belah di internet.)'
+    arti: 'Bayar di muka (DP / Uang muka)',
+    penjelasan: 'Aturan atau kebiasaan membayar sejumlah uang, biaya, atau deposit kepada penjual sebelum barang/pesanan tersebut kita terima.',
+    contoh1: '料金を前払いする。\n(Membayar biaya/harga di muka.)',
+    contoh2: 'ネットショッピングで前払いを選んだ。\n(Saya memilih sistem bayar di muka saat belanja online.)'
   },
   {
     id: 'm5h1_32',
@@ -392,10 +392,10 @@ const kosakata_m5h1 = [
     kategori: 'kata benda',
     kanji: '前科',
     furigana: 'ぜんか',
-    arti: 'Rekod jenayah / Kesalahan lalu',
-    penjelasan: 'Rekod hitam jenayah resmi oleh pihak polis bagi seseorang. Dalam situasi santai, ia turut digunakan untuk merujuk secara gurauan kepada kesilapan kecil yang seseorang itu sering lakukan.',
-    contoh1: '前科のある人。\n(Seseorang yang memiliki rekod sejarah jenayah.)',
-    contoh2: '彼は何度も遅刻する前科がある。\n(Dia memiliki "rekod jenayah lampau" sering datang lewat ke tempat kerja.)'
+    arti: 'Catatan kriminal / Rekam jejak buruk',
+    penjelasan: 'Catatan resmi dari kepolisian tentang rekam jejak kejahatan seseorang. Dalam bahasa santai, sering juga dipakai untuk bercanda tentang kesalahan kecil yang sering diulang-ulang seseorang.',
+    contoh1: '前科のある人。\n(Orang yang punya catatan kriminal.)',
+    contoh2: '彼は何度も遅刻する前科がある。\n(Dia punya "rekam jejak buruk" sering datang terlambat.)'
   }
 ];
 
