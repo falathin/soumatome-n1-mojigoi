@@ -12,11 +12,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'トマトが甘い',
     furigana: 'トマトがあまい',
-    arti: 'Tomato yang manis',
-    penjelasan: 'Perkataan 甘い (amai) di sini merujuk kepada makna yang paling asas dan harfiah, iaitu rasa manis pada makanan atau minuman. Ia menggambarkan kelazatan semulajadi seperti rasa gula atau buah-buahan yang sudah masak sepenuhnya.',
-    contoh1: 'このトマトは甘くておいしい。\n(Tomato ini manis dan sedap.)',
-    contoh2: '私は甘いお菓子が大好きです。\n(Saya sangat suka snek yang manis.)',
-    contoh3: 'このケーキは甘すぎないから食べやすい。\n(Kek ini tidak terlalu manis, jadi ia sedap/mudah dimakan.)'
+    arti: 'Tomat yang manis',
+    penjelasan: 'Kata 甘い (amai) di sini merujuk pada arti dasarnya, yaitu rasa manis pada makanan atau minuman (seperti gula atau buah yang matang sempurna).',
+    contoh1: 'このトマトは甘くておいしい。\n(Tomat ini manis dan enak.)',
+    contoh2: '私は甘いお菓子が大好きです。\n(Saya sangat suka camilan yang manis.)',
+    contoh3: 'このケーキは甘すぎないから食べやすい。\n(Kue ini tidak terlalu manis, jadi enak/mudah dimakan.)'
   },
   {
     id: 'm6h4_2',
@@ -25,11 +25,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'みそ汁が甘い',
     furigana: 'みそしるがあまい',
-    arti: 'Sup miso yang kurang masin / tawar',
-    penjelasan: 'Dalam konteks masakan tertentu (seperti sup atau hidangan berkuah), perkataan 甘い tidak bermaksud manis seperti gula, sebaliknya ia bermaksud rasa hidangan tersebut agak ringan atau tawar kerana kekurangan garam atau perasa (塩分が少ない).',
-    contoh1: '今朝のみそ汁はちょっと甘い。\n(Sup miso pagi ini rasanya agak tawar / kurang masin.)',
-    contoh2: '味が甘いので、少し塩を足してください。\n(Oleh kerana rasanya kurang masin, tolong tambahkan sedikit garam.)',
-    contoh3: 'このスープは私には少し甘すぎる。\n(Sup ini terasa terlalu tawar/kurang perasa bagi saya.)'
+    arti: 'Sup miso yang kurang asin / hambar',
+    penjelasan: 'Dalam konteks masakan berkuah, kata 甘い bukan berarti manis seperti gula, melainkan rasanya agak hambar atau kurang bumbu/garam.',
+    contoh1: '今朝のみそ汁はちょっと甘い。\n(Sup miso pagi ini rasanya agak hambar / kurang asin.)',
+    contoh2: '味が甘いので、少し塩を足してください。\n(Karena rasanya kurang asin, tolong tambahkan sedikit garam.)',
+    contoh3: 'このスープは私には少し甘すぎる。\n(Sup ini terasa terlalu hambar/kurang bumbu bagi saya.)'
   },
   {
     id: 'm6h4_3',
@@ -38,8 +38,8 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '甘い声でささやく',
     furigana: 'あまいこえでささやく',
-    arti: 'Membisik dengan suara yang lembut / manis',
-    penjelasan: 'Di sini, perkataan 甘い digunakan secara kiasan untuk menggambarkan suara yang sangat lembut, memikat hati, mesra, dan menyenangkan untuk didengar (優しく快い). Biasanya digunakan dalam konteks romantik atau pujukan.',
+    arti: 'Membisikkan dengan suara yang lembut / manis',
+    penjelasan: 'Di sini, kata 甘い digunakan sebagai kiasan untuk suara yang sangat lembut, memikat hati, ramah, dan enak didengar. Biasanya dipakai dalam konteks romantis atau rayuan.',
     contoh1: '彼は彼女に甘い声でささやいた。\n(Dia membisik di telinga wanita itu dengan suara yang lembut memikat.)',
     contoh2: '歌手の甘い声に魅了された。\n(Saya terpesona dengan suara penyanyi yang manis/lembut itu.)',
     contoh3: '甘い言葉に騙されないように気をつけて。\n(Berhati-hatilah agar tidak terpedaya dengan kata-kata manis.)'
@@ -51,11 +51,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '子どもたちに甘い',
     furigana: 'こどもたちにあまい',
-    arti: 'Terlalu berlembut / Memanjakan kanak-kanak',
-    penjelasan: 'Apabila digunakan untuk menyifatkan sikap seseorang terhadap orang lain, 甘い bermaksud tidak tegas, terlalu berlembut, atau suka memanjakan (厳しくない). Ia selalunya membawa konotasi bahawa seseorang itu kurang disiplin dalam mendidik.',
-    contoh1: '彼は子どもたちに甘い。\n(Dia terlalu berlembut / memanjakan anak-anaknya.)',
-    contoh2: '先生はルールに関して少し甘いところがある。\n(Cikgu agak tidak tegas / berlembut mengenai peraturan.)',
-    contoh3: '自分に甘く、他人に厳しい。\n(Berlembut pada diri sendiri, tetapi tegas terhadap orang lain.)'
+    arti: 'Terlalu memanjakan anak-anak',
+    penjelasan: 'Jika digunakan untuk sifat seseorang, 甘い berarti tidak tegas, lembek, atau terlalu memanjakan. Ini menunjukkan orang tersebut kurang disiplin dalam mendidik.',
+    contoh1: '彼は子どもたちに甘い。\n(Dia terlalu memanjakan anak-anaknya.)',
+    contoh2: '先生はルールに関して少し甘いところがある。\n(Guru itu agak tidak tegas / lembek mengenai peraturan.)',
+    contoh3: '自分に甘く、他人に厳しい。\n(Lembek/memanjakan diri sendiri, tapi keras terhadap orang lain.)'
   },
   {
     id: 'm6h4_5',
@@ -64,11 +64,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '考えが甘い',
     furigana: 'かんがえがあまい',
-    arti: 'Pemikiran yang naif / Terlalu optimistik',
-    penjelasan: 'Frasa ini bermaksud pemikiran atau perancangan seseorang itu terlalu mudah, naif, atau tidak mengambil kira kesukaran dan realiti sebenar sesuatu situasi (安易だ). Menunjukkan kurangnya kedalaman dalam berfikir.',
-    contoh1: '君の考えは甘いよ。\n(Pemikiran awak terlalu naif / memandang mudah.)',
-    contoh2: 'そんなに簡単に成功すると思うのは甘い。\n(Adalah naif untuk berfikir bahawa awak boleh berjaya dengan semudah itu.)',
-    contoh3: '甘い考えを捨てて、現実を見なさい。\n(Buanglah pemikiran yang naif itu dan pandanglah pada realiti.)'
+    arti: 'Pemikiran yang naif / Terlalu gampang (optimistis)',
+    penjelasan: 'Frasa ini berarti pemikiran atau rencana seseorang terlalu menyepelekan masalah, naif, atau tidak memikirkan kesulitan di dunia nyata. Menunjukkan pola pikir yang dangkal.',
+    contoh1: '君の考えは甘いよ。\n(Pemikiranmu terlalu naif / menyepelekan.)',
+    contoh2: 'そんなに簡単に成功すると思うのは甘い。\n(Terlalu naif jika kamu berpikir bisa sukses semudah itu.)',
+    contoh3: '甘い考えを捨てて、現実を見なさい。\n(Buanglah pemikiran naif itu dan tataplah realita.)'
   },
   {
     id: 'm6h4_6',
@@ -77,11 +77,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '受験したのは甘かった',
     furigana: 'じゅけんしたのはあまかった',
-    arti: 'Terlalu memandang mudah pada peperiksaan',
-    penjelasan: 'Ini merujuk kepada sikap memandang rendah terhadap kesukaran sesuatu cabaran (seperti ujian atau peperiksaan) sehingga tidak membuat persediaan yang secukupnya. Ia bermakna tekaan seseorang tentang betapa mudahnya sesuatu itu ternyata salah.',
-    contoh1: '準備なしで受験したのは甘かった。\n(Tindakan saya mengambil peperiksaan tanpa persediaan adalah satu kesilapan/terlalu memandang mudah.)',
-    contoh2: '相手の強さを甘く見ていたのが敗因だ。\n(Punca kekalahan adalah kerana saya memandang remeh kekuatan pihak lawan.)',
-    contoh3: 'こんなに難しいとは、私の認識が甘かった。\n(Saya terlalu memandang ringan sehingga tidak sangka ia sesukar ini.)'
+    arti: 'Terlalu meremehkan ujian',
+    penjelasan: 'Merujuk pada sikap yang meremehkan tingkat kesulitan suatu tantangan (seperti ujian) sehingga kurang persiapan. Artinya, tebakannya kalau hal itu gampang ternyata salah besar.',
+    contoh1: '準備なしで受験したのは甘かった。\n(Tindakan saya ikut ujian tanpa persiapan adalah sebuah kesalahan / terlalu meremehkan.)',
+    contoh2: '相手の強さを甘く見ていたのが敗因だ。\n(Penyebab kekalahan adalah karena saya meremehkan kekuatan lawan.)',
+    contoh3: 'こんなに難しいとは、私の認識が甘かった。\n(Saya terlalu meremehkannya sampai tidak menyangka ternyata sesulit ini.)'
   },
   {
     id: 'm6h4_7',
@@ -90,11 +90,11 @@ const kosakata_m6h4 = [
     kategori: 'kata kerja',
     kanji: '仕事を甘く見る',
     furigana: 'しごとをあまくみる',
-    arti: 'Memandang remeh / Mengambil mudah terhadap kerja',
-    penjelasan: 'Perkataan 甘い diubah menjadi kata keterangan (甘く) dan digabungkan dengan kata kerja 見る (melihat). Frasa ini bermakna seseorang itu tidak menganggap tugas atau kerja dengan serius, dan menganggapnya terlalu mudah.',
-    contoh1: '新しい仕事を甘く（＝簡単に）見てはいけない。\n(Jangan sesekali memandang remeh pekerjaan baharu ini.)',
-    contoh2: 'プロの世界を甘く見るな。\n(Jangan ambil mudah akan dunia profesional.)',
-    contoh3: '彼はいつも状況を甘く見る癖がある。\n(Dia sentiasa mempunyai tabiat memandang enteng akan sesuatu situasi.)'
+    arti: 'Menganggap remeh / Menyepelekan pekerjaan',
+    penjelasan: 'Kata 甘い diubah menjadi kata keterangan (甘く) dan digabungkan dengan kata kerja 見る (melihat). Artinya seseorang tidak menganggap serius suatu tugas dan menganggapnya terlalu mudah.',
+    contoh1: '新しい仕事を甘く（＝簡単に）見てはいけない。\n(Jangan pernah menyepelekan pekerjaan baru ini.)',
+    contoh2: 'プロの世界を甘く見るな。\n(Jangan anggap remeh dunia profesional.)',
+    contoh3: '彼はいつも状況を甘く見る癖がある。\n(Dia punya kebiasaan selalu menganggap remeh suatu situasi.)'
   },
   {
     id: 'm6h4_8',
@@ -103,11 +103,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '見通しが甘い',
     furigana: 'みとおしがあまい',
-    arti: 'Jangkaan yang terlalu optimistik',
-    penjelasan: '見通し bermaksud prospek, perancangan, atau ramalan tentang masa depan. Jika ia "甘い", ini bermaksud ramalan tersebut terlalu optimistik, tidak teliti, dan berkemungkinan besar akan gagal kerana tidak bersedia untuk senario terburuk.',
-    contoh1: '計画の見通しが甘かったため、失敗した。\n(Oleh kerana jangkaan pelan tersebut terlalu optimistik/tidak teliti, ia telah gagal.)',
-    contoh2: '売上の見通しが甘いと言わざるを得ない。\n(Saya terpaksa mengatakan bahawa jangkaan jualan ini terlalu optimistik.)',
-    contoh3: '見通しが甘い経営はすぐに危機に陥る。\n(Pengurusan yang mempunyai perancangan naif akan segera jatuh ke dalam krisis.)'
+    arti: 'Perkiraan yang terlalu optimistis',
+    penjelasan: '見通し berarti prospek, rencana, atau prediksi masa depan. Jika disebut "甘い", berarti prediksinya terlalu optimistis, kurang teliti, dan rentan gagal karena tidak siap menghadapi skenario terburuk.',
+    contoh1: '計画の見通しが甘かったため、失敗した。\n(Karena perkiraan rencana tersebut terlalu optimistis/kurang teliti, rencana itu gagal.)',
+    contoh2: '売上の見通しが甘いと言わざるを得ない。\n(Saya terpaksa harus bilang bahwa prediksi penjualan ini terlalu optimistis.)',
+    contoh3: '見通しが甘い経営はすぐに危機に陥る。\n(Manajemen yang perencanaannya naif akan segera jatuh ke dalam krisis.)'
   },
   {
     id: 'm6h4_9',
@@ -116,11 +116,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'ねじが甘い',
     furigana: 'ねじがあまい',
-    arti: 'Skru yang longgar',
-    penjelasan: 'Satu penggunaan yang agak unik dalam mekanik. Apabila komponen mekanikal seperti skru, penutup, atau ikatan disifatkan sebagai 甘い, ini bermaksud ia tidak diketatkan dengan betul, longgar (ゆるい), dan mudah tercabut.',
-    contoh1: 'このねじは甘い（＝ゆるい）からすぐに外れる。\n(Skru ini longgar, jadi ia akan segera tertanggal/tercabut.)',
-    contoh2: 'ふたの閉め方が甘かったので、水が漏れた。\n(Oleh kerana penutup itu ditutup dengan longgar, air telah bocor.)',
-    contoh3: '結び目が甘いとほどけてしまいますよ。\n(Jika ikatannya longgar, ia akan terungkai nanti.)'
+    arti: 'Sekrup yang longgar',
+    penjelasan: 'Penggunaan unik dalam dunia mekanik. Jika komponen seperti sekrup, tutup botol, atau ikatan disebut 甘い, artinya tidak dikencangkan dengan benar, longgar, dan mudah lepas.',
+    contoh1: 'このねじは甘い（＝ゆるい）からすぐに外れる。\n(Sekrup ini longgar, jadi cepat atau lambat akan lepas.)',
+    contoh2: 'ふたの閉め方が甘かったので、水が漏れた。\n(Karena tutupnya kurang kencang/longgar, airnya bocor.)',
+    contoh3: '結び目が甘いとほどけてしまいますよ。\n(Kalau ikatannya longgar, nanti akan terlepas lho.)'
   },
 
   // ==========================================
@@ -133,11 +133,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'かたい椅子',
     furigana: 'かたいいす',
-    arti: 'Kerusi yang keras',
-    penjelasan: 'Merujuk kepada bentuk fizikal sesuatu objek yang padat, pejal, tidak lembut, dan tidak berubah bentuk apabila ditekan (seperti kayu, batu, atau kerusi yang tidak empuk). Antonimnya ialah やわらかい (lembut).',
-    contoh1: 'かたい椅子に長時間座って腰が痛い。\n(Duduk di atas kerusi yang keras dalam masa yang lama membuatkan pinggang saya sakit.)',
-    contoh2: 'この肉はかたくて食べにくい。\n(Daging ini keras dan sukar untuk dimakan.)',
-    contoh3: 'かたい地面の上で寝るのは辛い。\n(Tidur di atas permukaan tanah yang keras sangat menyeksakan.)'
+    arti: 'Kursi yang keras',
+    penjelasan: 'Merujuk pada bentuk fisik benda yang padat, pejal, tidak empuk, dan tidak berubah bentuk saat ditekan (seperti kayu atau batu). Lawan katanya adalah やわらかい (lembut/empuk).',
+    contoh1: 'かたい椅子に長時間座って腰が痛い。\n(Duduk di kursi yang keras terlalu lama membuat pinggang saya sakit.)',
+    contoh2: 'この肉はかたくて食べにくい。\n(Daging ini keras dan susah dimakan.)',
+    contoh3: 'かたい地面の上で寝るのは辛い。\n(Tidur di atas tanah yang keras sangat menyiksa.)'
   },
   {
     id: 'm6h4_11',
@@ -146,10 +146,10 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'かたい握手を交わす',
     furigana: 'かたいあくしゅをかわす',
-    arti: 'Bersalaman dengan erat / kuat',
-    penjelasan: 'Digunakan secara metafora untuk menggambarkan tindakan yang dilakukan dengan penuh keyakinan, tenaga, dan ketegasan (しっかりとした). Bersalaman dengan "かたい" bermaksud genggaman tangan yang kuat dan padu.',
-    contoh1: '二人の大統領はかたい握手を交わした。\n(Kedua-dua orang presiden itu saling bersalaman dengan erat.)',
-    contoh2: 'チームメイトとかたい絆で結ばれている。\n(Saya terikat dengan ikatan persahabatan yang kuat/teguh bersama rakan sepasukan.)',
+    arti: 'Berjabat tangan dengan erat / kuat',
+    penjelasan: 'Digunakan sebagai kiasan untuk tindakan yang dilakukan dengan penuh keyakinan, bertenaga, dan mantap. Berjabat tangan dengan "かたい" berarti genggamannya kuat dan padu.',
+    contoh1: '二人の大統領はかたい握手を交わした。\n(Kedua presiden tersebut saling berjabat tangan dengan erat.)',
+    contoh2: 'チームメイトとかたい絆で結ばれている。\n(Saya terikat oleh ikatan persahabatan yang kuat dengan rekan setim.)',
     contoh3: '私たちはかたい約束をした。\n(Kami telah membuat janji yang teguh.)'
   },
   {
@@ -159,11 +159,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '口がかたい',
     furigana: 'くちがかたい',
-    arti: 'Pandai menyimpan rahsia (Mulut yang ketat)',
-    penjelasan: 'Satu simpulan bahasa (idiom). Seseorang yang "mulutnya keras" merujuk kepada individu yang sangat boleh dipercayai dalam menjaga rahsia dan tidak suka bergosip. Antonimnya ialah 口が軽い (mulut murai / suka membocorkan rahsia).',
-    contoh1: '彼は口がかたいから、秘密を話しても大丈夫だ。\n(Dia seorang yang pandai menyimpan rahsia, jadi tidak mengapa jika kita memberitahunya.)',
-    contoh2: '口がかたい人だけが信用される。\n(Hanya orang yang pandai menjaga rahsia sahaja yang akan dipercayai.)',
-    contoh3: '職業柄、どうしても口がかたくなる。\n(Kerana tuntutan kerja, saya semestinya perlu sentiasa menjaga rahsia.)'
+    arti: 'Pandai menjaga rahasia (Mulut yang rapat)',
+    penjelasan: 'Ini adalah ungkapan idiom. Seseorang yang "mulutnya keras (rapat)" adalah orang yang sangat bisa dipercaya menjaga rahasia dan tidak suka bergosip. Lawan katanya adalah 口が軽い (mulut ember / suka membocorkan rahasia).',
+    contoh1: '彼は口がかたいから、秘密を話しても大丈夫だ。\n(Dia orang yang pandai menjaga rahasia, jadi tidak masalah kalau kita beri tahu.)',
+    contoh2: '口がかたい人だけが信用される。\n(Hanya orang yang pandai menjaga rahasia yang bisa dipercaya.)',
+    contoh3: '職業柄、どうしても口がかたくなる。\n(Karena tuntutan pekerjaan, saya mau tak mau harus selalu tutup mulut/menjaga rahasia.)'
   },
   {
     id: 'm6h4_13',
@@ -172,11 +172,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '決意はかたい',
     furigana: 'けついはおかたい',
-    arti: 'Keazaman yang teguh / Keputusan yang muktamad',
-    penjelasan: 'Menunjukkan pendirian, keputusan, atau semangat yang tidak mudah goyah atau diubah oleh pengaruh luar. Ia menggambarkan ketegasan mental seseorang.',
-    contoh1: '彼の辞職する決意はかたい。\n(Keazamannya untuk meletakkan jawatan adalah teguh / muktamad.)',
-    contoh2: '何度説得しても、彼女の意志はかたかった。\n(Walaupun sudah berkali-kali dipujuk, pendiriannya tetap teguh.)',
-    contoh3: '勝利への思いがかたい。\n(Hasrat dan keazamannya untuk menang sangat kuat.)'
+    arti: 'Tekad yang kuat / Keputusan yang bulat',
+    penjelasan: 'Menunjukkan pendirian, keputusan, atau semangat yang pantang menyerah dan tidak mudah goyah oleh pengaruh luar. Menggambarkan ketangguhan mental seseorang.',
+    contoh1: '彼の辞職する決意はかたい。\n(Tekadnya untuk mengundurkan diri sudah bulat / mantap.)',
+    contoh2: '何度説得しても、彼女の意志はかたかった。\n(Walaupun sudah berkali-kali dibujuk, pendiriannya tetap teguh.)',
+    contoh3: '勝利への思いがかたい。\n(Keinginan dan tekadnya untuk menang sangat kuat.)'
   },
   {
     id: 'm6h4_14',
@@ -185,11 +185,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '表情がかたい',
     furigana: 'ひょうじょうがかたい',
-    arti: 'Riak wajah yang kaku / Tegang',
-    penjelasan: 'Apabila dikaitkan dengan riak muka, badan, atau pergerakan, ia bermaksud seseorang itu kelihatan sangat gemuruh, tegang (nervous), atau tidak senyum (serius). Kelihatan seolah-olah otot wajahnya "keras".',
-    contoh1: '面接の前で、みんな表情がかたい。\n(Sebelum temu duga bermula, riak wajah semua orang kelihatan kaku dan tegang.)',
-    contoh2: 'カメラの前に立つと、どうしても笑顔がかたくなる。\n(Apabila berdiri di hadapan kamera, senyuman saya pasti akan menjadi kaku.)',
-    contoh3: 'もっとリラックスして、かたい表情を和らげてください。\n(Tolong lebih relaks dan kurangkan ketegangan pada wajah itu.)'
+    arti: 'Ekspresi wajah yang kaku / Tegang',
+    penjelasan: 'Saat dikaitkan dengan raut wajah atau gerakan tubuh, ini berarti seseorang terlihat sangat gugup, tegang (nervous), atau terlalu serius sampai tidak bisa tersenyum. Seolah-olah otot wajahnya "keras".',
+    contoh1: '面接の前で、みんな表情がかたい。\n(Sebelum wawancara dimulai, raut wajah semua orang terlihat kaku dan tegang.)',
+    contoh2: 'カメラの前に立つと、どうしても笑顔がかたくなる。\n(Saat berdiri di depan kamera, senyum saya pasti jadi kaku.)',
+    contoh3: 'もっとリラックスして、かたい表情を和らげてください。\n(Tolong lebih relaks dan kurangi ketegangan di wajah itu.)'
   },
   {
     id: 'm6h4_15',
@@ -198,11 +198,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'かたい商売',
     furigana: 'かたいしょうばい',
-    arti: 'Perniagaan yang stabil / Selamat',
-    penjelasan: 'Dalam konteks perniagaan, pelaburan, atau pekerjaan, "かたい" bermaksud bebas daripada risiko yang tinggi, sangat selamat (安全な), konvensional, dan pasti mendatangkan keuntungan yang stabil walaupun mungkin tidak besar.',
-    contoh1: '彼はかたい（＝安全な）商売をしている。\n(Dia sedang menjalankan perniagaan yang stabil dan selamat.)',
-    contoh2: '公務員はかたい職業だと言われている。\n(Penjawat awam dikatakan sebagai satu profesion yang stabil dan terjamin.)',
-    contoh3: 'リスクを避けて、かたい投資を選ぶ。\n(Mengelakkan risiko dan memilih pelaburan yang selamat/kukuh.)'
+    arti: 'Bisnis yang stabil / Aman',
+    penjelasan: 'Dalam konteks bisnis, investasi, atau pekerjaan, "かたい" berarti minim risiko, sangat aman, konvensional, dan pasti mendatangkan keuntungan yang stabil walau mungkin tidak besar.',
+    contoh1: '彼はかたい（＝安全な）商売をしている。\n(Dia menjalankan bisnis yang stabil dan aman.)',
+    contoh2: '公務員はかたい職業だと言われている。\n(PNS disebut-sebut sebagai pekerjaan yang stabil dan terjamin.)',
+    contoh3: 'リスクを避けて、かたい投資を選ぶ。\n(Menghindari risiko dan memilih investasi yang aman.)'
   },
   {
     id: 'm6h4_16',
@@ -211,11 +211,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '合格はかたい',
     furigana: 'ごうかくはかたい',
-    arti: 'Kelulusannya sudah terjamin / Pasti',
-    penjelasan: 'Dalam konteks keputusan perlawanan, pilihan raya, atau peperiksaan, "かたい" bermaksud peluang untuk berjaya adalah hampir 100%, pasti (確実だ), dan sangat sukar untuk digugat oleh pihak lain.',
-    contoh1: '今の成績なら、彼の合格はかたい（＝確実だ）。\n(Melihat pada markah semasanya, dia pasti akan lulus.)',
-    contoh2: '今回の選挙は、現職の勝利がかたい。\n(Untuk pilihan raya kali ini, kemenangan penjawat penyandang sudah terjamin kukuh.)',
-    contoh3: '優勝は彼らのチームでかたいだろう。\n(Gelaran juara hampir pasti akan menjadi milik pasukan mereka.)'
+    arti: 'Kelulusannya sudah pasti / Terjamin',
+    penjelasan: 'Dalam konteks hasil pertandingan, pemilu, atau ujian, "かたい" berarti peluang suksesnya hampir 100%, pasti, dan sangat sulit digoyahkan oleh pihak lawan.',
+    contoh1: '今の成績なら、彼の合格はかたい（＝確実だ）。\n(Melihat nilainya sekarang, dia pasti akan lulus.)',
+    contoh2: '今回の選挙は、現職の勝利がかたい。\n(Untuk pemilu kali ini, kemenangan petahana sudah dipastikan aman.)',
+    contoh3: '優勝は彼らのチームでかたいだろう。\n(Gelar juara hampir dipastikan menjadi milik tim mereka.)'
   },
   {
     id: 'm6h4_17',
@@ -225,10 +225,10 @@ const kosakata_m6h4 = [
     kanji: '頭がかたい',
     furigana: 'あたまがかたい',
     arti: 'Kepala batu / Keras kepala',
-    penjelasan: 'Frasa kiasan yang bermaksud seseorang (biasanya orang tua) itu tidak berfikiran terbuka, konservatif, tidak mahu menerima idea baharu, dan sangat berdegil (頑固だ).',
-    contoh1: '私の父は頭がかたくて、新しい意見を全く聞かない。\n(Ayah saya sangat keras kepala dan langsung tidak mahu mendengar pendapat baharu.)',
-    contoh2: '年を取ると頭がかたくなりがちだ。\n(Apabila usia semakin meningkat, seseorang cenderung menjadi lebih berkeras kepala.)',
-    contoh3: '頭がかたい上司の下で働くのは疲れる。\n(Bekerja di bawah bos yang berfikiran tertutup sangat meletihkan.)'
+    penjelasan: 'Kiasan yang berarti seseorang (biasanya orang tua) berpikiran sempit, konservatif, tidak mau menerima ide baru, dan sangat keras kepala/bandel.',
+    contoh1: '私の父は頭がかたくて、新しい意見を全く聞かない。\n(Ayah saya sangat keras kepala dan sama sekali tidak mau mendengar pendapat baru.)',
+    contoh2: '年を取ると頭がかたくなりがちだ。\n(Saat usia makin bertambah, orang cenderung menjadi lebih keras kepala.)',
+    contoh3: '頭がかたい上司の下で働くのは疲れる。\n(Bekerja di bawah bos yang kaku/konservatif sangat melelahkan.)'
   },
   {
     id: 'm6h4_18',
@@ -237,11 +237,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'かたい話',
     furigana: 'かたいはなし',
-    arti: 'Topik perbualan yang berat / Serius',
-    penjelasan: 'Merujuk kepada keadaan, atmosfera, buku, atau perbualan yang sangat formal, terlalu serius, rumit, atau kaku (難しい). Orang lazimnya berkata "mari berhenti bercakap tentang topik yang berat ini" semasa beriadah.',
-    contoh1: '飲み会だから、かたい話はやめよう。\n(Ini hanyalah majlis minum-minum santai, jadi mari hentikan topik yang berat/serius ini.)',
+    arti: 'Topik pembicaraan yang berat / Serius',
+    penjelasan: 'Merujuk pada suasana, buku, atau percakapan yang sangat formal, terlalu serius, rumit, atau kaku. Biasanya orang berkata "mari berhenti bicara topik yang berat" saat sedang bersantai.',
+    contoh1: '飲み会だから、かたい話はやめよう。\n(Ini acara minum santai, jadi mari hentikan topik yang berat/serius ini.)',
     contoh2: '彼の書く文章は少しかたい。\n(Gaya penulisan karangannya agak kaku/terlalu formal.)',
-    contoh3: 'かたい挨拶は抜きにして、楽しみましょう。\n(Mari ketepikan ucapan pembukaan yang formal dan terus berseronok.)'
+    contoh3: 'かたい挨拶は抜きにして、楽しみましょう。\n(Mari kesampingkan ucapan pembukaan yang kaku dan langsung bersenang-senang.)'
   },
   {
     id: 'm6h4_19',
@@ -250,11 +250,11 @@ const kosakata_m6h4 = [
     kategori: 'kata kerja',
     kanji: '外出をかたく禁ずる',
     furigana: 'がいしゅつをかたくきんずる',
-    arti: 'Melarang keluar dengan sekeras-kerasnya',
-    penjelasan: 'Perkataan "かたい" di sini menjadi kata keterangan (かたく) yang bermaksud "secara mutlak" atau "dengan sekeras-kerasnya" (絶対に). Ia sering digabungkan dengan kata kerja larangan atau penolakan.',
-    contoh1: '夜間の外出をかたく禁ずる。\n(Aktiviti keluar pada waktu malam dilarang dengan sekeras-kerasnya.)',
-    contoh2: '社長はその提案をかたく拒否した。\n(Pengarah menolak cadangan tersebut dengan sekeras-kerasnya.)',
-    contoh3: '関係者以外の立ち入りはかたくお断りします。\n(Kemasukan pihak selain daripada yang berkenaan dilarang dengan sekeras-kerasnya.)'
+    arti: 'Melarang keluar dengan tegas / keras',
+    penjelasan: 'Kata "かたい" di sini menjadi kata keterangan (かたく) yang berarti "secara mutlak" atau "dengan sangat tegas". Sering digabungkan dengan kata kerja larangan atau penolakan.',
+    contoh1: '夜間の外出をかたく禁ずる。\n(Keluar di malam hari dilarang dengan keras.)',
+    contoh2: '社長はその提案をかたく拒否した。\n(Direktur menolak usulan tersebut dengan tegas.)',
+    contoh3: '関係者以外の立ち入りはかたくお断りします。\n(Selain pihak yang berkepentingan dilarang keras masuk.)'
   },
 
   // ==========================================
@@ -267,11 +267,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '対応がまずい',
     furigana: 'たいおうがまずい',
-    arti: 'Tindakan yang buruk / Tidak wajar',
-    penjelasan: 'Perkataan まずい biasanya merujuk kepada makanan yang "tidak sedap". Namun dalam urusan pekerjaan, ia bermakna cara seseorang mengendalikan sesuatu masalah adalah sangat buruk, tidak cekap, dan mengundang masalah (よくない).',
-    contoh1: 'クレームへの対応がまずかったため、客を怒らせてしまった。\n(Tindakan balas terhadap aduan adalah sangat buruk, menyebabkan pelanggan itu marah.)',
-    contoh2: '初期対応がまずいと、被害が拡大する。\n(Jika tindakan pada peringkat awal teruk, kerosakan akan menjadi lebih besar.)',
-    contoh3: 'やり方がまずいから失敗するんだ。\n(Kamu gagal kerana cara pelaksanaannya sangat lemah/buruk.)'
+    arti: 'Penanganan yang buruk / Tidak tepat',
+    penjelasan: 'Kata まずい biasanya untuk makanan yang "tidak enak". Tapi dalam pekerjaan, ini berarti cara seseorang menangani suatu masalah sangat buruk, tidak cekatan, dan bisa memicu masalah baru.',
+    contoh1: 'クレームへの対応がまずかったため、客を怒らせてしまった。\n(Karena penanganan komplainnya sangat buruk, pelanggan itu jadi marah.)',
+    contoh2: '初期対応がまずいと、被害が拡大する。\n(Jika penanganan awalnya buruk, kerugiannya akan makin membesar.)',
+    contoh3: 'やり方がまずいから失敗するんだ。\n(Kamu gagal karena cara kerjamu yang payah/buruk.)'
   },
   {
     id: 'm6h4_21',
@@ -280,11 +280,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '顔がまずい',
     furigana: 'かおがまずい',
-    arti: 'Wajah yang kurang menarik / Hodoh',
-    penjelasan: 'Satu ungkapan yang agak kasar, bermaksud rupa paras yang tidak kacak, kurang menarik, atau hodoh (不細工だ). (Nota: Penggunaan ini sangat kasar dan jarang digunakan secara sopan).',
-    contoh1: '彼は性格はいいが顔がまずい（＝不細工だ）。\n(Personalitinya baik tetapi rupa parasnya kurang menarik.)',
-    contoh2: 'デザインがまずい商品は売れない。\n(Produk dengan rekaan luaran yang buruk tidak akan terjual.)',
-    contoh3: '見た目がまずくても、味は最高です。\n(Walaupun luarannya nampak teruk, rasanya adalah yang terbaik.)'
+    arti: 'Wajah yang kurang menarik / Jelek',
+    penjelasan: 'Ungkapan kasar yang berarti rupa atau penampilan fisik yang tidak tampan/cantik, atau jelek. (Catatan: Penggunaan ini sangat kasar dan sebaiknya dihindari dalam situasi sopan).',
+    contoh1: '彼は性格はいいが顔がまずい（＝不細工だ）。\n(Sifatnya baik tapi wajahnya kurang menarik / jelek.)',
+    contoh2: 'デザインがまずい商品は売れない。\n(Produk dengan desain yang jelek tidak akan laku.)',
+    contoh3: '見た目がまずくても、味は最高です。\n(Meskipun penampilannya jelek, rasanya luar biasa.)'
   },
   {
     id: 'm6h4_22',
@@ -293,11 +293,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '歌がまずい',
     furigana: 'うたがまずい',
-    arti: 'Nyanyian yang sumbang / Teruk',
-    penjelasan: 'Merujuk kepada kemahiran, kebolehan, atau kecekapan seseorang yang sangat lemah dan tidak pandai (下手だ). Boleh digunakan untuk nyanyian, penulisan, atau kraf.',
-    contoh1: '彼の歌はまずい（＝下手だ）が、一生懸命歌っている。\n(Nyanyiannya sangat teruk, tetapi dia menyanyi dengan bersungguh-sungguh.)',
-    contoh2: '字がまずくて読めない。\n(Tulisan tangannya sangat buruk sehingga tidak dapat dibaca.)',
-    contoh3: 'スピーチがまずくて、みんなを退屈させた。\n(Cara pidatonya sangat teruk sehingga membuatkan semua orang bosan.)'
+    arti: 'Nyanyian yang sumbang / Payah',
+    penjelasan: 'Merujuk pada kemampuan atau keahlian seseorang yang sangat lemah atau tidak jago. Bisa digunakan untuk nyanyian, tulisan tangan, atau kerajinan.',
+    contoh1: '彼の歌はまずい（＝下手だ）が、一生懸命歌っている。\n(Nyanyiannya sangat payah, tapi dia bernyanyi dengan sungguh-sungguh.)',
+    contoh2: '字がまずくて読めない。\n(Tulisan tangannya sangat jelek sampai tidak bisa dibaca.)',
+    contoh3: 'スピーチがまずくて、みんなを退屈させた。\n(Pidatonya sangat payah sampai membuat semua orang bosan.)'
   },
   {
     id: 'm6h4_23',
@@ -306,11 +306,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '人に聞かれるとまずい',
     furigana: 'ひとにきかれるとまずい',
-    arti: 'Buruk padahnya jika didengari orang',
-    penjelasan: 'Ini merujuk kepada situasi yang janggal, sensitif, atau akan mendatangkan masalah besar jika diketahui orang lain (都合が悪い). Sesuatu yang "まずい" di sini bermaksud "ia adalah keadaan yang merugikan".',
-    contoh1: 'この話は人に聞かれるとまずいので、小声で話そう。\n(Sangat buruk padahnya jika perbualan ini didengari orang, mari bercakap dengan berbisik.)',
-    contoh2: '遅刻したらまずいから、早く家を出よう。\n(Padah jika kita terlewat, jadi mari kita keluar rumah awal.)',
-    contoh3: '親に見つかるとまずい。\n(Akan timbul masalah besar jika diketahui oleh ibu bapa.)'
+    arti: 'Gawat / Berbahaya kalau sampai ketahuan orang',
+    penjelasan: 'Merujuk pada situasi yang canggung, sensitif, atau akan memicu masalah besar jika diketahui orang lain. Sesuatu yang "まずい" di sini berarti "situasi yang sangat merugikan/gawat".',
+    contoh1: 'この話は人に聞かれるとまずいので、小声で話そう。\n(Bahaya kalau percakapan ini didengar orang lain, mari bicara dengan suara pelan.)',
+    contoh2: '遅刻したらまずいから、早く家を出よう。\n(Gawat kalau kita sampai telat, mari berangkat lebih awal.)',
+    contoh3: '親に見つかるとまずい。\n(Gawat kalau sampai ketahuan orang tua.)'
   },
   {
     id: 'm6h4_24',
@@ -319,11 +319,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'まずいことになった',
     furigana: 'まずいことになった',
-    arti: 'Berada dalam masalah besar / Keadaan teruk',
-    penjelasan: 'Satu frasa seruan (Ah, mampus! / Alamak!) yang diucapkan apabila keadaan tiba-tiba bertukar menjadi sangat buruk, kecemasan, atau sesuatu kesalahan besar baru sahaja disedari berlaku.',
-    contoh1: 'パソコンのデータが全部消えて、まずいことになった。\n(Semua data dalam komputer telah terpadam, saya benar-benar berada dalam masalah yang besar!)',
-    contoh2: '財布を落としてしまって、非常にまずい状況だ。\n(Saya tercicir dompet, ini satu keadaan kecemasan yang amat teruk.)',
-    contoh3: 'これはまずいぞ、急いで社長に報告しよう。\n(Ini sangat buruk, mari segera laporkan kepada presiden!)'
+    arti: 'Berada dalam masalah besar / Situasi gawat',
+    penjelasan: 'Ungkapan seruan (Waduh! / Gawat!) yang diucapkan saat keadaan tiba-tiba berubah memburuk, darurat, atau saat baru sadar melakukan kesalahan besar.',
+    contoh1: 'パソコンのデータが全部消えて、まずいことになった。\n(Semua data di komputer terhapus, kita benar-benar dalam masalah besar!)',
+    contoh2: '財布を落としてしまって、非常にまずい状況だ。\n(Dompet saya jatuh/hilang, ini benar-benar situasi yang gawat.)',
+    contoh3: 'これはまずいぞ、急いで社長に報告しよう。\n(Ini gawat, ayo buru-buru laporkan ke direktur!)'
   },
 
   // ==========================================
@@ -337,10 +337,10 @@ const kosakata_m6h4 = [
     kanji: '酸素は水素より重い',
     furigana: 'さんそはすいそよりおもい',
     arti: 'Oksigen lebih berat daripada hidrogen',
-    penjelasan: 'Makna harfiah perkataan 重い (omoi), yang merujuk kepada ukuran fizikal, jisim, atau berat sesuatu benda berbanding benda yang lain.',
+    penjelasan: 'Ini adalah makna harfiah (sebenarnya) dari kata 重い (omoi), yang merujuk pada ukuran fisik, massa, atau berat suatu benda dibandingkan benda lain.',
     contoh1: '酸素は水素より重い気体です。\n(Oksigen adalah gas yang lebih berat daripada hidrogen.)',
-    contoh2: 'この荷物は一人で運ぶには重すぎる。\n(Barang ini terlalu berat untuk diangkat berseorangan.)',
-    contoh3: '体重が前より重くなった。\n(Berat badan saya bertambah berbanding sebelum ini.)'
+    contoh2: 'この荷物は一人で運ぶには重すぎる。\n(Barang ini terlalu berat untuk dibawa sendirian.)',
+    contoh3: '体重が前より重くなった。\n(Berat badan saya bertambah dibanding sebelumnya.)'
   },
   {
     id: 'm6h4_26',
@@ -349,11 +349,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'ペダルが重い',
     furigana: 'ペダルがおもい',
-    arti: 'Pedal basikal terasa berat (sukar dikayuh)',
-    penjelasan: 'Menyifatkan daya fizikal yang diperlukan untuk menggerakkan atau menarik sesuatu. "Berat" bermaksud ia memerlukan banyak tenaga atau rintangan pada objek tersebut terlalu kuat.',
-    contoh1: '坂道なので、自転車のペダルが重い。\n(Kerana mendaki bukit, pedal basikal terasa sangat berat.)',
-    contoh2: 'このドアは重くてなかなか開かない。\n(Pintu ini terasa berat dan sukar untuk dibuka.)',
-    contoh3: '雪道を歩くのは足取りが重くなる。\n(Berjalan di atas jalan bersalji membuatkan langkah kaki terasa berat.)'
+    arti: 'Pedal sepeda terasa berat (susah dikayuh)',
+    penjelasan: 'Menggambarkan tenaga fisik yang diperlukan untuk menggerakkan suatu benda. "Berat" di sini berarti butuh tenaga ekstra atau hambatannya terlalu kuat.',
+    contoh1: '坂道なので、自転車のペダルが重い。\n(Karena jalanan menanjak, pedal sepeda terasa sangat berat.)',
+    contoh2: 'このドアは重くてなかなか開かない。\n(Pintu ini berat dan susah dibuka.)',
+    contoh3: '雪道を歩くのは足取りが重くなる。\n(Berjalan di jalan bersalju membuat langkah kaki terasa berat.)'
   },
   {
     id: 'm6h4_27',
@@ -362,11 +362,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '重い地位につく',
     furigana: 'おもいちいつく',
-    arti: 'Memegang jawatan yang penting / Berat',
-    penjelasan: 'Dalam konteks tanggungjawab, peranan, atau kesalahan undang-undang, perkataan 重い bermaksud ia sesuatu yang sangat penting (重要な), kritikal, atau melibatkan beban yang besar ke atas seseorang.',
-    contoh1: '彼は会社で重い（＝重要な）地位についている。\n(Dia memegang satu jawatan yang sangat penting / berat tanggungjawabnya di syarikat.)',
-    contoh2: '重い責任を任されてプレッシャーを感じる。\n(Saya merasakan tekanan kerana diamanahkan dengan tanggungjawab yang berat.)',
-    contoh3: '彼は重い罪を犯した。\n(Dia telah melakukan satu jenayah yang berat/serius.)'
+    arti: 'Memegang jabatan yang penting / Berat',
+    penjelasan: 'Dalam konteks tanggung jawab, peran, atau hukuman, kata 重い berarti hal tersebut sangat penting, krusial, atau membebankan tanggung jawab yang besar pada seseorang.',
+    contoh1: '彼は会社で重い（＝重要な）地位についている。\n(Dia memegang posisi/jabatan yang sangat penting / berat di perusahaan.)',
+    contoh2: '重い責任を任されてプレッシャーを感じる。\n(Saya merasa tertekan karena dipercaya mengemban tanggung jawab yang berat.)',
+    contoh3: '彼は重い罪を犯した。\n(Dia telah melakukan tindak kejahatan yang berat/serius.)'
   },
   {
     id: 'm6h4_28',
@@ -375,11 +375,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '頭が重い',
     furigana: 'あたまがおもい',
-    arti: 'Kepala terasa lesu / Berat',
-    penjelasan: 'Secara fisiologi, ini bermakna badan atau kepala terasa tidak segar, lesu (すっきりしない), pening-pening lalat, atau kurang bertenaga akibat sakit atau kurang tidur.',
-    contoh1: '寝不足で頭が重い。\n(Kepala saya terasa lesu akibat kurang tidur.)',
-    contoh2: '風邪を引いたのか、体が重い。\n(Mungkin saya dijangkiti selesema, badan saya terasa sangat letih/berat.)',
-    contoh3: '胃が重くて食欲がない。\n(Perut saya berasa senak/berat dan saya tiada selera makan.)'
+    arti: 'Kepala terasa berat / Penat',
+    penjelasan: 'Secara fisik, ini berarti badan atau kepala terasa tidak segar, penat, pusing, atau kurang bertenaga karena sakit atau kurang tidur.',
+    contoh1: '寝不足で頭が重い。\n(Kepala saya terasa penat/berat karena kurang tidur.)',
+    contoh2: '風邪を引いたのか、体が重い。\n(Mungkin karena masuk angin, badan saya terasa sangat berat/lelah.)',
+    contoh3: '胃が重くて食欲がない。\n(Perut saya terasa begah/berat dan saya tidak ada nafsu makan.)'
   },
   {
     id: 'm6h4_29',
@@ -388,11 +388,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: 'パソコンの動きが重い',
     furigana: 'パソコンのうごきがおもい',
-    arti: 'Pergerakan komputer perlahan',
-    penjelasan: 'Dalam terma teknologi moden (seperti komputer, telefon, laman web), "重い" secara kiasannya bermaksud kelajuan peranti tersebut sangat perlahan (遅い), tersangkut-sangkut, atau "lag" kerana memori atau pemprosesannya terbeban.',
-    contoh1: 'アプリをたくさん開いていると、パソコンの動きが重くなる。\n(Jika anda membuka banyak aplikasi, kelajuan komputer akan menjadi perlahan/berat.)',
-    contoh2: '回線が混雑していて、ネットが重い。\n(Kerana trafik rangkaian sesak, capaian internet menjadi lambat.)',
-    contoh3: 'このゲームはデータが重すぎてスマホで遊べない。\n(Data permainan ini terlalu besar/berat sehingga tidak dapat dimainkan di telefon pintar.)'
+    arti: 'Kinerja komputer lambat (lemot)',
+    penjelasan: 'Dalam dunia teknologi (seperti komputer, HP, internet), "重い" adalah kiasan yang berarti perangkat atau koneksi tersebut sangat lambat (lemot) atau "lag" karena memori/prosesornya terbebani.',
+    contoh1: 'アプリをたくさん開いていると、パソコンの動きが重くなる。\n(Kalau membuka banyak aplikasi, kinerja komputer akan jadi lambat/lemot.)',
+    contoh2: '回線が混雑していて、ネットが重い。\n(Karena jaringan sedang sibuk, koneksi internet jadi lemot.)',
+    contoh3: 'このゲームはデータが重すぎてスマホで遊べない。\n(Data game ini terlalu besar/berat sehingga tidak bisa dimainkan di HP.)'
   },
   {
     id: 'm6h4_30',
@@ -401,11 +401,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '気が重い',
     furigana: 'きがおもい',
-    arti: 'Berasa berat hati / Murung',
-    penjelasan: 'Simpulan bahasa ini (気が重い) bermaksud keadaan emosi seseorang yang berasa tertekan, terbeban, tidak bermotivasi, atau bimbang (憂うつだ) mengenai sesuatu perkara yang akan datang atau perlu dilakukan.',
-    contoh1: 'その仕事を断るのは気が重い。\n(Saya berasa berat hati untuk menolak kerja tersebut.)',
-    contoh2: '明日は苦手なテストがあるので、今から気が重い。\n(Esok ada ujian untuk subjek yang saya lemah, jadi bermula dari sekarang saya sudah berasa murung/berat hati.)',
-    contoh3: '謝りに行くのは気が重い仕事だ。\n(Pergi untuk memohon maaf adalah suatu tugas yang sangat berat bagi jiwa saya.)'
+    arti: 'Merasa berat hati / Suntuk (malas)',
+    penjelasan: 'Idiom (気が重い) ini berarti kondisi emosi seseorang yang merasa terbebani, tertekan, tidak termotivasi, atau khawatir mengenai sesuatu yang harus dilakukannya.',
+    contoh1: 'その仕事を断るのは気が重い。\n(Saya merasa berat hati untuk menolak pekerjaan itu.)',
+    contoh2: '明日は苦手なテストがあるので、今から気が重い。\n(Besok ada ujian untuk mata pelajaran yang saya kurang kuasai, dari sekarang saya sudah merasa suntuk/malas.)',
+    contoh3: '謝りに行くのは気が重い仕事だ。\n(Pergi untuk meminta maaf adalah tugas yang sangat berat di hati.)'
   },
   {
     id: 'm6h4_31',
@@ -414,11 +414,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '内容が重い',
     furigana: 'ないようがおもい',
-    arti: 'Kandungan yang serius / Mencekam',
-    penjelasan: 'Apabila digunakan untuk menerangkan topik, filem, berita, atau suasana, ia membawa erti bahawa mesej di dalamnya sangat serius, mendalam, tragis, atau berat (深刻だった) sehingga tidak boleh diambil secara sambil lewa.',
-    contoh1: '今日の会議の内容は重かった。\n(Kandungan mesyuarat pada hari ini adalah sangat serius/berat.)',
-    contoh2: '戦争をテーマにした重い映画を見た。\n(Saya telah menonton sebuah filem yang temanya sangat berat mengenai peperangan.)',
-    contoh3: '空気（雰囲気）が重くて息苦しい。\n(Suasana pada waktu itu sangat tegang/berat sehingga terasa sesak nafas.)'
+    arti: 'Konten/topik yang berat / Serius (mencekam)',
+    penjelasan: 'Saat digunakan untuk menjelaskan topik, film, berita, atau suasana, ini berarti pesannya sangat serius, mendalam, tragis, atau berat, sehingga tidak bisa dianggap main-main.',
+    contoh1: '今日の会議の内容は重かった。\n(Konten rapat hari ini sangat berat/serius.)',
+    contoh2: '戦争をテーマにした重い映画を見た。\n(Saya menonton film dengan tema perang yang sangat berat/kelam.)',
+    contoh3: '空気（雰囲気）が重くて息苦しい。\n(Suasananya sangat berat/tegang sampai terasa sesak napas.)'
   },
 
   // ==========================================
@@ -432,10 +432,10 @@ const kosakata_m6h4 = [
     kanji: '明るいブルー',
     furigana: 'あかるいブルー',
     arti: 'Biru cerah',
-    penjelasan: 'Makna paling asas bagi 明るい (akarui). Selain daripada bermaksud bilik yang diterangi cahaya, apabila digabungkan dengan warna, ia bermaksud tona warna terang, berseri, dan cerah (antonim: 暗い - gelap).',
+    penjelasan: 'Makna paling dasar dari 明るい (akarui). Selain berarti ruangan yang terang oleh cahaya, jika digabungkan dengan warna, artinya warna tersebut bernada terang dan cerah (Lawan kata: 暗い - gelap).',
     contoh1: '彼女は明るいブルーのシャツを着ている。\n(Dia memakai kemeja berwarna biru cerah.)',
-    contoh2: '部屋をもっと明るい色に塗りたい。\n(Saya mahu mengecat bilik ini dengan warna yang lebih cerah.)',
-    contoh3: '春らしい明るい服が欲しい。\n(Saya mahukan baju berwarna terang yang bersesuaian dengan musim bunga.)'
+    contoh2: '部屋をもっと明るい色に塗りたい。\n(Saya ingin mengecat kamar dengan warna yang lebih cerah.)',
+    contoh3: '春らしい明るい服が欲しい。\n(Saya ingin baju berwarna cerah khas musim semi.)'
   },
   {
     id: 'm6h4_33',
@@ -444,11 +444,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '明るい性格',
     furigana: 'あかるいせいかく',
-    arti: 'Personaliti yang ceria',
-    penjelasan: 'Bila merujuk kepada karakter atau personaliti seseorang, ia bermakna orang tersebut sentiasa kelihatan riang, gembira, peramah, positif, dan penuh semangat.',
-    contoh1: '彼女は明るい性格で、誰からも好かれている。\n(Kerana dia mempunyai perwatakan yang ceria, dia disukai oleh semua orang.)',
-    contoh2: 'つらい時でも明るく振る舞う。\n(Walaupun pada waktu yang sukar, dia tetap berkelakuan ceria.)',
-    contoh3: '彼がいると職場が明るくなる。\n(Tempat kerja akan menjadi ceria dengan kehadirannya.)'
+    arti: 'Kepribadian yang ceria',
+    penjelasan: 'Jika merujuk pada karakter seseorang, artinya orang tersebut selalu terlihat riang, gembira, ramah, berpikiran positif, dan penuh semangat.',
+    contoh1: '彼女は明るい性格で、誰からも好かれている。\n(Karena sifatnya yang ceria, dia disukai oleh semua orang.)',
+    contoh2: 'つらい時でも明るく振る舞う。\n(Walau di saat sulit, dia tetap bersikap riang/ceria.)',
+    contoh3: '彼がいると職場が明るくなる。\n(Kalau ada dia, suasana tempat kerja jadi ceria.)'
   },
   {
     id: 'm6h4_34',
@@ -458,10 +458,10 @@ const kosakata_m6h4 = [
     kanji: '明るい声',
     furigana: 'あかるいこえ',
     arti: 'Suara yang riang',
-    penjelasan: 'Menyifatkan nada suara atau cara bercakap yang bernada tinggi, bersemangat, dan menunjukkan perasaan gembira kepada pendengar.',
-    contoh1: '電話越しに彼女の明るい声が聞こえた。\n(Dari seberang telefon, kedengaran suaranya yang riang ceria.)',
-    contoh2: 'いつも明るい声で挨拶をしてくれる。\n(Dia sentiasa memberikan ucapan salam dengan suara yang riang.)',
-    contoh3: 'アナウンサーの明るい声で一日が始まる。\n(Hari saya bermula dengan suara ceria penyiar radio tersebut.)'
+    penjelasan: 'Menggambarkan nada suara atau cara bicara yang bernada tinggi, bersemangat, dan memancarkan perasaan gembira kepada pendengarnya.',
+    contoh1: '電話越しに彼女の明るい声が聞こえた。\n(Dari seberang telepon, terdengar suaranya yang riang ceria.)',
+    contoh2: 'いつも明るい声で挨拶をしてくれる。\n(Dia selalu menyapa dengan suara yang riang.)',
+    contoh3: 'アナウンサーの明るい声で一日が始まる。\n(Hari saya dimulai dengan suara ceria penyiar radio itu.)'
   },
   {
     id: 'm6h4_35',
@@ -471,10 +471,10 @@ const kosakata_m6h4 = [
     kanji: '見通しが明るい',
     furigana: 'みとおしがあかるい',
     arti: 'Prospek masa depan yang cerah',
-    penjelasan: 'Berlawanan dengan 見通しが甘い (terlalu optimistik), 見通しが明るい membawa konotasi positif bahawa terdapat harapan yang kukuh, prospek yang sangat baik, dan peluang besar untuk berjaya pada masa hadapan.',
-    contoh1: '新商品のヒットで、今後の見通しが明るい。\n(Disebabkan jualan produk baharu yang laris, prospek untuk masa hadapan kelihatan cerah.)',
-    contoh2: '経済の回復により、未来は明るいと言える。\n(Berdasarkan kepada pemulihan ekonomi, boleh dikatakan bahawa masa depan kita cerah.)',
-    contoh3: '手術は成功し、病状の見通しは明るい。\n(Pembedahan telah berjaya, dan prospek pemulihannya sangat positif.)'
+    penjelasan: 'Kebalikan dari 見通しが甘い (terlalu optimistis/naif). 見通しが明るい membawa konotasi positif bahwa ada harapan kuat, prospek yang sangat bagus, dan peluang besar untuk sukses di masa depan.',
+    contoh1: '新商品のヒットで、今後の見通しが明るい。\n(Karena produk baru laris manis, prospek masa depannya terlihat cerah.)',
+    contoh2: '経済の回復により、未来は明るいと言える。\n(Karena pemulihan ekonomi, bisa dibilang masa depan kita cerah.)',
+    contoh3: '手術は成功し、病状の見通しは明るい。\n(Operasi berhasil, dan prospek pemulihannya sangat positif/cerah.)'
   },
   {
     id: 'm6h4_36',
@@ -483,11 +483,11 @@ const kosakata_m6h4 = [
     kategori: 'kata sifat',
     kanji: '政治に明るい',
     furigana: 'せいじにあかるい',
-    arti: 'Sangat berpengetahuan / Mahir dalam bidang politik',
-    penjelasan: 'Jika digabungkan dengan struktur (bidang/topik) + に明るい, ia bermakna seseorang itu mempunyai ilmu pengetahuan yang sangat mendalam, berpengalaman, dan berpengetahuan luas tentang sesuatu perkara tersebut (詳しい).',
-    contoh1: '彼は政治に明るい（＝詳しい）。\n(Dia sangat berpengetahuan luas dalam selok-belok politik.)',
-    contoh2: 'この町の地理に明るい人に案内してもらう。\n(Kita akan dipandu oleh seseorang yang sangat mahir dengan selok-belok geografi bandar ini.)',
-    contoh3: 'IT関係に明るいスタッフを探している。\n(Kami sedang mencari staf yang mempunyai kepakaran/pengetahuan yang mendalam dalam bidang IT.)'
+    arti: 'Sangat berpengetahuan / Paham betul soal politik',
+    penjelasan: 'Jika digabungkan dengan pola (bidang/topik) + に明るい, artinya seseorang punya ilmu yang sangat mendalam, berpengalaman, dan wawasannya luas mengenai hal tersebut.',
+    contoh1: '彼は政治に明るい（＝詳しい）。\n(Dia sangat berwawasan / paham betul tentang seluk-beluk politik.)',
+    contoh2: 'この町の地理に明るい人に案内してもらう。\n(Kita akan dipandu oleh orang yang sangat paham dengan geografi kota ini.)',
+    contoh3: 'IT関係に明るいスタッフを探している。\n(Kami sedang mencari staf yang punya pengetahuan mendalam tentang dunia IT.)'
   }
 ];
 
