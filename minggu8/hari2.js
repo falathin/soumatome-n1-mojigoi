@@ -10,8 +10,8 @@ const kosakata_m8h2 = [
     kategori: 'kata benda',
     kanji: '一同',
     furigana: 'いちどう',
-    arti: 'Semua yang hadir / Seluruh anggota',
-    penjelasan: 'Merujuk pada semua orang yang berkumpul atau semua anggota dalam suatu kelompok secara kolektif tanpa terkecuali.',
+    arti: 'Seluruh anggota / Semua yang hadir',
+    penjelasan: 'Mengacu pada semua orang dalam satu kelompok tanpa terkecuali. Biasanya dipakai untuk konteks formal, seperti "segenap keluarga" atau "seluruh hadirin".',
     contoh1: '家族一同を代表してご挨拶申し上げます。\n(Mewakili seluruh anggota keluarga, saya ingin menyampaikan salam.)',
     contoh2: '出席者一同、彼の話に感動した。\n(Seluruh hadirin, semuanya merasa terharu mendengar ceritanya.)'
   },
@@ -23,9 +23,9 @@ const kosakata_m8h2 = [
     kanji: '一面',
     furigana: 'いちめん',
     arti: 'Satu sisi / Seluruh permukaan / Halaman depan',
-    penjelasan: 'Memiliki beberapa arti: satu aspek dari suatu hal, seluruh permukaan dari suatu tempat/benda, atau halaman utama/depan dari sebuah surat kabar.',
+    penjelasan: 'Kata ini punya 3 arti umum: 1) Satu sisi dari suatu hal/masalah, 2) Seluruh permukaan suatu tempat/benda, 3) Halaman utama koran.',
     contoh1: '物事の一面しか見ていない。\n(Hanya melihat satu aspek/sisi dari suatu hal.)',
-    contoh2: '空一面に星が輝いている。\n(Bintang-bintang bersinar penuh di seluruh penjuru langit.)'
+    contoh2: '空一面に星が輝いている。\n(Bintang-bintang bersinar penuh menutupi seluruh permukaan langit.)'
   },
   {
     id: 'm8h2_3',
@@ -35,8 +35,8 @@ const kosakata_m8h2 = [
     kanji: '一連',
     furigana: 'いちれん',
     arti: 'Serangkaian / Rentetan',
-    penjelasan: 'Merujuk pada kejadian, peristiwa, atau tindakan yang terjadi secara berurutan dan saling berkaitan satu sama lain dalam satu kesatuan.',
-    contoh1: '一連の事件が解決した。\n(Serangkaian/rentetan insiden tersebut akhirnya telah diselesaikan.)',
+    penjelasan: 'Rangkaian kejadian, insiden, atau proses yang berurutan dan saling menyambung satu sama lain (tidak terputus).',
+    contoh1: '一連の事件が解決した。\n(Serangkaian insiden tersebut akhirnya telah diselesaikan.)',
     contoh2: '一連のプロセスを確認する。\n(Memeriksa serangkaian tahapan proses yang saling terkait.)'
   },
   {
@@ -46,10 +46,10 @@ const kosakata_m8h2 = [
     kategori: 'kata benda',
     kanji: '一目',
     furigana: 'いちもく',
-    arti: 'Sekilas pandang / Diakui kehebatannya',
-    penjelasan: 'Berarti melihat secara sekilas. Frasa "一目置く" secara khusus digunakan ketika kita mengakui, segan, atau menghormati kemampuan seseorang yang lebih unggul.',
+    arti: 'Sekilas pandang / Segan (mengakui kehebatan)',
+    penjelasan: 'Arti aslinya melihat sekilas. Namun, ada ungkapan khusus "一目置く" (ichimoku oku) yang artinya kita segan atau mengakui kehebatan orang lain yang lebih jago.',
     contoh1: 'その違いは一目瞭然だ。\n(Perbedaan tersebut sangat jelas terlihat hanya dengan sekilas pandang.)',
-    contoh2: '彼の才能には誰もが一目置いている。\n(Semua orang mengakui dengan segan bakatnya yang luar biasa.)'
+    contoh2: '彼の才能には誰もが一目置いている。\n(Semua orang segan dan mengakui bakatnya yang luar biasa.)'
   },
   {
     id: 'm8h2_5',
@@ -59,9 +59,9 @@ const kosakata_m8h2 = [
     kanji: '一律(に)',
     furigana: 'いちりつ(に)',
     arti: 'Merata / Sama rata',
-    penjelasan: 'Tindakan memperlakukan segala sesuatunya dengan standar, jumlah, atau cara yang sama persis untuk semua orang, tanpa adanya pengecualian.',
-    contoh1: 'ボーナスが一律１万円支給される。\n(Bonus akan dibayarkan secara merata sebesar 10.000 yen untuk semua pegawai.)',
-    contoh2: '給料を一律に上げるのは難しい。\n(Sulit rasanya untuk menaikkan gaji secara sama rata ke semua orang.)'
+    penjelasan: 'Memperlakukan semuanya dengan standar atau jumlah yang sama persis tanpa pilih kasih atau pengecualian (misalnya saat bagi-bagi gaji atau bonus).',
+    contoh1: 'ボーナスが一律１万円支給される。\n(Bonus akan dibayarkan merata sebesar 10.000 yen untuk semua pegawai.)',
+    contoh2: '給料を一律に上げるのは難しい。\n(Sulit rasanya menaikkan gaji secara sama rata ke semua orang.)'
   },
   {
     id: 'm8h2_6',
@@ -70,9 +70,9 @@ const kosakata_m8h2 = [
     kategori: 'kata sifat',
     kanji: '一様(に)',
     furigana: 'いちよう(に)',
-    arti: 'Seragam / Sama',
-    penjelasan: 'Menunjukkan bahwa sikap, reaksi, raut wajah, atau keadaan sekumpulan orang atau benda semuanya tampak sama persis, tidak ada yang berbeda.',
-    contoh1: '参加者は一様に驚きの声をあげた。\n(Para peserta memberikan reaksi suara terkejut yang seragam/sama.)',
+    arti: 'Seragam / Tampak sama',
+    penjelasan: 'Kondisi di mana reaksi, raut wajah, atau bentuk dari sekumpulan orang atau benda terlihat sama persis, kompak, dan seragam.',
+    contoh1: '参加者は一様に驚きの声をあげた。\n(Para peserta memberikan reaksi suara terkejut yang seragam.)',
     contoh2: '全員が一様な反応を示した。\n(Semua orang menunjukkan reaksi yang serupa/seragam.)'
   },
   {
@@ -83,8 +83,8 @@ const kosakata_m8h2 = [
     kanji: '一瞬',
     furigana: 'いっしゅん',
     arti: 'Sesaat / Dalam sekejap',
-    penjelasan: 'Waktu yang berlalu dengan sangat cepat, seolah hanya terjadi dalam sekejap mata atau satu kedipan saja.',
-    contoh1: '一瞬、ためらった。\n(Saya ragu-ragu sejenak/sesaat.)',
+    penjelasan: 'Waktu yang berlalu dengan super cepat, seolah cuma terjadi dalam kedipan mata saja.',
+    contoh1: '一瞬、ためらった。\n(Saya ragu-ragu sejenak.)',
     contoh2: 'それは一瞬の出来事だった。\n(Itu adalah kejadian yang berlangsung hanya dalam sekejap.)'
   },
   {
@@ -95,8 +95,8 @@ const kosakata_m8h2 = [
     kanji: '一帯',
     furigana: 'いったい',
     arti: 'Seluruh kawasan / Daerah sekitar',
-    penjelasan: 'Merujuk pada suatu wilayah tertentu secara keseluruhan, atau daerah luas yang ada di sekitar suatu lokasi.',
-    contoh1: '警察は付近一帯を捜索した。\n(Polisi melakukan pencarian menyeluruh di seluruh kawasan sekitar.)',
+    penjelasan: 'Keseluruhan area di suatu wilayah tertentu, atau area luas yang ada di sekitar suatu lokasi.',
+    contoh1: '警察は付近一帯を捜索した。\n(Polisi menyisir keseluruhan kawasan di sekitar sini.)',
     contoh2: 'この一帯は昔、海だった。\n(Seluruh daerah kawasan ini dulunya adalah lautan.)'
   },
   {
@@ -107,8 +107,8 @@ const kosakata_m8h2 = [
     kanji: '一斉(に)',
     furigana: 'いっせい(に)',
     arti: 'Serentak / Bersamaan',
-    penjelasan: 'Melakukan suatu tindakan atau gerakan secara bersama-sama pada waktu yang sama persis oleh orang atau benda dalam jumlah banyak.',
-    contoh1: 'ランナーが一斉にスタートする。\n(Para pelari mulai berlari/start secara serentak bersamaan.)',
+    penjelasan: 'Banyak orang atau banyak benda melakukan satu hal secara bebarengan/kompak di waktu yang sama persis.',
+    contoh1: 'ランナーが一斉にスタートする。\n(Para pelari mulai start secara serentak bersamaan.)',
     contoh2: '鳥が一斉に飛び立った。\n(Burung-burung terbang ke udara secara serentak.)'
   },
   {
@@ -118,10 +118,10 @@ const kosakata_m8h2 = [
     kategori: 'kata keterangan',
     kanji: '一心(に)',
     furigana: 'いっしん(に)',
-    arti: 'Sepenuh hati / Dengan sungguh-sungguh',
-    penjelasan: 'Memusatkan seluruh pikiran, perasaan, dan perhatian dengan tulus hanya pada satu hal, tanpa teralihkan oleh hal yang lain.',
+    arti: 'Sepenuh hati / Fokus 100%',
+    penjelasan: 'Mengerjakan sesuatu (seperti berdoa atau belajar) dengan fokus 100% dan segenap hati tanpa membiarkan pikiran terdistraksi hal lain.',
     contoh1: '彼女の無事を一心に祈る。\n(Berdoa dengan sepenuh hati demi keselamatannya.)',
-    contoh2: '一心に本を読んでいる。\n(Sedang membaca buku dengan sungguh-sungguh dan penuh konsentrasi.)'
+    contoh2: '一心に本を読んでいる。\n(Sedang membaca buku dengan sungguh-sungguh dan sangat fokus.)'
   },
   {
     id: 'm8h2_11',
@@ -130,10 +130,10 @@ const kosakata_m8h2 = [
     kategori: 'kata keterangan',
     kanji: '一挙(に)',
     furigana: 'いっきょ(に)',
-    arti: 'Sekaligus / Dalam satu tindakan',
-    penjelasan: 'Melakukan atau menyelesaikan suatu hal yang besar secara langsung dan menyeluruh dalam satu waktu atau satu kesempatan saja.',
-    contoh1: '問題が一挙に解決する。\n(Masalahnya dapat terselesaikan sekaligus dalam satu waktu.)',
-    contoh2: '遅れを一挙に取り戻す。\n(Mengejar/memulihkan ketertinggalan secara sekaligus.)'
+    arti: 'Sekaligus / Dalam sekali waktu',
+    penjelasan: 'Menyelesaikan sebuah hal besar langsung tuntas dalam satu kali percobaan atau satu kesempatan saja.',
+    contoh1: '問題が一挙に解決する。\n(Masalahnya dapat diselesaikan sekaligus dalam satu waktu.)',
+    contoh2: '遅れを一挙に取り戻す。\n(Mengejar ketertinggalan secara sekaligus.)'
   },
   {
     id: 'm8h2_12',
@@ -142,10 +142,10 @@ const kosakata_m8h2 = [
     kategori: 'kata keterangan',
     kanji: '一見(する)',
     furigana: 'いっけん(する)',
-    arti: 'Sekilas / Tampaknya / Layak dilihat',
-    penjelasan: 'Melihat sesuatu hanya sebentar/sekilas (seperti tampak asli, namun aslinya tidak). Bisa juga diartikan sesuatu itu sangat berharga untuk disaksikan (一見の価値がある).',
-    contoh1: '一見本物のようだが、実は偽物だ。\n(Sekilas tampaknya seperti barang asli, tapi nyatanya palsu.)',
-    contoh2: 'あの絵は一見の価値がある。\n(Lukisan itu sangat layak/berharga untuk dilihat sekali.)'
+    arti: 'Sekilas / Layak dilihat',
+    penjelasan: 'Melihat sekilas (sering dipakai untuk konteks "sekilas kelihatan asli, padahal palsu"). Bisa juga berarti sesuatu itu sangat pantas/berharga untuk dilihat sekali seumur hidup (一見の価値がある).',
+    contoh1: '一見本物のようだが、実は偽物だ。\n(Sekilas tampaknya asli, tapi nyatanya palsu.)',
+    contoh2: 'あの絵は一見の価値がある。\n(Lukisan itu sangat berharga untuk dilihat barang sekali.)'
   },
   {
     id: 'm8h2_13',
@@ -154,10 +154,10 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '一新(する)',
     furigana: 'いっしん(する)',
-    arti: 'Memperbarui total / Menyegarkan',
-    penjelasan: 'Mengubah, merombak, atau memperbarui keadaan, suasana, atau sistem secara menyeluruh sehingga hal tersebut terasa benar-benar segar dan baru.',
+    arti: 'Dirombak total / Terasa baru',
+    penjelasan: 'Merombak atau mengganti suasana, sistem, atau perasaan secara total sehingga semuanya benar-benar terasa baru dan segar (move on/refresh).',
     contoh1: '気分を一新する。\n(Menyegarkan perasaan/suasana hati secara total.)',
-    contoh2: '会社の体制が一新された。\n(Sistem dan struktur perusahaan telah diperbarui secara total.)'
+    contoh2: '会社の体制が一新された。\n(Sistem dan struktur perusahaan telah dirombak total.)'
   },
   {
     id: 'm8h2_14',
@@ -167,9 +167,9 @@ const kosakata_m8h2 = [
     kanji: '一掃(する)',
     furigana: 'いっそう(する)',
     arti: 'Menyapu bersih / Membasmi',
-    penjelasan: 'Menghilangkan, membuang, atau menyingkirkan hal-hal buruk (seperti kejahatan, kecemasan, atau musuh) sampai benar-benar bersih tak tersisa.',
-    contoh1: '社会から暴力を一掃する。\n(Menyapu bersih/membasmi kekerasan dari lingkungan masyarakat.)',
-    contoh2: '不安を一掃するような知らせだった。\n(Itu adalah kabar yang berhasil menyapu bersih rasa cemas saya.)'
+    penjelasan: 'Menghilangkan dan menyingkirkan hal-hal negatif (seperti musuh, kejahatan, atau rasa cemas) sampai benar-benar bersih dan tidak bersisa.',
+    contoh1: '社会から暴力を一掃する。\n(Menyapu bersih kekerasan dari lingkungan masyarakat.)',
+    contoh2: '不安を一掃するような知らせだった。\n(Itu adalah kabar yang sukses menyapu bersih rasa cemas saya.)'
   },
   {
     id: 'm8h2_15',
@@ -179,9 +179,9 @@ const kosakata_m8h2 = [
     kanji: '一変(する)',
     furigana: 'いっぺん(する)',
     arti: 'Berubah total / Berubah drastis',
-    penjelasan: 'Menggambarkan keadaan, situasi, kondisi alam, atau sikap seseorang yang berubah seratus delapan puluh derajat dari keadaan sebelumnya.',
-    contoh1: '彼の態度は一変した。\n(Sikapnya telah berubah secara drastis/total.)',
-    contoh2: '事件で街の様子が一変した。\n(Suasana kota berubah seratus delapan puluh derajat akibat insiden itu.)'
+    penjelasan: 'Kondisi, suasana suatu tempat, atau sikap seseorang yang berubah drastis 180 derajat dari keadaan sebelumnya.',
+    contoh1: '彼の態度は一変した。\n(Sikapnya telah berubah secara drastis/180 derajat.)',
+    contoh2: '事件で街の様子が一変した。\n(Suasana kota berubah total akibat insiden itu.)'
   },
   {
     id: 'm8h2_16',
@@ -190,10 +190,10 @@ const kosakata_m8h2 = [
     kategori: 'kata benda',
     kanji: '一息',
     furigana: 'ひといき',
-    arti: 'Ambil napas / Istirahat sejenak / Sedikit lagi',
-    penjelasan: 'Bisa merujuk pada berhenti sebentar untuk tarik napas/beristirahat. Sering juga bermakna "sedikit lagi usaha akan membuahkan hasil" (あと一息).',
-    contoh1: 'お茶を飲んで一息入れる。\n(Minum teh untuk mengambil napas/beristirahat sejenak.)',
-    contoh2: 'あと一息で頂上だ。\n(Tinggal sedikit lagi kita akan sampai di puncak gunung.)'
+    arti: 'Tarik napas sebentar / Sedikit lagi',
+    penjelasan: 'Berhenti sebentar buat ambil napas. Sering juga dipakai untuk situasi "tanggung, tinggal dikit lagi kelar nih" (あと一息).',
+    contoh1: 'お茶を飲んで一息入れる。\n(Minum teh untuk tarik napas/beristirahat sejenak.)',
+    contoh2: 'あと一息で頂上だ。\n(Tinggal sedikit lagi kita akan sampai di puncak.)'
   },
   {
     id: 'm8h2_17',
@@ -203,9 +203,9 @@ const kosakata_m8h2 = [
     kanji: '一頃',
     furigana: 'ひところ',
     arti: 'Suatu masa / Pernah suatu ketika',
-    penjelasan: 'Menunjukkan suatu rentang waktu atau periode di masa lampau di mana sesuatu sempat sering terjadi atau sangat populer.',
-    contoh1: 'その歌は一頃はやった歌だ。\n(Lagu tersebut adalah lagu yang pernah ngetren/populer pada suatu masa.)',
-    contoh2: '一頃はよくこの公園で遊んだものだ。\n(Dulu, pernah suatu masa saya sering bermain di taman ini.)'
+    penjelasan: 'Nostalgia atau mengingat suatu rentang masa di masa lampau di mana suatu hal sempat sangat ngetren, populer, atau sering dilakukan.',
+    contoh1: 'その歌は一頃はやった歌だ。\n(Lagu tersebut adalah lagu yang pernah ngetren pada suatu masa.)',
+    contoh2: '一頃はよくこの公園で遊んだものだ。\n(Dulu, pernah suatu ketika saya sering sekali bermain di taman ini.)'
   },
   {
     id: 'm8h2_18',
@@ -214,10 +214,10 @@ const kosakata_m8h2 = [
     kategori: 'kata benda',
     kanji: '一筋',
     furigana: 'ひとすじ',
-    arti: 'Sepenuhnya dedikasi / Satu garis lurus',
-    penjelasan: 'Fokus kuat yang mendedikasikan seluruh hidup, waktu, atau tenaga hanya untuk satu jalan, satu bidang, atau satu orang saja secara teguh.',
-    contoh1: '田中さんは仕事一筋の人間だ。\n(Sdr. Tanaka adalah orang yang mendedikasikan hidupnya hanya semata untuk pekerjaan.)',
-    contoh2: '学問一筋に生きる。\n(Hidup dengan jalan dedikasi sepenuhnya pada ilmu pengetahuan.)'
+    arti: 'Fokus penuh dedikasi',
+    penjelasan: 'Fokus dan mendedikasikan seluruh sisa hidup, waktu, atau tenaga cuma untuk satu tujuan, satu bidang, atau satu orang saja.',
+    contoh1: '田中さんは仕事一筋の人間だ。\n(Sdr. Tanaka adalah orang yang mendedikasikan hidupnya murni cuma buat pekerjaan.)',
+    contoh2: '学問一筋に生きる。\n(Hidup dengan dedikasi sepenuhnya hanya pada ilmu pengetahuan.)'
   },
   {
     id: 'm8h2_19',
@@ -226,10 +226,10 @@ const kosakata_m8h2 = [
     kategori: 'kata benda',
     kanji: '一苦労',
     furigana: 'ひとくろう',
-    arti: 'Sangat kerepotan / Susah payah',
-    penjelasan: 'Situasi yang membutuhkan tenaga ekstra, usaha keras, atau cukup menyulitkan dan merepotkan untuk diselesaikan.',
-    contoh1: 'レポートを仕上げるのは一苦労だった。\n(Menyelesaikan laporan tertulis ini adalah sebuah usaha yang bersusah payah.)',
-    contoh2: '子供を寝かせるのは一苦労だ。\n(Menidurkan anak-anak adalah suatu kerepotan/kesulitan tersendiri.)'
+    arti: 'Sangat repot / Butuh usaha ekstra',
+    penjelasan: 'Suatu tugas, pekerjaan, atau situasi yang bikin lumayan repot dan menuntut kesabaran/tenaga ekstra buat diselesaikan.',
+    contoh1: 'レポートを仕上げるのは一苦労だった。\n(Menyelesaikan laporan ini benar-benar bikin repot dan butuh tenaga ekstra.)',
+    contoh2: '子供を寝かせるのは一苦労だ。\n(Menidurkan anak-anak itu jadi kerepotan tersendiri.)'
   },
   {
     id: 'm8h2_20',
@@ -238,10 +238,10 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '一休み(する)',
     furigana: 'ひとやすみ(する)',
-    arti: 'Istirahat sebentar',
-    penjelasan: 'Menghentikan aktivitas secara sementara dalam waktu singkat untuk memulihkan tenaga sebelum mulai beraktivitas kembali.',
-    contoh1: 'この辺で、一休みしよう。\n(Mari kita beristirahat sebentar di sekitar sini.)',
-    contoh2: '一休みしてから作業を再開する。\n(Saya akan melanjutkan pekerjaan lagi setelah istirahat sejenak.)'
+    arti: 'Istirahat sebentar / Break',
+    penjelasan: 'Break singkat di sela-sela aktivitas atau pekerjaan agar tenaga kembali pulih sebelum lanjut bekerja lagi.',
+    contoh1: 'この辺で、一休みしよう。\n(Mari kita break/istirahat sebentar di sekitar sini.)',
+    contoh2: '一休みしてから作業を再開する。\n(Saya akan lanjut kerja lagi setelah istirahat sejenak.)'
   },
   {
     id: 'm8h2_21',
@@ -250,8 +250,8 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '一眠り(する)',
     furigana: 'ひとねむり(する)',
-    arti: 'Tidur sebentar / Tidur sejenak',
-    penjelasan: 'Tidur dalam rentang waktu yang cukup singkat (seperti tidur siang) sekadar untuk menghilangkan kantuk dan menyegarkan tubuh.',
+    arti: 'Tidur sejenak / Power nap',
+    penjelasan: 'Tidur dalam rentang waktu singkat (seperti tidur siang) sekadar untuk menghilangkan ngantuk dan bikin badan segar lagi.',
     contoh1: '一眠りしてから、また仕事をしよう。\n(Mari kita mulai bekerja kembali setelah tidur sejenak.)',
     contoh2: '疲れたので、一眠りしたい。\n(Karena capek, saya ingin rebahan/tidur sebentar.)'
   },
@@ -264,10 +264,10 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '見逃す',
     furigana: 'みのがす',
-    arti: 'Melewatkan / Membiarkan (kesalahan)',
-    penjelasan: 'Tidak memanfaatkan/mengambil suatu kesempatan baik, atau tindakan sengaja pura-pura tidak melihat dan memaafkan kesalahan seseorang.',
+    arti: 'Melewatkan / Membiarkan',
+    penjelasan: 'Gagal mengambil peluang bagus, atau sengaja pura-pura tidak melihat dengan niat memaafkan kesalahan orang lain.',
     contoh1: 'チャンスを見逃す。\n(Melewatkan begitu saja kesempatan yang ada.)',
-    contoh2: '今回だけはミスを見逃してあげよう。\n(Hanya untuk kali ini saja, aku akan membiarkan/memaafkan kesalahanmu.)'
+    contoh2: '今回だけはミスを見逃してあげよう。\n(Khusus kali ini saja, aku bakal membiarkan/memaafkan kesalahanmu.)'
   },
   {
     id: 'm8h2_23',
@@ -276,10 +276,10 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '見落とす',
     furigana: 'みおとす',
-    arti: 'Terlewatkan / Tidak menyadari',
-    penjelasan: 'Ketidaksengajaan saat melihat, sehingga ada hal penting, detail kecil, atau kesalahan yang gagal disadari dan luput dari perhatian.',
-    contoh1: '書類の間違いを見落とす。\n(Terlewatkan/tidak menyadari adanya kesalahan ketik pada dokumen.)',
-    contoh2: '重要な注意書きを見落としていた。\n(Saya tidak sengaja melewatkan teks catatan peringatan yang penting itu.)'
+    arti: 'Terlewat / Luput dari perhatian',
+    penjelasan: 'Tidak sengaja terlewat saat mengecek sesuatu, sehingga ada detail kecil atau kesalahan yang gagal disadari.',
+    contoh1: '書類の間違いを見落とす。\n(Terlewat/tidak menyadari adanya kesalahan pada dokumen.)',
+    contoh2: '重要な注意書きを見落としていた。\n(Saya tidak sengaja melewatkan peringatan penting itu.)'
   },
   {
     id: 'm8h2_24',
@@ -288,9 +288,9 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '見失う',
     furigana: 'みうしなう',
-    arti: 'Kehilangan jejak / Kehilangan arah',
-    penjelasan: 'Tidak bisa melihat lagi objek yang sedang diikuti secara fisik. Secara psikologis bermakna kehilangan motivasi, tujuan, atau pedoman hidup.',
-    contoh1: '森の中で道を見失う。\n(Kehilangan arah jalan/tersesat saat berada di dalam hutan.)',
+    arti: 'Kehilangan jejak / Hilang arah',
+    penjelasan: 'Kehilangan jejak secara fisik (misal: target buruan hilang/tersesat di jalan), atau secara mental (misal: kehilangan arah dan motivasi hidup).',
+    contoh1: '森の中で道を見失う。\n(Kehilangan arah/tersesat saat di dalam hutan.)',
     contoh2: '人生の目標を見失ってしまった。\n(Saya telah kehilangan tujuan/arah hidup saya.)'
   },
   {
@@ -301,9 +301,9 @@ const kosakata_m8h2 = [
     kanji: '見積もる',
     furigana: 'みつもり',
     arti: 'Mengestimasi / Menaksir',
-    penjelasan: 'Menghitung, memperkirakan, atau mengkalkulasi secara kasar besaran biaya, anggaran, waktu, maupun kemampuan pihak lain.',
+    penjelasan: 'Menghitung secara kasar/mengira-ngira besaran anggaran, waktu, atau bahkan meremehkan (menaksir rendah) kemampuan lawan.',
     contoh1: '工事の費用を見積もる。\n(Mengestimasi/menaksir besaran biaya konstruksi.)',
-    contoh2: '相手の力を安く見積もる。\n(Meremehkan atau menaksir terlampau rendah akan kemampuan lawan.)'
+    contoh2: '相手の力を安く見積もる。\n(Meremehkan atau menaksir terlampau rendah kemampuan musuh.)'
   },
   {
     id: 'm8h2_26',
@@ -312,10 +312,10 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '見計らう',
     furigana: 'みはからう',
-    arti: 'Memperkirakan waktu yang tepat',
-    penjelasan: 'Menganalisis situasi dan memperhitungkan dengan cermat momen atau waktu yang paling tepat untuk melakukan suatu tindakan.',
-    contoh1: 'ラッシュの終わるころを見計らって出かける。\n(Memilih pergi keluar dengan memperkirakan waktu saat jam sibuk kemacetan selesai.)',
-    contoh2: 'タイミングを見計らって話しかける。\n(Mengajak berbicara dengan mencari/menunggu momen yang pas.)'
+    arti: 'Mencari momen / Memperkirakan timing',
+    penjelasan: 'Peka membaca situasi untuk memperhitungkan momen atau waktu yang paling tepat buat melakukan suatu tindakan.',
+    contoh1: 'ラッシュの終わるころを見計らって出かける。\n(Pergi keluar dengan memperkirakan timing di mana jam sibuk kemacetan selesai.)',
+    contoh2: 'タイミングを見計らって話しかける。\n(Mengajak bicara dengan mencari momen yang pas.)'
   },
   {
     id: 'm8h2_27',
@@ -324,10 +324,10 @@ const kosakata_m8h2 = [
     kategori: 'kata kerja',
     kanji: '見違える',
     furigana: 'みちがえる',
-    arti: 'Pangling / Sulit dikenali (karena membaik)',
-    penjelasan: 'Kondisi di mana seseorang atau benda mengalami perubahan drastis menjadi jauh lebih baik/cantik, sampai-sampai kita hampir tidak mengenalinya lagi.',
-    contoh1: '父は見違えるように元気になった。\n(Ayah sudah menjadi sangat sehat, sampai-sampai bikin pangling.)',
-    contoh2: 'リフォームで家が見違えるほど綺麗になった。\n(Berkat renovasi, kondisi rumah ini menjadi cantik sampai bikin kita pangling/sulit dikenali.)'
+    arti: 'Pangling / Sulit dikenali',
+    penjelasan: 'Keadaan di mana seseorang atau sebuah barang berubah drastis jadi jauh lebih bagus atau cantik, sampai-sampai kita pangling karena pangling.',
+    contoh1: '父は見違えるように元気になった。\n(Ayah sudah sangat sehat, sampai-sampai bikin pangling.)',
+    contoh2: 'リフォームで家が見違えるほど綺麗になった。\n(Berkat renovasi, rumah ini jadi cantik sampai kita hampir tidak mengenalinya.)'
   },
   {
     id: 'm8h2_28',
@@ -336,9 +336,9 @@ const kosakata_m8h2 = [
     kategori: 'kata benda',
     kanji: '見晴らし',
     furigana: 'みはらし',
-    arti: 'Pemandangan (luas dari atas)',
-    penjelasan: 'Pemandangan alam yang membentang sangat luas sejauh mata memandang tanpa ada penghalang, yang biasanya disaksikan dari titik lokasi yang tinggi.',
-    contoh1: '見晴らしがいい部屋。\n(Kamar dengan pemandangan luar yang membentang luas dan bagus.)',
+    arti: 'Pemandangan luas (dari atas)',
+    penjelasan: 'Pemandangan alam super luas sejauh mata memandang tanpa ada tembok/penghalang. Biasanya dilihat dari tempat yang tinggi (seperti puncak gunung atau balkon apartemen tinggi).',
+    contoh1: '見晴らしがいい部屋。\n(Kamar dengan pemandangan luar yang membentang luas tanpa halangan.)',
     contoh2: '山頂からの見晴らしは最高だ。\n(Pemandangan membentang yang dilihat dari puncak gunung adalah yang terbaik.)'
   }
 ];
