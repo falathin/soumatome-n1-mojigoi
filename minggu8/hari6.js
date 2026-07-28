@@ -13,7 +13,7 @@ const kosakata_m8h6 = [
     kanji: '勘違い',
     furigana: 'かんちがい',
     arti: 'Kesalahpahaman / Salah sangka',
-    penjelasan: 'Kondisi di mana seseorang salah memahami suatu situasi atau salah mengira sesuatu.',
+    penjelasan: 'Dipakai saat kita keliru memahami sesuatu, atau salah sangka terhadap ucapan dan situasi.',
     contoh1: 'それは私の勘違いでした。\n(Itu adalah kesalahpahaman saya.)',
     contoh2: '彼は私を先生だと勘違いしている。\n(Dia salah sangka mengira saya adalah seorang guru.)'
   },
@@ -25,7 +25,7 @@ const kosakata_m8h6 = [
     kanji: '人違い',
     furigana: 'ひとちがい',
     arti: 'Salah orang',
-    penjelasan: 'Keliru mengenali seseorang dan mengiranya sebagai orang lain.',
+    penjelasan: 'Gunakan saat kamu salah menyapa atau mengenali orang karena mengira dia adalah temanmu atau orang lain.',
     contoh1: 'すみません、人違いでした。\n(Maaf, saya salah orang.)',
     contoh2: '彼を兄と人違いして声をかけた。\n(Saya memanggilnya karena salah mengira dia adalah kakak saya.)'
   },
@@ -37,7 +37,7 @@ const kosakata_m8h6 = [
     kanji: '色違い',
     furigana: 'いろちがい',
     arti: 'Berbeda warna',
-    penjelasan: 'Barang atau produk yang modelnya sama persis, tetapi memiliki pilihan warna yang berbeda.',
+    penjelasan: 'Kata ini merujuk pada barang (seperti baju, sepatu, atau tas) yang desainnya sama persis, tapi warnanya beda.',
     contoh1: 'このシャツの色違いはありますか。\n(Apakah ada baju ini dalam warna yang berbeda?)',
     contoh2: '姉と色違いのバッグを買った。\n(Saya membeli tas yang modelnya sama namun berbeda warna dengan kakak perempuan saya.)'
   },
@@ -49,7 +49,7 @@ const kosakata_m8h6 = [
     kanji: '一字違い',
     furigana: 'いちじちがい',
     arti: 'Berbeda satu huruf',
-    penjelasan: 'Kondisi kata atau nama yang hampir sama persis, namun memiliki selisih satu huruf saja.',
+    penjelasan: 'Dipakai ketika ada dua kata atau nama yang hampir mirip banget, cuma selisih satu huruf saja (misal: Budi dan Bodi).',
     contoh1: '私の名前は彼の名前と一字違いだ。\n(Nama saya dan namanya hanya berbeda satu huruf saja.)',
     contoh2: '一字違いで意味が全く変わる。\n(Hanya beda satu huruf, maknanya bisa berubah total.)'
   },
@@ -61,7 +61,7 @@ const kosakata_m8h6 = [
     kanji: '食い違い',
     furigana: 'くいちがい',
     arti: 'Ketidaksesuaian / Perbedaan',
-    penjelasan: 'Situasi di mana keterangan, pendapat, atau data dari dua pihak tidak sinkron atau saling bertentangan.',
+    penjelasan: 'Digunakan kalau ada pendapat, cerita, atau data dari dua belah pihak yang bentrok dan nggak sinkron satu sama lain.',
     contoh1: '二人の意見に食い違いがある。\n(Ada ketidakcocokan antara pendapat mereka berdua.)',
     contoh2: '証言の食い違いを調べる。\n(Menyelidiki ketidaksesuaian atau perbedaan dalam kesaksian.)'
   },
@@ -73,7 +73,7 @@ const kosakata_m8h6 = [
     kanji: '行き違い',
     furigana: 'いきちがい',
     arti: 'Berselisih jalan / Miskomunikasi',
-    penjelasan: 'Kondisi gagal bertemu karena saling terlewat di jalan, atau terjadi kesalahpahaman dalam penyampaian informasi.',
+    penjelasan: 'Dipakai saat gagal bertemu karena selisihan jalan, atau saat ada miskomunikasi pesan yang tidak tersampaikan dengan benar.',
     contoh1: '途中で行き違いになって、会えなかった。\n(Kami berselisihan di jalan, sehingga tidak dapat bertemu.)',
     contoh2: '連絡の行き違いでトラブルになった。\n(Terjadi masalah karena miskomunikasi dalam penyampaian pesan.)'
   },
@@ -87,7 +87,7 @@ const kosakata_m8h6 = [
     kanji: '食べ放題',
     furigana: 'たべほうだい',
     arti: 'Makan sepuasnya',
-    penjelasan: 'Layanan restoran di mana pelanggan dapat menikmati berbagai makanan sepuasnya dengan harga tetap.',
+    penjelasan: 'Sering ditemui di restoran (All You Can Eat), artinya kamu bisa makan sepuasnya dengan bayar harga pas/tetap.',
     contoh1: '焼肉の食べ放題に行く。\n(Pergi ke restoran yakiniku untuk makan sepuasnya.)',
     contoh2: 'この店はケーキが食べ放題だ。\n(Toko ini menyediakan layanan makan kue sepuasnya.)'
   },
@@ -99,7 +99,7 @@ const kosakata_m8h6 = [
     kanji: '飲み放題',
     furigana: 'のみほうだい',
     arti: 'Minum sepuasnya',
-    penjelasan: 'Layanan di mana pelanggan dapat memesan dan meminum berbagai jenis minuman sepuasnya dalam batas waktu tertentu.',
+    penjelasan: 'Sama seperti tabehoudai, tapi ini khusus untuk paket minum sepuasnya (biasanya sering ada di bar atau izakaya).',
     contoh1: '飲み放題プランを予約する。\n(Memesan paket minum sepuasnya.)',
     contoh2: '2時間飲み放題で3000円です。\n(Harganya 3000 yen untuk minum sepuasnya selama 2 jam.)'
   },
@@ -113,7 +113,7 @@ const kosakata_m8h6 = [
     kanji: '度忘れ',
     furigana: 'どわすれ',
     arti: 'Lupa sesaat / Mendadak lupa',
-    penjelasan: 'Keadaan di mana seseorang mendadak lupa akan sesuatu yang sebenarnya sudah diketahui dengan baik.',
+    penjelasan: 'Dipakai saat kamu tiba-tiba "ngeblank" atau mendadak lupa soal sesuatu yang sebenarnya kamu hafal di luar kepala.',
     contoh1: '彼の名前を度忘れしてしまった。\n(Saya mendadak lupa siapa namanya.)',
     contoh2: 'よく知っているはずなのに、度忘れした。\n(Padahal saya seharusnya sangat tahu, tapi entah kenapa mendadak lupa.)'
   },
@@ -125,7 +125,7 @@ const kosakata_m8h6 = [
     kanji: '物忘れ',
     furigana: 'ものわすれ',
     arti: 'Sifat pelupa',
-    penjelasan: 'Kecenderungan untuk sering melupakan hal-hal kecil atau kejadian sehari-hari, umumnya seiring bertambahnya usia.',
+    penjelasan: 'Merujuk pada sifat pelupa secara umum yang sering terjadi sehari-hari, biasanya sering dikaitkan dengan faktor usia.',
     contoh1: '最近、物忘れがひどくなった。\n(Akhir-akhir ini, sifat pelupa saya semakin parah.)',
     contoh2: '祖母は年をとって物忘れが多くなった。\n(Nenek saya sudah menua dan menjadi sering pelupa.)'
   },
@@ -137,7 +137,7 @@ const kosakata_m8h6 = [
     kanji: '負けず嫌い',
     furigana: 'まけずぎらい',
     arti: 'Berjiwa kompetitif / Pantang kalah',
-    penjelasan: 'Sifat seseorang yang sangat benci mengalami kekalahan dan selalu ingin menjadi yang terbaik.',
+    penjelasan: 'Kata untuk menggambarkan sifat orang yang ambisius, sangat kompetitif, dan paling benci kalau harus kalah.',
     contoh1: '彼は負けず嫌いな性格だ。\n(Dia memiliki sifat yang tidak mau kalah.)',
     contoh2: '負けず嫌いなので、誰よりも練習する。\n(Karena sangat pantang kalah, dia berlatih lebih keras dari siapapun.)'
   },
@@ -149,7 +149,7 @@ const kosakata_m8h6 = [
     kanji: '食わず嫌い',
     furigana: 'くわずぎらい',
     arti: 'Prasangka buruk sebelum mencoba',
-    penjelasan: 'Menolak atau tidak menyukai sesuatu (seperti makanan atau hal lain) tanpa pernah mencobanya terlebih dahulu.',
+    penjelasan: 'Gunakan saat seseorang sudah bilang benci, jijik, atau menolak sesuatu (makanan atau aktivitas) padahal mencoba saja belum pernah.',
     contoh1: '納豆は食わず嫌いだったが、食べたら美味しかった。\n(Saya dulu enggan mencoba natto karena prasangka, tapi setelah dimakan ternyata enak.)',
     contoh2: '食わず嫌いをしないで、一度やってみよう。\n(Jangan langsung menolak sebelum mencoba, mari kita coba lakukan sekali.)'
   },
@@ -162,8 +162,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: '呼び捨て',
     furigana: 'よびすて',
-    arti: 'Memanggil nama tanpa gelar/panggilan kehormatan',
-    penjelasan: 'Menyebut nama seseorang secara langsung tanpa menyertakan imbuhan seperti san, kun, atau chan (biasanya hanya kepada orang yang sudah sangat akrab).',
+    arti: 'Memanggil nama tanpa gelar kehormatan',
+    penjelasan: 'Tindakan memanggil nama orang secara langsung tanpa embel-embel "san", "kun", atau "chan". Biasanya cuma buat teman akrab.',
     contoh1: '初対面の人を呼び捨てにするのは失礼だ。\n(Memanggil nama tanpa gelar kepada orang yang baru pertama kali bertemu adalah tidak sopan.)',
     contoh2: '親友とはお互いに呼び捨てで呼んでいる。\n(Saya dan sahabat saling memanggil nama secara langsung tanpa gelar kehormatan.)'
   },
@@ -175,7 +175,7 @@ const kosakata_m8h6 = [
     kanji: '裏返し',
     furigana: 'うらがえし',
     arti: 'Terbalik (bagian dalam di luar)',
-    penjelasan: 'Posisi pakaian atau benda di mana sisi bagian dalam berada di luar.',
+    penjelasan: 'Dipakai saat memakai baju terbalik (tag/bagian dalam ada di luar), atau kiasan untuk menyebut sifat yang jadi kebalikan dari aslinya.',
     contoh1: 'セーターを裏返しに着ている。\n(Dia memakai sweter secara terbalik dengan bagian dalam di luar.)',
     contoh2: '彼の攻撃的な態度は、弱さの裏返しだ。\n(Sikap agresifnya itu adalah cerminan kebalikan dari kelemahan hatinya.)'
   },
@@ -187,7 +187,7 @@ const kosakata_m8h6 = [
     kanji: 'あべこべ',
     furigana: 'あべこべ',
     arti: 'Berlawanan / Terbalik (posisi/urutan)',
-    penjelasan: 'Kondisi di mana urutan, posisi, atau arah bertukar secara total dari yang seharusnya.',
+    penjelasan: 'Kondisi saat urutan, arah, atau posisi suatu benda/hal benar-benar tertukar total dari yang seharusnya (misal: pakai sepatu kiri di kanan).',
     contoh1: '靴をあべこべに履いている。\n(Memakai sepatu secara terbalik antara kiri dan kanan.)',
     contoh2: '言うこととやることがあべこべだ。\n(Apa yang dikatakan dan apa yang dilakukan saling berlawanan.)'
   },
@@ -199,7 +199,7 @@ const kosakata_m8h6 = [
     kanji: '交互',
     furigana: 'こうご',
     arti: 'Secara bergantian',
-    penjelasan: 'Melakukan atau mengatur sesuatu secara bergiliran antara dua pihak atau hal.',
+    penjelasan: 'Dipakai saat kita melakukan suatu kegiatan atau mengatur sesuatu secara bergiliran / bergantian.',
     contoh1: '赤と青の線を交互に引く。\n(Menggambar garis merah dan biru secara bergantian.)',
     contoh2: '二人は交互に意見を言った。\n(Mereka berdua mengutarakan pendapat secara bergantian.)'
   },
@@ -211,7 +211,7 @@ const kosakata_m8h6 = [
     kanji: '互い違い',
     furigana: 'たがいちがい',
     arti: 'Berselang-seling',
-    penjelasan: 'Susunan posisi objek yang saling bergantian letaknya satu sama lain.',
+    penjelasan: 'Merujuk pada susunan posisi barang yang diletakkan secara berselang-seling atau zig-zag.',
     contoh1: '本を互い違いに重ねる。\n(Menumpuk buku secara berselang-seling.)',
     contoh2: '柄を互い違いに配置する。\n(Menyusun pola secara berselang-seling.)'
   },
@@ -223,7 +223,7 @@ const kosakata_m8h6 = [
     kanji: 'でこぼこ',
     furigana: 'でこぼこ',
     arti: 'Tidak rata / Bergelombang',
-    penjelasan: 'Permukaan suatu objek yang memiliki bagian menonjol dan cekung secara tidak beraturan.',
+    penjelasan: 'Kata sifat yang pas untuk menggambarkan permukaan yang tidak rata, bergelombang, atau bolong-bolong (seperti jalanan rusak).',
     contoh1: 'でこぼこした道。\n(Jalan yang tidak rata dan bergelombang.)',
     contoh2: '壁の表面がでこぼこしている。\n(Permukaan dindingnya tidak rata dan bergelombang.)'
   },
@@ -235,7 +235,7 @@ const kosakata_m8h6 = [
     kanji: 'じゃんけん',
     furigana: 'じゃんけん',
     arti: 'Suit Jepang (Batu-Gunting-Kertas)',
-    penjelasan: 'Permainan tangan tradisional untuk mengambil keputusan atau menentukan giliran.',
+    penjelasan: 'Sering banget dipakai! Ini adalah permainan batu-gunting-kertas ala Jepang untuk mengundi atau menentukan giliran.',
     contoh1: 'じゃんけんで決める。\n(Menentukannya melalui permainan suit.)',
     contoh2: 'じゃんけんをして勝った人が一番だ。\n(Orang yang menang dalam suit akan menjadi yang pertama.)'
   },
@@ -247,7 +247,7 @@ const kosakata_m8h6 = [
     kanji: '引き分け',
     furigana: 'ひきわけ',
     arti: 'Seri / Imbang',
-    penjelasan: 'Hasil akhir pertandingan di mana tidak ada pihak yang menang maupun kalah.',
+    penjelasan: 'Dipakai dalam pertandingan olahraga atau permainan saat hasilnya seri (tidak ada pihak yang menang atau kalah).',
     contoh1: '試合は引き分けに終わった。\n(Pertandingannya berakhir dengan hasil seri.)',
     contoh2: '0対0の引き分けだった。\n(Hasil akhirnya adalah imbang 0-0.)'
   },
@@ -259,7 +259,7 @@ const kosakata_m8h6 = [
     kanji: 'びり',
     furigana: 'びり',
     arti: 'Posisi paling akhir / Buncit',
-    penjelasan: 'Peringkat atau urutan paling bawah dalam suatu perlombaan atau penilaian.',
+    penjelasan: 'Kata kasual untuk menyebut posisi paling bontot alias juara terakhir dalam perlombaan, ujian, atau ranking.',
     contoh1: 'マラソンでびりになった。\n(Saya berada di posisi terakhir dalam lari maraton.)',
     contoh2: 'テストの成績がクラスでびりだった。\n(Nilai tes saya adalah yang paling bawah di kelas.)'
   },
@@ -271,7 +271,7 @@ const kosakata_m8h6 = [
     kanji: 'やせっぽち',
     furigana: 'やせっぽち',
     arti: 'Sangat kurus',
-    penjelasan: 'Sebutan untuk orang atau anak yang memiliki tubuh sangat kurus kering.',
+    penjelasan: 'Istilah kasual untuk menyebut orang (atau anak-anak) yang badannya kerempeng atau sangat kurus kering.',
     contoh1: '彼は子供の頃、やせっぽちだった。\n(Saat masih kecil, dia adalah anak yang kurus kering.)',
     contoh2: 'やせっぽちだから、もっと食べなさい。\n(Karena tubuhmu sangat kurus, makanlah yang lebih banyak.)'
   },
@@ -283,7 +283,7 @@ const kosakata_m8h6 = [
     kanji: 'デブ',
     furigana: 'でぶ',
     arti: 'Orang gemuk (istilah kasual/ejekan)',
-    penjelasan: 'Sebutan informal atau ejekan untuk orang yang berbadan gemuk.',
+    penjelasan: 'Kata gaul yang lumayan kasar untuk menyebut orang gemuk (gendut). Sebaiknya hati-hati menggunakannya karena bisa menyinggung.',
     contoh1: '彼はデブだとからかわれた。\n(Dia diejek sebagai orang gemuk.)',
     contoh2: 'デブにならないように運動する。\n(Saya berolahraga agar tidak menjadi gemuk.)'
   },
@@ -297,9 +297,9 @@ const kosakata_m8h6 = [
     kanji: 'よそ',
     furigana: 'よそ',
     arti: 'Pihak luar / Tempat lain',
-    penjelasan: 'Merujuk pada orang lain di luar keluarga sendiri, atau lingkungan/tempat yang berbeda.',
+    penjelasan: 'Merujuk pada tempat lain, keluarga lain, atau kelompok lain yang bukan bagian dari kita.',
     contoh1: 'よその人には分からない苦労がある。\n(Ada penderitaan yang tidak akan dimengerti oleh orang luar.)',
-    contoh2: 'よその子供を叱る。\n(Memarahi anak dari keluarga lain.)'
+    contoh2: 'よ所の子供を叱る。\n(Memarahi anak dari keluarga lain.)'
   },
   {
     id: 'm8h6_25',
@@ -309,7 +309,7 @@ const kosakata_m8h6 = [
     kanji: 'ただの人',
     furigana: 'ただのひと',
     arti: 'Orang biasa',
-    penjelasan: 'Seseorang yang tidak memiliki keistimewaan khusus atau bukan siapa-siapa (masyarakat awam).',
+    penjelasan: 'Dipakai untuk menyebut "orang awam biasa" yang tidak punya status spesial, jabatan, atau keahlian khusus.',
     contoh1: '彼は有名な俳優だが、普段はただの人だ。\n(Walaupun dia aktor terkenal, kesehariannya hanyalah orang biasa.)',
     contoh2: '私は天才ではなく、ただの人です。\n(Saya bukanlah orang jenius, melainkan hanya orang biasa.)'
   },
@@ -320,8 +320,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: '見知らぬ人',
     furigana: 'みしらぬひと',
-    arti: 'Orang asing / Orang yang tidak dikenal',
-    penjelasan: 'Seseorang yang belum pernah dilihat atau dikenal sebelumnya.',
+    arti: 'Orang asing / Orang tak dikenal',
+    penjelasan: 'Kata untuk menyebut orang asing yang belum pernah kita temui sama sekali (misal: orang yang nanya jalan).',
     contoh1: '見知らぬ人に道を尋ねられた。\n(Saya ditanya jalan oleh orang asing yang tidak saya kenal.)',
     contoh2: '見知らぬ人にはついていかないように。\n(Jangan pernah ikut pergi dengan orang yang tidak dikenal.)'
   },
@@ -332,8 +332,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: '赤の他人',
     furigana: 'あかのたにん',
-    arti: 'Orang yang sama sekali tidak dikenal',
-    penjelasan: 'Ungkapan untuk seseorang yang sama sekali tidak memiliki hubungan darah, kekerabatan, atau keterikatan apa pun.',
+    arti: 'Orang asing total',
+    penjelasan: 'Tingkatannya lebih dari orang asing biasa; artinya orang ini benar-benar tidak ada hubungan darah atau ikatan apapun dengan kita.',
     contoh1: '赤の他人からお金を借りることはできない。\n(Saya tidak bisa meminjam uang dari orang yang benar-benar asing.)',
     contoh2: '私たちは血が繋がっていない赤の他人だ。\n(Kita adalah orang asing total yang tidak memiliki hubungan darah.)'
   },
@@ -347,7 +347,7 @@ const kosakata_m8h6 = [
     kanji: '逆立ち',
     furigana: 'さかだち',
     arti: 'Berdiri dengan tangan (Handstand)',
-    penjelasan: 'Posisi tubuh terbalik dengan tangan di bawah menopang berat badan dan kaki di atas.',
+    penjelasan: 'Dipakai untuk gerakan senam berdiri terbalik bertumpu pada tangan, atau sebagai ungkapan "meski jungkir balik berusaha" untuk hal mustahil.',
     contoh1: '逆立ちをして歩く。\n(Berjalan dengan posisi tangan di bawah / handstand.)',
     contoh2: '逆立ちしても彼には勝てない。\n(Meskipun jungkir balik berusaha, saya tetap tidak bisa mengalahkannya.)'
   },
@@ -359,7 +359,7 @@ const kosakata_m8h6 = [
     kanji: '逆さま',
     furigana: 'さかさま',
     arti: 'Posisi terbalik (atas-bawah)',
-    penjelasan: 'Kondisi suatu benda di mana bagian atas dan bawahnya bertukar posisi.',
+    penjelasan: 'Gunakan saat posisi atas dan bawah suatu benda tertukar (misal: lukisan dipasang terbalik atau menumpahkan isi tas).',
     contoh1: '絵が逆さまに掛かっている。\n(Lukisan itu digantung dalam posisi terbalik.)',
     contoh2: 'カバンを逆さまにして探す。\n(Membalikkan posisi tas untuk mencari barang.)'
   },
@@ -370,8 +370,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: '共稼ぎ',
     furigana: 'ともがせぎ',
-    arti: 'Suami istri bekerja / Dual income',
-    penjelasan: 'Kondisi di mana kedua pasangan (suami dan istri) sama-sama bekerja mencari nafkah.',
+    arti: 'Suami istri sama-sama bekerja',
+    penjelasan: 'Kata untuk mendeskripsikan keluarga di mana suami dan istri dua-duanya bekerja mencari uang (dual income).',
     contoh1: '私の両親は共稼ぎです。\n(Kedua orang tua saya sama-sama bekerja.)',
     contoh2: '結婚後は共稼ぎをする予定だ。\n(Setelah menikah, kami berencana untuk sama-sama bekerja.)'
   },
@@ -383,7 +383,7 @@ const kosakata_m8h6 = [
     kanji: '共働き',
     furigana: 'ともばたらき',
     arti: 'Suami istri bekerja',
-    penjelasan: 'Sinonim dari 共稼ぎ, merujuk pada keluarga di mana suami dan istri sama-sama bekerja.',
+    penjelasan: 'Artinya sama persis dengan "tomogasegi", yaitu suami istri sama-sama berkarier. Kosakata ini sedikit lebih umum dipakai sehari-hari.',
     contoh1: '共働き家庭が増えている。\n(Keluarga dengan suami-istri yang sama-sama bekerja sedang meningkat.)',
     contoh2: '私たちは共働きで家事を分担している。\n(Kami sama-sama bekerja, jadi kami membagi tugas rumah tangga.)'
   },
@@ -394,8 +394,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'あいこ',
     furigana: 'あいこ',
-    arti: 'Hasil imbang',
-    penjelasan: 'Situasi seri dalam permainan atau kompetisi.',
+    arti: 'Hasil imbang / Seri',
+    penjelasan: 'Sering kamu dengar saat main janken (suit), dipakai saat hasilnya seri (misal sama-sama ngeluarin batu).',
     contoh1: 'じゃんけんはあいこだった。\n(Permainan suit tersebut berakhir imbang.)',
     contoh2: 'これでお互いにおあいこだね。\n(Dengan begini, kita berdua impas ya.)'
   },
@@ -406,8 +406,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'しまい',
     furigana: 'しまい',
-    arti: 'Selesai / Berakhir',
-    penjelasan: 'Menyatakan bahwa suatu kegiatan atau hal telah usai.',
+    arti: 'Selesai / Tamat',
+    penjelasan: 'Gunakan untuk menyatakan bahwa suatu kegiatan sudah usai, atau ancaman halus bahwa semuanya "berakhirlah sudah".',
     contoh1: '今日の授業はこれでおしまいです。\n(Pelajaran hari ini selesai sampai di sini.)',
     contoh2: 'バレたらおしまいだ。\n(Kalau sampai ketahuan, berakhirlah sudah.)'
   },
@@ -419,7 +419,7 @@ const kosakata_m8h6 = [
     kanji: '似合い',
     furigana: 'にあい',
     arti: 'Serasi / Cocok',
-    penjelasan: 'Kesesuaian yang baik antara pakaian dengan pemakainya, atau kecocokan antar-pasangan.',
+    penjelasan: 'Kata pujian andalan saat melihat baju yang sangat cocok dipakai seseorang, atau melihat pasangan kekasih yang serasi banget.',
     contoh1: '二人はとてもお似合いのカップルだ。\n(Mereka berdua adalah pasangan yang sangat serasi.)',
     contoh2: 'そのドレス、あなたにお似合いですよ。\n(Gaun itu sangat cocok untukmu.)'
   },
@@ -433,7 +433,7 @@ const kosakata_m8h6 = [
     kanji: '恋愛',
     furigana: 'れんあい',
     arti: 'Percintaan / Romansa',
-    penjelasan: 'Hubungan perasaan kasih sayang dan ketertarikan romantis antar-individu.',
+    penjelasan: 'Merujuk pada hal-hal yang berhubungan dengan cinta, romansa, atau asmara antar pasangan (misal: novel cinta).',
     contoh1: '彼らは恋愛結婚だ。\n(Mereka menikah atas dasar cinta.)',
     contoh2: '恋愛小説を読むのが好きだ。\n(Saya suka membaca novel percintaan.)'
   },
@@ -444,8 +444,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: '交際',
     furigana: 'こうさい',
-    arti: 'Berpacaran / Hubungan sosial',
-    penjelasan: 'Menjalin hubungan asmara dengan seseorang, atau berinteraksi sosial dengan orang lain.',
+    arti: 'Berpacaran / Bergaul',
+    penjelasan: 'Punya dua arti: bisa berarti pacaran (hubungan asmara yang serius), atau interaksi sosial/bergaul dengan rekan & tetangga.',
     contoh1: '二人は交際している。\n(Mereka berdua sedang menjalin hubungan asmara.)',
     contoh2: '近所の人と交際する。\n(Berinteraksi dan bersosialisasi dengan tetangga.)'
   },
@@ -457,7 +457,7 @@ const kosakata_m8h6 = [
     kanji: 'きっかけ',
     furigana: 'きっかけ',
     arti: 'Pemicu / Awal mula',
-    penjelasan: 'Faktor atau kejadian awal yang menjadi penyebab dimulainya sesuatu.',
+    penjelasan: 'Dipakai untuk menyebut pemicu, alasan, atau "batu loncatan" awal mula kita melakukan suatu hobi atau pekerjaan.',
     contoh1: '日本語を勉強し始めたきっかけはアニメです。\n(Awal mula saya mulai belajar bahasa Jepang adalah anime.)',
     contoh2: 'これがきっかけで交際が始まった。\n(Kejadian inilah yang memicu dimulainya hubungan mereka.)'
   },
@@ -469,7 +469,7 @@ const kosakata_m8h6 = [
     kanji: 'なれそめ',
     furigana: 'なれそめ',
     arti: 'Awal mula kisah cinta',
-    penjelasan: 'Cerita atau kronologi bagaimana dua orang pertama kali bertemu hingga akhirnya saling jatuh cinta.',
+    penjelasan: 'Kata khusus untuk menanyakan atau menceritakan awal mula romantis dua orang bertemu sampai akhirnya jatuh cinta.',
     contoh1: '二人のなれそめを教えてください。\n(Tolong ceritakan bagaimana awal mula kisah cinta kalian berdua.)',
     contoh2: 'なれそめは大学のサークルだった。\n(Awal perjumpaan romansa mereka adalah di klub universitas.)'
   },
@@ -481,7 +481,7 @@ const kosakata_m8h6 = [
     kanji: '初対面',
     furigana: 'しょたいめん',
     arti: 'Pertemuan pertama',
-    penjelasan: 'Pengalaman pertama kali bertatap muka atau berkenalan dengan seseorang.',
+    penjelasan: 'Gunakan saat kamu baru pertama kali bertatap muka atau berkenalan langsung dengan seseorang.',
     contoh1: '初対面の人と話すのは緊張する。\n(Berbicara dengan orang yang baru pertama kali ditemui membuat saya gugup.)',
     contoh2: '彼とは今日が初対面です。\n(Hari ini adalah pertemuan pertama saya dengannya.)'
   },
@@ -493,7 +493,7 @@ const kosakata_m8h6 = [
     kanji: '一目ぼれ',
     furigana: 'ひとめぼれ',
     arti: 'Cinta pada pandangan pertama',
-    penjelasan: 'Langsung jatuh cinta kepada seseorang seketika pada pandangan pertama.',
+    penjelasan: 'Dipakai saat kamu langsung naksir dan jatuh cinta pada seseorang seketika pada pandangan pertama.',
     contoh1: '彼女に一目ぼれした。\n(Saya jatuh cinta kepadanya pada pandangan pertama.)',
     contoh2: '一目ぼれから始まった恋。\n(Cinta yang bermula dari pandangan pertama.)'
   },
@@ -504,8 +504,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: '見合い',
     furigana: 'みあい',
-    arti: 'Perjodohan formal (Omiai)',
-    penjelasan: 'Pertemuan formal yang diatur untuk mempertimbangkan prospek pernikahan.',
+    arti: 'Perjodohan formal',
+    penjelasan: 'Merujuk pada tradisi "Omiai" di Jepang, di mana pria dan wanita dipertemukan secara resmi untuk tujuan menikah.',
     contoh1: 'お見合いで結婚した。\n(Mereka menikah melalui proses perjodohan.)',
     contoh2: '週末にお見合いをする予定だ。\n(Akhir pekan ini saya dijadwalkan mengikuti pertemuan perjodohan.)'
   },
@@ -517,7 +517,7 @@ const kosakata_m8h6 = [
     kanji: '浮気',
     furigana: 'うわき',
     arti: 'Perselingkuhan',
-    penjelasan: 'Tindakan mengkhianati pasangan sah atau pacar dengan menjalin hubungan asmara dengan orang lain.',
+    penjelasan: 'Kata untuk menyebut perselingkuhan atau tindakan main serong dari pasangan yang sudah sah atau pacar.',
     contoh1: '彼の浮気が原因で別れた。\n(Mereka berpisah akibat perselingkuhan pria tersebut.)',
     contoh2: '浮気をする人は信用できない。\n(Orang yang berselingkuh tidak dapat dipercaya.)'
   },
@@ -529,7 +529,7 @@ const kosakata_m8h6 = [
     kanji: '再婚',
     furigana: 'さいこん',
     arti: 'Menikah lagi',
-    penjelasan: 'Melangsungkan pernikahan kembali setelah bercerai atau ditinggal wafat pasangan sebelumnya.',
+    penjelasan: 'Dipakai saat seseorang menikah lagi (pernikahan kedua atau seterusnya) setelah bercerai atau ditinggal mati pasangannya.',
     contoh1: '母は5年前に再婚した。\n(Ibu saya telah menikah lagi 5 tahun yang lalu.)',
     contoh2: '彼らは再婚同士だ。\n(Mereka berdua adalah pasangan yang sama-sama pernah menikah sebelumnya.)'
   },
@@ -540,8 +540,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'ナンパ',
     furigana: 'なんぱ',
-    arti: 'Menggoda orang asing di jalan (Street scouting)',
-    penjelasan: 'Tindakan mendekati atau merayu orang asing (biasanya wanita) di tempat umum secara spontan.',
+    arti: 'Menggoda / Ngajak kenalan orang asing',
+    penjelasan: 'Kata gaul untuk aksi menggoda, merayu, atau ngajak kenalan orang tak dikenal (biasanya perempuan) di jalan/tempat umum.',
     contoh1: '道でナンパされた。\n(Saya digoda oleh seseorang di jalan.)',
     contoh2: '海へナンパしに行く。\n(Pergi ke pantai untuk mencoba merayu gadis-gadis.)'
   },
@@ -552,8 +552,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'バツイチ',
     furigana: 'ばついち',
-    arti: 'Pernah bercerai sekali (Status)',
-    penjelasan: 'Istilah kasual untuk seseorang yang memiliki catatan satu kali perceraian pada dokumen keluarga.',
+    arti: 'Pernah bercerai satu kali',
+    penjelasan: 'Istilah kasual/populer untuk menyebut seseorang yang berstatus janda atau duda karena pernah bercerai satu kali.',
     contoh1: '彼はバツイチです。\n(Dia adalah seorang duda yang pernah bercerai satu kali.)',
     contoh2: 'バツイチでも気にしない。\n(Meskipun berstatus pernah bercerai, saya tidak mempermasalahkannya.)'
   },
@@ -566,8 +566,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'つじつま',
     furigana: 'つじつま',
-    arti: 'Kesesuaian / Logika cerita yang runtut',
-    penjelasan: 'Keterkaitan yang logis dan konsisten antar-bagian dalam suatu penjelasan atau cerita.',
+    arti: 'Kesesuaian logika / Masuk akal',
+    penjelasan: 'Digunakan untuk membicarakan apakah suatu alasan atau cerita itu masuk akal, sinkron, dan logis dari awal sampai akhir.',
     contoh1: '話のつじつまが合わない。\n(Logika ceritanya saling bertentangan / tidak masuk akal.)',
     contoh2: '嘘をつくと、どこかでつじつまが合わなくなる。\n(Jika berbohong, pada akhirnya logika cerita tersebut akan menjadi tidak sinkron.)'
   },
@@ -579,9 +579,9 @@ const kosakata_m8h6 = [
     kanji: 'ひずみ',
     furigana: 'ひずみ',
     arti: 'Distorsi / Keretakan / Dampak buruk',
-    penjelasan: 'Kerusakan bentuk akibat tekanan, atau dampak negatif jangka panjang yang timbul dari kebijakan/situasi yang tidak seimbang.',
+    penjelasan: 'Dipakai untuk menyebut dampak buruk, ketidakseimbangan, atau keretakan (baik secara fisik bangunan maupun sistem sosial/ekonomi).',
     contoh1: '地震でひずみが発生する。\n(Keretakan atau deformasi muncul akibat gempa bumi.)',
-    contoh2: '無理な経済政策のひずみ。\n(Dampak buruk distorsi yang timbul akibat kebijakan ekonomi yang dipaksakan.)'
+    contoh2: '無理な経済政策のひずみ。\n(Dampak buruk/distorsi yang timbul akibat kebijakan ekonomi yang dipaksakan.)'
   },
   {
     id: 'm8h6_48',
@@ -591,7 +591,7 @@ const kosakata_m8h6 = [
     kanji: 'はり',
     furigana: 'はり',
     arti: 'Kekencangan / Elastisitas kulit',
-    penjelasan: 'Kondisi kulit yang kencang, segar, dan kenyal.',
+    penjelasan: 'Sering muncul di iklan kecantikan; kata ini merujuk pada kekencangan, kelembapan, dan elastisitas kulit agar tampak awet muda.',
     contoh1: '張りのある肌。\n(Kulit wajah yang kencang dan elastis.)',
     contoh2: '毎日のケアで肌のはりを保つ。\n(Menjaga kekencangan kulit dengan perawatan rutin setiap hari.)'
   },
@@ -603,7 +603,7 @@ const kosakata_m8h6 = [
     kanji: 'つや',
     furigana: 'つや',
     arti: 'Kilau / Kilap',
-    penjelasan: 'Permukaan yang memantulkan cahaya dengan sehat dan bersih (seperti pada rambut atau benda yang dipoles).',
+    penjelasan: 'Juga sering ada di produk kecantikan atau semir; merujuk pada kilau sehat bercahaya pada rambut, kulit, atau benda yang mengkilap.',
     contoh1: 'つやのある髪。\n(Rambut yang memiliki kilauan sehat.)',
     contoh2: '磨くと靴につやが出る。\n(Jika disemir, sepatu akan memancarkan kilau.)'
   },
@@ -615,7 +615,7 @@ const kosakata_m8h6 = [
     kanji: 'こつ',
     furigana: 'こつ',
     arti: 'Kiat / Trik / Rahasia keahlian',
-    penjelasan: 'Cara praktis atau teknik khusus untuk menguasai sesuatu dengan mudah dan efisien.',
+    penjelasan: 'Sangat berguna! Dipakai untuk menyebut "trik" atau rahasia keahlian supaya bisa melakukan sesuatu dengan lebih mudah dan mahir.',
     contoh1: '仕事のこつをつかむ。\n(Menguasai kiat atau trik dalam bekerja.)',
     contoh2: '自転車に乗るこつを教える。\n(Mengajarkan trik cara mengendarai sepeda.)'
   },
@@ -626,8 +626,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'めど',
     furigana: 'めど',
-    arti: 'Perkiraan / Titik terang penyelesaian',
-    penjelasan: 'Gambaran atau estimasi mengenai kapan suatu target atau pekerjaan akan tercapai/selesai.',
+    arti: 'Perkiraan / Titik terang',
+    penjelasan: 'Gunakan saat kamu membuat perkiraan, target waktu, atau melihat ada kejelasan kapan suatu masalah/pekerjaan bisa selesai.',
     contoh1: '復旧のめどがたつ。\n(Terdapat titik terang mengenai perkiraan waktu pemulihan.)',
     contoh2: '資金調達のめどが立っていない。\n(Belum ada kepastian atau titik terang mengenai penggalangan dana.)'
   },
@@ -638,8 +638,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'ゆとり',
     furigana: 'ゆとり',
-    arti: 'Kelonggaran / Kecukupan (waktu/finansial)',
-    penjelasan: 'Kondisi yang memiliki sisa atau keleluasaan, baik dari segi waktu, ruang, maupun finansial.',
+    arti: 'Kelonggaran / Keleluasaan',
+    penjelasan: 'Dipakai saat kamu punya "sisa" kelonggaran, misalnya waktu bersantai yang cukup, uang yang lebih, atau perasaan yang tidak terburu-buru.',
     contoh1: 'ゆとりのある生活。\n(Gaya hidup yang mapan dan tidak terburu-buru.)',
     contoh2: '予算にゆとりがある。\n(Terdapat kelonggaran atau kelebihan dana pada anggaran.)'
   },
@@ -651,7 +651,7 @@ const kosakata_m8h6 = [
     kanji: 'ぐち',
     furigana: 'ぐち',
     arti: 'Keluhan / Gerutuan',
-    penjelasan: 'Ungkapan ketidakpuasan atau kejengkelan yang diutarakan secara lisan.',
+    penjelasan: 'Artinya keluhan. Dipakai saat seseorang ngomel, menggerutu, atau curhat karena kesal pada suatu keadaan atau orang lain.',
     contoh1: '上司のぐちを言う。\n(Mengeluhkan atau menggerutu tentang atasan di kantor.)',
     contoh2: '友達にぐちをこぼす。\n(Melontarkan keluhan-keluhan kepada teman.)'
   },
@@ -662,8 +662,8 @@ const kosakata_m8h6 = [
     kategori: 'kata benda',
     kanji: 'ねた',
     furigana: 'ねた',
-    arti: 'Bahan pembicaraan / Topping sushi',
-    penjelasan: 'Topik informasi untuk diangkat dalam cerita/berita, atau bahan utama lauk di atas sushi.',
+    arti: 'Topik cerita / Topping sushi',
+    penjelasan: 'Bisa berarti bahan obrolan lucu/menarik supaya percakapan seru, atau berarti irisan bahan utama (ikan, seafood) di atas nasi sushi.',
     contoh1: '面白い話のねたがある。\n(Saya mempunyai bahan topik cerita yang menarik.)',
     contoh2: 'すしのねたが新鮮だ。\n(Topping ikan pada sushinya sangat segar.)'
   }
