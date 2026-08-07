@@ -10,9 +10,9 @@ const kosakata_m3h5 = [
     kanji: '至って',
     furigana: 'いたって',
     arti: 'Sangat / Amat',
-    penjelasan: 'Digunakan untuk menyatakan sesuatu keadaan yang mencapai tahap atau darjah yang sangat tinggi. Perkataan ini biasanya digunakan dalam konteks yang positif atau untuk menerangkan keadaan normal yang melebihi kebiasaan.',
-    contoh1: '母は、至って元気です。\n(Ibu saya amat sihat/berada dalam keadaan yang sangat baik.)',
-    contoh2: '彼は至ってまじめな青年だ。\n(Dia adalah seorang pemuda yang sangat serius dan jujur.)'
+    penjelasan: 'Dipakai untuk menunjukkan kondisi yang sangat tinggi atau melebihi batas normal (biasanya untuk hal yang positif).',
+    contoh1: '母は、至って元気です。\n(Ibu saya amat sihat.)',
+    contoh2: '彼は至ってまじめな青年だ。\n(Dia adalah pemuda yang sangat serius.)'
   },
   {
     id: 'm3h5_2',
@@ -21,10 +21,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'いかにも',
     furigana: 'いかにも',
-    arti: 'Memang / Benar-benar / Tipikal',
-    penjelasan: 'Digunakan untuk menekankan bahawa sesuatu itu sangat menepati ciri-ciri tertentu atau kelihatan jelas menyerupai sesuatu keadaan. Ia memberi nuansa "sepertimana yang dijangkakan" atau "sangat tipikal".',
-    contoh1: '社長の考えはいかにも日本的だ。\n(Cara pemikiran presiden memang sangat tipikal gaya Jepun.)',
-    contoh2: '彼はいかにも学者らしい服装をしている。\n(Pakaiannya benar-benar menampakkan ciri khas seorang cendekiawan.)'
+    arti: 'Memang / Benar-benar / Khas',
+    penjelasan: 'Dipakai untuk menunjukkan sesuatu yang sangat cocok, pas, atau sesuai dengan ciri-ciri aslinya (seperti yang dibayangkan).',
+    contoh1: '社長の考えはいかにも日本的だ。\n(Cara pemikiran bos benar-benar gaya orang Jepang.)',
+    contoh2: '彼はいかにも学者らしい服装をしている。\n(Pakaiannya benar-benar mirip seorang ilmuwan.)'
   },
   {
     id: 'm3h5_3',
@@ -33,10 +33,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'いかに',
     furigana: 'いかに',
-    arti: 'Walau betapa (sekalipun) / Bagaimana',
-    penjelasan: 'Biasanya digunakan bersama dengan bentuk "~ても" (walaupun) untuk menunjukkan kesia-siaan suatu usaha tanpa mengira betapa kuatnya tindakan tersebut dilakukan. Membawa maksud yang sama dengan "どれほど" (sejauh mana/betapa banyak).',
-    contoh1: 'いかに（＝どれほど）努力してもできないだろう。\n(Walau betapa kuat saya berusaha sekalipun, saya mungkin tidak akan berjaya.)',
-    contoh2: 'いかに困難な状況でも諦めない。\n(Walau betapa sukarnya keadaan sekalipun, saya tidak akan berputus asa.)'
+    arti: 'Walau betapa pun / Bagaimana',
+    penjelasan: 'Biasanya dipakai bersama bentuk "~ても" (walaupun) untuk menyatakan "meskipun sudah berusaha sekuat tenaga, hasilnya tetap sama".',
+    contoh1: 'いかに努力してもできないだろう。\n(Walau betapa pun saya berusaha, mungkin tidak akan bisa.)',
+    contoh2: 'いかに困難な状況でも諦めない。\n(Walau sesulit apa pun situasinya, saya tidak akan menyerah.)'
   },
   {
     id: 'm3h5_4',
@@ -45,10 +45,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'いやに',
     furigana: 'いやに',
-    arti: 'Sangat (secara aneh) / Terlalu',
-    penjelasan: 'Menggambarkan keadaan yang berbeza secara ketara daripada kebiasaan, sehingga dirasakan agak aneh, pelik, atau luar biasa oleh penutur.',
-    contoh1: '今日はいやに暑い。\n(Hari ini sangat panas secara luar biasa berbanding biasa.)',
-    contoh2: '子どもたちがいやにおとなしい。\n(Kanak-kanak itu sangat pendiam, sungguh pelik/aneh.)'
+    arti: 'Terlalu / Sangat (terasa aneh)',
+    penjelasan: 'Dipakai saat sesuatu hal terasa sangat berlebihan dari biasanya, sehingga membuat kita merasa agak aneh atau heran.',
+    contoh1: '今日はいやに暑い。\n(Hari ini panasnya terasa aneh/tidak seperti biasanya.)',
+    contoh2: '子どもたちがいやにおとなしい。\n(Anak-anak sangat pendiam, tumben sekali.)'
   },
   {
     id: 'm3h5_5',
@@ -57,10 +57,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'さも',
     furigana: 'さも',
-    arti: 'Seolah-olah / Benar-benar',
-    penjelasan: 'Digunakan untuk menggambarkan perbuatan atau ekspresi seseorang yang jelas menunjukkan sesuatu emosi atau keadaan yang sangat nyata (mirip dengan いかにも). Kerap kali diekspresikan dengan kata "～そうに". Boleh juga bermaksud ungkapan "benar juga" (さもありなん).',
-    contoh1: '彼はさも（＝いかにも）うれしそうに笑った。\n(Dia tersenyum gembira, seolah-olah benar-benar rasa sangat puas hati.)',
-    contoh2: 'さも知っているかのように話す。\n(Dia bercakap seolah-olah dia benar-benar mengetahui semua tentang hal itu.)'
+    arti: 'Seolah-olah / Seakan-akan',
+    penjelasan: 'Dipakai untuk menunjukkan sikap atau ekspresi seseorang yang kelihatan sangat menjiwai sesuatu hal (biasanya diikuti pola "~そうに").',
+    contoh1: '彼はさもうれしそうに笑った。\n(Dia tersenyum gembira seolah-olah sangat puas.)',
+    contoh2: 'さも知っているかのように話す。\n(Dia berbicara seakan-akan dia tahu segalanya.)'
   },
   {
     id: 'm3h5_6',
@@ -69,10 +69,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: '何より',
     furigana: 'なにより',
-    arti: 'Lebih daripada segalanya / Paling',
-    penjelasan: 'Satu frasa yang digunakan untuk menyatakan bahawa sesuatu perkara itu adalah yang terbaik, paling penting, atau paling menggembirakan tanpa tandingan berbanding dengan perkara-perkara lain.',
-    contoh1: '合格して何よりうれしい。\n(Saya paling gembira kerana lulus, lebih daripada perkara yang lain.)',
-    contoh2: 'あなたが無事で何よりです。\n(Keselamatan awak adalah yang paling penting lebih daripada segalanya.)'
+    arti: 'Paling utama / Lebih dari segalanya',
+    penjelasan: 'Menyatakan bahwa sesuatu hal adalah yang paling penting, paling membahagiakan, atau paling utama dibanding yang lain.',
+    contoh1: '合格して何よりうれしい。\n(Lulus adalah hal yang paling membuatku senang.)',
+    contoh2: 'あなたが無事で何よりです。\n(Kamu selamat adalah hal yang paling penting.)'
   },
   {
     id: 'm3h5_7',
@@ -81,10 +81,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'とりわけ',
     furigana: 'とりわけ',
-    arti: 'Terutamanya / Khususnya',
-    penjelasan: 'Perkataan ini memberikan penekanan kepada satu perkara tertentu yang sangat menonjol jika dibandingkan di antara banyak perkara lain dalam kategori yang sama. Maknanya bersinonim dengan "特に" (tokuni).',
-    contoh1: 'とりわけ（＝特に）ビールが好きだ。\n(Saya suka minuman keras, tetapi saya terutamanya sangat suka bir.)',
-    contoh2: '今年の夏はとりわけ暑い。\n(Musim panas tahun ini terutamanya sangat panas berbanding tahun-tahun lepas.)'
+    arti: 'Terutama / Khususnya',
+    penjelasan: 'Dipakai untuk memilih satu hal yang paling menonjol atau paling penting di antara banyak hal lainnya.',
+    contoh1: 'とりわけビールが好きだ。\n(Saya suka minuman, tapi terutama paling suka bir.)',
+    contoh2: '今年の夏はとりわけ暑い。\n(Musim panas tahun ini terasa sangat panas dibanding biasanya.)'
   },
   {
     id: 'm3h5_8',
@@ -94,9 +94,9 @@ const kosakata_m3h5 = [
     kanji: 'ことに',
     furigana: 'ことに',
     arti: 'Terutama sekali / Khususnya',
-    penjelasan: 'Digunakan untuk menunjukkan bahawa sesuatu hal adalah sangat luar biasa dan berada pada tahap yang paling ketara di antara yang lain. Mempunyai maksud penekanan yang serupa dengan "特に" atau "とりわけ".',
-    contoh1: 'この小説はことに（＝特に、とりわけ）面白い。\n(Novel ini terutama sekali sangat menarik jalan ceritanya.)',
-    contoh2: '彼女はことに語学に優れている。\n(Dia sangat cemerlang terutama sekali di dalam bidang bahasa.)'
+    penjelasan: 'Hampir sama dengan "とりわけ" atau "特に", dipakai untuk menekankan kondisi yang paling mencolok.',
+    contoh1: 'この小説はことに面白い。\n(Novel ini terutama sekali sangat menarik.)',
+    contoh2: '彼女はことに語学に優れている。\n(Dia sangat unggul, terutama dalam bidang bahasa.)'
   },
   {
     id: 'm3h5_9',
@@ -105,10 +105,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'さぞ / さぞかし',
     furigana: 'さぞ / さぞかし',
-    arti: 'Pastinya / Tentu sekali',
-    penjelasan: 'Keterangan yang digunakan untuk membuat kesimpulan, tekaan, atau untuk bersimpati dengan situasi dan perasaan seseorang dengan keyakinan yang tinggi. Pada kebiasaannya diletakkan bersama imbuhan tekaan di hujung ayat seperti "～だろう" atau "～でしょう".',
-    contoh1: 'ご両親はさぞ（かし）お喜びでしょう。\n(Ibu bapa kamu pastinya akan sangat bergembira mendengarnya.)',
-    contoh2: '長い旅で、さぞお疲れになったことでしょう。\n(Perjalanan yang jauh, anda tentu sekali berasa sangat penat.)'
+    arti: 'Pasti / Tentu saja',
+    penjelasan: 'Dipakai untuk menebak atau membayangkan perasaan orang lain dengan tingkat keyakinan yang tinggi (biasanya diakhiri "~だろう").',
+    contoh1: 'ご両親はさぞお喜びでしょう。\n(Orang tuamu pasti akan sangat gembira.)',
+    contoh2: '長い旅で、さぞお疲れになったことでしょう。\n(Perjalanan jauh, kamu pasti sangat lelah ya.)'
   },
   {
     id: 'm3h5_10',
@@ -117,10 +117,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'よほど / よっぽど',
     furigana: 'よほど / よっぽど',
-    arti: 'Sangat (ketara) / Hampir-hampir',
-    penjelasan: 'Membawa dua peranan: yang pertama menunjukkan kualiti/keadaan yang sangat tinggi hingga melebihi tahap biasa. Yang kedua menyatakan bahawa niat seseorang hampir sahaja diterjemahkan ke dalam bentuk perbuatan ekstrem ("hampir-hampir sahaja"). "よっぽど" adalah varian percakapan santai.',
-    contoh1: 'あの荷物はよほど重いようだ。\n(Bungkusan/bagasi itu kelihatan sangat berat sekali.)',
-    contoh2: 'よっぽど国に帰ろうかと思った。\n(Saya hampir-hampir terfikir untuk berkemas dan pulang ke negara asal.)'
+    arti: 'Sangat sekali / Hampir saja',
+    penjelasan: 'Menyatakan tingkat kondisi yang sangat kuat, atau bermaksud "hampir saja melakukan sesuatu". "よっぽど" bentuk santainya.',
+    contoh1: 'あの荷物はよほど重いようだ。\n(Barang itu kelihatannya berat sekali.)',
+    contoh2: 'よっぽど国に帰ろうかと思った。\n(Saya tadi hampir-hampir berpikir mau pulang kampung saja.)'
   },
   {
     id: 'm3h5_11',
@@ -129,10 +129,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'なおさら',
     furigana: 'なおさら',
-    arti: 'Lebih-lebih lagi / Semakin',
-    penjelasan: 'Digunakan untuk menunjukkan keadaan sesuatu hal yang sudah sedia wujud kini bertambah kuat, menjadi lebih ketara, atau semakin parah dengan wujudnya situasi yang menyokong pertambahan itu. Mirip dengan "ますます".',
-    contoh1: 'だめだと言われると、なおさら（＝ますます）やりたくなる。\n(Apabila diberitahu ianya tidak dibenarkan, saya jadi lebih-lebih lagi ingin melakukannya.)',
-    contoh2: '夜になって雨が降り、道はなおさら悪くなった。\n(Hujan turun menjelang malam, dan laluan tersebut menjadi bertambah teruk/semakin berbahaya.)'
+    arti: 'Semakin / Lebih-lebih lagi',
+    penjelasan: 'Dipakai saat suatu keadaan sudah parah/bagus, lalu ditambah situasi lain yang membuat kondisinya menjadi semakin kuat.',
+    contoh1: 'だめだと言われると、なおさらやりたくなる。\n(Kalau dibilang jangan, malah jadi semakin ingin melakukannya.)',
+    contoh2: '雨が降り、道はなおさら悪くなった。\n(Hujan turun, jalannya jadi semakin bertambah parah.)'
   },
   {
     id: 'm3h5_12',
@@ -141,10 +141,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'まさしく',
     furigana: 'まさしく',
-    arti: 'Tepat sekali / Sememangnya',
-    penjelasan: 'Dipakai semasa penutur mempunyai tahap keyakinan mutlak bahawa fakta tersebut adalah benar, asli dan mustahil untuk disangkal oleh mana-mana pihak.',
-    contoh1: 'これはまさしく本物のダイヤです。\n(Ini sememangnya adalah permata berlian yang asli tanpa keraguan.)',
-    contoh2: 'その時の状況は、まさしく地獄のようだった。\n(Keadaan pada masa kejadian itu, tepat sekali kelihatan seperti suasana di neraka.)'
+    arti: 'Benar-benar / Tepat sekali',
+    penjelasan: 'Dipakai saat kita merasa 100% yakin bahwa suatu hal adalah fakta yang asli dan tidak bisa dibantah.',
+    contoh1: 'これはまさしく本物のダイヤです。\n(Ini benar-benar berlian asli.)',
+    contoh2: 'その時の状況は、まさしく地獄のようだった。\n(Situasi waktu itu benar-benar seperti di neraka.)'
   },
   {
     id: 'm3h5_13',
@@ -154,9 +154,9 @@ const kosakata_m3h5 = [
     kanji: 'まして',
     furigana: 'まして',
     arti: 'Apatah lagi / Apalagi',
-    penjelasan: 'Struktur logik yang digunakan untuk menekankan bahawa sekiranya suatu situasi A (yang lebih ringan/mudah) pun tidak mungkin berlaku, maka apatah lagi situasi B (yang jauh lebih sukar atau lebih luar biasa).',
-    contoh1: '大人でもできないのだから、まして子どもには無理だ。\n(Golongan dewasa pun tidak berupaya menyelesaikannya, apatah lagi kanak-kanak, sudah pasti mustahil bagi mereka.)',
-    contoh2: '英語も話せないのに、ましてフランス語などわかるはずがない。\n(Bahasa Inggeris pun saya tidak fasih, apatah lagi bahasa Perancis, sudah tentu saya tidak faham langsung.)'
+    penjelasan: 'Rumus logika: Kalau hal yang mudah saja tidak bisa, "apalagi" hal yang jauh lebih susah, sudah pasti tidak bisa.',
+    contoh1: '大人でもできないのだから、まして子どもには無理だ。\n(Orang dewasa saja tidak bisa, apalagi anak-anak, pasti tidak mampu.)',
+    contoh2: '英語も話せないのに、ましてフランス語などわかるはずがない。\n(Bahasa Inggris saja tidak bisa, apalagi bahasa Prancis.)'
   },
   {
     id: 'm3h5_14',
@@ -165,10 +165,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'やけに / やたらに / やたらと',
     furigana: 'やけに / やたらに / やたらと',
-    arti: 'Terlalu sangat / Keterlaluan / Tanpa had',
-    penjelasan: 'Merujuk kepada sesuatu tindakan, tahap perasaan, atau kuantiti yang melampaui batas kewarasan dan berlaku secara berlebihan tanpa ada sebarang sekatan. Selalunya ia melambangkan rasa kurang selesa penutur.',
-    contoh1: '今日はやけにのどが渇くなあ。\n(Entah mengapa saya berasa sangat haus dengan keterlaluan hari ini.)',
-    contoh2: '最近、やたらに（やたらと）寝汗をかく。\n(Mutakhir ini, saya selalu berpeluh tanpa kawalan semasa sedang tidur lelap.)'
+    arti: 'Terlalu berlebihan / Sembarangan',
+    penjelasan: 'Menunjukkan sesuatu yang terjadi secara berlebihan, kelewatan batas, atau tidak wajar (biasanya bernada negatif).',
+    contoh1: '今日はやけにのどが渇く。\n(Hari ini tenggorokan terasa haus sekali secara tidak wajar.)',
+    contoh2: '最近、やたらに寝汗をかく。\n(Akhir-akhir ini saya sering keluar keringat dingin saat tidur.)'
   },
   {
     id: 'm3h5_15',
@@ -176,11 +176,11 @@ const kosakata_m3h5 = [
     hari: '5',
     kategori: 'Kata Keterangan',
     kanji: '誠に',
-    furigana: 'まことに',
-    arti: 'Sesungguhnya / Amat sangat',
-    penjelasan: 'Kosa kata peringkat sangat formal dan hormat yang selalunya digunakan untuk memohon maaf secara tulus, menyatakan rasa penghargaan yang mendalam, atau menegaskan fakta. Amat lazim dalam surat-menyurat perniagaan dan ucapan rasmi.',
-    contoh1: 'ご迷惑をおかけして、誠に申し訳ありません。\n(Saya sesungguhnya memohon jutaan kemaafan atas segala kesulitan yang timbul.)',
-    contoh2: '本日はご来場いただき、誠にありがとうございます。\n(Terima kasih yang amat sangat kerana sudi hadir pada hari ini.)'
+    furigana: 'まことを / まことに',
+    arti: 'Sesungguhnya / Benar-benar (Sopan)',
+    penjelasan: 'Bentuk sangat sopan untuk meminta maaf, berterima kasih, atau menegaskan fakta. Sering dipakai dalam dunia kerja.',
+    contoh1: 'ご迷惑をおかけして、誠に申し訳ありません。\n(Saya benar-benar memohon maaf atas kerepotan ini.)',
+    contoh2: '本日はご来場いただき、誠にありがとうございます。\n(Terima kasih banyak atas kedatangan Anda hari ini.)'
   },
   {
     id: 'm3h5_16',
@@ -189,10 +189,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'もっぱら',
     furigana: 'もっぱら',
-    arti: 'Sepenuhnya / Hanya tertumpu kepada',
-    penjelasan: 'Digunakan untuk menunjukkan tindakan menumpukan sepenuh dedikasi, minat, masa, atau tenaga hanya ke arah satu tujuan atau perkara sahaja tanpa mempedulikan pelbagai hal yang lain.',
-    contoh1: '休日はもっぱらゴルフをしている。\n(Pada hari cuti rasmi, saya menghabiskan keseluruhan masa tertumpu hanya dengan bermain golf sahaja.)',
-    contoh2: '彼はもっぱら研究に打ち込んでいる。\n(Lelaki tersebut kini mendedikasikan sepenuh masanya hanya untuk melaksanakan kajian penyelidikannya.)'
+    arti: 'Sepenuhnya / Hanya berfokus pada',
+    penjelasan: 'Dipakai saat seseorang mendedikasikan seluruh waktu atau usahanya hanya untuk satu hal tertentu saja.',
+    contoh1: '休日はもっぱらゴルフをしている。\n(Hari libur saya habiskan sepenuhnya untuk main golf.)',
+    contoh2: '彼はもっぱら研究に打ち込んでいる。\n(Dia fokus sepenuhnya menekuni penelitian.)'
   },
   {
     id: 'm3h5_17',
@@ -201,10 +201,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'ひたすら',
     furigana: 'ひたすら',
-    arti: 'Dengan tekun / Semata-mata secara berterusan',
-    penjelasan: 'Menggambarkan tumpuan atau dedikasi yang utuh dengan melakukan perbuatan tersebut secara berterusan, tidak putus-putus, dan bersungguh-sungguh walaupun perlu mengabaikan kehendak lain.',
-    contoh1: 'ゴールを目指してひたすら走り続ける。\n(Saya terus-menerus berlari dengan tekun menuju terus ke arah garisan penamat.)',
-    contoh2: '妻の回復をひたすら祈った。\n(Saya mendoakan kesembuhan isteri saya secara semata-mata dengan penuh pengharapan yang berterusan.)'
+    arti: 'Dengan tekun / Terus-menerus',
+    penjelasan: 'Melakukan sesuatu secara fokus, terus-menerus, dan bersungguh-sungguh tanpa memikirkan hal lain.',
+    contoh1: 'ゴールを目指してひたすら走り続ける。\n(Terus berlari dengan tekun menuju garis akhir.)',
+    contoh2: '妻の回復をひたすら祈った。\n(Saya terus-menerus mendoakan kesembuhan istri saya.)'
   },
   {
     id: 'm3h5_18',
@@ -213,10 +213,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'もろに',
     furigana: 'もろに',
-    arti: 'Secara langsung / Tepat mengena',
-    penjelasan: 'Membawa makna sebarang jenis tindakan atau impak yang menimpa sasaran dengan secara berdepan, secara langsung dan sepenuhnya tanpa dapat dielakkan atau ditapis. Kerap digunakan bila melibatkan kerosakan dan hentakan fizikal.',
-    contoh1: 'もろに地震の被害を受けた。\n(Pihak kami telah terjejas dengan skala penuh secara langsung akibat kerosakan struktur dari gempa bumi tersebut.)',
-    contoh2: 'ボールがもろに顔に当たった。\n(Bola liar itu telah mengena dan menghentam wajahnya tepat secara langsung.)'
+    arti: 'Secara langsung / Telak',
+    penjelasan: 'Dipakai saat suatu hantaman, dampak, atau masalah mengenai sasaran secara langsung tanpa ada halang rintang.',
+    contoh1: 'もろに地震の被害を受けた。\n(Kami terkena dampak gempa bumi secara langsung.)',
+    contoh2: 'ボールがもろに顔に当たった。\n(Bola itu mengenai wajahnya secara telak.)'
   },
   {
     id: 'm3h5_19',
@@ -225,10 +225,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'たかが',
     furigana: 'たかが',
-    arti: 'Hanya sekadar / Takat itu sahaja',
-    penjelasan: 'Diletakkan sebelum sesuatu nilai untuk memperkecilkan atau merendahkannya supaya pendengar tidak perlu mengendahkannya dengan sangat serius. Membawa maksud nilai atau tahap perbuatan itu tidak seberapa dan langsung tidak penting.',
-    contoh1: 'たかが一度の失敗で、あきらめるな。\n(Janganlah engkau berputus asa hanya sekadar disebabkan oleh satu kegagalan sahaja.)',
-    contoh2: 'たかが子どもの言うことだ、気にしないで。\n(Itu hanyalah sekadar luahan anak kecil takat itu sahaja, jangan ambil peduli akan hal itu.)'
+    arti: 'Hanya sekadar / Tidak seberapa',
+    penjelasan: 'Dipakai untuk meremehkan atau mengecilkan suatu masalah agar orang lain tidak perlu terlalu serius menanggapinya.',
+    contoh1: 'たかが一度の失敗で、あきらめるな。\n(Jangan menyerah hanya karena satu kegagalan kecil.)',
+    contoh2: 'たかが子どもの言うことだ、気にしないで。\n(Itu cuma omongan anak kecil, jangan dipikirkan.)'
   },
   {
     id: 'm3h5_20',
@@ -238,9 +238,9 @@ const kosakata_m3h5 = [
     kanji: 'てんで',
     furigana: 'てんで',
     arti: 'Sama sekali tidak',
-    penjelasan: 'Menyatakan penafian secara keras dan mutlak bermaksud "tidak wujud langsung". Penutur wajib memasangkan perkataan ini dengan unsur dan kata-kata ekspresi negatif di dalam sambungan ayat. Semaksud dengan "全く～ない".',
-    contoh1: 'その話はてんで面白くない。\n(Pengkisahan cerita tersebut adalah sama sekali tidak menarik minat orang.)',
-    contoh2: '相手のチームは強すぎて、てんで勝負にならない。\n(Pasukan pesaing terlampau kuat, ia sama sekali tidak akan mendatangkan perlawanan yang adil buat kita.)'
+    penjelasan: 'Menyatakan penolakan atau hal negatif secara mutlak. Harus selalu dipasangkan dengan bentuk negatif di ujung kalimat.',
+    contoh1: 'その話はてんで面白くない。\n(Cerita itu sama sekali tidak menarik.)',
+    contoh2: '相手のチームは強すぎて、てんで勝負にならない。\n(Lawannya terlalu kuat, sama sekali tidak bisa dilawan.)'
   },
   {
     id: 'm3h5_21',
@@ -249,10 +249,10 @@ const kosakata_m3h5 = [
     kategori: 'Kata Keterangan',
     kanji: 'むろん',
     furigana: 'むろん',
-    arti: 'Sudah tentu / Sememangnya',
-    penjelasan: 'Mengekspresikan persetujuan atau menyampaikan suatu fakta ketetapan yang sudah sangat jelas sehingga rasanya tidak perlu dikupas mahupun didebatkan secara logik. Bunyinya sangat rasmi, dan ia bersinonim secara langsung dengan "もちろん" atau "言うまでもなく".',
-    contoh1: 'むろん（＝もちろん、言うまでもなく）賛成だ。\n(Sudah tentulah saya akan menyatakan persetujuan secara penuh akan hal itu.)',
-    contoh2: 'むろん、私に異議はありません。\n(Sememangnya sudah pasti, saya tidak mempunyai apa-apa bentuk pertikaian untuk dibangkitkan.)'
+    arti: 'Tentu saja / Sudah pasti',
+    penjelasan: 'Menyatakan hal yang sudah sangat jelas kebenarannya sehingga tidak perlu diperdebatkan lagi (sama seperti "もちろん").',
+    contoh1: 'むろん賛成だ。\n(Tentu saja saya setuju.)',
+    contoh2: 'むろん、私に異議はありません。\n(Tentu saja, saya tidak punya keberatan.)'
   },
   {
     id: 'm3h5_22',
@@ -262,21 +262,21 @@ const kosakata_m3h5 = [
     kanji: 'なんと / なんて',
     furigana: 'なんと / なんて',
     arti: 'Betapa / Alangkah',
-    penjelasan: 'Berperanan penting sebagai penanda emosi tatkala menzahirkan rasa kekaguman, keluhan mengejut, atau kehairanan terhadap intensiti dan tahap sesuatu keadaan. Biasanya merangkaikan dirinya bersama-sama dengan kata adjektif atau kata seru.',
-    contoh1: 'なんときれいな人だろう。\n(Wah, alangkah menawan dan cantiknya keperibadian orang ini di mata saya.)',
-    contoh2: 'なんてひどい天気だ。\n(Aduhai, betapa teruk dan buruknya iklim cuaca di luar sana ketika ini.)'
+    penjelasan: 'Kata seru untuk mengungkapkan rasa kagum, kaget, atau takjub terhadap suatu kondisi.',
+    contoh1: 'なんときれいな人だろう。\n(Betapa cantiknya orang ini.)',
+    contoh2: 'なんてひどい天気だ。\n(Alangkah buruknya cuaca ini.)'
   },
   {
     id: 'm3h5_23',
     minggu: '3',
     hari: '5',
-    kategori: 'kata keterangan',
+    kategori: 'Kata Keterangan',
     kanji: '残らず',
     furigana: 'のこらず',
-    arti: 'Tanpa berbaki / Kesemuanya sekali',
-    penjelasan: 'Menunjuk isyarat perbuatan menyudahkan sesuatu keadaan ataupun hal objek secara keseluruhan 100 peratus dan rata hingga ke dasar, tanpa pernah meninggalkan walau cebisan kecil atau sisa sedikit pun yang berbaki.',
-    contoh1: '知っていることを残らず話す。\n(Saya akan menyalurkan dan menceritakan kesemuanya apa yang saya ketahui tanpa berbaki sedikit pun.)',
-    contoh2: 'お皿の料理を残らず食べた。\n(Dia menyantap kesemua hidangan makanan di atas pinggannya itu licin tanpa berbaki langsung.)'
+    arti: 'Tanpa sisa / Semuanya',
+    penjelasan: 'Menyatakan bahwa suatu hal dihabiskan atau diambil 100% tanpa ada yang tersisa sedikit pun.',
+    contoh1: '知っていることを残らず話す。\n(Saya akan ceritakan semua yang saya tahu tanpa ada yang disembunyikan.)',
+    contoh2: 'お皿の料理を残らず食べた。\n(Dia makan semua makanan di piring sampai habis tak bersisa.)'
   }
 ];
 
