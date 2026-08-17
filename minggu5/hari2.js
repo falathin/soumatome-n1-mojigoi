@@ -10,8 +10,8 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '和風',
     furigana: 'わふう',
-    arti: 'Gaya Jepang / Ala Jepang',
-    penjelasan: 'Desain, pola, arsitektur, masakan, atau gaya hidup yang bernuansa budaya tradisional Jepang (lawannya adalah 洋風 / youfuu - gaya Barat).',
+    arti: 'Gaya / Ala Jepang',
+    penjelasan: 'Segala sesuatu yang bernuansa atau bergaya tradisional Jepang (makanan, rumah, baju, dll). Kebalikan dari 洋風 (youfuu - gaya Barat).',
     contoh1: '和風建築。\n(Arsitektur bangunan gaya tradisional Jepang.)',
     contoh2: '今日は和風の料理を作りましょう。\n(Ayo masak hidangan gaya Jepang hari ini.)'
   },
@@ -22,10 +22,10 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '和式',
     furigana: 'わしき',
-    arti: 'Gaya Jepang (misal: toilet/format)',
-    penjelasan: 'Merujuk pada format, jenis, atau struktur gaya tradisional Jepang. Paling sering dipakai dalam percakapan sehari-hari untuk menyebut toilet jongkok ala Jepang (kebalikannya 洋式 / youshiki - gaya Barat).',
+    arti: 'Gaya/Format Jepang',
+    penjelasan: 'Tipe atau format standar khas Jepang. Paling sering dipakai untuk menyebut toilet jongkok ala Jepang (kebalikan dari 洋式 / youshiki - toilet duduk gaya Barat).',
     contoh1: '和式トイレ。\n(Toilet jongkok gaya Jepang.)',
-    contoh2: 'この旅館の部屋は和式です。\n(Kamar di penginapan tradisional ini berkonsep gaya Jepang.)'
+    contoh2: 'この旅館の部屋は和式です。\n(Kamar di penginapan ini berkonsep gaya Jepang.)'
   },
   {
     id: 'm5h2_3',
@@ -34,8 +34,8 @@ const kosakata_m5h2 = [
     kategori: 'kata sifat',
     kanji: '温和',
     furigana: 'おんわ',
-    arti: 'Hangat / Lembut / Bersahabat (cuaca)',
-    penjelasan: 'Bisa dipakai dalam dua situasi: pertama, cuaca atau iklim yang bersahabat dan nyaman (tidak terlalu dingin atau panas). Kedua, merujuk pada watak atau kepribadian seseorang yang tenang, lemah lembut, dan tidak gampang marah.',
+    arti: 'Hangat / Lembut / Bersahabat',
+    penjelasan: 'Bisa untuk cuaca/iklim yang hangat dan nyaman, atau untuk sifat orang yang lemah lembut, tenang, dan tidak gampang marah.',
     contoh1: '温和な気候。\n(Iklim dan cuaca yang hangat/bersahabat.)',
     contoh2: '彼女は温和な人です。\n(Dia adalah orang yang lemah lembut.)'
   },
@@ -47,8 +47,8 @@ const kosakata_m5h2 = [
     kanji: '調和',
     furigana: 'ちょうわ',
     arti: 'Harmoni / Keselarasan',
-    penjelasan: 'Kondisi di mana elemen-elemen yang berbeda menyatu dengan baik dan menghasilkan suasana yang pas, seimbang, serasi, dan tidak terlihat janggal.',
-    contoh1: 'よく調和する。\n(Menyatu dan serasi dengan sangat baik / sangat harmonis.)',
+    penjelasan: 'Kondisi ketika beberapa hal berbeda menyatu dengan pas, seimbang, dan terlihat serasi.',
+    contoh1: 'よく調和する。\n(Menyatu dan serasi dengan sangat baik.)',
     contoh2: '自然と調和したデザイン。\n(Desain yang selaras dengan alam.)'
   },
   {
@@ -59,9 +59,9 @@ const kosakata_m5h2 = [
     kanji: '和む',
     furigana: 'なごむ',
     arti: 'Menjadi tenang / Rileks',
-    penjelasan: 'Perasaan di mana ketegangan hati, stres, atau suasana tegang berangsur-angsur hilang, lalu berubah menjadi tenang, santai, akrab, dan damai.',
+    penjelasan: 'Perasaan ketika stres atau suasana tegang berubah menjadi santai, tenang, dan damai.',
     contoh1: '心が和む。\n(Hati menjadi tenang dan rileks.)',
-    contoh2: '赤ちゃんの笑顔を見ると和む。\n(Melihat senyuman bayi membuat suasana hati jadi tenang.)'
+    contoh2: '赤ちゃんの笑顔を見ると和む。\n(Melihat senyuman bayi membuat hati jadi tenang.)'
   },
 
   // --- KANJI 図 (Zu/To) ---
@@ -73,7 +73,7 @@ const kosakata_m5h2 = [
     kanji: '図案',
     furigana: 'ずあん',
     arti: 'Desain / Pola / Sketsa',
-    penjelasan: 'Sketsa dasar, draf, atau ide desain grafis, lukisan, dan pola yang dibuat untuk diterapkan pada sebuah proyek seni, logo, maupun produk industri.',
+    penjelasan: 'Gambar draf, sketsa awal, atau pola desain untuk sebuah produk, seni, atau logo.',
     contoh1: '図案を描く。\n(Menggambar draf pola desain.)',
     contoh2: '新しい切手の図案。\n(Sketsa desain untuk prangko baru.)'
   },
@@ -85,9 +85,9 @@ const kosakata_m5h2 = [
     kanji: '指図',
     furigana: 'さしず',
     arti: 'Perintah / Instruksi',
-    penjelasan: 'Tindakan memberi perintah atau instruksi kepada orang lain tentang apa yang harus dilakukan. Kadang memiliki nuansa yang agak mengekang atau menjengkelkan jika dilakukan berlebihan (suka nyuruh-nyuruh).',
+    penjelasan: 'Tindakan menyuruh atau memberi perintah kepada orang lain (sering terkesan suka mengatur/nyuruh-nyuruh).',
     contoh1: 'あれこれ指図する。\n(Memberi perintah ini dan itu.)',
-    contoh2: '誰の指図も受けない。\n(Saya tidak akan menerima atau mengikuti perintah dari siapa pun.)'
+    contoh2: '誰の指図も受けない。\n(Saya tidak akan mengikuti perintah dari siapa pun.)'
   },
 
   // --- KANJI 実 (Jitsu/Mi) ---
@@ -99,8 +99,8 @@ const kosakata_m5h2 = [
     kanji: '実態',
     furigana: 'じったい',
     arti: 'Kondisi sebenarnya / Realitas',
-    penjelasan: 'Situasi asli, status sesungguhnya, atau wujud sebenarnya dari sesuatu yang sedang terjadi, yang biasanya mungkin berbeda dengan apa yang digembar-gemborkan atau terlihat dari luar.',
-    contoh1: '実態を調査する。\n(Menyelidiki kondisi atau realitas sebenarnya.)',
+    penjelasan: 'Fakta atau kenyataan asli di lapangan, bukan sekadar apa yang terlihat dari luar.',
+    contoh1: '実態を調査する。\n(Menyelidiki kondisi sebenarnya.)',
     contoh2: '社会の実態を知る。\n(Mengetahui realitas sebenarnya tentang masyarakat.)'
   },
   {
@@ -110,10 +110,10 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '実業',
     furigana: 'じつぎょう',
-    arti: 'Bisnis / Industri',
-    penjelasan: 'Merujuk pada sektor bisnis, perusahaan, komersial, atau industri dalam bidang seperti manufaktur, pertanian, dan perdagangan yang menjadi fondasi utama ekonomi.',
-    contoh1: '実業家。\n(Pengusaha bisnis / Pelaku industri.)',
-    contoh2: '彼は実業の世界で成功した。\n(Beliau telah meraih kesuksesan di dunia bisnis/industri.)'
+    arti: 'Bisnis / Industri nyata',
+    penjelasan: 'Sektor bisnis atau industri yang menghasilkan barang/jasa nyata seperti manufaktur, perdagangan, dan pertanian.',
+    contoh1: '実業家。\n(Pengusaha / Pebisnis.)',
+    contoh2: '彼は実業の世界で成功した。\n(Dia telah sukses di dunia bisnis.)'
   },
   {
     id: 'm5h2_10',
@@ -123,9 +123,9 @@ const kosakata_m5h2 = [
     kanji: '誠実',
     furigana: 'せいじつ',
     arti: 'Tulus / Jujur',
-    penjelasan: 'Sifat seseorang yang jujur, bisa dipercaya, lurus hati, dan tulus dalam tutur kata maupun perbuatan, serta selalu bertindak tanpa ada niat menipu.',
+    penjelasan: 'Sifat orang yang jujur, tulus, dapat dipercaya, dan tidak suka menipu.',
     contoh1: '誠実な人。\n(Orang yang sangat jujur dan tulus.)',
-    contoh2: '誠実に対応する。\n(Merespons dan melayani dengan tulus dan jujur.)'
+    contoh2: '誠実に対応する。\n(Merespons/melayani dengan tulus dan jujur.)'
   },
   {
     id: 'm5h2_11',
@@ -135,9 +135,9 @@ const kosakata_m5h2 = [
     kanji: '真実',
     furigana: 'しんじつ',
     arti: 'Kebenaran / Fakta',
-    penjelasan: 'Kenyataan, hakikat, atau fakta yang benar-benar terjadi, sejati, dan tidak dipalsukan. Sepenuhnya bebas dari kebohongan, tipuan, atau cerita karangan semata.',
-    contoh1: '真実を語る。\n(Mengungkapkan fakta atau kebenaran.)',
-    contoh2: 'いつか真実が明らかになる。\n(Suatu hari nanti kebenaran pasti akan terungkap.)'
+    penjelasan: 'Kejadian nyata yang sesungguhnya dan tidak bohong.',
+    contoh1: '真実を語る。\n(Mengungkapkan kebenaran.)',
+    contoh2: 'いつか真実が明らかになる。\n(Suatu hari nanti kebenaran pasti terungkap.)'
   },
   {
     id: 'm5h2_12',
@@ -147,9 +147,9 @@ const kosakata_m5h2 = [
     kanji: '口実',
     furigana: 'こうじつ',
     arti: 'Alasan / Dalih',
-    penjelasan: 'Alasan yang sengaja dibuat-buat atau digunakan oleh seseorang sebagai dalih untuk membenarkan tindakan, menghindari tanggung jawab, atau menyembunyikan niat aslinya.',
-    contoh1: '下手な口実。\n(Alasan atau dalih yang konyol/tidak masuk akal.)',
-    contoh2: '病気を口実にして休む。\n(Mengambil cuti dengan menjadikan alasan sakit sebagai dalih.)'
+    penjelasan: 'Alasan yang dibuat-buat untuk menutupi kesalahan, menghindar, atau membenarkan diri.',
+    contoh1: '下手な口実。\n(Alasan/dalih yang konyol.)',
+    contoh2: '病気を口実にして休む。\n(Menggunakan alasan sakit sebagai dalih untuk libur.)'
   },
   {
     id: 'm5h2_13',
@@ -158,10 +158,10 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '実入り',
     furigana: 'みいり',
-    arti: 'Penghasilan / Pemasukan',
-    penjelasan: 'Hasil pendapatan uang, panen, atau keuntungan bersih yang diperoleh dari suatu bisnis, karier, pekerjaan, atau usaha yang dilakukan.',
-    contoh1: '実入りのいい商売。\n(Bisnis yang menghasilkan pemasukan atau keuntungan lumayan.)',
-    contoh2: '今月は実入りが少ない。\n(Bulan ini, pemasukan sangat sedikit.)'
+    arti: 'Penghasilan / Keuntungan',
+    penjelasan: 'Pendapatan uang, hasil panen, atau keuntungan bersih dari suatu pekerjaan/usaha.',
+    contoh1: '実入りのいい商売。\n(Bisnis yang menghasilkan keuntungan lumayan.)',
+    contoh2: '今月は実入りが少ない。\n(Bulan ini penghasilan sangat sedikit.)'
   },
 
   // --- KANJI 公 (Kou/Ooyake) ---
@@ -173,9 +173,9 @@ const kosakata_m5h2 = [
     kanji: '公正',
     furigana: 'こうせい',
     arti: 'Adil / Objektif',
-    penjelasan: 'Sifat, tindakan, atau keputusan yang adil, transparan, jujur, tidak berat sebelah, dan mematuhi aturan serta hukum tanpa memihak secara salah.',
-    contoh1: '公正な取り引き。\n(Transaksi dan urusan bisnis yang adil.)',
-    contoh2: '公正な裁判。\n(Proses peradilan pengadilan yang adil dan transparan.)'
+    penjelasan: 'Sifat atau keputusan yang adil, jujur, sesuai aturan, dan tidak memihak.',
+    contoh1: '公正な取り引き。\n(Transaksi bisnis yang adil.)',
+    contoh2: '公正な裁判。\n(Proses peradilan yang adil.)'
   },
   {
     id: 'm5h2_15',
@@ -185,9 +185,9 @@ const kosakata_m5h2 = [
     kanji: '公平',
     furigana: 'こうへい',
     arti: 'Sama rata / Adil',
-    penjelasan: 'Memberikan perlakuan, hak, pembagian, atau peluang yang setara dan sama rata kepada semua orang dalam sebuah kelompok, tanpa adanya diskriminasi atau pilih kasih.',
-    contoh1: '公平に分ける。\n(Membagi sesuatu dengan sama rata / adil.)',
-    contoh2: '誰に対しても公平だ。\n(Bersikap adil dan sama rata terhadap siapa saja.)'
+    penjelasan: 'Memberikan bagian, kesempatan, atau perlakuan yang sama persis kepada semua orang tanpa membeda-bedakan.',
+    contoh1: '公平に分ける。\n(Membagi sesuatu secara adil/sama rata.)',
+    contoh2: '誰に対しても公平だ。\n(Bersikap adil kepada siapa saja.)'
   },
   {
     id: 'm5h2_16',
@@ -197,9 +197,9 @@ const kosakata_m5h2 = [
     kanji: '公立',
     furigana: 'こうりつ',
     arti: 'Negeri / Publik',
-    penjelasan: 'Institusi publik seperti sekolah, perpustakaan, atau rumah sakit yang didirikan, diawasi, dan didanai oleh pemerintah (kebalikannya adalah 私立 / shiritsu - institusi swasta).',
-    contoh1: '公立の学校。\n(Sekolah negeri / sekolah publik.)',
-    contoh2: '公立病院で働く。\n(Bekerja di rumah sakit umum milik pemerintah.)'
+    penjelasan: 'Fasilitas umum (sekolah, RS, perpustakaan) milik pemerintah. Lawannya 私立 (shiritsu - swasta).',
+    contoh1: '公立の学校。\n(Sekolah negeri.)',
+    contoh2: '公立病院で働く。\n(Bekerja di rumah sakit umum pemerintah.)'
   },
   {
     id: 'm5h2_17',
@@ -209,9 +209,9 @@ const kosakata_m5h2 = [
     kanji: '公用',
     furigana: 'こうよう',
     arti: 'Penggunaan resmi / Dinas',
-    penjelasan: 'Barang, bahasa, fasilitas, atau kendaraan yang digunakan secara resmi untuk urusan pemerintah, administrasi, atau organisasi saja, dan dilarang dipakai untuk kepentingan pribadi.',
+    penjelasan: 'Barang, kendaraan, atau bahasa yang digunakan untuk urusan dinas/pemerintah, bukan pribadi.',
     contoh1: '公用語。\n(Bahasa resmi.)',
-    contoh2: '公用車を使う。\n(Menggunakan mobil/kendaraan dinas.)'
+    contoh2: '公用車を使う。\n(Menggunakan mobil dinas.)'
   },
   {
     id: 'm5h2_18',
@@ -220,10 +220,10 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '公私',
     furigana: 'こうし',
-    arti: 'Publik dan Pribadi (Urusan kantor & pribadi)',
-    penjelasan: 'Kata ini mencakup dua dunia sekaligus, yaitu urusan resmi/pekerjaan dan urusan pribadi di rumah. Sering dipakai dalam ungkapan tentang mencampuradukkan kedua urusan tersebut.',
-    contoh1: '公私混同する。\n(Mencampuradukkan urusan pekerjaan/dinas dengan masalah pribadi.)',
-    contoh2: '公私の区別をつける。\n(Membedakan dan memisahkan urusan pekerjaan dengan kehidupan pribadi.)'
+    arti: 'Publik dan Pribadi',
+    penjelasan: 'Mencakup dua urusan sekaligus: urusan kerjaan/dinas (publik) dan urusan keluarga/pribadi.',
+    contoh1: '公私混同する。\n(Mencampuradukkan urusan kerjaan dan masalah pribadi.)',
+    contoh2: '公私の区別をつける。\n(Memisahkan urusan kerjaan dari kehidupan pribadi.)'
   },
   {
     id: 'm5h2_19',
@@ -232,10 +232,10 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '主人公',
     furigana: 'しゅじんこう',
-    arti: 'Karakter utama / Tokoh utama',
-    penjelasan: 'Merujuk pada karakter pusat, tokoh terpenting, pemeran utama, atau pahlawan dalam cerita sebuah karya sastra, novel, anime, film, atau drama.',
-    contoh1: '物語の主人公。\n(Karakter utama dalam jalan cerita ini.)',
-    contoh2: '映画の主人公になりきる。\n(Benar-benar menghayati dan menjelma menjadi tokoh utama film itu.)'
+    arti: 'Karakter / Tokoh utama',
+    penjelasan: 'Tokoh utama dalam cerita novel, anime, film, atau drama.',
+    contoh1: '物語の主人公。\n(Tokoh utama dalam cerita ini.)',
+    contoh2: '映画の主人公になりきる。\n(Menghayati peran menjadi tokoh utama film.)'
   },
   {
     id: 'm5h2_20',
@@ -245,9 +245,9 @@ const kosakata_m5h2 = [
     kanji: '公',
     furigana: 'おおやけ',
     arti: 'Publik / Umum / Resmi',
-    penjelasan: 'Suatu hal, kondisi, informasi, atau rahasia yang tidak lagi disembunyikan dan sudah diketahui oleh masyarakat luas secara terbuka, atau diumumkan secara resmi oleh pihak berwenang.',
-    contoh1: '事件が公になる。\n(Kejadian tersebut telah tersebar dan diketahui oleh publik.)',
-    contoh2: '公の発表。\n(Sebuah pengumuman resmi kepada masyarakat umum.)'
+    penjelasan: 'Hal atau informasi yang terbuka untuk umum dan diketahui masyarakat luas.',
+    contoh1: '事件が公になる。\n(Kejadian tersebut sudah diketahui oleh publik.)',
+    contoh2: '公の発表。\n(Pengumuman resmi kepada masyarakat.)'
   },
 
   // --- KANJI 連 (Ren/Tsura) ---
@@ -258,10 +258,10 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '連休',
     furigana: 'れんきゅう',
-    arti: 'Libur panjang / Libur berturut-turut',
-    penjelasan: 'Hari libur, cuti bersama, atau hari libur nasional yang bersambung selama beberapa hari (misalnya libur akhir pekan yang menyambung dengan libur nasional seperti Golden Week di Jepang).',
-    contoh1: '３日間の連休。\n(Libur panjang berturut-turut selama 3 hari.)',
-    contoh2: '連休を利用して旅行に行く。\n(Pergi jalan-jalan dengan memanfaatkan libur panjang.)'
+    arti: 'Libur panjang berturut-turut',
+    penjelasan: 'Hari libur yang bersambung selama beberapa hari berturut-turut.',
+    contoh1: '３日間の連休。\n(Libur berturut-turut selama 3 hari.)',
+    contoh2: '連休を利用して旅行に行く。\n(Pergi jalan-jalan memanfaatkan libur panjang.)'
   },
   {
     id: 'm5h2_22',
@@ -271,9 +271,9 @@ const kosakata_m5h2 = [
     kanji: '連帯',
     furigana: 'れんたい',
     arti: 'Solidaritas / Tanggung jawab bersama',
-    penjelasan: 'Ikatan persatuan dan rasa kebersamaan di mana anggota dalam suatu kelompok menanggung tanggung jawab atau akibat dari suatu perbuatan secara bersama-sama (kolektif).',
-    contoh1: '連帯責任。\n(Tanggung jawab renteng / kolektif akibat kesalahan kelompok.)',
-    contoh2: '連帯感を持つ。\n(Memiliki rasa solidaritas dan kebersamaan antar anggota.)'
+    penjelasan: 'Rasa kebersamaan atau ikatan kelompok untuk menanggung beban/kesalahan secara bersama-sama.',
+    contoh1: '連帯責任。\n(Tanggung jawab bersama / kolektif.)',
+    contoh2: '連帯感を持つ。\n(Memiliki rasa solidaritas kelompok.)'
   },
   {
     id: 'm5h2_23',
@@ -283,8 +283,8 @@ const kosakata_m5h2 = [
     kanji: '連なる',
     furigana: 'つらなる',
     arti: 'Berjejer / Membentang',
-    penjelasan: 'Kondisi di mana suatu benda fisik (seperti kendaraan di jalan tol, deretan gunung, atau pulau) berjejer panjang dan bersambung melintasi jarak yang jauh.',
-    contoh1: '渋滞で車が連なっている。\n(Deretan mobil berjejer panjang karena macet.)',
+    penjelasan: 'Kondisi barang atau benda alam (seperti gunung, mobil) yang berjejer panjang dan bersambung.',
+    contoh1: '渋滞で車が連なっている。\n(Mobil berjejer panjang karena macet.)',
     contoh2: '山が連なる風景。\n(Pemandangan deretan pegunungan yang membentang.)'
   },
   {
@@ -295,9 +295,9 @@ const kosakata_m5h2 = [
     kanji: '連ねる',
     furigana: 'つらねる',
     arti: 'Menderetkan / Mencantumkan',
-    penjelasan: 'Tindakan aktif menjejalkan sesuatu secara berderet atau menyambungkannya menjadi barisan panjang. Sering juga dipakai sebagai ungkapan kiasan "mencantumkan/menambahkan nama ke dalam sebuah daftar".',
-    contoh1: 'リストに名前を連ねる。\n(Mencantumkan atau menambahkan nama agar masuk ke dalam daftar tersebut.)',
-    contoh2: '車を連ねて走る。\n(Mengendarai mobil dengan berjejer/berkonvoi beramai-ramai.)'
+    penjelasan: 'Menjejalkan sesuatu hingga berderet, atau menambahkan nama ke dalam daftar.',
+    contoh1: 'リストに名前を連ねる。\n(Mencantumkan nama ke dalam daftar.)',
+    contoh2: '車を連ねて走る。\n(Mengendarai mobil secara berkonvoi.)'
   },
 
   // --- KANJI 告 (Koku/Tsu) ---
@@ -309,9 +309,9 @@ const kosakata_m5h2 = [
     kanji: '告知',
     furigana: 'こくち',
     arti: 'Pemberitahuan / Pengumuman',
-    penjelasan: 'Informasi, pengumuman, atau pemberitahuan tentang hal penting secara resmi. Sangat sering dipakai dalam konteks medis ketika dokter memberitahukan diagnosis penyakit kritis kepada pasien.',
+    penjelasan: 'Pemberitahuan resmi. Sering dipakai juga saat dokter menyampaikan vonis penyakit kepada pasien.',
     contoh1: 'ガンの告知をする。\n(Memberitahukan vonis kanker kepada pasien.)',
-    contoh2: 'イベントの告知を出す。\n(Mengeluarkan pengumuman terkait acara tersebut.)'
+    contoh2: 'イベントの告知を出す。\n(Mengeluarkan pengumuman acara.)'
   },
   {
     id: 'm5h2_26',
@@ -320,10 +320,10 @@ const kosakata_m5h2 = [
     kategori: 'kata kerja',
     kanji: '告白',
     furigana: 'こくはく',
-    arti: 'Pengakuan (cinta/dosa) / Menembak (cinta)',
-    penjelasan: 'Tindakan menyatakan atau mengungkapkan perasaan serta rahasia yang terpendam di hati. Bisa dipakai dalam situasi romantis (mengungkapkan cinta) atau pengakuan kesalahan/dosa.',
-    contoh1: '罪を告白する。\n(Membuat pengakuan atas dosa/kejahatan yang dilakukan.)',
-    contoh2: '好きな人に告白した。\n(Saya sudah menyatakan cinta kepada orang yang saya sukai.)'
+    arti: 'Pengakuan (cinta/dosa)',
+    penjelasan: 'Mengungkapkan rahasia atau perasaan terpendam. Bisa untuk "menembak" gebetan atau mengakui kesalahan.',
+    contoh1: '罪を告白する。\n(Mengakui kesalahan/dosa yang dilakukan.)',
+    contoh2: '好きな人に告白した。\n(Saya sudah menyatakan cinta kepada orang yang disukai.)'
   },
   {
     id: 'm5h2_27',
@@ -332,10 +332,10 @@ const kosakata_m5h2 = [
     kategori: 'kata kerja',
     kanji: '予告',
     furigana: 'よこく',
-    arti: 'Pemberitahuan awal / Cuplikan (Trailer)',
-    penjelasan: 'Pemberitahuan atau peringatan singkat mengenai acara, film, atau hal yang akan terjadi dan tayang di masa depan (seperti trailer film atau cuplikan episode serial TV minggu depan).',
-    contoh1: '映画の予告。\n(Cuplikan/Trailer sebuah film.)',
-    contoh2: '予告なしにテストが行われた。\n(Ujian diadakan secara mendadak tanpa ada pemberitahuan awal.)'
+    arti: 'Pemberitahuan awal / Trailer',
+    penjelasan: 'Info atau cuplikan awal tentang hal yang akan tayang/terjadi nanti (seperti trailer film).',
+    contoh1: '映画の予告。\n(Trailer/cuplikan film.)',
+    contoh2: '予告なしにテストが行われた。\n(Ujian diadakan mendadak tanpa pemberitahuan awal.)'
   },
   {
     id: 'm5h2_28',
@@ -345,9 +345,9 @@ const kosakata_m5h2 = [
     kanji: '告げる',
     furigana: 'つげる',
     arti: 'Memberitahukan / Mengumumkan',
-    penjelasan: 'Ungkapan yang agak formal atau puitis untuk menyampaikan berita, menyebut nama, atau mengumumkan informasi/keputusan penting secara lisan kepada seseorang.',
-    contoh1: '名前を告げる。\n(Memberitahukan atau menyebutkan namanya.)',
-    contoh2: '春の訪れを告げる。\n(Mengumumkan kedatangan musim semi.)'
+    penjelasan: 'Bahasa agak formal/puitis untuk menyampaikan kabar, nama, atau pengumuman secara lisan.',
+    contoh1: '名前を告げる。\n(Memberitahukan atau menyebutkan nama.)',
+    contoh2: '春の訪れを告げる。\n(Mengumumkan datangnya musim semi.)'
   },
 
   // --- KANJI 記 (Ki/Shiru) ---
@@ -359,9 +359,9 @@ const kosakata_m5h2 = [
     kanji: '手記',
     furigana: 'しゅき',
     arti: 'Catatan pribadi / Memoar',
-    penjelasan: 'Catatan, buku harian, atau memoar yang ditulis sendiri oleh seseorang berdasarkan pengalaman hidup, perasaan pribadi, atau kejadian yang benar-benar dialaminya.',
-    contoh1: '体験を手記にまとめる。\n(Menulis dan merangkum pengalaman yang dialami ke dalam sebuah catatan pribadi.)',
-    contoh2: '戦争の手記を読む。\n(Membaca buku catatan memoar pribadi tentang sejarah zaman perang.)'
+    penjelasan: 'Catatan pengalaman pribadi yang ditulis sendiri oleh orang yang mengalaminya.',
+    contoh1: '体験を手記にまとめる。\n(Merangkum pengalaman ke dalam catatan pribadi.)',
+    contoh2: '戦争の手記を読む。\n(Membaca catatan pribadi tentang kisah perang.)'
   },
   {
     id: 'm5h2_30',
@@ -370,9 +370,9 @@ const kosakata_m5h2 = [
     kategori: 'kata benda',
     kanji: '伝記',
     furigana: 'でんき',
-    arti: 'Biografi / Riwayat hidup',
-    penjelasan: 'Karya tulis atau buku yang mencatat dan menceritakan kembali tentang sejarah kronologi hidup, tantangan, dan pencapaian luar biasa seorang tokoh terkenal atau bersejarah.',
-    contoh1: '伝記を読む。\n(Membaca buku biografi seseorang.)',
+    arti: 'Biografi',
+    penjelasan: 'Buku yang menceritakan riwayat hidup dan perjalanan tokoh terkenal.',
+    contoh1: '伝記を読む。\n(Membaca buku biografi.)',
     contoh2: 'リンカーンの伝記。\n(Buku biografi Abraham Lincoln.)'
   },
   {
@@ -383,9 +383,9 @@ const kosakata_m5h2 = [
     kanji: '記す',
     furigana: 'しるす',
     arti: 'Menuliskan / Mencatat',
-    penjelasan: 'Kata kerja formal untuk tindakan menulis, merekam, atau mencatat nama dan detail informasi di dalam dokumen. Bisa juga berarti mematrikan sebuah peringatan atau tekad dengan kuat di dalam hati.',
-    contoh1: '名前を記す。\n(Menulis atau mencatatkan nama.)',
-    contoh2: '心に記す。\n(Mencatat dan mematrinya dengan teguh di dalam hati/ingatan.)'
+    penjelasan: 'Kata kerja formal untuk menulis/mencatat sesuatu, atau mematri niat/janji di dalam hati.',
+    contoh1: '名前を記す。\n(Menuliskan nama.)',
+    contoh2: '心に記す。\n(Mematrikan di dalam hati/ingatan.)'
   }
 ];
 
