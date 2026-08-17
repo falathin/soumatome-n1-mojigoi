@@ -11,7 +11,7 @@ const kosakata_m5h4 = [
     kanji: '志す',
     furigana: 'こころざす',
     arti: 'Bercita-cita / Menargetkan',
-    penjelasan: 'Kata kerja ini digunakan ketika seseorang memiliki tekad, niat, atau cita-cita yang kuat untuk mencapai suatu tujuan atau profesi tertentu di masa depan.',
+    penjelasan: 'Punya tekad atau niat kuat untuk mencapai cita-cita/profesi di masa depan.',
     contoh1: '学者を志す。\n(Bercita-cita menjadi seorang ilmuwan/sarjana.)',
     contoh2: '医者を志して勉強している。\n(Belajar keras dengan cita-cita menjadi seorang dokter.)'
   },
@@ -23,7 +23,7 @@ const kosakata_m5h4 = [
     kanji: '試す',
     furigana: 'ためす',
     arti: 'Mencoba / Menguji',
-    penjelasan: 'Merujuk pada tindakan mencoba atau mengetes sesuatu (seperti produk baru, metode, mesin, atau kemampuan) untuk mengetahui hasil, kualitas, atau efektivitasnya.',
+    penjelasan: 'Mencoba atau mengetes produk, metode, atau kemampuan diri untuk tahu hasilnya.',
     contoh1: '新商品を試す。\n(Mencoba menggunakan produk baru.)',
     contoh2: '自分の実力を試す。\n(Menguji sejauh mana kemampuan diri sendiri.)'
   },
@@ -35,7 +35,7 @@ const kosakata_m5h4 = [
     kanji: '犯す',
     furigana: 'おかす',
     arti: 'Melakukan (kejahatan/kesalahan)',
-    penjelasan: 'Digunakan secara spesifik untuk tindakan yang bersifat negatif, seperti melanggar hukum, aturan moral, melakukan tindak pidana, dosa, atau berbuat kesalahan yang fatal.',
+    penjelasan: 'Digunakan khusus untuk melakukan hal negatif seperti melanggar hukum, dosa, atau kesalahan fatal.',
     contoh1: '罪を犯す。\n(Melakukan tindak kejahatan atau dosa.)',
     contoh2: '大きなミスを犯してしまった。\n(Telah melakukan kesalahan yang sangat besar dan fatal.)'
   },
@@ -47,7 +47,7 @@ const kosakata_m5h4 = [
     kanji: '乱す',
     furigana: 'みだす',
     arti: 'Mengacaukan / Mengganggu',
-    penjelasan: 'Merupakan tindakan merusak tatanan, ketertiban, kedamaian, atau keteraturan yang sudah ada sebelumnya, sehingga kondisinya menjadi kacau balau atau tidak teratur.',
+    penjelasan: 'Merusak aturan, ketertiban, atau ketenangan yang sudah rapi.',
     contoh1: '秩序を乱す。\n(Mengacaukan sistem ketertiban yang ada.)',
     contoh2: '列を乱さないでください。\n(Tolong jangan mengacaukan barisan.)'
   },
@@ -59,7 +59,7 @@ const kosakata_m5h4 = [
     kanji: '満たす',
     furigana: 'みたす',
     arti: 'Memenuhi / Memuaskan',
-    penjelasan: 'Bisa berarti mengisi sesuatu hingga penuh (seperti air dalam wadah), atau memenuhi berbagai kebutuhan, persyaratan, kriteria, maupun permintaan seseorang sehingga tercapai kepuasan.',
+    penjelasan: 'Mengisi wadah sampai penuh, atau memenuhi syarat dan keinginan seseorang.',
     contoh1: '容器に水を満たす。\n(Mengisi wadah dengan air sampai penuh.)',
     contoh2: '要求を満たす。\n(Memenuhi tuntutan atau permintaan seseorang.)'
   },
@@ -71,7 +71,7 @@ const kosakata_m5h4 = [
     kanji: '果たす',
     furigana: 'はたす',
     arti: 'Mencapai / Memenuhi (tugas/janji)',
-    penjelasan: 'Tindakan melaksanakan atau menyelesaikan suatu tugas, tanggung jawab, tujuan akhir, peran, atau janji hingga tuntas dan berhasil sesuai dengan yang diharapkan.',
+    penjelasan: 'Menyelesaikan tugas, janji, atau peran sampai tuntas.',
     contoh1: '目的を果たす。\n(Berhasil mencapai tujuan yang diinginkan.)',
     contoh2: '約束を果たす。\n(Menepati dan memenuhi janji yang telah dibuat.)'
   },
@@ -83,7 +83,7 @@ const kosakata_m5h4 = [
     kanji: '抜かす',
     furigana: 'ぬかす',
     arti: 'Melewatkan / Melompati',
-    penjelasan: 'Tindakan (baik disengaja maupun tidak) melewati, menghilangkan, atau melompati suatu bagian, baris, atau urutan yang seharusnya ada atau dibaca.',
+    penjelasan: 'Sengaja atau tidak sengaja melompati baris, poin, atau bagian dari suatu urutan.',
     contoh1: '１行抜かして読む。\n(Membaca dengan melompati satu baris tulisan.)',
     contoh2: '重要な項目を抜かしてしまった。\n(Tanpa sengaja melewatkan satu poin yang sangat penting.)'
   },
@@ -95,7 +95,7 @@ const kosakata_m5h4 = [
     kanji: '負かす',
     furigana: 'まかす',
     arti: 'Mengalahkan / Menaklukkan',
-    penjelasan: 'Tindakan mengalahkan lawan dalam sebuah kompetisi, pertandingan, perdebatan, persaingan bisnis, atau peperangan sehingga mereka mengakui kekalahan.',
+    penjelasan: 'Mengalahkan lawan dalam pertandingan, permainan, atau persaingan.',
     contoh1: '敵を負かす。\n(Mengalahkan dan menaklukkan musuh.)',
     contoh2: '試合で相手チームを負かした。\n(Berhasil mengalahkan tim lawan dalam pertandingan tersebut.)'
   },
@@ -107,7 +107,7 @@ const kosakata_m5h4 = [
     kanji: '悩ます',
     furigana: 'なやます',
     arti: 'Menyusahkan / Mengganggu pikiran',
-    penjelasan: 'Sesuatu yang membuat seseorang merasa terganggu, kesulitan, cemas, atau pusing memikirkan jalan keluarnya (seperti diganggu suara bising, penyakit, atau masalah berat).',
+    penjelasan: 'Hal yang bikin pusing, cemas, atau mengganggu pikiran (seperti kebisingan atau penyakit).',
     contoh1: '騒音に悩まされる。\n(Dibuat pusing dan terganggu oleh suara bising yang terus-menerus.)',
     contoh2: '頭痛が彼を悩ませている。\n(Penyakit sakit kepala sedang menyusahkannya akhir-akhir ini.)'
   },
@@ -119,7 +119,7 @@ const kosakata_m5h4 = [
     kanji: '慣らす',
     furigana: 'ならす',
     arti: 'Membiasakan / Melatih',
-    penjelasan: 'Proses membuat diri sendiri, tubuh, atau panca indera (seperti telinga dan mata) menjadi terbiasa dan beradaptasi dengan kondisi, rangsangan, atau lingkungan baru melalui repetisi/latihan.',
+    penjelasan: 'Melatih diri, panca indera, atau tubuh agar terbiasa dengan hal baru.',
     contoh1: '耳を慣らす。\n(Melatih dan membiasakan telinga untuk mendengar bahasa asing.)',
     contoh2: '新しい靴を足に慣らす。\n(Membiasakan kaki dengan sepatu yang baru dibeli agar tidak lecet.)'
   },
@@ -131,7 +131,7 @@ const kosakata_m5h4 = [
     kanji: '荒らす',
     furigana: 'あらす',
     arti: 'Merusak / Mengobrak-abrik',
-    penjelasan: 'Tindakan menghancurkan, merusak alam, atau mengobrak-abrik suatu tempat sehingga kondisinya menjadi sangat buruk, berantakan, dan kehilangan nilainya.',
+    penjelasan: 'Merusak tempat atau ladang hingga berantakan dan hancur.',
     contoh1: 'イノシシが作物を荒らす。\n(Babi hutan merusak tanaman dan hasil panen di ladang.)',
     contoh2: '泥棒が部屋を荒らした。\n(Pencuri telah mengobrak-abrik isi ruangan tersebut.)'
   },
@@ -143,7 +143,7 @@ const kosakata_m5h4 = [
     kanji: '費やす',
     furigana: 'ついやす',
     arti: 'Menghabiskan (waktu/uang/energi)',
-    penjelasan: 'Menggunakan sumber daya yang berharga seperti waktu, energi, tenaga, atau uang dalam jumlah yang banyak atau durasi yang lama untuk menyelesaikan suatu aktivitas atau proyek.',
+    penjelasan: 'Menggunakan banyak waktu, energi, atau uang untuk suatu kegiatan.',
     contoh1: 'エネルギーを費やす。\n(Banyak menghabiskan energi dan tenaga.)',
     contoh2: '研究に長い年月を費やす。\n(Menghabiskan waktu bertahun-tahun untuk menyelesaikan penelitian.)'
   },
@@ -156,8 +156,8 @@ const kosakata_m5h4 = [
     kategori: 'kata kerja',
     kanji: '練る',
     furigana: 'ねる',
-    arti: 'Menyusun dengan matang / Menguleni',
-    penjelasan: 'Secara abstrak berarti memikirkan dan merencanakan suatu konsep secara mendalam dan teliti agar hasilnya sempurna. Secara fisik berarti menguleni bahan adonan hingga kalis (dalam memasak).',
+    arti: 'Menyusun matang-matang / Menguleni',
+    penjelasan: 'Mematangkan rencana/ide secara mendalam. Bisa juga berarti menguleni adonan.',
     contoh1: '計画を練る。\n(Menyusun rencana dengan pemikiran yang matang.)',
     contoh2: 'パンの生地をよく練る。\n(Menguleni adonan roti dengan baik agar teksturnya lembut.)'
   },
@@ -169,7 +169,7 @@ const kosakata_m5h4 = [
     kanji: '鈍る',
     furigana: 'にぶる',
     arti: 'Menjadi tumpul / Melemah',
-    penjelasan: 'Kondisi di mana kepekaan, intuisi, insting, kemampuan pisau, kecepatan bereaksi, atau bahkan tekad seseorang menjadi menurun, kurang tajam, atau melambat dibanding kondisi puncaknya.',
+    penjelasan: 'Kemampuan, insting, kepekaan, atau tekad yang menurun/berkurang ketajamannya.',
     contoh1: '勘が鈍る。\n(Insting atau intuisinya menjadi tumpul dan melemah.)',
     contoh2: '決心が鈍った。\n(Tekad dan kebulatan hatinya sempat melemah.)'
   },
@@ -181,7 +181,7 @@ const kosakata_m5h4 = [
     kanji: '勝る',
     furigana: 'まさる',
     arti: 'Lebih unggul / Melebihi',
-    penjelasan: 'Menunjukkan bahwa suatu hal memiliki kualitas, nilai, tingkat kebahagiaan, kemampuan, atau kekuatan yang jauh lebih baik dan lebih hebat jika dibandingkan dengan pihak atau hal yang lain.',
+    penjelasan: 'Memiliki kualitas, kemampuan, atau kebahagiaan yang lebih hebat dibanding yang lain.',
     contoh1: 'これに勝る喜びはない。\n(Tidak ada rasa kebahagiaan yang dapat melebihi hal ini.)',
     contoh2: '実力において彼が勝っている。\n(Dalam hal kemampuan murni, dia jauh lebih unggul.)'
   },
@@ -193,7 +193,7 @@ const kosakata_m5h4 = [
     kanji: '操る',
     furigana: 'あやつる',
     arti: 'Mengendalikan / Mengoperasikan',
-    penjelasan: 'Keterampilan untuk menggunakan, mengontrol, dan mengoperasikan objek (seperti mesin, alat, boneka), bahasa, atau bahkan memanipulasi manusia sesuai dengan kehendak diri sendiri secara leluasa.',
+    penjelasan: 'Mahir mengendalikan alat/mesin, menggunakan bahasa asing, atau mengontrol orang.',
     contoh1: '機械を上手に操る。\n(Mampu mengoperasikan mesin tersebut dengan sangat mahir.)',
     contoh2: '3カ国語を操る。\n(Menguasai dan mampu menggunakan 3 bahasa asing dengan fasih.)'
   },
@@ -205,7 +205,7 @@ const kosakata_m5h4 = [
     kanji: '群がる',
     furigana: 'むらがる',
     arti: 'Berkerumun / Berkumpul',
-    penjelasan: 'Perilaku hewan atau sekumpulan manusia yang berkumpul, berkerumun, atau bergerombol dalam jumlah massal di satu titik yang sama karena tertarik pada sesuatu hal.',
+    penjelasan: 'Orang atau hewan yang berkumpul/bergerombol banyak karena tertarik sesuatu.',
     contoh1: 'アリが砂糖に群がる。\n(Sekawanan semut berkerumun pada gula yang tumpah.)',
     contoh2: '有名人にファンが群がる。\n(Para penggemar berkerumun mengelilingi orang terkenal tersebut.)'
   },
@@ -217,7 +217,7 @@ const kosakata_m5h4 = [
     kanji: '備わる',
     furigana: 'そなわる',
     arti: 'Dilengkapi / Terbekali (secara alami)',
-    penjelasan: 'Menunjukkan keadaan di mana seseorang atau sebuah barang sudah terbekali atau dilengkapi dengan suatu bakat, sifat bawaan, fasilitas khusus, atau fitur perlengkapan sejak awal atau secara alami.',
+    penjelasan: 'Sudah memiliki bakat alami sejak lahir, atau tempat yang sudah dilengkapi fasilitas.',
     contoh1: '才能が備わっている。\n(Sudah terbekali bakat alami dari lahir.)',
     contoh2: 'この部屋にはエアコンが備わっている。\n(Kamar ini sudah dilengkapi dengan fasilitas AC/pendingin ruangan.)'
   },
@@ -229,7 +229,7 @@ const kosakata_m5h4 = [
     kanji: '改まる',
     furigana: 'あらたまる',
     arti: 'Diperbarui / Menjadi formal',
-    penjelasan: 'Bisa merujuk pada perubahan suatu aturan, sistem, atau keadaan ke arah yang lebih baru/lebih baik. Dapat juga bermakna perubahan suasana atau sikap menjadi sangat kaku, formal, dan resmi.',
+    penjelasan: 'Aturan/sistem yang diperbarui, atau situasi/sikap yang berubah jadi kaku dan formal.',
     contoh1: '規則が改まる。\n(Peraturannya diperbarui ke sistem yang baru.)',
     contoh2: '改まった場所。\n(Tempat atau situasi pertemuan yang sangat formal dan resmi.)'
   },
@@ -243,7 +243,7 @@ const kosakata_m5h4 = [
     kanji: '病む',
     furigana: 'やむ',
     arti: 'Menderita penyakit / Tertekan (mental)',
-    penjelasan: 'Kondisi di mana seseorang jatuh sakit atau menderita suatu penyakit fisik kronis (seperti penyakit paru-paru). Juga sering digunakan (気に病む) untuk menunjukkan tekanan mental dan kecemasan akibat overthinking.',
+    penjelasan: 'Menderita penyakit fisik, atau merasa cemas/stres karena kepikiran masalah.',
     contoh1: '肺を病む。\n(Menderita gangguan penyakit pada paru-paru.)',
     contoh2: '失敗を気に病む。\n(Merasa sangat tertekan dan terlalu mengkhawatirkan kegagalan yang terjadi.)'
   },
@@ -255,7 +255,7 @@ const kosakata_m5h4 = [
     kanji: '富む',
     furigana: 'とむ',
     arti: 'Kaya akan / Berlimpah',
-    penjelasan: 'Menunjukkan bahwa suatu benda, tempat, atau seseorang memiliki persediaan, ketersediaan, atau elemen yang sangat berlimpah. Misalnya kaya akan sumber daya alam, variasi, ekspresi, atau pengalaman.',
+    penjelasan: 'Punya banyak ketersediaan (seperti sumber daya, pengalaman, atau ekspresi).',
     contoh1: '天然資源に富む。\n(Kaya akan ketersediaan sumber daya alam.)',
     contoh2: '経験に富んだスタッフ。\n(Seorang staf yang kaya akan pengalaman kerja.)'
   },
@@ -267,7 +267,7 @@ const kosakata_m5h4 = [
     kanji: '恵む',
     furigana: 'めぐむ',
     arti: 'Memberikan (berkah/sedekah)',
-    penjelasan: 'Tindakan mulia memberikan bantuan berupa uang, makanan, atau kemurahan hati kepada pihak yang kekurangan atau sedang membutuhkan pertolongan. Sering juga dikaitkan dengan berkah atau karunia.',
+    penjelasan: 'Memberi bantuan atau sedekah kepada orang butuh. Sering juga berarti berkah alam.',
     contoh1: '食べ物を恵む。\n(Memberikan sedekah makanan kepada yang membutuhkan.)',
     contoh2: '恵みの雨が降る。\n(Turunnya hujan yang membawa rahmat dan berkah.)'
   },
@@ -279,7 +279,7 @@ const kosakata_m5h4 = [
     kanji: '営む',
     furigana: 'いとなむ',
     arti: 'Menjalankan (usaha/kehidupan)',
-    penjelasan: 'Melakukan kegiatan, menjalankan, mengelola, atau mengurus suatu pekerjaan bisnis/perusahaan, profesi, atau menjalani aktivitas siklus kehidupan sehari-hari secara rutin dan terus-menerus.',
+    penjelasan: 'Mengelola bisnis/usaha, atau menjalani rutinitas kehidupan sehari-hari.',
     contoh1: '日常生活を営む。\n(Menjalani rutinitas aktivitas kehidupan sehari-hari dengan normal.)',
     contoh2: '旅館を営む。\n(Menjalankan dan mengelola bisnis penginapan bergaya Jepang / Ryokan.)'
   },
@@ -291,7 +291,7 @@ const kosakata_m5h4 = [
     kanji: '危ぶむ',
     furigana: 'あやぶむ',
     arti: 'Mengkhawatirkan / Meragukan',
-    penjelasan: 'Timbulnya perasaan khawatir, cemas, atau ragu-ragu di dalam hati bahwa suatu hal, acara, atau rencana mungkin tidak akan bisa berjalan lancar atau kemungkinan besar akan terancam batal/gagal.',
+    penjelasan: 'Khawatir atau ragu kalau acara/rencana bakalan gagal atau tidak berjalan lancar.',
     contoh1: '会議の開催が危ぶまれる。\n(Pelaksanaan konferensi tersebut diragukan dan dikhawatirkan akan batal.)',
     contoh2: '会社の将来を危ぶむ。\n(Sangat mengkhawatirkan bagaimana nasib masa depan perusahaan tersebut.)'
   },
@@ -305,7 +305,7 @@ const kosakata_m5h4 = [
     kanji: '負う',
     furigana: 'おう',
     arti: 'Memikul (tanggung jawab) / Menderita (luka)',
-    penjelasan: 'Memikul atau menanggung suatu beban, baik yang bersifat abstrak maupun material seperti tanggung jawab dan utang. Kata ini juga merujuk pada penderitaan fisik, seperti menderita luka parah atau luka bakar.',
+    penjelasan: 'Menanggung beban tanggung jawab/utang, atau mengalami cedera/luka fisik.',
     contoh1: '責任を負う。\n(Harus memikul tanggung jawab atas perbuatan tersebut.)',
     contoh2: 'やけどを負う。\n(Menderita luka bakar akibat kecelakaan.)'
   },
@@ -317,7 +317,7 @@ const kosakata_m5h4 = [
     kanji: '沿う',
     furigana: 'そう',
     arti: 'Menyusuri / Sejalan dengan',
-    penjelasan: 'Bergerak sejajar menelusuri sesuatu yang memiliki garis atau bentangan panjang (seperti sungai, rel, atau jalan pantai). Juga bermakna bertindak menyesuaikan dengan pedoman atau harapan orang lain.',
+    penjelasan: 'Berjalan mengikuti jalur (sungai/jalan), atau bertindak sesuai harapan/pedoman.',
     contoh1: '川に沿って進む。\n(Maju terus menyusuri sepanjang jalur aliran sungai.)',
     contoh2: 'お客様のご希望に沿うように努力します。\n(Kami akan berusaha sebaik mungkin agar sejalan dengan ekspektasi/harapan pelanggan.)'
   },
@@ -329,7 +329,7 @@ const kosakata_m5h4 = [
     kanji: '損なう',
     furigana: 'そこなう',
     arti: 'Merusak / Membahayakan',
-    penjelasan: 'Tindakan yang menyebabkan kerusakan, kerugian, atau menurunnya kondisi sesuatu yang asalnya baik menjadi memburuk. Misalnya merusak kesehatan tubuh, merusak pemandangan, atau merusak suasana hati (mood) orang lain.',
+    penjelasan: 'Membuat hal baik jadi buruk (seperti merusak kesehatan atau merusak *suasana hati*).',
     contoh1: '健康を損なう。\n(Membahayakan dan merusak kondisi kesehatan.)',
     contoh2: '人の機嫌を損なう。\n(Merusak suasana hati seseorang atau membuatnya menjadi kesal.)'
   },
@@ -341,7 +341,7 @@ const kosakata_m5h4 = [
     kanji: '似通う',
     furigana: 'にかよう',
     arti: 'Sangat mirip / Serupa',
-    penjelasan: 'Keadaan di mana sifat, pola pikir, bentuk fisik, sifat dasar, atau penampilan dari dua hal memiliki tingkat kesamaan dan kemiripan yang sangat kuat satu sama lain.',
+    penjelasan: 'Dua hal yang punya sifat, pola pikir, atau bentuk yang sangat mirip.',
     contoh1: '似通った考え。\n(Cara dan pola pikir yang sangat mirip/serupa.)',
     contoh2: '2つの事件は手口が似通っている。\n(Kedua kasus kejahatan tersebut memiliki modus operandi yang sangat serupa.)'
   },
@@ -353,7 +353,7 @@ const kosakata_m5h4 = [
     kanji: '恥じらう',
     furigana: 'はじらう',
     arti: 'Merasa tersipu malu',
-    penjelasan: 'Ekspresi yang menunjukkan rasa malu yang polos, malu-malu kucing, atau grogi (biasanya karena canggung, digoda, atau karena berhadapan dengan lawan jenis), yang sering kali ditunjukkan dengan rona pipi memerah atau tertunduk malu.',
+    penjelasan: 'Tersipu malu-malu kucing (pipi memerah atau menunduk) saat canggung/digoda.',
     contoh1: '下を向いて恥じらう。\n(Menundukkan wajah karena merasa tersipu malu.)',
     contoh2: '彼女は恥じらいながら微笑んだ。\n(Dia tersenyum manis dengan malu-malu.)'
   },
@@ -365,7 +365,7 @@ const kosakata_m5h4 = [
     kanji: '保つ',
     furigana: 'たもつ',
     arti: 'Menjaga / Mempertahankan',
-    penjelasan: 'Berusaha menjaga agar suatu kondisi, kualitas, jarak, hubungan, atau keadaan sesuatu benda dan situasi tetap terjaga secara stabil pada level tertentu, dan mencegahnya memburuk dari keadaan aslinya.',
+    penjelasan: 'Menjaga kondisi, kualitas, atau situasi agar tetap stabil dan tidak memburuk.',
     contoh1: '部屋を清潔に保つ。\n(Menjaga dan mempertahankan kebersihan kamar.)',
     contoh2: '若さを保つ。\n(Menjaga tubuh agar tetap awet muda.)'
   }
