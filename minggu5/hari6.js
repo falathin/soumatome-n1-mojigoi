@@ -11,7 +11,7 @@ const kosakata_m5h6 = [
     kanji: '最寄り',
     furigana: 'もより',
     arti: 'Terdekat',
-    penjelasan: 'Merujuk pada sesuatu (biasanya tempat, fasilitas umum, atau stasiun) yang lokasinya paling dekat dengan posisi kita saat ini atau titik acuan tertentu.',
+    penjelasan: 'Lokasi atau fasilitas umum (seperti stasiun atau minimarket) yang paling dekat dari posisi kita saat ini.',
     contoh1: '最寄りの駅。\n(Stasiun terdekat.)',
     contoh2: '最寄りのコンビニで買い物をする。\n(Berbelanja di minimarket terdekat.)'
   },
@@ -23,7 +23,7 @@ const kosakata_m5h6 = [
     kanji: '誤り',
     furigana: 'あやまり',
     arti: 'Kesalahan / Kekeliruan',
-    penjelasan: 'Merupakan kata benda dari kata kerja 誤る (ayamaru). Digunakan untuk menunjukkan sesuatu yang tidak tepat, salah hitung, atau keliru dalam hal informasi, pemikiran, maupun tata bahasa.',
+    penjelasan: 'Kesalahan yang sifatnya teknis atau keliru informasi (seperti salah hitung, salah tulis, atau salah paham).',
     contoh1: '誤りが多い。\n(Banyak kesalahan.)',
     contoh2: '誤った考えを正す。\n(Memperbaiki pemikiran yang keliru.)'
   },
@@ -34,9 +34,9 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '過ち',
     furigana: 'あやまち',
-    arti: 'Kesalahan (tindakan/moral) / Dosa',
-    penjelasan: 'Berbeda dengan 誤り yang lebih ke teknis atau keliru informasi, 過ち lebih menekankan pada kesalahan berat, kecerobohan besar dalam tindakan, cacat moral, atau "dosa" masa lalu yang disesali seseorang.',
-    contoh1: '過ちを犯す。\n(Melakukan kesalahan / dosa.)',
+    arti: 'Kesalahan besar / Dosa / Khilaf',
+    penjelasan: 'Beda dengan 誤り, kata ini dipakai untuk kesalahan berat akibat kecerobohan/kekhilafan tindakan yang menimbulkan rasa menyesal mendalam.',
+    contoh1: '過ちを犯す。\n(Melakukan kesalahan besar/dosa.)',
     contoh2: '若い頃の過ちを悔いる。\n(Menyesali kesalahan di masa muda.)'
   },
   {
@@ -46,9 +46,9 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '値打ち',
     furigana: 'ねうち',
-    arti: 'Nilai / Harga / Martabat',
-    penjelasan: 'Menunjukkan bobot, kualitas, dan nilai dari suatu benda (baik secara finansial maupun kegunaan). Sering digunakan untuk menilai apakah suatu barang antik, karya seni, atau sebuah tindakan "berharga" atau "pantas" dilakukan.',
-    contoh1: '値打ちがある絵。\n(Lukisan yang memiliki nilai/berharga.)',
+    arti: 'Nilai / Harga / Kualitas',
+    penjelasan: 'Tingkat nilai atau kualitas berharga dari suatu benda/tindakan (apakah pantas/sepadan dengan harganya atau usahanya).',
+    contoh1: '値打ちがある絵。\n(Lukisan yang memiliki nilai tinggi/berharga.)',
     contoh2: 'この本は読む値打ちがある。\n(Buku ini bernilai/layak untuk dibaca.)'
   },
   {
@@ -59,9 +59,9 @@ const kosakata_m5h6 = [
     kanji: '勝手',
     furigana: 'かって',
     arti: 'Egois / Semaunya sendiri',
-    penjelasan: 'Biasa digunakan sebagai kata sifat-na (勝手な). Menggambarkan sikap egois, tidak peduli aturan, atau bertindak sesuka hati tanpa memikirkan dampak pada orang lain.',
-    contoh1: '勝手な行動をとる。\n(Mengambil tindakan semaunya sendiri / bertindak egois.)',
-    contoh2: '自分の勝手な都合で休む。\n(Libur karena urusan/keegoisan diri sendiri.)'
+    penjelasan: 'Sikap bertindak seenaknya tanpa memikirkan aturan, perasaan, atau dampaknya bagi orang lain.',
+    contoh1: '勝手な行動をとる。\n(Bertindak semaunya sendiri/egois.)',
+    contoh2: '自分の勝手な都合で休む。\n(Libur hanya demi kepentingan egois sendiri.)'
   },
   {
     id: 'm5h6_6',
@@ -71,9 +71,9 @@ const kosakata_m5h6 = [
     kanji: '初耳',
     furigana: 'はつみみ',
     arti: 'Baru pertama kali dengar',
-    penjelasan: 'Ungkapan yang dipakai ketika seseorang baru pertama kali mengetahui atau mendengar suatu berita, gosip, atau informasi yang seringkali mengejutkan atau tidak disangka-sangka.',
-    contoh1: 'その話は初耳だ。\n(Cerita/kabar itu baru pertama kali saya dengar.)',
-    contoh2: '彼が結婚するなんて初耳です。\n(Baru dengar/tahu kalau ternyata dia akan menikah.)'
+    penjelasan: 'Ungkapan saat baru pertama kali mengetahui kabar atau gosip yang sebelumnya belum pernah didengar sama sekali.',
+    contoh1: 'その話は初耳だ。\n(Kabar itu baru pertama kali saya dengar.)',
+    contoh2: '彼が結婚するなんて初耳です。\n(Saya baru dengar kalau dia mau menikah.)'
   },
   {
     id: 'm5h6_7',
@@ -82,10 +82,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '人並み',
     furigana: 'ひとなみ',
-    arti: 'Rata-rata orang / Wajar / Normal',
-    penjelasan: 'Merujuk pada standar, taraf kehidupan, penampilan, atau kemampuan rata-rata yang dimiliki oleh masyarakat pada umumnya (tidak menonjol tapi tidak juga kurang).',
-    contoh1: '人並みの生活。\n(Kehidupan yang layak/normal seperti orang pada umumnya.)',
-    contoh2: '人並みに英語が話せる。\n(Bisa berbicara bahasa Inggris rata-rata seperti orang lain.)'
+    arti: 'Rata-rata / Wajar seperti orang lain',
+    penjelasan: 'Taraf hidup, kemampuan, atau kondisi standar yang wajar seperti masyarakat pada umumnya.',
+    contoh1: '人並みの生活。\n(Kehidupan yang layak/normal seperti orang lain.)',
+    contoh2: '人並みに英語が話せる。\n(Bisa bahasa Inggris standar rata-rata orang pada umumnya.)'
   },
   {
     id: 'm5h6_8',
@@ -94,9 +94,9 @@ const kosakata_m5h6 = [
     kategori: 'kata keterangan',
     kanji: '軒並み',
     furigana: 'のきなみ',
-    arti: 'Semuanya (tanpa kecuali) / Deretan rumah',
-    penjelasan: 'Secara harfiah berarti deretan atap/rumah yang berjajar. Sebagai kata keterangan, sering digunakan dalam berita untuk menyatakan sesuatu (biasanya harga atau omset) yang naik atau turun secara bersamaan/merata.',
-    contoh1: '軒並みに値上がりする。\n(Harganya naik semuanya secara merata tanpa kecuali.)',
+    arti: 'Semuanya merata / Berderet',
+    penjelasan: 'Dipakai saat menyatakan sesuatu (seperti harga barang atau omset) yang naik/turun secara bersamaan dan merata tanpa terkecuali.',
+    contoh1: '軒並みに値上がりする。\n(Harganya naik semua secara merata.)',
     contoh2: '古い軒並みが続く。\n(Deretan rumah tua berjejer panjang.)'
   },
   {
@@ -106,10 +106,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '人任せ',
     furigana: 'ひとまかせ',
-    arti: 'Menyerahkan (semua) pada orang lain',
-    penjelasan: 'Sikap tidak mau repot, malas, atau melemparkan tanggung jawab dengan membiarkan orang lain yang mengerjakan tugas atau membuat keputusan penting.',
-    contoh1: '仕事を人任せにする。\n(Menyerahkan/melemparkan pekerjaan pada orang lain.)',
-    contoh2: '自分の人生を人任せにしてはいけない。\n(Tidak boleh menyerahkan hidupmu sepenuhnya pada keputusan orang lain.)'
+    arti: 'Pasrah / Lepas tangan ke orang lain',
+    penjelasan: 'Sikap enggan repot dengan melimpahkan seluruh pekerjaan atau keputusan kepada orang lain.',
+    contoh1: '仕事を人任せにする。\n(Melemparkan pekerjaan ke orang lain.)',
+    contoh2: '自分の人生を人任せにしてはいけない。\n(Jangan menyerahkan keputusan hidupmu pada orang lain.)'
   },
   {
     id: 'm5h6_10',
@@ -119,9 +119,9 @@ const kosakata_m5h6 = [
     kanji: '善し悪し',
     furigana: 'よしあし',
     arti: 'Baik dan buruk',
-    penjelasan: 'Gabungan kata dari 良い (yoi - baik) dan 悪い (warui - buruk). Digunakan ketika menimbang kedua sisi dari suatu hal, mengevaluasi kelebihan dan kekurangannya, atau membedakan mana hal yang benar dan yang salah.',
-    contoh1: '物事の善し悪し。\n(Baik dan buruknya suatu hal.)',
-    contoh2: 'この薬には善し悪しがある。\n(Obat ini memiliki sisi baik dan buruk / efek samping.)'
+    penjelasan: 'Melihat dua sisi sekaligus (sisi positif dan negatif, kelebihan dan kekurangan, atau benar dan salah).',
+    contoh1: '物事の善し悪し。\n(Baik buruknya suatu hal.)',
+    contoh2: 'この薬には善し悪しがある。\n(Obat ini punya sisi baik dan buruknya/efek samping.)'
   },
   {
     id: 'm5h6_11',
@@ -131,9 +131,9 @@ const kosakata_m5h6 = [
     kanji: '目の当たり',
     furigana: 'めのあたり',
     arti: 'Tepat di depan mata / Secara langsung',
-    penjelasan: 'Selalu dihubungkan dengan partikel に menjadi 目の当たりにする. Artinya menjadi saksi hidup atau menyaksikan suatu kejadian (seringkali kejadian tragis, menakjubkan, atau realita pahit) secara langsung tepat di depan mata.',
-    contoh1: '惨状を目の当たりにする。\n(Menyaksikan kondisi tragis tersebut langsung di depan mata.)',
-    contoh2: 'プロの技を目の当たりにして感動した。\n(Terharu karena menyaksikan keterampilan profesional secara langsung.)'
+    penjelasan: 'Biasanya dipakai 「目の当たりにする」 yang artinya menyaksikan suatu kejadian secara nyata dan langsung di hadapan mata sendiri.',
+    contoh1: '惨状を目の当たりにする。\n(Melihat kondisi tragis itu langsung di depan mata.)',
+    contoh2: 'プロの技を目の当たりにして感動した。\n(Kagum karena melihat skill profesional secara langsung.)'
   },
   {
     id: 'm5h6_12',
@@ -143,9 +143,9 @@ const kosakata_m5h6 = [
     kanji: '応急',
     furigana: 'おうきゅう',
     arti: 'Darurat / Pertolongan pertama',
-    penjelasan: 'Tindakan kilat dan sementara yang diambil dalam keadaan darurat untuk mengatasi bahaya atau krisis sebelum penanganan resmi/sempurna dapat diberikan.',
-    contoh1: '応急処置をする。\n(Memberikan/melakukan tindakan pertolongan pertama.)',
-    contoh2: '応急手当のおかげで助かった。\n(Selamat berkat pertolongan darurat/pertama.)'
+    penjelasan: 'Penanganan cepat dan sementara untuk situasi darurat sebelum dapat penanganan medis/resmi yang lengkap.',
+    contoh1: '応急処置をする。\n(Melakukan tindakan pertolongan pertama/P3K.)',
+    contoh2: '応急手当のおかげで助かった。\n(Selamat berkat penanganan darurat.)'
   },
   {
     id: 'm5h6_13',
@@ -154,9 +154,9 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '気配',
     furigana: 'けはい',
-    arti: 'Tanda / Firasat / Kehadiran',
-    penjelasan: 'Sensasi samar, tanda, atau nuansa yang terasa bahwa ada seseorang atau sesuatu yang sedang mendekat/terjadi, meskipun belum dapat dipastikan atau dilihat jelas oleh mata.',
-    contoh1: '人の気配がする。\n(Merasakan kehadiran seseorang / Ada tanda-tanda orang.)',
+    arti: 'Tanda-tanda / Kehadiran / Firasat',
+    penjelasan: 'Perasaan atau intuisi samar bahwa ada orang/hal yang mendekat atau terjadi, walau belum terlihat jelas oleh mata.',
+    contoh1: '人の気配がする。\n(Merasakan ada tanda-tanda keberadaan orang.)',
     contoh2: '秋の気配を感じる。\n(Merasakan tanda-tanda datangnya musim gugur.)'
   },
   {
@@ -167,9 +167,9 @@ const kosakata_m5h6 = [
     kanji: '手際',
     furigana: 'てぎわ',
     arti: 'Keterampilan / Kecekatan',
-    penjelasan: 'Keahlian, cara, atau efisiensi seseorang dalam menangani sebuah pekerjaan (khususnya pekerjaan fisik, membuat kerajinan, atau memasak) dengan rapi, cepat, dan tanpa buang-buang waktu.',
-    contoh1: '手際がいい。\n(Sangat cekatan / terampil dan cepat.)',
-    contoh2: '彼女は料理の手際が素晴らしい。\n(Kecekatannya dalam memasak sangat luar biasa.)'
+    penjelasan: 'Kelincahan dan efisiensi seseorang dalam menuntaskan tugas (seperti memasak atau merakit barang) secara rapi dan cepat.',
+    contoh1: '手際がいい。\n(Sangat cekatan dan terampil.)',
+    contoh2: '彼女は料理の手際が素晴らしい。\n(Kecekatannya saat memasak sangat luar biasa.)'
   },
   {
     id: 'm5h6_15',
@@ -179,9 +179,9 @@ const kosakata_m5h6 = [
     kanji: '知恵',
     furigana: 'ちえ',
     arti: 'Kebijaksanaan / Akal cerdik',
-    penjelasan: 'Kemampuan berpikir tingkat tinggi untuk memecahkan masalah. Berbeda dengan ilmu pengetahuan murni (chishiki), "chie" adalah akal praktis yang lahir dari pengalaman dan keluwesan berpikir.',
-    contoh1: '知恵を出し合う。\n(Saling bertukar akal / mengeluarkan ide bersama-sama.)',
-    contoh2: 'おばあちゃんの知恵袋。\n(Kumpulan kebijaksanaan/tips cerdik ala nenek-nenek zaman dulu.)'
+    penjelasan: 'Akal praktis atau ide cerdas untuk menyelesaikan masalah yang didapat dari pengalaman hidup.',
+    contoh1: '知恵を出し合う。\n(Saling bertukar akal/ide bersama.)',
+    contoh2: 'おばあちゃんの知恵袋。\n(Kumpulan tips cerdas/kebijaksanaan ala nenek-nenek.)'
   },
   {
     id: 'm5h6_16',
@@ -191,9 +191,9 @@ const kosakata_m5h6 = [
     kanji: '自我',
     furigana: 'じが',
     arti: 'Ego / Kesadaran diri',
-    penjelasan: 'Istilah yang sering merujuk pada "aku" (ego) atau pandangan mengenai identitas diri. Jika digunakan sehari-hari, "jiga ga tsuyoi" berarti orang tersebut keras kepala atau selalu memaksakan kehendaknya.',
-    contoh1: '自我が強い。\n(Egonya tinggi / Keras kepala mempertahankan kemauan.)',
-    contoh2: '幼児期に自我が芽生える。\n(Ego/kesadaran diri mulai tumbuh di masa balita.)'
+    penjelasan: 'Rasa akan identitas diri sendiri. Jika dikatakan 「自我が強い」(jiga ga tsuyoi), artinya orangnya egois/keras kepala mempertahankan kemauan.',
+    contoh1: '自我が強い。\n(Egonya tinggi/keras kepala.)',
+    contoh2: '幼児期に自我が芽生える。\n(Ego/kesadaran diri mulai tumbuh pada balita.)'
   },
   {
     id: 'm5h6_17',
@@ -203,9 +203,9 @@ const kosakata_m5h6 = [
     kanji: '自己',
     furigana: 'じこ',
     arti: 'Diri sendiri',
-    penjelasan: 'Bentuk yang lebih objektif/formal untuk merujuk pada diri pribadi. Sangat sering dijadikan imbuhan awal untuk kosakata lain seperti 自己紹介 (jikoshoukai: perkenalan diri), 自己中 (jikochuu: egois), dll.',
-    contoh1: '自己中心的な人。\n(Orang yang berpusat pada dirinya sendiri / Egois.)',
-    contoh2: '自己を見つめ直す。\n(Meninjau kembali / mengintrospeksi diri sendiri.)'
+    penjelasan: 'Kata formal untuk merujuk ke diri sendiri. Sering jadi awalan kata seperti 自己紹介 (perkenalan diri) atau 自己中 (egois).',
+    contoh1: '自己中心的な人。\n(Orang yang egois/berpusat pada diri sendiri.)',
+    contoh2: '自己を見つめ直す。\n(Merenungkan/mengintrospeksi diri sendiri.)'
   },
   {
     id: 'm5h6_18',
@@ -215,9 +215,9 @@ const kosakata_m5h6 = [
     kanji: '作戦',
     furigana: 'さくせん',
     arti: 'Taktik / Strategi',
-    penjelasan: 'Rencana, skenario, atau siasat yang dipikirkan dengan sangat matang untuk memenangkan peperangan, pertandingan olahraga, permainan, hingga strategi bisnis.',
-    contoh1: '作戦を練る。\n(Merencanakan / mematangkan taktik strategi.)',
-    contoh2: '新しい作戦を立てる。\n(Membuat taktik/strategi yang baru.)'
+    penjelasan: 'Rencana siasat yang disusun matang untuk memenangkan pertandingan, permainan, atau bisnis.',
+    contoh1: '作戦を練る。\n(Mematangkan strategi/taktik.)',
+    contoh2: '新しい作戦を立てる。\n(Membuat taktik baru.)'
   },
   {
     id: 'm5h6_19',
@@ -226,10 +226,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '始末',
     furigana: 'しまつ',
-    arti: 'Mengurus penyelesaian / Keadaan (buruk)',
-    penjelasan: 'Punya dua arti: (1) Menyelesaikan atau membereskan sisa/akibat dari suatu masalah. (2) Sering digunakan di akhir kalimat (~始末だ) untuk mengeluhkan hasil atau kondisi memalukan yang terjadi akibat keburukan sesuatu.',
-    contoh1: '事故の始末をする。\n(Mengurus penyelesaian buntut kecelakaan.)',
-    contoh2: '結局、彼に謝らせる始末となった。\n(Ujung-ujungnya, berakibat pada keadaan (buruk) di mana kita membuat dia meminta maaf.)'
+    arti: 'Membereskan / Akhir cerita (buruk)',
+    penjelasan: 'Punya 2 arti: (1) Pemberesan akibat masalah. (2) Akhir kejadian yang buruk/memalukan (sering memakai pola ～始末だ).',
+    contoh1: '事故の始末をする。\n(Mengurus penyelesaian akibat kecelakaan.)',
+    contoh2: '結局、彼に謝らせる始末となった。\n(Ujung-ujungnya, malah berakhir pada kondisi di mana dia harus minta maaf.)'
   },
   {
     id: 'm5h6_20',
@@ -238,10 +238,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '決意',
     furigana: 'けつい',
-    arti: 'Tekad / Keputusan bulat',
-    penjelasan: 'Keputusan final dan kokoh di dalam hati nurani untuk melakukan, mencapai, atau tidak mengulangi suatu hal. Menunjukkan level niat dan determinasi yang kuat.',
+    arti: 'Tekad bulat / Keputusan pasti',
+    penjelasan: 'Niat dan kemauan yang sangat bulat di dalam hati untuk mencapai atau menghentikan sesuatu.',
     contoh1: '決意を固める。\n(Memantapkan tekad bulat.)',
-    contoh2: '辞職の決意を伝える。\n(Menyampaikan keputusan/tekad untuk mengundurkan diri.)'
+    contoh2: '辞職の決意を伝える。\n(Menyampaikan keputusan untuk mengundurkan diri.)'
   },
   {
     id: 'm5h6_21',
@@ -250,10 +250,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '意欲',
     furigana: 'いよく',
-    arti: 'Kemauan keras / Antusiasme',
-    penjelasan: 'Motivasi, hasrat, semangat yang menggebu-gebu dari dalam jiwa seseorang untuk melangkah maju, belajar, atau bertindak aktif guna mencapai tujuan.',
-    contoh1: '意欲がある。\n(Memiliki antusiasme / kemauan keras.)',
-    contoh2: '学習意欲が高まる。\n(Motivasi atau kemauan belajarnya meningkat.)'
+    arti: 'Semangat / Antusiasme / Hasrat',
+    penjelasan: 'Dorongan motivasi yang kuat dari dalam diri untuk belajar, bekerja, atau meraih target.',
+    contoh1: '意欲がある。\n(Punya semangat/antusiasme tinggi.)',
+    contoh2: '学習意欲が高まる。\n(Motivasi belajarnya meningkat.)'
   },
   {
     id: 'm5h6_22',
@@ -262,10 +262,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '片言',
     furigana: 'かたこと',
-    arti: 'Bahasa terbata-bata / Terputus-putus',
-    penjelasan: 'Kondisi saat seseorang belum fasih berbicara suatu bahasa asing (atau balita yang baru belajar bicara), sehingga hanya mampu berucap sepatah demi sepatah kata.',
-    contoh1: '片言でしゃべる。\n(Berbicara dengan bahasa yang terputus-putus/terbata-bata.)',
-    contoh2: '片言の日本語で挨拶した。\n(Memberi salam menggunakan bahasa Jepang yang masih terbata-bata.)'
+    arti: 'Bahasa patah-patah / Terbata-bata',
+    penjelasan: 'Kemampuan bicara bahasa asing (atau anak kecil) yang belum lancar sehingga baru bisa mengucapkan kata per kata.',
+    contoh1: '片言でしゃべる。\n(Bicara dengan terbata-bata.)',
+    contoh2: '片言の日本語で挨拶した。\n(Membawa salam pakai bahasa Jepang yang masih patah-patah.)'
   },
   {
     id: 'm5h6_23',
@@ -274,10 +274,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '独自',
     furigana: 'どくじ',
-    arti: 'Khas / Orisinal / Tersendiri',
-    penjelasan: 'Sesuatu (seperti ide, metode, atau teknologi) yang bersifat sangat mandiri, diciptakan atau dimiliki sendiri, dan sama sekali tidak meniru atau bergantung pada pihak lain.',
-    contoh1: '独自の見解。\n(Pendapat/pandangan orisinal milik sendiri.)',
-    contoh2: '独自の技術を開発する。\n(Mengembangkan teknologi tersendiri yang khas.)'
+    arti: 'Khas / Orisinal / Milik sendiri',
+    penjelasan: 'Gaya, teknik, atau gagasan asli karya sendiri tanpa meniru atau bergantung pada pihak lain.',
+    contoh1: '独自の見解。\n(Pandangan/pendapat orisinal milik sendiri.)',
+    contoh2: '独自の技術を開発する。\n(Mengembangkan teknologi khas sendiri.)'
   },
   {
     id: 'm5h6_24',
@@ -286,10 +286,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '個々',
     furigana: 'ここ',
-    arti: 'Individu / Masing-masing / Satu per satu',
-    penjelasan: 'Fokus menyoroti unit, bagian, atau setiap orang secara terpisah dan detail, bukan menganggapnya sebagai satu keseluruhan atau kelompok besar yang sama rata.',
-    contoh1: '個々に意見を聞く。\n(Mendengarkan pendapat orang per orang / secara individu.)',
-    contoh2: '個々の能力を評価する。\n(Mengevaluasi kemampuan masing-masing individu secara terpisah.)'
+    arti: 'Masing-masing / Per individu',
+    penjelasan: 'Menitikberatkan pada tiap-tiap orang atau unit secara terpisah (satu per satu), bukan sebagai kelompok.',
+    contoh1: '個々に意見を聞く。\n(Mendengarkan pendapat secara individu per orang.)',
+    contoh2: '個々の能力を評価する。\n(Mengevaluasi kemampuan masing-masing individu.)'
   },
 
   // --- KOSAKATA GAMBAR 2 (Kata Sifat "Na" & Sufiks) ---
@@ -300,10 +300,10 @@ const kosakata_m5h6 = [
     kategori: 'kata benda',
     kanji: '従来',
     furigana: 'じゅうらい',
-    arti: 'Seperti yang sudah-sudah / Sampai saat ini (Konvensional)',
-    penjelasan: 'Merujuk pada cara, kebiasaan, sistem, atau pemikiran dari masa lalu yang terus dipakai hingga sekarang. Sering digunakan dalam konteks membandingkan metode konvensional dengan inovasi terbaru.',
-    contoh1: '従来の考え方。\n(Cara berpikir konvensional / gaya lama.)',
-    contoh2: '従来通りに作業を進める。\n(Melanjutkan proses kerja sama seperti (cara) sebelum-sebelumnya.)'
+    arti: 'Cara lama / Konvensional',
+    penjelasan: 'Sistem atau cara yang sudah dipakai sejak dulu hingga sekarang. Sering dibandingkan dengan inovasi baru.',
+    contoh1: '従来の考え方。\n(Cara berpikir konvensional/gaya lama.)',
+    contoh2: '従来通りに作業を進める。\n(Mengerjakan tugas dengan cara seperti biasa/sebelumnya.)'
   },
   {
     id: 'm5h6_26',
@@ -312,10 +312,10 @@ const kosakata_m5h6 = [
     kategori: 'kata sifat',
     kanji: '無茶',
     furigana: 'むちゃ',
-    arti: 'Tidak masuk akal / Sembarangan / Nekat',
-    penjelasan: 'Merupakan kata sifat-na yang berarti melakukan atau menuntut sesuatu yang sangat berlebihan, mustahil secara logika, atau bertindak ceroboh tanpa memikirkan konsekuensi maupun akal sehat.',
-    contoh1: '無茶を言う。\n(Berbicara sesuatu yang tidak masuk akal / menuntut hal yang mustahil.)',
-    contoh2: '無茶な運転をする。\n(Mengemudi dengan ugal-ugalan/nekat.)'
+    arti: 'Nekat / Tidak masuk akal',
+    penjelasan: 'Tindakan yang berlebihan, sembrono, atau menuntut hal absurd yang tidak menggunakan akal sehat.',
+    contoh1: '無茶を言う。\n(Bicara hal yang tidak masuk akal/menuntut hal mustahil.)',
+    contoh2: '無茶な運転をする。\n(Nyetir dengan ugal-ugalan/nekat.)'
   },
   {
     id: 'm5h6_27',
@@ -324,10 +324,10 @@ const kosakata_m5h6 = [
     kategori: 'kata sifat',
     kanji: '過密',
     furigana: 'かみつ',
-    arti: 'Terlalu padat / Sangat sesak',
-    penjelasan: 'Kondisi di mana suatu jadwal, wilayah perkotaan, atau populasi memiliki tingkat kepadatan yang ekstrem hingga melampaui batas kewajaran atau kapasitas normal.',
-    contoh1: '過密スケジュール。\n(Jadwal yang terlalu padat dan ketat.)',
-    contoh2: '都市の過密化が進む。\n(Kepadatan berlebih di area perkotaan semakin meningkat.)'
+    arti: 'Sangat padat / Terlalu sesak',
+    penjelasan: 'Kondisi jadwal yang sangat padat/ketat, atau wilayah yang jumlah populasinya terlalu padat.',
+    contoh1: '過密スケジュール。\n(Jadwal yang sangat padat.)',
+    contoh2: '都市の過密化が進む。\n(Kepadatan kota semakin meningkat.)'
   },
   {
     id: 'm5h6_28',
@@ -336,10 +336,10 @@ const kosakata_m5h6 = [
     kategori: 'kata sifat',
     kanji: '不可欠',
     furigana: 'ふかけつ',
-    arti: 'Mutlak diperlukan / Sangat krusial',
-    penjelasan: 'Sesuatu yang statusnya sangat esensial dan vital; jika sesuatu tersebut tidak ada atau kurang, maka sebuah rencana, benda, atau kehidupan tidak akan bisa berjalan atau bertahan.',
-    contoh1: '生活に不可欠なもの。\n(Hal yang mutlak diperlukan / tidak bisa dilepaskan dalam kehidupan.)',
-    contoh2: '水は人間の体にとって不可欠だ。\n(Air adalah komponen yang sangat esensial bagi tubuh manusia.)'
+    arti: 'Sangat penting / Wajib ada',
+    penjelasan: 'Sesuatu yang vital atau krusial; jika tidak ada, proses atau kehidupan tidak bisa berjalan.',
+    contoh1: '生活に不可欠なもの。\n(Hal yang wajib ada dalam kehidupan.)',
+    contoh2: '水は人間の体にとって不可欠だ。\n(Air sangat penting bagi tubuh manusia.)'
   },
   {
     id: 'm5h6_29',
@@ -348,9 +348,9 @@ const kosakata_m5h6 = [
     kategori: 'kata sifat',
     kanji: '画期的',
     furigana: 'かっきてき',
-    arti: 'Revolusioner / Mencetak sejarah',
-    penjelasan: 'Menggambarkan terobosan, ide, penemuan (biasanya dalam teknologi medis/sains) yang benar-benar baru, belum pernah ada presedennya, dan sukses membuka zaman baru di bidangnya.',
-    contoh1: '画期的な発見。\n(Penemuan bersejarah yang revolusioner.)',
+    arti: 'Revolusioner / Terobosan baru',
+    penjelasan: 'Penemuan atau ide baru yang belum pernah ada sebelumnya dan membawa perubahan besar/sejarah baru.',
+    contoh1: '画期的な発見。\n(Penemuan revolusioner.)',
     contoh2: 'この薬は画期的な治療法になる。\n(Obat ini akan menjadi metode pengobatan baru yang sangat revolusioner.)'
   },
   {
@@ -361,8 +361,8 @@ const kosakata_m5h6 = [
     kanji: '客観的',
     furigana: 'きゃっかんてき',
     arti: 'Objektif',
-    penjelasan: 'Cara pandang atau penilaian yang bertumpu pada bukti, fakta, dan angka secara universal, murni tanpa dicampuri oleh asumsi personal, emosi, atau bias pihak tertentu. Kebalikannya adalah 主観的 (shukanteki: subjektif).',
-    contoh1: '客観的な意見を求める。\n(Meminta pendapat yang objektif dari luar.)',
+    penjelasan: 'Penilaian netral berdasarkan fakta dan data nyata tanpa dicampuri emosi atau pendapat pribadi.',
+    contoh1: '客観的な意見を求める。\n(Meminta pendapat yang objektif.)',
     contoh2: 'データを客観的に分析する。\n(Menganalisis data secara murni dan objektif.)'
   },
   {
@@ -372,10 +372,10 @@ const kosakata_m5h6 = [
     kategori: 'kata sifat',
     kanji: '自発的',
     furigana: 'じはつてき',
-    arti: 'Sukarela / Atas inisiatif sendiri',
-    penjelasan: 'Mengacu pada tindakan yang lahir dari kemauan, dorongan positif, serta kesadaran mandiri dalam diri seseorang secara spontan, tanpa disuruh maupun ditekan pihak luar.',
-    contoh1: '自発的に参加する。\n(Turut berpartisipasi atas kesadaran dan kemauan sukarela sendiri.)',
-    contoh2: '社員の自発的な行動を促す。\n(Mendorong para karyawan untuk memiliki inisiatif bergerak mandiri.)'
+    arti: 'Inisiatif sendiri / Sukarela',
+    penjelasan: 'Tindakan yang dilakukan atas kesadaran dan kemauan sendiri tanpa perlu disuruh atau dipaksa.',
+    contoh1: '自発的に参加する。\n(Ikut serta secara sukarela atas inisiatif sendiri.)',
+    contoh2: '社員の自発的な行動を促す。\n(Mendorong karyawan agar punya inisiatif sendiri.)'
   },
   {
     id: 'm5h6_32',
@@ -384,9 +384,9 @@ const kosakata_m5h6 = [
     kategori: 'kata sifat',
     kanji: '強制的',
     furigana: 'きょうせいてき',
-    arti: 'Memaksa / Diwajibkan (oleh kuasa)',
-    penjelasan: 'Tindakan yang menekan, mengharuskan, dan mengikat orang lain untuk patuh melakukan sesuatu, mengabaikan apakah orang tersebut mau atau tidak. Didasari pada kekuatan otoritas atau paksaan.',
-    contoh1: '強制的に参加させる。\n(Memaksa seseorang untuk (harus) ikut berpartisipasi.)',
+    arti: 'Memaksa / Diwajibkan',
+    penjelasan: 'Tindakan mengharuskan orang lain menurut menggunakan wewenang/kekuatan, tanpa peduli orang itu mau atau tidak.',
+    contoh1: '強制的に参加させる。\n(Memaksa seseorang untuk ikut serta.)',
     contoh2: '寄付を強制的に集める。\n(Mengumpulkan uang donasi secara paksa.)'
   }
 ];
