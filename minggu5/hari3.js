@@ -11,8 +11,8 @@ const kosakata_m5h3 = [
     kanji: '仕上げる',
     furigana: 'しあげる',
     arti: 'Menyelesaikan / Merampungkan',
-    penjelasan: 'Kata kerja ini digunakan ketika seseorang menyelesaikan atau menyempurnakan sebuah karya, tugas, laporan, atau produk hingga mencapai tahap akhir yang berkualitas dan memuaskan.',
-    contoh1: '作品を仕上げる。\n(Menyelesaikan/menyempurnakan sebuah karya seni.)',
+    penjelasan: 'Menyelesaikan suatu tugas, karya, atau pekerjaan sampai benar-benar tuntas dan siap diserahkan.',
+    contoh1: '作品を仕上げる。\n(Menyelesaikan sebuah karya seni.)',
     contoh2: 'レポートを明日までに仕上げる。\n(Menyelesaikan laporan paling lambat besok.)'
   },
   {
@@ -22,10 +22,10 @@ const kosakata_m5h3 = [
     kategori: 'kata kerja',
     kanji: '仕入れる',
     furigana: 'しいれる',
-    arti: 'Membeli stok / Kulakan / Memasok barang',
-    penjelasan: 'Sering dipakai dalam konteks bisnis, di mana pengusaha atau pemilik toko membeli barang dagangan, bahan baku, atau bahkan informasi dari pemasok untuk dijual kembali atau untuk operasional bisnis.',
+    arti: 'Membeli stok / Kulakan',
+    penjelasan: 'Membeli barang dagangan atau bahan baku dari pemasok untuk dijual kembali atau dipakai usaha.',
     contoh1: '商品を仕入れる。\n(Membeli stok barang untuk dijual.)',
-    contoh2: '新鮮な魚を市場で仕入れる。\n(Membeli ikan segar di pasar sebagai stok untuk restoran.)'
+    contoh2: '新鮮な魚を市場で仕入れる。\n(Membeli stok ikan segar di pasar.)'
   },
   {
     id: 'm5h3_3',
@@ -34,10 +34,10 @@ const kosakata_m5h3 = [
     kategori: 'kata kerja',
     kanji: '仕切る',
     furigana: 'しきる',
-    arti: 'Membatasi / Membagi / Mengendalikan',
-    penjelasan: 'Punya dua arti utama: Pertama, membagi ruang atau kamar secara fisik menggunakan sekat/pembatas. Kedua, mengambil peran utama untuk mengatur, memimpin, atau mengendalikan jalannya sebuah acara atau kelompok.',
+    arti: 'Membatasi / Memimpin (mengatur)',
+    penjelasan: 'Mempunyai 2 arti: (1) Membagi ruangan dengan pembatas/sekat, (2) Memimpin dan memegang kendali suatu acara/kelompok.',
     contoh1: '部屋を仕切る。\n(Membagi ruangan dengan sekat.)',
-    contoh2: '宴会を仕切る。\n(Menjadi penanggung jawab yang mengatur dan mengendalikan jalannya pesta.)'
+    contoh2: '宴会を仕切る。\n(Memimpin dan mengatur jalannya pesta.)'
   },
   {
     id: 'm5h3_4',
@@ -47,9 +47,9 @@ const kosakata_m5h3 = [
     kanji: '仕組み',
     furigana: 'しくみ',
     arti: 'Struktur / Mekanisme / Cara kerja',
-    penjelasan: 'Merujuk pada tata cara, susunan, atau sistem bagaimana suatu benda atau proses berfungsi. Bisa merujuk pada sistem sosial masyarakat, mekanisme dalam mesin, atau cara kerja sebuah organisasi.',
-    contoh1: '世の中の仕組み。\n(Struktur, sistem, atau realitas tentang bagaimana dunia/masyarakat bekerja.)',
-    contoh2: '機械の仕組みを理解する。\n(Memahami mekanisme dan cara kerja mesin tersebut.)'
+    penjelasan: 'Sistem atau susunan tentang bagaimana suatu benda, mesin, atau organisasi bekerja.',
+    contoh1: '世の中の仕組み。\n(Cara kerja sistem kehidupan masyarakat/dunia.)',
+    contoh2: '機械の仕組みを理解する。\n(Memahami mekanisme/cara kerja mesin.)'
   },
   {
     id: 'm5h3_5',
@@ -59,9 +59,9 @@ const kosakata_m5h3 = [
     kanji: '仕える',
     furigana: 'つかえる',
     arti: 'Mengabdi / Melayani',
-    penjelasan: 'Merujuk pada tindakan melayani, mengabdi, atau bekerja dengan penuh kesetiaan di bawah seseorang yang punya kedudukan lebih tinggi dan dihormati, seperti Tuhan, raja, atau majikan.',
-    contoh1: '神に仕える。\n(Melayani atau mengabdi kepada Tuhan.)',
-    contoh2: '主君に仕える。\n(Berbakti dan mengabdi kepada majikan/tuan.)'
+    penjelasan: 'Bekerja dengan setia untuk melayani atasan, raja, majikan, atau Tuhan.',
+    contoh1: '神に仕える。\n(Mengabdi kepada Tuhan.)',
+    contoh2: '主君に仕える。\n(Setia melayani majikan/tuan.)'
   },
   {
     id: 'm5h3_6',
@@ -70,10 +70,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '日差し',
     furigana: 'ひざし',
-    arti: 'Sinar matahari / Sorotan matahari',
-    penjelasan: 'Merujuk pada pancaran atau kekuatan cahaya matahari yang menyinari bumi. Sering dipakai untuk menggambarkan seberapa kuat, terik, atau hangatnya cuaca pada hari itu.',
-    contoh1: '日差しが強い。\n(Sinar matahari sangat terik dan menyengat.)',
-    contoh2: '春の暖かい日差し。\n(Sinar matahari musim semi yang hangat dan menyegarkan.)'
+    arti: 'Sinar matahari',
+    penjelasan: 'Sorotan atau pancaran cahaya matahari yang terasa di kulit/bumi.',
+    contoh1: '日差しが強い。\n(Sinar matahari sangat terik.)',
+    contoh2: '春の暖かい日差し。\n(Sinar matahari musim semi yang hangat.)'
   },
   {
     id: 'm5h3_7',
@@ -82,10 +82,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '時差',
     furigana: 'じさ',
-    arti: 'Perbedaan waktu / Zona waktu',
-    penjelasan: 'Perbedaan waktu lokal antara dua negara atau lokasi geografis yang berbeda. Kata ini juga menjadi dasar dari istilah \'時差ぼけ\' (jetlag), yaitu gangguan jam biologis tubuh akibat penerbangan melintasi zona waktu.',
-    contoh1: '時差がある。\n(Ada perbedaan waktu di antara tempat tersebut.)',
-    contoh2: '時差ぼけで眠れない。\n(Tidak bisa tidur gara-gara jetlag.)'
+    arti: 'Perbedaan waktu',
+    penjelasan: 'Selisih waktu antarwilayah atau negara. Sering dipakai pada istilah 時差ぼけ (jetlag).',
+    contoh1: '時差がある。\n(Ada perbedaan waktu.)',
+    contoh2: '時差ぼけで眠れない。\n(Tidak bisa tidur karena jetlag.)'
   },
   {
     id: 'm5h3_8',
@@ -95,8 +95,8 @@ const kosakata_m5h3 = [
     kanji: '点差',
     furigana: 'てんさ',
     arti: 'Selisih poin / Perbedaan skor',
-    penjelasan: 'Selisih poin, nilai, atau skor yang membedakan dua tim atau pihak yang sedang bertanding dalam pertandingan olahraga, maupun selisih nilai dalam ujian.',
-    contoh1: '点差が開く。\n(Selisih poin makin menjauh/melebar.)',
+    penjelasan: 'Beda nilai atau jumlah skor antara dua tim/pihak yang bertanding.',
+    contoh1: '点差が開く。\n(Selisih skor makin melebar.)',
     contoh2: '５点差で負けた。\n(Kalah dengan selisih 5 poin.)'
   },
   {
@@ -106,10 +106,10 @@ const kosakata_m5h3 = [
     kategori: 'kata kerja',
     kanji: '指差す',
     furigana: 'ゆびさす',
-    arti: 'Menunjuk (dengan jari)',
-    penjelasan: 'Tindakan fisik mengangkat tangan dan menggunakan jari (biasanya jari telunjuk) untuk menunjuk ke arah suatu benda, tempat, atau seseorang.',
-    contoh1: '家のほうを指差す。\n(Menunjuk ke arah rumah menggunakan jari.)',
-    contoh2: '人を指差すのは失礼だ。\n(Menunjuk-nunjuk orang dengan jari itu tidak sopan.)'
+    arti: 'Menunjuk dengan jari',
+    penjelasan: 'Mengarahkan jari telunjuk ke objek, tempat, atau seseorang.',
+    contoh1: '家のほうを指差す。\n(Menunjuk ke arah rumah.)',
+    contoh2: '人を指差すのは失礼だ。\n(Menunjuk orang dengan jari itu tidak sopan.)'
   },
 
   // --- GAMBAR 2 (利, 有, 現, 柄, 訳, 説) ---
@@ -120,10 +120,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '利子 / 利息',
     furigana: 'りし / りそく',
-    arti: 'Bunga (Bank/Keuangan)',
-    penjelasan: 'Merujuk pada sejumlah uang tambahan atau persentase yang dikenakan pada pinjaman uang, atau keuntungan yang didapat dari tabungan di bank (suku bunga / interest).',
-    contoh1: '銀行の利子。\n(Bunga yang diberikan oleh pihak bank.)',
-    contoh2: 'お金を借りて利息を払う。\n(Meminjam uang dan harus membayar bunganya.)'
+    arti: 'Bunga bank / Uang sewa tabungan/pinjaman',
+    penjelasan: 'Uang tambahan yang dibayarkan saat meminjam uang, atau imbalan yang didapat dari menabung di bank.',
+    contoh1: '銀行の利子。\n(Bunga bank.)',
+    contoh2: 'お金を借りて利息を払う。\n(Meminjam uang dan membayar bunganya.)'
   },
   {
     id: 'm5h3_11',
@@ -132,10 +132,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '利点',
     furigana: 'りてん',
-    arti: 'Kelebihan / Keuntungan / Manfaat',
-    penjelasan: 'Poin plus, nilai tambah, keuntungan, atau kelebihan yang ada pada sebuah rencana, situasi, atau produk dibandingkan dengan pilihan lain.',
-    contoh1: 'A案には多くの利点がある。\n(Ada banyak kelebihan pada rencana/proposal A.)',
-    contoh2: 'このシステムを使う利点は何ですか。\n(Apa keuntungannya jika menggunakan sistem ini?)'
+    arti: 'Kelebihan / Keuntungan',
+    penjelasan: 'Nilai tambah atau segi positif dari suatu hal dibandingkan pilihan lainnya.',
+    contoh1: 'A案には多くの利点がある。\n(Rencana A punya banyak kelebihan.)',
+    contoh2: 'このシステムを使う利点は何ですか。\n(Apa keuntungan memakai sistem ini?)'
   },
   {
     id: 'm5h3_12',
@@ -145,9 +145,9 @@ const kosakata_m5h3 = [
     kanji: '砂利',
     furigana: 'じゃり',
     arti: 'Batu kerikil',
-    penjelasan: 'Batu-batu berukuran kecil, sering dipakai sebagai material dasar untuk membuat jalan, diletakkan di lintasan rel kereta api, atau sebagai hiasan di taman.',
-    contoh1: '砂利道。\n(Jalanan yang ditaburi atau berbatu kerikil.)',
-    contoh2: '庭に砂利を敷く。\n(Menabur dan meratakan batu kerikil di halaman rumah.)'
+    penjelasan: 'Batu-batu kecil yang biasa dipakai untuk jalanan, rel kereta, atau halaman rumah.',
+    contoh1: '砂利道。\n(Jalan berbatu kerikil.)',
+    contoh2: '庭に砂利を敷く。\n(Menabur batu kerikil di halaman.)'
   },
   {
     id: 'm5h3_13',
@@ -157,9 +157,9 @@ const kosakata_m5h3 = [
     kanji: '左利き',
     furigana: 'ひだりきき',
     arti: 'Kidal',
-    penjelasan: 'Kondisi bawaan di mana seseorang lebih dominan dan nyaman menggunakan tangan kiri untuk beraktivitas sehari-hari seperti menulis dan makan. Lawan katanya adalah 右利き (migikiki) alias pengguna tangan kanan.',
-    contoh1: '左利きの人。\n(Orang yang kidal.)',
-    contoh2: '左利き用のハサミ。\n(Gunting yang dirancang khusus untuk orang kidal.)'
+    penjelasan: 'Orang yang lebih dominan menggunakan tangan kiri. Kebalikannya adalah 右利き (migikiki / tangan kanan).',
+    contoh1: '左利きの人。\n(Orang kidal.)',
+    contoh2: '左利き用のハサミ。\n(Gunting khusus orang kidal.)'
   },
   {
     id: 'm5h3_14',
@@ -168,10 +168,10 @@ const kosakata_m5h3 = [
     kategori: 'kata sifat',
     kanji: '有望（な）',
     furigana: 'ゆうぼう',
-    arti: 'Berpotensi / Punya masa depan cerah',
-    penjelasan: 'Kata sifat untuk mendeskripsikan seseorang, perusahaan, atau proyek yang menunjukkan potensi besar, menjanjikan, dan punya harapan tinggi untuk sukses di masa depan.',
-    contoh1: '有望な研究者。\n(Peneliti yang punya potensi sangat tinggi / menjanjikan.)',
-    contoh2: '将来有望な若者。\n(Anak muda yang masa depannya cerah dan menjanjikan.)'
+    arti: 'Berpotensi / Masa depan cerah',
+    penjelasan: 'Sifat untuk seseorang atau hal yang punya prospek hebat dan berpeluang sukses besar di masa depan.',
+    contoh1: '有望な研究者。\n(Peneliti yang sangat berpotensi.)',
+    contoh2: '将来有望な若者。\n(Pemuda yang masa depannya cerah.)'
   },
   {
     id: 'm5h3_15',
@@ -180,10 +180,10 @@ const kosakata_m5h3 = [
     kategori: 'kata sifat',
     kanji: '有益（な）',
     furigana: 'ゆうえき',
-    arti: 'Bermanfaat / Berguna / Berfaedah',
-    penjelasan: 'Sesuatu yang memberikan nilai, manfaat, dan keuntungan yang nyata bagi diri sendiri maupun orang lain (seperti informasi, waktu, atau aktivitas). Kebalikannya adalah 無益 (mueki) alias sia-sia/tidak berguna.',
-    contoh1: '有益な本。\n(Buku yang sangat bermanfaat dan penuh ilmu.)',
-    contoh2: '休暇を有益に使う。\n(Menghabiskan waktu liburan dengan hal-hal yang bermanfaat.)'
+    arti: 'Bermanfaat / Berfaedah',
+    penjelasan: 'Segala hal yang memberikan nilai guna atau kegunaan positif. Lawan katanya adalah 無益 (mueki / sia-sia).',
+    contoh1: '有益な本。\n(Buku yang sangat bermanfaat.)',
+    contoh2: '休暇を有益に使う。\n(Memanfaatkan waktu liburan dengan baik.)'
   },
   {
     id: 'm5h3_16',
@@ -192,10 +192,10 @@ const kosakata_m5h3 = [
     kategori: 'kata sifat',
     kanji: '有力（な）',
     furigana: 'ゆうりょく',
-    arti: 'Berpengaruh / Punya kans atau kemungkinan besar',
-    penjelasan: 'Merujuk pada orang atau argumen yang punya kuasa, pengaruh, dan dukungan kuat di masyarakat. Sering juga dipakai untuk menyebut kandidat yang punya peluang menang sangat besar.',
-    contoh1: '地域の有力者。\n(Tokoh ternama atau orang yang sangat berpengaruh di daerah tersebut.)',
-    contoh2: '優勝の有力な候補。\n(Kandidat terkuat yang diprediksi bakal jadi juara.)'
+    arti: 'Berpengaruh / Berpeluang kuat',
+    penjelasan: 'Memiliki pengaruh/kekuatan besar, atau menjadi kandidat terkuat untuk memenangkan sesuatu.',
+    contoh1: '地域の有力者。\n(Tokoh yang sangat berpengaruh di daerah tersebut.)',
+    contoh2: '優勝の有力な候補。\n(Kandidat terkuat calon juara.)'
   },
   {
     id: 'm5h3_17',
@@ -204,10 +204,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '私有',
     furigana: 'しゆう',
-    arti: 'Milik pribadi / Kepemilikan privat',
-    penjelasan: 'Aset, properti, atau lahan yang dimiliki sepenuhnya secara pribadi atau oleh pihak swasta, dan tidak boleh dimasuki/digunakan oleh publik tanpa izin.',
-    contoh1: '私有財産。\n(Harta benda milik pribadi.)',
-    contoh2: 'ここは私有地です。\n(Ini adalah tanah/lahan milik pribadi, bukan fasilitas umum.)'
+    arti: 'Milik pribadi / Privat',
+    penjelasan: 'Kepemilikan perorangan/swasta, bukan untuk umum/publik.',
+    contoh1: '私有財産。\n(Harta kekayaan milik pribadi.)',
+    contoh2: 'ここは私有地です。\n(Ini adalah tanah milik pribadi.)'
   },
   {
     id: 'm5h3_18',
@@ -217,9 +217,9 @@ const kosakata_m5h3 = [
     kanji: '有する',
     furigana: 'ゆうする',
     arti: 'Memiliki / Mempunyai',
-    penjelasan: 'Kata kerja yang lumayan formal, berarti mempunyai, memegang, atau memiliki sesuatu baik secara fisik maupun abstrak, seperti hak, kemampuan, atau kualifikasi.',
-    contoh1: '権利を有する。\n(Memiliki hak penuh atas suatu hal.)',
-    contoh2: '特別な能力を有する。\n(Mempunyai bakat atau kemampuan yang khusus/istimewa.)'
+    penjelasan: 'Bentuk formal dari "mempunyai" (hak, kemampuan, atau kualifikasi).',
+    contoh1: '権利を有する。\n(Memiliki hak.)',
+    contoh2: '特別な能力を有する。\n(Memiliki kemampuan khusus.)'
   },
   {
     id: 'm5h3_19',
@@ -229,9 +229,9 @@ const kosakata_m5h3 = [
     kanji: '現行',
     furigana: 'げんこう',
     arti: 'Sedang berlaku / Saat ini',
-    penjelasan: 'Merujuk pada undang-undang, sistem, atau aturan yang sedang berjalan dan berlaku saat ini. Jika digabung menjadi 現行犯 (genkouhan), artinya pelaku yang tertangkap basah sedang berbuat kejahatan.',
-    contoh1: '現行犯で逮捕される。\n(Ditangkap polisi karena tertangkap basah di tempat kejadian.)',
-    contoh2: '現行の制度。\n(Sistem atau peraturan yang sedang berlaku saat ini.)'
+    penjelasan: 'Aturan, sistem, atau undang-undang yang sedang dipakai/berjalan saat ini. 現行犯 (tertangkap basah).',
+    contoh1: '現行犯で逮捕される。\n(Ditangkap karena tertangkap basah di lokasi.)',
+    contoh2: '現行の制度。\n(Sistem yang sedang berlaku saat ini.)'
   },
   {
     id: 'm5h3_20',
@@ -240,10 +240,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '現場',
     furigana: 'げんば',
-    arti: 'TKP (Tempat Kejadian Perkara) / Lokasi proyek',
-    penjelasan: 'Lokasi fisik asli tempat terjadinya suatu peristiwa (seperti kecelakaan atau tindak kriminal/TKP), atau tempat berlangsungnya pekerjaan lapangan (seperti lokasi proyek konstruksi).',
-    contoh1: '工事現場。\n(Lokasi proyek pembangunan/konstruksi.)',
-    contoh2: '事故の現場。\n(Tempat kejadian kecelakaan / TKP kecelakaan.)'
+    arti: 'TKP / Lokasi kerja lapangan',
+    penjelasan: 'Tempat terjadinya suatu peristiwa (kecelakaan/kejahatan) atau tempat proyek dikerjakan.',
+    contoh1: '工事現場。\n(Lokasi proyek konstruksi.)',
+    contoh2: '事故の現場。\n(Tempat kejadian perkara/kecelakaan.)'
   },
   {
     id: 'm5h3_21',
@@ -252,10 +252,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '現地',
     furigana: 'げんち',
-    arti: 'Lokasi setempat / Lapangan (di tempat tujuan)',
-    penjelasan: 'Tempat, daerah, atau negara di mana sebuah acara, tugas, atau kegiatan berlangsung. Sering merujuk pada lokasi tujuan atau lapangan yang berada jauh dari tempat pembicara berada.',
-    contoh1: '現地に向かう。\n(Berangkat menuju ke lokasi tujuan.)',
-    contoh2: '現地の習慣を学ぶ。\n(Mempelajari adat istiadat warga setempat di lokasi tersebut.)'
+    arti: 'Lokasi tujuan / Setempat',
+    penjelasan: 'Tempat asli di mana suatu aktivitas atau peristiwa berlangsung (biasanya lokasi yang dituju).',
+    contoh1: '現地に向かう。\n(Menuju ke lokasi tujuan.)',
+    contoh2: '現地の習慣を学ぶ。\n(Mempelajari kebiasaan warga setempat.)'
   },
   {
     id: 'm5h3_22',
@@ -264,10 +264,10 @@ const kosakata_m5h3 = [
     kategori: 'kata kerja',
     kanji: '出現（する）',
     furigana: 'しゅつげん',
-    arti: 'Muncul / Penampakan',
-    penjelasan: 'Situasi di mana sebuah objek, makhluk, atau seseorang yang sebelumnya tersembunyi atau tidak ada, tiba-tiba muncul dan menampakkan diri (bisa dilihat).',
-    contoh1: 'UFOが出現する。\n(Penampakan/munculnya UFO.)',
-    contoh2: '新たなウイルスが出現した。\n(Varian virus baru telah muncul.)'
+    arti: 'Muncul / Menampakkan diri',
+    penjelasan: 'Keadaan di mana sesuatu yang sebelumnya tidak kelihatan tiba-tiba muncul.',
+    contoh1: 'UFOが出現する。\n(UFO muncul/menampakkan diri.)',
+    contoh2: '新たなウイルスが出現した。\n(Virus baru telah muncul.)'
   },
   {
     id: 'm5h3_23',
@@ -276,10 +276,10 @@ const kosakata_m5h3 = [
     kategori: 'kata kerja',
     kanji: '再現（する）',
     furigana: 'さいげん',
-    arti: 'Membuat ulang / Merekonstruksi / Menyimulasikan',
-    penjelasan: 'Proses mewujudkan atau membuat ulang sebuah situasi, lingkungan, atau karya dari masa lalu agar sama persis seperti aslinya. Sering dipakai untuk rekonstruksi kejadian.',
-    contoh1: '事故の状況を再現する。\n(Merekam/merekonstruksi ulang situasi saat kecelakaan itu terjadi.)',
-    contoh2: '当時の街並みを再現したテーマパーク。\n(Taman hiburan yang membangun ulang pemandangan kota dari zaman dulu.)'
+    arti: 'Merekonstruksi / Membuat ulang',
+    penjelasan: 'Menampilkan atau membuat ulang suatu kejadian/kondisi agar sama seperti aslinya.',
+    contoh1: '事故の状況を再現する。\n(Merekonstruksi ulang kronologi kecelakaan.)',
+    contoh2: '当時の街並みを再現したテーマパーク。\n(Taman hiburan yang merekonstruksi tata kota zaman dulu.)'
   },
   {
     id: 'm5h3_24',
@@ -288,10 +288,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '間柄',
     furigana: 'あいだがら',
-    arti: 'Hubungan / Kedekatan (antar manusia)',
-    penjelasan: 'Merujuk pada status hubungan, keakraban, atau kedekatan yang terjalin antara dua orang atau lebih, seperti hubungan keluarga, pertemanan, maupun hubungan romantis.',
-    contoh1: '親密な間柄。\n(Hubungan yang sangat dekat dan akrab/intim.)',
-    contoh2: '彼とは兄弟のような間柄だ。\n(Hubungan saya dengannya sudah sedekat saudara kandung.)'
+    arti: 'Hubungan / Kedekatan',
+    penjelasan: 'Status atau tingkat kedekatan hubungan antarmanusia (keluarga, teman, pasangan).',
+    contoh1: '親密な間柄。\n(Hubungan yang sangat akrab/dekat.)',
+    contoh2: '彼とは兄弟のような間柄だ。\n(Hubungan saya dengannya sudah seperti saudara.)'
   },
   {
     id: 'm5h3_25',
@@ -300,10 +300,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '事柄',
     furigana: 'ことがら',
-    arti: 'Hal / Perkara / Sesuatu',
-    penjelasan: 'Istilah formal yang merujuk pada suatu hal, subjek, fakta, atau permasalahan umum yang sedang dibahas atau dijelaskan.',
-    contoh1: '重要な事柄。\n(Hal atau perkara yang sangat penting.)',
-    contoh2: '次の事柄について説明します。\n(Saya akan menjelaskan tentang hal-hal berikut ini.)'
+    arti: 'Hal / Perkara / Masalah',
+    penjelasan: 'Istilah formal untuk menyebut topik, fakta, atau hal yang sedang dibahas.',
+    contoh1: '重要な事柄。\n(Hal/perkara yang penting.)',
+    contoh2: '次の事柄について説明します。\n(Saya akan menjelaskan tentang hal-hal berikut.)'
   },
   {
     id: 'm5h3_26',
@@ -312,10 +312,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '人柄',
     furigana: 'ひとがら',
-    arti: 'Kepribadian / Sifat / Karakter',
-    penjelasan: 'Karakter, sifat, atau kepribadian bawaan seseorang yang tecermin dari perilakunya. Sering dipakai saat memuji budi pekerti seseorang yang dianggap baik oleh orang-orang di sekitarnya.',
-    contoh1: '立派な人柄。\n(Punya sifat dan kepribadian yang sangat mengagumkan/terhormat.)',
-    contoh2: '彼の温かい人柄に惹かれる。\n(Tertarik dengan kepribadiannya yang selalu hangat dan ramah.)'
+    arti: 'Kepribadian / Sifat',
+    penjelasan: 'Karakter atau sifat dasar seseorang yang terlihat dari perilakunya sehari-hari.',
+    contoh1: '立派な人柄。\n(Kepribadian yang terpuji/luar biasa.)',
+    contoh2: '彼の温かい人柄に惹かれる。\n(Tertarik dengan sifatnya yang hangat.)'
   },
   {
     id: 'm5h3_27',
@@ -324,10 +324,10 @@ const kosakata_m5h3 = [
     kategori: 'kata kerja',
     kanji: '直訳（する）',
     furigana: 'ちょくやく',
-    arti: 'Terjemahan harfiah / Terjemahan langsung',
-    penjelasan: 'Menerjemahkan sebuah kalimat mentah-mentah secara harfiah (kata per kata) tanpa menyesuaikan konteks, tata bahasa, atau makna kiasannya.',
-    contoh1: '文章を直訳する。\n(Menerjemahkan teks secara harfiah/langsung.)',
-    contoh2: '直訳すると意味が通じない。\n(Kalau diterjemahkan secara harfiah, maknanya jadi aneh dan tidak masuk akal.)'
+    arti: 'Terjemahan harfiah / Mentah',
+    penjelasan: 'Menerjemahkan teks kata demi kata secara langsung tanpa menyesuaikan konteksnya.',
+    contoh1: '文章を直訳する。\n(Menerjemahkan kalimat secara harfiah.)',
+    contoh2: '直訳すると意味が通じない。\n(Jika diterjemahkan secara harfiah, maknanya jadi aneh.)'
   },
   {
     id: 'm5h3_28',
@@ -336,10 +336,10 @@ const kosakata_m5h3 = [
     kategori: 'kata benda',
     kanji: '内訳',
     furigana: 'うちわけ',
-    arti: 'Rincian / Pecahan (Biaya)',
-    penjelasan: 'Rincian atau detail pemecahan dari total biaya atau angka yang besar. Sangat sering dipakai dalam bon, struk, faktur, atau laporan keuangan untuk menunjukkan secara spesifik ke mana saja uang itu mengalir.',
-    contoh1: '請求書の内訳。\n(Rincian tagihan dalam faktur/invoice.)',
-    contoh2: '出費の内訳をチェックする。\n(Mengecek rincian pengeluaran satu per satu.)'
+    arti: 'Rincian / Pemecahan biaya',
+    penjelasan: 'Detail pembagian angka atau biaya total ke dalam pos-pos yang lebih spesifik.',
+    contoh1: '請求書の内訳。\n(Rincian komponen biaya dalam tagihan.)',
+    contoh2: '出費の内訳をチェックする。\n(Mengecek rincian pengeluaran.)'
   },
   {
     id: 'm5h3_29',
@@ -349,9 +349,9 @@ const kosakata_m5h3 = [
     kanji: '言い訳（する）',
     furigana: 'いいわけ',
     arti: 'Mencari alasan / Ngeles',
-    penjelasan: 'Tindakan membela diri dengan membuat-buat alasan untuk menjelaskan kesalahan, membenarkan tindakan, atau mengurangi rasa bersalah saat gagal melakukan sesuatu (ngeles).',
-    contoh1: '遅刻の言い訳をする。\n(Cari-cari alasan karena datang terlambat.)',
-    contoh2: '言い訳は聞きたくない。\n(Aku gak mau dengar alasan apa pun darimu.)'
+    penjelasan: 'Membuat alasan untuk membela diri atau menutupi kesalahan.',
+    contoh1: '遅刻の言い訳をする。\n(Mencari alasan atas keterlambatan.)',
+    contoh2: '言い訳は聞きたくない。\n(Saya tidak mau mendengar alasanmu.)'
   },
   {
     id: 'm5h3_30',
@@ -361,9 +361,9 @@ const kosakata_m5h3 = [
     kanji: '説得（する）',
     furigana: 'せっとく',
     arti: 'Membujuk / Meyakinkan',
-    penjelasan: 'Usaha untuk membujuk atau meyakinkan orang lain dengan alasan yang logis agar mereka mau setuju, mengubah pikiran, atau melakukan suatu tindakan tertentu.',
-    contoh1: '親を説得する。\n(Berusaha membujuk dan meyakinkan orang tua agar setuju.)',
-    contoh2: '彼を説得してプロジェクトに参加させた。\n(Berhasil meyakinkan dia untuk ikut serta di proyek tersebut.)'
+    penjelasan: 'Memberikan penjelasan logis agar orang lain mau setuju atau menuruti keinginan kita.',
+    contoh1: '親を説得する。\n(Membujuk/meyakinkan orang tua.)',
+    contoh2: '彼を説得してプロジェクトに参加させた。\n(Membujuknya agar mau ikut dalam proyek.)'
   },
   {
     id: 'm5h3_31',
@@ -373,9 +373,9 @@ const kosakata_m5h3 = [
     kanji: '伝説',
     furigana: 'でんせつ',
     arti: 'Legenda',
-    penjelasan: 'Bisa merujuk pada dua hal: Pertama, cerita rakyat, mitos, atau kisah bersejarah yang diturunkan dari generasi ke generasi. Kedua, dipakai untuk menyebut sosok/tokoh hebat yang pencapaiannya sangat luar biasa (legendaris).',
-    contoh1: '伝説上の人物。\n(Sosok pahlawan atau karakter fiktif yang ada dalam kisah legenda.)',
-    contoh2: 'この村には古い伝説がある。\n(Ada sebuah legenda tua yang diwariskan di desa ini.)'
+    penjelasan: 'Cerita rakyat kuno, atau julukan untuk sosok luar biasa yang sangat terkenal.',
+    contoh1: '伝説上の人物。\n(Tokoh dalam legenda.)',
+    contoh2: 'この村には古い伝説がある。\n(Desa ini memiliki legenda kuno.)'
   },
   {
     id: 'm5h3_32',
@@ -384,10 +384,10 @@ const kosakata_m5h3 = [
     kategori: 'kata kerja',
     kanji: '説く',
     furigana: 'とく',
-    arti: 'Menjelaskan / Berkhotbah / Mengajarkan',
-    penjelasan: 'Tindakan menjelaskan sebuah prinsip, filosofi, kebenaran, atau ajaran agama dengan sabar agar orang lain bisa mengerti dan menerimanya. Identik dengan berdakwah, berkhotbah, atau menasihati.',
-    contoh1: '教えを説く。\n(Menjelaskan dan mengajarkan sebuah doktrin/ajaran kepada orang-orang.)',
-    contoh2: '仏教の教えを説く。\n(Menyampaikan khotbah mengenai ajaran dan filosofi agama Buddha.)'
+    arti: 'Menjelaskan / Mengajarkan',
+    penjelasan: 'Menerangkan ajaran, filosofi, atau kebenaran kepada orang lain.',
+    contoh1: '教えを説く。\n(Mengajarkan suatu doktrin/ajaran.)',
+    contoh2: '仏教の教えを説く。\n(Menjelaskan ajaran agama Buddha.)'
   }
 ];
 
