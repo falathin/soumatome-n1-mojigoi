@@ -10,10 +10,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '受ける',
     furigana: 'うける',
-    arti: 'Menerima / Menangkap (Fisik)',
-    penjelasan: 'Dipakai saat tubuh/tangan kita secara fisik menangkap atau menahan benda/elemen alam yang mengarah ke kita (seperti bola, angin, atau sinar matahari).',
-    contoh1: '両手でボールを受ける。\n(Menangkap bola dengan kedua belah tangan.)',
-    contoh2: 'ヨットが風を受けて進む。\n(Kapal layar melaju dengan memanfaatkan hembusan angin.)'
+    arti: 'Menangkap / Menerima (Fisik)',
+    penjelasan: 'Menangkap atau menahan benda/aliran fisik yang mengarah ke kita (bola, angin, sinar matahari).',
+    contoh1: '両手でボールを受ける。\n(Menangkap bola dengan kedua tangan.)',
+    contoh2: 'ヨットが風を受けて進む。\n(Kapal layar melaju dengan menangkap angin.)'
   },
   {
     id: 'm6h1_v2',
@@ -23,9 +23,9 @@ const kosakata_m6h1_verbs = [
     kanji: '受ける',
     furigana: 'うける',
     arti: 'Menerima / Mendapatkan (Abstrak)',
-    penjelasan: 'Dipakai untuk hal yang tidak berwujud/non-fisik, seperti menerima bantuan, pengaruh, sambutan, bimbingan, atau saran dari orang lain.',
-    contoh1: '外国から援助を受ける。\n(Menerima bantuan/subsidi dari luar negeri.)',
-    contoh2: '先生の影響を受ける。\n(Mendapatkan/terpengaruh oleh ajaran guru.)'
+    penjelasan: 'Menerima hal non-fisik seperti bantuan, pengaruh, saran, atau bimbingan.',
+    contoh1: '外国から援助を受ける。\n(Menerima bantuan dari luar negeri.)',
+    contoh2: '先生の影響を受ける。\n(Mendapat pengaruh dari guru.)'
   },
   {
     id: 'm6h1_v3',
@@ -34,8 +34,8 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '受ける',
     furigana: 'うける',
-    arti: 'Menjalani / Mengalami (Proses atau Perlakuan)',
-    penjelasan: 'Dipakai saat kita menjalani suatu prosedur/proses (seperti tes medis, ujian, atau wawancara) atau menerima perlakuan/undangan dari pihak lain.',
+    arti: 'Menjalani / Mengikuti',
+    penjelasan: 'Mengikuti atau menjalani proses resmi seperti ujian, tes medis, wawancara, atau memenuhi undangan.',
     contoh1: '招待を受ける。\n(Menerima/memenuhi undangan.)',
     contoh2: '病院で検査を受ける。\n(Menjalani pemeriksaan medis di rumah sakit.)'
   },
@@ -46,10 +46,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '受ける',
     furigana: 'うける',
-    arti: 'Populer / Disukai / Laku (Bahasa Gaul/Santai)',
-    penjelasan: 'Sering ditulis katakana (ウケる). Artinya mendapat respons positif, sangat disukai publik, atau bikin orang tertawa terbahak-bahak (untuk lelucon).',
-    contoh1: '若者に受ける映画。\n(Film yang sangat populer/disukai di kalangan anak muda.)',
-    contoh2: 'そのギャグは全くウケなかった。\n(Lelucon itu sama sekali tidak lucu / gagal total membuat orang tertawa.)'
+    arti: 'Populer / Bikin Ketawa (Slang)',
+    penjelasan: 'Sering ditulis ウケる. Artinya sangat disukai publik atau sangat lucu/lucu banget.',
+    contoh1: '若者に受ける映画。\n(Film yang disukai anak muda.)',
+    contoh2: 'そのギャグは全くウケなかった。\n(Lelucon itu sama sekali tidak garing/tidak bikin ketawa.)'
   },
 
   // --- KOSAKATA GAMBAR: 滑る (suberu) ---
@@ -60,10 +60,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '滑る',
     furigana: 'すべる',
-    arti: 'Meluncur / Terpeleset / Licin',
-    penjelasan: 'Arti fisiknya adalah bergerak meluncur di atas permukaan licin. Bisa sengaja (bermain ski/es) atau tidak sengaja (terpeleset, atau barang terlepas dari tangan).',
+    arti: 'Meluncur / Terpeleset',
+    penjelasan: 'Bergerak di permukaan licin, baik disengaja (main ski) maupun tidak (terpeleset/terlepas dari tangan).',
     contoh1: '足が滑って転んだ。\n(Kakiku terpeleset lalu jatuh.)',
-    contoh2: '手が滑ってコップを落とした。\n(Cangkir terlepas dari tanganku karena licin lalu jatuh.)'
+    contoh2: '手が滑ってコップを落とした。\n(Gelas terlepas dari tangan karena licin.)'
   },
   {
     id: 'm6h1_v6',
@@ -72,10 +72,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '滑る',
     furigana: 'すべる',
-    arti: 'Keceplosan / Gagal Ujian (Ungkapan Kiasan)',
-    penjelasan: '• 口が滑る (mulut terpeleset) = Keceplosan omongan/rahasia.\n• 試験に滑る (terpeleset ujian) = Gagal/tidak lulus ujian (ungkapan lain dari 落ちる).',
-    contoh1: 'つい口が滑って、秘密を話してしまった。\n(Tanpa sengaja mulutku keceplosan dan membocorkan rahasia.)',
-    contoh2: '試験に滑って、がっかりしている。\n(Aku sangat kecewa karena gagal/tidak lulus ujian.)'
+    arti: 'Keceplosan / Gagal Ujian (Kiasan)',
+    penjelasan: 'Ungkapan khusus: 口が滑る (keceplosan) dan 試験に滑る (gagal ujian).',
+    contoh1: 'つい口が滑って、秘密を話してしまった。\n(Tanpa sengaja keceplosan membocorkan rahasia.)',
+    contoh2: '試験に滑って、がっかりしている。\n(Aku kecewa karena gagal ujian.)'
   },
 
   // --- KOSAKATA GAMBAR: つながる (tsunagaru) ---
@@ -86,10 +86,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: 'つながる',
     furigana: 'つながる',
-    arti: 'Tersambung / Terhubung (Fisik atau Saluran)',
-    penjelasan: 'Menunjukkan sesuatu yang saling terhubung secara nyata, seperti sinyal/saluran telepon, jalan raya, atau deretan kendaraan yang mengantre panjang.',
-    contoh1: '山奥だが、やっと電話がつながった。\n(Meskipun di dalam gunung/pelosok, akhirnya teleponnya tersambung.)',
-    contoh2: '渋滞で車が何キロもつながっている。\n(Karena macet, mobil-mobil mengantre/bersambungan sampai beberapa kilometer.)'
+    arti: 'Tersambung / Deretan Beruntun',
+    penjelasan: 'Terhubung secara nyata, seperti koneksi telepon, jalan, atau deretan mobil yang macet.',
+    contoh1: '山奥だが、やっと電話がつながった。\n(Meski di dalam gunung, akhirnya telepon tersambung.)',
+    contoh2: '渋滞で車が何キロもつながっている。\n(Karena macet, mobil mengantre berderet sampai ber-km.)'
   },
   {
     id: 'm6h1_v8',
@@ -98,10 +98,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: 'つながる',
     furigana: 'つながる',
-    arti: 'Berkaitan / Memiliki Hubungan / Berujung Pada',
-    penjelasan: 'Dipakai untuk hubungan non-fisik: seperti ikatan keluarga/darah (血がつながっている), keterkaitan dengan kasus hukum, atau tindakan yang berujung pada suatu hasil.',
-    contoh1: '彼とは血がつながっている。\n(Aku dan dia memiliki hubungan darah / bersaudara.)',
-    contoh2: 'この手掛かりは事件の解決につながる。\n(Petunjuk ini akan berujung pada penyelesaian kasus.)'
+    arti: 'Berhubungan / Berujung Pada',
+    penjelasan: 'Hubungan abstrak seperti ikatan darah, keterkaitan kasus, atau sebab-akibat.',
+    contoh1: '彼とは血がつながっている。\n(Aku dan dia ada hubungan darah.)',
+    contoh2: 'この手掛かりは事件の解決につながる。\n(Petunjuk ini berujung pada penyelesaian kasus.)'
   },
 
   // --- KOSAKATA GAMBAR: 挟む (hasamu) ---
@@ -112,10 +112,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '挟む',
     furigana: 'はさむ',
-    arti: 'Menjepit / Menyisipkan (Fisik)',
-    penjelasan: 'Tindakan menaruh atau menjepit sesuatu di antara dua benda. Contohnya menyisipkan pembatas buku, menjepit makanan dengan sumpit, atau jari yang terjepit pintu.',
-    contoh1: '本にしおりを挟む。\n(Menyisipkan pembatas buku di antara halaman buku.)',
-    contoh2: '不注意で指をドアに挟んだ。\n(Karena tidak hati-hati, jariku terjepit pintu.)'
+    arti: 'Menjepit / Menyisipkan',
+    penjelasan: 'Menaruh atau meletakkan sesuatu di antara dua benda.',
+    contoh1: '本にしおりを挟む。\n(Menyisipkan pembatas buku.)',
+    contoh2: '不注意で指をドアに挟んだ。\n(Karena ceroboh, jari terjepit pintu.)'
   },
   {
     id: 'm6h1_v10',
@@ -124,10 +124,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '挟む',
     furigana: 'はさむ',
-    arti: 'Mengapit (Posisi) / Menyelingi (Waktu)',
-    penjelasan: '1. Mengapit: Ada posisi benda di tengah dua orang (misal: meja di antara 2 kursi).\n2. Menyelingi: Menyisipkan jeda waktu/istirahat di tengah acara.',
-    contoh1: 'テーブルを挟んで向かい合って座る。\n(Duduk saling berhadapan diapit oleh meja di tengahnya.)',
-    contoh2: '会議は10分の休憩を挟んで再開します。\n(Rapat akan dilanjutkan kembali setelah diselingi istirahat 10 menit.)'
+    arti: 'Mengapit / Diselingi',
+    penjelasan: 'Posisinya berada di tengah-tengah dua benda/orang, atau menyelingi jeda waktu.',
+    contoh1: 'テーブルを挟んで向かい合って座る。\n(Duduk berhadapan diapit meja.)',
+    contoh2: '会議は10分の休憩を挟んで再開します。\n(Rapat dilanjutkan setelah diselingi istirahat 10 menit.)'
   },
   {
     id: 'm6h1_v11',
@@ -136,10 +136,10 @@ const kosakata_m6h1_verbs = [
     kategori: 'kata kerja',
     kanji: '挟む',
     furigana: 'はさむ',
-    arti: 'Menyela / Kebetulan Mendengar (Idiom)',
-    penjelasan: '• 口を挟む (menyisipkan mulut) = Menyela/memotong pembicaraan orang.\n• 耳に挟む (menyisipkan telinga) = Ketidaksengajaan mendengar selentingan/gosip.',
-    contoh1: '他人の会話に口を挟むのは失礼だ。\n(Menyela/memotong pembicaraan orang lain itu tidak sopan.)',
-    contoh2: '彼が辞めるといううわさを耳に挟んだ。\n(Aku tidak sengaja mendengar kabar angin bahwa dia mau resign.)'
+    arti: 'Menyela / Kuping Sekilas Dengar (Idiom)',
+    penjelasan: 'Ungkapan khusus: 口を挟む (potong pembicaraan) dan 耳に挟む (sekilas mendengar rumor).',
+    contoh1: '他人の会話に口を挟むのは失礼だ。\n(Menyela pembicaraan orang lain itu tidak sopan.)',
+    contoh2: '彼が辞めるといううわさを耳に挟んだ。\n(Aku sekilas mendengar rumor dia mau resign.)'
   }
 ];
 
