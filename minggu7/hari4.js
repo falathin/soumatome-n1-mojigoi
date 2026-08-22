@@ -2,7 +2,7 @@
 window.vocabData = window.vocabData || [];
 
 const kosakata_m7h4 = [
-  // --- GAMBAR 1 (image_681ba0.jpg) ---
+  // --- GAMBAR 1 ---
   {
     id: 'm7h4_1',
     minggu: '7',
@@ -11,9 +11,9 @@ const kosakata_m7h4 = [
     kanji: '受け継ぐ',
     furigana: 'うけつぐ',
     arti: 'Mewarisi / Meneruskan',
-    penjelasan: 'Menerima sesuatu dari generasi sebelumnya (seperti harta, tradisi, atau tekad) untuk dilanjutkan.',
-    contoh1: '親から莫大な財産を受け継ぐ。\n(Mewarisi harta benda yang sangat banyak dari orang tua.)',
-    contoh2: '先輩の意志を受け継いで、この研究を後世に伝える。\n(Meneruskan tekad/keinginan senior dan menyampaikan penelitian ini ke generasi mendatang.)'
+    penjelasan: 'Menerima takhta, harta, atau amanat dari pendahulu untuk dilanjutkan.',
+    contoh1: '親から莫大な財産を受け継ぐ。\n(Mewarisi harta yang sangat banyak dari orang tua.)',
+    contoh2: '先輩の意志を受け継いで、この研究を後世に伝える。\n(Meneruskan tekad senior dan menyampaikan penelitian ini ke generasi mendatang.)'
   },
   {
     id: 'm7h4_2',
@@ -23,8 +23,8 @@ const kosakata_m7h4 = [
     kanji: '受け入れる',
     furigana: 'うけいれる',
     arti: 'Menerima / Menyetujui',
-    penjelasan: 'Menerima usulan/tuntutan orang lain, atau menyambut orang baru masuk ke kelompok/wilayah kita.',
-    contoh1: '相手側の要求や提案を受け入れる。\n(Menerima dan menyetujui tuntutan atau usulan dari pihak lawan.)',
+    penjelasan: 'Menyetujui usulan orang lain, atau menerima warga/orang asing masuk.',
+    contoh1: '相手側の要求や提案を受け入れる。\n(Menerima/menyetujui tuntutan atau usulan dari pihak lawan.)',
     contoh2: '政府は多くの外国人労働者を受け入れる方針を決めた。\n(Pemerintah memutuskan kebijakan untuk menerima banyak pekerja asing.)'
   },
   {
@@ -35,9 +35,9 @@ const kosakata_m7h4 = [
     kanji: '受け入れ',
     furigana: 'うけいれ',
     arti: 'Penerimaan / Penampungan',
-    penjelasan: 'Proses atau kesiapan untuk menerima orang, ide baru, atau pasien darurat (bentuk kata benda dari 受け入れる).',
-    contoh1: '外国人留学生の受け入れ体制を整える。\n(Merapikan dan mempersiapkan sistem penerimaan bagi mahasiswa asing.)',
-    contoh2: 'その救急病院は患者の受け入れを断った。\n(Rumah sakit darurat itu menolak penerimaan pasien tersebut.)'
+    penjelasan: 'Kesiapan atau sistem untuk menampung/menerima orang atau pasien.',
+    contoh1: '外国人留学生の受け入れ体制を整える。\n(Merapikan sistem penerimaan bagi mahasiswa asing.)',
+    contoh2: 'その救急病院は患者の受け入れを断った。\n(Rumah sakit darurat itu menolak penerimaan pasien.)'
   },
   {
     id: 'm7h4_4',
@@ -46,10 +46,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '受け止める',
     furigana: 'うけとめる',
-    arti: 'Menangkap / Menerima Kenyataan',
-    penjelasan: 'Menangkap benda fisik (seperti bola yang dilempar) atau menerima kenyataan/kritik pahit dengan lapang dada.',
+    arti: 'Menangkap / Menerima realita',
+    penjelasan: 'Menangkap bola dengan tangan, atau menerima kritik/kenyataan pahit.',
     contoh1: '正面から飛んできたボールを両手で受け止める。\n(Menangkap bola yang terbang dari arah depan dengan kedua tangan.)',
-    contoh2: '厳しい事実を厳粛に受け止める必要がある。\n(Kita perlu menerima kenyataan yang pahit/keras ini dengan penuh keseriusan.)'
+    contoh2: '厳しい事実を厳粛に受け止める必要がある。\n(Kita perlu menerima kenyataan yang pahit ini dengan serius.)'
   },
   {
     id: 'm7h4_5',
@@ -59,9 +59,9 @@ const kosakata_m7h4 = [
     kanji: '取り締まる',
     furigana: 'とりしまる',
     arti: 'Menertibkan / Menindak',
-    penjelasan: 'Mengawasi dengan ketat dan menindak pelanggar hukum atau aturan agar situasi tetap tertib.',
-    contoh1: '警察が厳しく交通違反を取り締まる。\n(Polisi menindak dengan tegas pelanggaran lalu lintas.)',
-    contoh2: '違法な路上駐車を取り締まるための見回りを強化する。\n(Memperkuat patroli untuk menertibkan parkir liar di pinggir jalan.)'
+    penjelasan: 'Mengawasi ketat dan menindak pelanggar hukum atau aturan.',
+    contoh1: '警察が厳しく交通違反を取り締まる。\n(Polisi menindak tegas pelanggaran lalu lintas.)',
+    contoh2: '違法な路上駐車を取り締まるための見回りを強化する。\n(Memperkuat patroli untuk menertibkan parkir liar.)'
   },
   {
     id: 'm7h4_6',
@@ -71,9 +71,9 @@ const kosakata_m7h4 = [
     kanji: '取り締まり',
     furigana: 'とりしまり',
     arti: 'Razia / Penertiban',
-    penjelasan: 'Pelaksanaan razia atau operasi penertiban oleh pihak berwenang (bentuk kata benda dari 取り締まる).',
-    contoh1: 'スピード違反の取り締まり（Ｎ）に引っかかってしまった。\n(Saya terkena razia/penertiban pelanggaran batas kecepatan.)',
-    contoh2: '年末年始は飲酒運転の取り締まりが厳しくなる。\n(Pada akhir dan awal tahun, penindakan mengemudi dalam keadaan mabuk akan semakin ketat.)'
+    penjelasan: 'Operasi razia atau penindakan hukum oleh aparat.',
+    contoh1: 'スピード違反の取り締まりに引っかかってしまった。\n(Saya terkena razia batas kecepatan.)',
+    contoh2: '年末年始は飲酒運転の取り締まりが厳しくなる。\n(Pada akhir dan awal tahun, razia mengemudi mabuk semakin ketat.)'
   },
   {
     id: 'm7h4_7',
@@ -82,10 +82,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '取り次ぐ',
     furigana: 'とりつぐ',
-    arti: 'Menyambungkan / Menjadi Perantara',
-    penjelasan: 'Menjadi perantara untuk menyambungkan telepon atau menyampaikan pesan tamu ke orang yang dituju.',
-    contoh1: 'かかってきた電話を奥の担当者に取り次ぐ。\n(Menyambungkan/menyampaikan telepon yang masuk kepada penanggung jawab di dalam.)',
-    contoh2: '受付のスタッフが来客の伝言を取り次いでくれた。\n(Staf resepsionis menyampaikan pesan dari tamu yang datang.)'
+    arti: 'Menyambungkan / Perantara',
+    penjelasan: 'Menyambungkan telepon atau menyampaikan pesan tamu ke orang yang dituju.',
+    contoh1: 'かかってきた電話を奥の担当者に取り次ぐ。\n(Menyambungkan telepon yang masuk ke staf penanggung jawab.)',
+    contoh2: '受付のスタッフが来客の伝言を取り次いでくれた。\n(Staf resepsionis menyampaikan pesan dari tamu.)'
   },
   {
     id: 'm7h4_8',
@@ -95,9 +95,9 @@ const kosakata_m7h4 = [
     kanji: '取り次ぎ',
     furigana: 'とりつぎ',
     arti: 'Penyambungan / Perantara',
-    penjelasan: 'Layanan perantara komunikasi atau penyampaian pesan (bentuk kata benda dari 取り次ぐ).',
-    contoh1: '電話の取り次ぎ（Ｎ）の間違いで大きなトラブルになった。\n(Terjadi masalah besar akibat kesalahan dalam penyambungan telepon.)',
-    contoh2: '用件の取り次ぎをお願いできますか。\n(Bisa saya minta tolong untuk penyampaian pesan urusannya?)'
+    penjelasan: 'Layanan/proses menyampaikan pesan atau menyambungkan komunikasi.',
+    contoh1: '電話の取り次ぎの間違いで大きなトラブルになった。\n(Terjadi masalah besar akibat salah menyambungkan telepon.)',
+    contoh2: '用件の取り次ぎをお願いできますか。\n(Bisa minta tolong sampaikan pesan urusannya?)'
   },
   {
     id: 'm7h4_9',
@@ -106,9 +106,9 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '取り戻す',
     furigana: 'とりもどす',
-    arti: 'Mendapatkan Kembali / Memulihkan',
-    penjelasan: 'Mengambil kembali barang yang hilang/dicuri, atau memulihkan keadaan (seperti kesehatan atau mengejar keterlambatan).',
-    contoh1: '警察のおかげで盗まれた宝石を取り戻すことができた。\n(Berkat polisi, saya bisa mendapatkan kembali permata yang dicuri.)',
+    arti: 'Mendapatkan kembali / Memulihkan',
+    penjelasan: 'Mengambil kembali barang yang hilang, atau memulihkan kesadaran/kesehatan.',
+    contoh1: '警察のおかげで盗まれた宝石を取り戻すことができた。\n(Berkat polisi, saya berhasil mendapatkan kembali permata yang dicuri.)',
     contoh2: '病気の遅れを取り戻すために必死で勉強する。\n(Belajar mati-matian untuk mengejar ketinggalan akibat sakit.)'
   },
   {
@@ -118,10 +118,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '取り囲む',
     furigana: 'とりかこむ',
-    arti: 'Mengepung / Mengelilingi',
-    penjelasan: 'Berada di posisi melingkar sehingga mengepung atau mengelilingi seseorang/objek.',
-    contoh1: '大勢の記者が首相の周りを取り囲む。\n(Banyak wartawan mengepung/mengelilingi di sekitar Perdana Menteri.)',
-    contoh2: 'ファンが憧れのスターを取り囲んでサインを求めた。\n(Para penggemar mengelilingi bintang pujaan mereka untuk meminta tanda tangan.)'
+    arti: 'Mengepung / Mengelilingi (Fisik)',
+    penjelasan: 'Orang/objek yang berdiri melingkar mengepung target.',
+    contoh1: '大勢の記者が首相の周りを取り囲む。\n(Banyak wartawan mengepung di sekitar Perdana Menteri.)',
+    contoh2: 'ファンが憧れのスターを取り囲んでサインを求めた。\n(Para penggemar mengelilingi bintang pujaan untuk minta tanda tangan.)'
   },
   {
     id: 'm7h4_11',
@@ -130,10 +130,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '取り巻く',
     furigana: 'とりまく',
-    arti: 'Melingkupi / Mengelilingi',
-    penjelasan: 'Mirip dengan 取り囲む, tapi lebih sering dipakai untuk hal abstrak seperti situasi atau lingkungan sekitar yang melingkupi kita.',
-    contoh1: '記者が首相の周りを取り巻いて質問攻めにする。\n(Wartawan mengelilingi di sekitar Perdana Menteri dan menghujani dengan pertanyaan.)',
-    contoh2: '子どもたちを取り巻く環境は時代とともに変化している。\n(Lingkungan yang meliputi anak-anak berubah seiring dengan berjalannya zaman.)'
+    arti: 'Melingkupi / Mengelilingi (Kondisi)',
+    penjelasan: 'Sering dipakai untuk kondisi, situasi, atau lingkungan yang melingkupi kita.',
+    contoh1: '記者が首相の周りを取り巻いて質問攻めにする。\n(Wartawan mengelilingi Perdana Menteri dan memborbardir pertanyaan.)',
+    contoh2: '子どもたちを取り巻く環境は時代とともに変化している。\n(Lingkungan yang melingkupi anak-anak berubah seiring zaman.)'
   },
   {
     id: 'm7h4_12',
@@ -142,9 +142,9 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '取り調べる',
     furigana: 'とりしらべる',
-    arti: 'Menginterogasi / Mengusut',
-    penjelasan: 'Pemeriksaan mendalam atau interogasi oleh polisi/penegak hukum terhadap seseorang yang dicurigai.',
-    contoh1: '警察官が事件の容疑者を取り調べる。\n(Petugas polisi menginterogasi/memeriksa tersangka kasus kejahatan.)',
+    arti: 'Menginterogasi / Memeriksa',
+    penjelasan: 'Pemeriksaan atau interogasi tersangkut kasus oleh pihak polisi.',
+    contoh1: '警察官が事件の容疑者を取り調べる。\n(Polisi menginterogasi tersangka kasus kejahatan.)',
     contoh2: '容疑者を一晩中取り調べて、ようやく真相が分かった。\n(Setelah menginterogasi tersangka semalaman, akhirnya kebenaran terungkap.)'
   },
   {
@@ -154,10 +154,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '取り調べ',
     furigana: 'とりしらべ',
-    arti: 'Proses Interogasi',
-    penjelasan: 'Sesi interogasi formal di kantor polisi (bentuk kata benda dari 取り調べる).',
-    contoh1: '厳しい取り調べ（Ｎ）を受けて、彼はついに罪を認めた。\n(Mendapatkan interogasi yang ketat, dia akhirnya mengakui kejahatannya.)',
-    contoh2: '取り調べは密室ではなく、可視化された部屋で行われる。\n(Pemeriksaan/interogasi dilakukan di ruangan yang transparan, bukan di kamar tertutup.)'
+    arti: 'Proses interogasi',
+    penjelasan: 'Sesi pemeriksaan/interogasi resmi oleh kepolisian.',
+    contoh1: '厳しい取り調べを受けて、彼はついに罪を認めた。\n(Setelah diinterogasi dengan ketat, dia akhirnya mengakui kejahatannya.)',
+    contoh2: '取り調べは密室ではなく、可視化された部屋で行われる。\n(Interogasi dilakukan di ruangan transparan, bukan ruang tertutup.)'
   },
   {
     id: 'm7h4_14',
@@ -166,10 +166,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '取り立てる',
     furigana: 'とりたてる',
-    arti: 'Menagih / Membahas Khusus',
-    penjelasan: 'Memaksa seseorang membayar kewajiban (seperti utang/pajak), atau membahas/menunjuk suatu hal secara spesifik.',
-    contoh1: '国は未納になっている税金を取り立てる。\n(Negara menagih pajak yang belum dibayarkan.)',
-    contoh2: '取り立てて言うほどの問題ではない。\n(Bukan masalah yang perlu disebutkan/dibahas secara khusus.)'
+    arti: 'Menagih paksa / Membahas khusus',
+    penjelasan: 'Menagih utang/pajak secara paksa, atau membahas sesuatu secara khusus.',
+    contoh1: '国は未納になっている税金を取り立てる。\n(Negara menagih pajak yang menunggak.)',
+    contoh2: '取り立てて言うほどの問題ではない。\n(Bukan masalah yang perlu dibahas secara khusus.)'
   },
   {
     id: 'm7h4_15',
@@ -178,10 +178,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '取り立て',
     furigana: 'とりたて',
-    arti: 'Penagihan / Baru Dipetik',
-    penjelasan: 'Proses penagihan uang paksa, atau kondisi barang (seperti sayur/buah) yang sangat segar karena baru saja dipetik.',
-    contoh1: '借金の取り立て（Ｎ）が怖くて、彼は夜も眠れない。\n(Penagihan utang yang menakutkan membuat dia tidak bisa tidur di malam hari.)',
-    contoh2: '畑から取り立ての新鮮な野菜を食べる。\n(Memakan sayuran segar yang baru saja dipetik langsung dari kebun.)'
+    arti: 'Penagihan utang / Baru dipetik',
+    penjelasan: 'Aksi penagihan utang, atau kondisi buah/sayur yang baru saja dipetik (segar).',
+    contoh1: '借金の取り立てが怖くて、彼は夜も眠れない。\n(Penagihan utang yang menakutkan membuat dia tidak bisa tidur.)',
+    contoh2: '畑から取り立ての新鮮な野菜を食べる。\n(Memakan sayuran segar yang baru saja dipetik dari kebun.)'
   },
   {
     id: 'm7h4_16',
@@ -191,9 +191,9 @@ const kosakata_m7h4 = [
     kanji: '取り混ぜる',
     furigana: 'とりまぜる',
     arti: 'Mencampur / Menggabungkan',
-    penjelasan: 'Menggabungkan beberapa hal yang berbeda jenis, ukuran, atau karakternya menjadi satu kesatuan yang bervariasi.',
-    contoh1: '大きさの違うクッキーを大小取り混ぜて箱に詰める。\n(Mengemas kue dengan mencampur berbagai ukuran besar dan kecil ke dalam kotak.)',
-    contoh2: '商品の在庫を新旧取り混ぜて格安で販売する。\n(Menjual murah stok barang dengan mencampuradukkan produk baru dan lama.)'
+    penjelasan: 'Mencampur berbagai jenis, ukuran, atau variasi barang menjadi satu.',
+    contoh1: '大きさの違うクッキーを大小取り混ぜて箱に詰める。\n(Mencampur kue ukuran besar dan kecil ke dalam kotak.)',
+    contoh2: '商品の在庫を新旧取り混ぜて格安で販売する。\n(Menjual murah stok barang dengan mencampur produk baru dan lama.)'
   },
   {
     id: 'm7h4_17',
@@ -202,10 +202,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '取り寄せる',
     furigana: 'とりよせる',
-    arti: 'Memesan untuk Dikirim',
-    penjelasan: 'Meminta barang, dokumen, atau katalog dari tempat lain agar dikirimkan atau didatangkan ke tempat kita.',
-    contoh1: '新しい商品のカタログを自宅に取り寄せる。\n(Memesan/meminta katalog produk baru dikirimkan ke rumah.)',
-    contoh2: '日本のお店から直接本を取り寄せる。\n(Memesan buku agar dikirimkan langsung dari toko di Jepang.)'
+    arti: 'Memesan untuk dikirim',
+    penjelasan: 'Meminta/memesan barang atau katalog dari luar agar dikirimkan ke tempat kita.',
+    contoh1: '新しい商品のカタログを自宅に取り寄せる。\n(Memesan katalog produk baru untuk dikirim ke rumah.)',
+    contoh2: '日本のお店から直接本を取り寄せる。\n(Memesan buku agar dikirim langsung dari toko di Jepang.)'
   },
   {
     id: 'm7h4_18',
@@ -214,10 +214,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '取り寄せ',
     furigana: 'とりよせ',
-    arti: 'Sistem Pemesanan / Inden',
-    penjelasan: 'Status barang yang harus dipesan dulu karena tidak ready stock di tempat (bentuk kata benda dari 取り寄せる).',
-    contoh1: 'この靴は在庫がないので、取り寄せ（Ｎ）になります。\n(Karena sepatu ini tidak ada stoknya, statusnya menjadi pemesanan inden/khusus.)',
-    contoh2: '地方の有名なお菓子をお取り寄せして楽しむ。\n(Menikmati kue terkenal dari daerah dengan sistem pengiriman khusus.)'
+    arti: 'Barang inden / Order khusus',
+    penjelasan: 'Status barang yang tidak ready stock dan harus diorder khusus dulu.',
+    contoh1: 'この靴は在庫がないので、取り寄せになります。\n(Karena sepatu ini tidak ada stok, statusnya jadi barang orderan khusus.)',
+    contoh2: '地方の有名なお菓子をお取り寄せして楽しむ。\n(Menikmati jajanan daerah dengan memesan pengiriman khusus.)'
   },
   {
     id: 'm7h4_19',
@@ -227,9 +227,9 @@ const kosakata_m7h4 = [
     kanji: '取り引き（する）',
     furigana: 'とりひき（する）',
     arti: 'Bertransaksi / Berbisnis',
-    penjelasan: 'Melakukan hubungan kerja sama, aktivitas jual beli, atau kesepakatan bisnis resmi antar perusahaan.',
-    contoh1: '信頼できる新しい会社と取り引き（＝ビジネスを）する。\n(Melakukan transaksi/berbisnis dengan perusahaan baru yang dapat dipercaya.)',
-    contoh2: '長年取り引きがある会社なので安心だ。\n(Tenang rasanya karena ini adalah perusahaan yang sudah bertahun-tahun bertransaksi dengan kami.)'
+    penjelasan: 'Melakukan hubungan jual beli atau kesepakatan bisnis resmi.',
+    contoh1: '信頼できる新しい会社と取り引きする。\n(Melakukan transaksi/berbisnis dengan perusahaan baru yang tepercaya.)',
+    contoh2: '長年取り引きがある会社なので安心だ。\n(Tenang rasanya karena ini perusahaan yang sudah bertahun-tahun berbisnis dengan kami.)'
   },
   {
     id: 'm7h4_20',
@@ -239,9 +239,9 @@ const kosakata_m7h4 = [
     kanji: '引き起こす',
     furigana: 'ひきおこす',
     arti: 'Memicu / Menyebabkan',
-    penjelasan: 'Menjadi akar penyebab munculnya masalah, kecelakaan, perselisihan, atau dampak negatif lainnya.',
-    contoh1: 'ちょっとした不注意が重大な事件を引き起こす。\n(Sedikit kecerobohan dapat memicu/menyebabkan insiden yang sangat serius.)',
-    contoh2: '大気汚染が住民の健康被害を引き起こしている。\n(Polusi udara menyebabkan gangguan kesehatan pada warga setempat.)'
+    penjelasan: 'Menjadi penyebab terjadinya masalah, kecelakaan, atau dampak buruk.',
+    contoh1: 'ちょっとした不注意が重大な事件を引き起こす。\n(Sedikit kecerobohan dapat memicu insiden yang sangat serius.)',
+    contoh2: '大気汚染が住民の健康被害を引き起こしている。\n(Polusi udara menyebabkan masalah kesehatan pada warga.)'
   },
   {
     id: 'm7h4_21',
@@ -251,9 +251,9 @@ const kosakata_m7h4 = [
     kanji: '引き下げる',
     furigana: 'ひきさげる',
     arti: 'Menurunkan (Harga/Tarif)',
-    penjelasan: 'Menurunkan harga, tarif, nilai, posisi, atau persentase suku bunga menjadi lebih rendah.',
-    contoh1: '中央銀行がローンの利率を引き下げる。\n(Bank sentral menurunkan/memangkas suku bunga pinjaman.)',
-    contoh2: '商品の価格を引き下げて、購入者を増やす。\n(Menurunkan harga barang untuk meningkatkan jumlah pembeli.)'
+    penjelasan: 'Menurunkan nilai, tarif pajak, harga, atau suku bunga.',
+    contoh1: '中央銀行がローンの利率を引き下げる。\n(Bank sentral menurunkan suku bunga pinjaman.)',
+    contoh2: '商品の価格を引き下げて、購入者を増やす。\n(Menurunkan harga barang untuk menambah pembeli.)'
   },
   {
     id: 'm7h4_22',
@@ -263,9 +263,9 @@ const kosakata_m7h4 = [
     kanji: '引き上げる',
     furigana: 'ひきあげる',
     arti: 'Menaikkan / Mengangkat',
-    penjelasan: 'Menaikkan harga/tarif/suku bunga, atau secara fisik mengangkat benda ke atas (seperti dari dalam air).',
+    penjelasan: 'Menaikkan harga/suku bunga, atau mengangkat benda dari dalam air/bawah.',
     contoh1: '景気の変動に伴い、消費税の利率を引き上げる。\n(Seiring perubahan ekonomi, pemerintah menaikkan tarif pajak konsumsi.)',
-    contoh2: '海底に沈んだ船を大型クレーンで引き上げる。\n(Mengangkat kapal yang tenggelam di dasar laut dengan derek besar.)'
+    contoh2: '海底に沈んだ船を大型クレーンで引き上げる。\n(Mengangkat kapal yang tenggelam di dasar laut dengan kerek besar.)'
   },
   {
     id: 'm7h4_23',
@@ -274,10 +274,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '引き立てる',
     furigana: 'ひきたてる',
-    arti: 'Menonjolkan / Mengangkat Pamor',
-    penjelasan: 'Membuat sesuatu jadi lebih menarik (seperti rempah yang menonjolkan rasa makanan), atau mempromosikan bawahan agar posisinya naik.',
-    contoh1: '隠し味のスパイスが全体の味を引き立てる。\n(Rempah rahasia menonjolkan cita rasa masakan secara keseluruhan.)',
-    contoh2: '熱心な上司が優秀な後輩を引き立てる。\n(Atasan yang penuh perhatian mempromosikan/mendukung junior yang berprestasi.)'
+    arti: 'Menonjolkan / Promosi posisi',
+    penjelasan: 'Membuat rasa/penampilan lebih menonjol, atau mendukung bawahan naik posisi.',
+    contoh1: '隠し味のスパイスが全体の味を引き立てる。\n(Bumbu rahasia menonjolkan cita rasa masakan secara keseluruhan.)',
+    contoh2: '熱心な上司が優秀な後輩を引き立てる。\n(Atasan yang baik mempromosikan/mendukung junior berprestasi.)'
   },
   {
     id: 'm7h4_24',
@@ -286,10 +286,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '申し入れる',
     furigana: 'もうしいれる',
-    arti: 'Mengajukan / Mengusulkan',
-    penjelasan: 'Menyampaikan pemberitahuan, protes, usulan, atau keberatan secara resmi kepada pihak lain.',
-    contoh1: '不公平なルールに対して運営側に抗議を申し入れる。\n(Mengajukan protes kepada pihak panitia terhadap aturan yang tidak adil.)',
-    contoh2: '面会を申し入れたが、スケジュールが合わず断られた。\n(Saya mengajukan permohonan pertemuan, tetapi ditolak karena jadwal tidak cocok.)'
+    arti: 'Mengajukan / Protes resmi',
+    penjelasan: 'Menyampaikan usulan, keberatan, atau protes secara resmi ke pihak lawan.',
+    contoh1: '不公平なルールに対して運営側に抗議を申し入れる。\n(Mengajukan protes resmi kepada panitia atas aturan yang tidak adil.)',
+    contoh2: '面会を申し入れたが、スケジュールが合わず断られた。\n(Saya mengajukan permohonan bertemu, tapi ditolak karena jadwal tidak cocok.)'
   },
   {
     id: 'm7h4_25',
@@ -298,10 +298,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '申し入れ',
     furigana: 'もうしいれ',
-    arti: 'Pengajuan / Usulan Resmi',
-    penjelasan: 'Dokumen atau pernyataan resmi yang berisi tuntutan, negosiasi, atau usulan (bentuk kata benda dari 申し入れる).',
-    contoh1: '相手の国からの和平の申し入れ（Ｎ）を公式に受け入れる。\n(Menerima secara resmi pengajuan perdamaian dari negara lawan.)',
-    contoh2: '労働組合からの要求の申し入れを慎重に検討する。\n(Mempertimbangkan dengan cermat pengajuan tuntutan dari serikat pekerja.)'
+    arti: 'Pengajuan / Protes resmi',
+    penjelasan: 'Pernyataan atau dokumen tuntutan/pengajuan resmi.',
+    contoh1: '相手の国からの和平の申し入れを公式に受け入れる。\n(Menerima pengajuan perdamaian resmi dari negara lawan.)',
+    contoh2: '労働組合からの要求の申し入れを慎重に検討する。\n(Mempertimbangkan pengajuan tuntutan dari serikat pekerja.)'
   },
   {
     id: 'm7h4_26',
@@ -310,10 +310,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '申し出る',
     furigana: 'もうしでる',
-    arti: 'Menawarkan Diri / Melapor',
-    penjelasan: 'Mengajukan diri secara sukarela atas inisiatif pribadi untuk membantu, melapor, atau mengundurkan diri.',
-    contoh1: 'ボランティアとして被災者への援助を申し出る。\n(Menawarkan diri secara sukarela untuk memberikan bantuan bagi korban bencana.)',
-    contoh2: '落とし物の持ち主は、速やかに交番へ申し出てください。\n(Bagi pemilik barang hilang, harap segera melaporkan diri ke pos polisi.)'
+    arti: 'Menawarkan diri / Melapor',
+    penjelasan: 'Mengajukan diri secara sukarela untuk membantu atau melaporkan diri.',
+    contoh1: 'ボランティアとして被災者への援助を申し出る。\n(Menawarkan diri secara sukarela untuk membantu korban bencana.)',
+    contoh2: '落とし物の持ち主は、速やかに交番へ申し出てください。\n(Pemilik barang hilang harap segera melapor ke pos polisi.)'
   },
   {
     id: 'm7h4_27',
@@ -322,10 +322,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '申し出',
     furigana: 'もうしで',
-    arti: 'Penawaran / Permohonan Sukarela',
-    penjelasan: 'Tindakan sukarela seseorang yang menawarkan sesuatu atau mengajukan permohonan (bentuk kata benda dari 申し出る).',
-    contoh1: '彼の温かい援助の申し出（Ｎ）に対して深く感謝する。\n(Berterima kasih yang mendalam atas penawaran bantuannya yang hangat.)',
-    contoh2: '本人からの辞退の申し出により、メンバーを交代した。\n(Berdasarkan permohonan mundur dari yang bersangkutan, kami mengganti anggota.)'
+    arti: 'Penawaran sukarela',
+    penjelasan: 'Tindakan atau tawaran bantuan yang diajukan dari inisiatif diri sendiri.',
+    contoh1: '彼の温かい援助の申し出に対して深く感謝する。\n(Sangat berterima kasih atas penawaran bantuannya yang hangat.)',
+    contoh2: '本人からの辞退の申し出により、メンバーを交代した。\n(Atas permohonan mundur dari yang bersangkutan, kami mengganti anggota.)'
   },
   {
     id: 'm7h4_28',
@@ -335,9 +335,9 @@ const kosakata_m7h4 = [
     kanji: '追い出す',
     furigana: 'おいだす',
     arti: 'Mengusir',
-    penjelasan: 'Memaksa orang atau hewan keluar dari suatu tempat atau ruangan karena dianggap mengganggu.',
-    contoh1: '家賃を滞納し続けたため、アパートを追い出される。\n(Diusir keluar dari apartemen karena terus-menerus menunggak uang sewa.)',
-    contoh2: '部屋に入り込んだ野良猫を外へ追い出す。\n(Mengusir kucing liar yang menyelinap masuk ke dalam kamar ke luar.)'
+    penjelasan: 'Memaksa orang atau hewan keluar dari ruangan/rumah.',
+    contoh1: '家賃を滞納し続けたため、アパートを追い出される。\n(Diusir dari apartemen karena terus menunggak sewa.)',
+    contoh2: '部屋に入り込んだ野良猫を外へ追い出す。\n(Mengusir kucing liar yang masuk kamar ke luar.)'
   },
   {
     id: 'm7h4_29',
@@ -347,9 +347,9 @@ const kosakata_m7h4 = [
     kanji: '追い込む',
     furigana: 'おいこむ',
     arti: 'Menyudutkan / Memojokkan',
-    penjelasan: 'Memaksa seseorang masuk ke dalam situasi yang sangat sulit, terjepit, atau jalan buntu.',
-    contoh1: '多額の借金が重なり、ついに窮地に追い込まれる。\n(Utang yang menumpuk banyak akhirnya membuat saya tersudut ke dalam situasi pelik.)',
-    contoh2: '警察は巧みな捜査で犯人を袋小路に追い込んだ。\n(Polisi menyudutkan pelaku ke jalan buntu melalui penyelidikan yang cerdik.)'
+    penjelasan: 'Memaksa orang masuk ke posisi sulit atau jalan buntu.',
+    contoh1: '多額の借金が重なり、ついに窮地に追い込まれる。\n(Utang yang menumpuk membuat saya tersudut ke situasi sulit.)',
+    contoh2: '警察は巧みな捜査で犯人を袋小路に追い込んだ。\n(Polisi memojokkan pelaku ke jalan buntu.)'
   },
   {
     id: 'm7h4_30',
@@ -359,9 +359,9 @@ const kosakata_m7h4 = [
     kanji: '立ち寄る',
     furigana: 'たちよる',
     arti: 'Mampir / Singgah',
-    penjelasan: 'Mengunjungi suatu tempat sebentar saja di tengah perjalanan menuju tujuan utama.',
-    contoh1: '会社からの帰り道に、ちょっと友人の家に立ち寄る。\n(Mampir sejenak ke rumah teman di tengah perjalanan pulang dari kantor.)',
-    contoh2: '喉が渇いたので、近くのコンビニに立ち寄る。\n(Singgah sebentar di minimarket terdekat karena merasa haus.)'
+    penjelasan: 'Singgah sebentar ke suatu tempat di tengah perjalanan.',
+    contoh1: '会社からの帰り道に、ちょっと友人の家に立ち寄る。\n(Mampir sebentar ke rumah teman saat jalan pulang kantor.)',
+    contoh2: '喉が渇いたので、近くのコンビニに立ち寄る。\n(Mampir ke minimarket dekat sini karena haus.)'
   },
   {
     id: 'm7h4_31',
@@ -370,13 +370,13 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '立ち去る',
     furigana: 'たちさる',
-    arti: 'Beranjak Pergi',
-    penjelasan: 'Melangkah pergi dan meninggalkan suatu lokasi atau tempat kejadian.',
-    contoh1: '用事が終わると、彼は何も言わずにその場を立ち去る。\n(Begitu urusannya selesai, dia pergi meninggalkan tempat itu tanpa berkata apa pun.)',
-    contoh2: '怪しい人物は、警察官の姿を見るとすぐに立ち去った。\n(Orang yang mencurigakan itu segera pergi begitu melihat sosok polisi.)'
+    arti: 'Beranjak pergi / Angkat kaki',
+    penjelasan: 'Melangkah pergi meninggalkan suatu lokasi kejadian.',
+    contoh1: '用事が終わると、彼は何も言わずにその場を立ち去る。\n(Setelah urusan selesai, dia pergi dari lokasi tanpa berkata apa pun.)',
+    contoh2: '怪しい人物は、警察官の姿を見るとすぐに立ち去った。\n(Orang mencurigakan itu langsung pergi saat melihat polisi.)'
   },
 
-  // --- GAMBAR 2 (image_681bbe.png) ---
+  // --- GAMBAR 2 ---
   {
     id: 'm7h4_32',
     minggu: '7',
@@ -384,10 +384,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '打ち明ける',
     furigana: 'うちあける',
-    arti: 'Curhat / Berterus Terang',
-    penjelasan: 'Menceritakan isi hati, masalah, atau rahasia dengan jujur kepada orang yang dipercaya.',
-    contoh1: '誰にも言えなかった悩みを親友に打ち明ける。\n(Mencurahkan masalah yang tidak bisa diceritakan kepada siapa pun kepada sahabat karib.)',
-    contoh2: '本当の気持ちを家族に打ち明けて、心が軽くなった。\n(Hati saya menjadi lega setelah berterus terang tentang perasaan asli kepada keluarga.)'
+    arti: 'Curhat / Berterus terang',
+    penjelasan: 'Membuka rahasia atau menceritakan isi hati kepada orang lain.',
+    contoh1: '誰にも言えなかった悩みを親友に打ち明ける。\n(Curhat masalah rahasia kepada sahabat karib.)',
+    contoh2: '本当の気持ちを家族に打ち明けて、心が軽くなった。\n(Hati menjadi lega setelah berterus terang tentang perasaan ke keluarga.)'
   },
   {
     id: 'm7h4_33',
@@ -396,10 +396,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '打ち切る',
     furigana: 'うちきる',
-    arti: 'Menghentikan / Menyudahi',
-    penjelasan: 'Memutuskan untuk menghentikan suatu kegiatan, siaran, atau proyek di tengah jalan sebelum jadwalnya selesai.',
-    contoh1: '業績不振の理由により、雑誌の販売を打ち切る。\n(Menghentikan penjualan majalah karena alasan performa bisnis yang buruk.)',
-    contoh2: '議論が平行線のままなので、今日の話し合いを打ち切った。\n(Karena diskusi tidak menemui titik temu, kami menyudahi pembicaraan hari ini.)'
+    arti: 'Menghentikan di tengah jalan',
+    penjelasan: 'Menghentikan acara, siaran, atau diskusi sebelum waktunya.',
+    contoh1: '業績不振の理由により、雑誌の販売を打ち切る。\n(Menghentikan penjualan majalah karena penjualan buruk.)',
+    contoh2: '議論が平行線のままなので、今日の話し合いを打ち切った。\n(Karena diskusi tidak ketemu titik terang, kami menyudahi pembicaraan hari ini.)'
   },
   {
     id: 'm7h4_34',
@@ -408,10 +408,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '打ち切り',
     furigana: 'うちきり',
-    arti: 'Penghentian / Pemutusan',
-    penjelasan: 'Pembatalan mendadak sebuah acara TV, komik, atau proyek kerja akibat masalah tertentu (bentuk kata benda dari 打ち切る).',
-    contoh1: '視聴率が低迷していた番組が、ついに打ち切り（Ｎ）になった。\n(Acara TV yang ratingnya terpuruk itu akhirnya resmi mengalami penghentian tayang.)',
-    contoh2: '予算の都合により、研究プロジェクトの打ち切りが決まった。\n(Telah ditetapkan pemutusan/penghentian proyek penelitian karena penyesuaian anggaran.)'
+    arti: 'Penghentian mendadak (Drop)',
+    penjelasan: 'Penghentian tayang/proyek di tengah jalan (misal: manga/komik di-drop).',
+    contoh1: '視聴率が低迷していた番組が、ついに打ち切りになった。\n(Acara TV yang ratingnya jelek akhirnya resmi dihentikan.)',
+    contoh2: '予算の都合により、研究プロジェクトの打ち切りが決まった。\n(Proyek penelitian resmi dihentikan karena masalah anggaran.)'
   },
   {
     id: 'm7h4_35',
@@ -421,9 +421,9 @@ const kosakata_m7h4 = [
     kanji: '打ち上げる',
     furigana: 'うちあげる',
     arti: 'Meluncurkan / Menembakkan',
-    penjelasan: 'Meluncurkan sesuatu ke langit (seperti roket/kembang api), atau terdamparnya makhluk laut ke pantai.',
-    contoh1: '新型の宇宙探査ロケットを種子島から打ち上げる。\n(Meluncurkan roket eksplorasi luar angkasa model baru dari Tanegashima.)',
-    contoh2: '夜空に色鮮やかな花火を打ち上げる。\n(Menembakkan kembang api berwarna-warni yang indah ke langit malam.)'
+    penjelasan: 'Meluncurkan roket ke luar angkasa atau menembakkan kembang api.',
+    contoh1: '新型の宇宙探査ロケットを種子島から打ち上げる。\n(Meluncurkan roket ruang angkasa baru dari Tanegashima.)',
+    contoh2: '夜空に色鮮やかな花火を打ち上げる。\n(Menembakkan kembang api berwarna-warni ke langit malam.)'
   },
   {
     id: 'm7h4_36',
@@ -432,10 +432,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '打ち上げ',
     furigana: 'うちあげ',
-    arti: 'Pesta Perayaan / Peluncuran',
-    penjelasan: 'Pesta makan-makan untuk merayakan selesainya acara/proyek besar, atau proses peluncuran roket.',
-    contoh1: '大きな仕事が終わったから、みんなで打ち上げ（Ｎ）をしよう！\n(Karena pekerjaan besar telah selesai, mari kita semua mengadakan pesta perayaan!)',
-    contoh2: '明日は人工衛星の打ち上げが行われる予定だ。\n(Besok dijadwalkan akan dilakukan peluncuran satelit buatan.)'
+    arti: 'Pesta syukuran / Peluncuran',
+    penjelasan: 'Pesta makan-makan merayakan selesainya proyek besar, atau peluncuran roket.',
+    contoh1: '大きな仕事が終わったから、みんなで打ち上げをしよう！\n(Karena kerjaan besar selesai, mari kita pesta syukuran!)',
+    contoh2: '明日は人工衛星の打ち上げが行われる予定だ。\n(Besok dijadwalkan peluncuran satelit buatan.)'
   },
   {
     id: 'm7h4_37',
@@ -444,10 +444,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '割り当てる',
     furigana: 'わりあてる',
-    arti: 'Membagikan / Mengalokasikan',
-    penjelasan: 'Membagi tugas, tanggung jawab, biaya, atau fasilitas secara adil kepada setiap anggota kelompok.',
-    contoh1: '文化祭の準備に向けて、メンバーに仕事を割り当てる。\n(Membagikan/mengalokasikan tugas kepada para anggota untuk persiapan festival budaya.)',
-    contoh2: '参加者全員にそれぞれの部屋の番号を割り当てた。\n(Mengalokasikan nomor kamar masing-masing kepada seluruh peserta.)'
+    arti: 'Membagikan tugas / Mengalokasikan',
+    penjelasan: 'Membagi tugas, porsi kerja, atau nomor kamar secara adil.',
+    contoh1: '文化祭の準備に向けて、メンバーに仕事を割り当てる。\n(Membagikan tugas ke anggota untuk persiapan festival.)',
+    contoh2: '参加者全員にそれぞれの部屋の番号を割り当てた。\n(Mengalokasikan nomor kamar ke masing-masing peserta.)'
   },
   {
     id: 'm7h4_38',
@@ -456,10 +456,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '割り当て',
     furigana: 'わりあて',
-    arti: 'Jatah / Alokasi',
-    penjelasan: 'Hasil pembagian kuota atau porsi tugas yang harus diselesaikan tiap orang (bentuk kata benda dari 割り当てる).',
-    contoh1: '自分の割り当て（Ｎ）の作業を責任を持って終わらせる。\n(Menyelesaikan tugas yang menjadi alokasi jatah saya dengan penuh tanggung jawab.)',
-    contoh2: '仕事の割り当てが不公平だと不満が出る。\n(Akan muncul keluhan jika pembagian porsi tugas tidak adil.)'
+    arti: 'Jatah / Alokasi tugas',
+    penjelasan: 'Porsi tugas atau kuota yang didapat masing-masing orang.',
+    contoh1: '自分の割り当ての作業を責任を持って終わらせる。\n(Menyelesaikan jatah tugas saya dengan bertanggung jawab.)',
+    contoh2: '仕事の割り当てが不公平だと不満が出る。\n(Akan muncul keluhan kalau pembagian jatah tugas tidak adil.)'
   },
   {
     id: 'm7h4_39',
@@ -468,10 +468,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '割り込む',
     furigana: 'わりこむ',
-    arti: 'Menyela / Memotong Antrean',
-    penjelasan: 'Menyelip paksa ke dalam antrean, atau memotong pembicaraan orang lain secara tidak sopan.',
-    contoh1: 'チケットを買いに待っている列に無理やり割り込む。\n(Memotong antrean orang yang sedang mengantre untuk membeli tiket secara paksa.)',
-    contoh2: '人が話している途中に横から割り込むのは良くない。\n(Menyela dari samping di tengah-tengah orang lain sedang berbicara itu tidak baik.)'
+    arti: 'Menyerobot antrean / Menyela',
+    penjelasan: 'Menyelip paksa di antrean atau menyela pembicaraan orang.',
+    contoh1: 'チケットを買いに待っている列に無理やり割り込む。\n(Menyerobot antrean orang yang sedang mengantre tiket.)',
+    contoh2: '人が話している途中に横から割り込むのは良くない。\n(Menyela di tengah orang yang sedang bicara itu tidak baik.)'
   },
   {
     id: 'm7h4_40',
@@ -480,10 +480,10 @@ const kosakata_m7h4 = [
     kategori: 'kata benda',
     kanji: '割り込み',
     furigana: 'わりこみ',
-    arti: 'Penyerobotan / Pemotongan Jalur',
-    penjelasan: 'Tindakan menyerobot antrean kereta atau memotong lajur di jalan raya (bentuk kata benda dari 割り込む).',
-    contoh1: '満員電車への割り込み（Ｎ）乗車は非常に迷惑な行為だ。\n(Menyerobot masuk/memotong antrean saat naik kereta padat adalah tindakan yang sangat mengganggu.)',
-    contoh2: '前の車が急な割り込みをしてきて危なかった。\n(Mobil di depan melakukan pemotongan jalur mendadak sehingga sangat berbahaya.)'
+    arti: 'Penyerobotan / Pemotongan jalur',
+    penjelasan: 'Tindakan menyerobot antrean atau memotong lajur jalan.',
+    contoh1: '満員電車への割り込み乗車は非常に迷惑な行為だ。\n(Menyerobot antrean masuk kereta padat sangat mengganggu.)',
+    contoh2: '前の車が急な割り込みをしてきて危なかった。\n(Mobil di depan memotong jalur mendadak sehingga berbahaya.)'
   },
   {
     id: 'm7h4_41',
@@ -492,10 +492,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '読み上げる',
     furigana: 'よみあげる',
-    arti: 'Membaca Lantang',
-    penjelasan: 'Membaca tulisan atau daftar nama dengan suara yang keras agar didengar oleh semua orang di ruangan.',
-    contoh1: '先生がクラスの出席を取るために名簿を読み上げる。\n(Guru membaca lantang daftar nama siswa untuk memeriksa kehadiran di kelas.)',
-    contoh2: '当選者の名前をステージ上で1人ずつ読み上げる。\n(Menyebutkan/membaca satu per satu nama pemenang dengan suara lantang di atas panggung.)'
+    arti: 'Membaca keras / Membaca lantang',
+    penjelasan: 'Membaca tulisan/nama dengan suara keras agar didengar umum.',
+    contoh1: '先生がクラスの出席を取るために名簿を読み上げる。\n(Guru membaca lantang daftar nama untuk mengecek presensi.)',
+    contoh2: '当選者の名前をステージ上で1人ずつ読み上げる。\n(Membaca satu per satu nama pemenang dengan suara keras di panggung.)'
   },
   {
     id: 'm7h4_42',
@@ -504,10 +504,10 @@ const kosakata_m7h4 = [
     kategori: 'kata kerja',
     kanji: '読み取る',
     furigana: 'よみとる',
-    arti: 'Memahami / Memindai (Scan)',
-    penjelasan: 'Menangkap maksud tersirat dari sebuah tulisan/situasi, atau memindai data digital secara teknologi (seperti barcode).',
-    contoh1: '小説の文章から著者の言いたいことを正確に読み取る。\n(Memahami dengan akurat apa yang ingin disampaikan penulis dari teks novel.)',
-    contoh2: 'レジの機械がスマートフォンのバーコードを読み取る。\n(Mesin kasir memindai/membaca kode batang yang ada di ponsel.)'
+    arti: 'Memahami makna / Scan barcode',
+    penjelasan: 'Memahami perasaan/maksud tersirat, atau memindai (scan) data digital.',
+    contoh1: '小説の文章から著者の言いたいことを正確に読み取る。\n(Memahami dengan tepat maksud penulis dari teks novel.)',
+    contoh2: 'レジの機械がスマートフォンのバーコードを読み取る。\n(Mesin kasir memindai [scan] barcode di ponsel.)'
   }
 ];
 
