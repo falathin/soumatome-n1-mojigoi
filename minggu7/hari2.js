@@ -10,8 +10,8 @@ const kosakata_m7h2 = [
     kategori: 'kata sifat',
     kanji: 'アットホーム（な）',
     furigana: 'アットホーム（な）',
-    arti: 'Nyaman / Seperti di Rumah Sendiri (Cozy)',
-    penjelasan: 'Berasal dari bahasa Inggris "at home". Menggambarkan suasana tempat, toko, atau restoran yang sangat ramah, hangat, santai, dan membuat seseorang merasa nyaman seperti berada di rumah sendiri.',
+    arti: 'Nyaman / Kekeluargaan (Cozy)',
+    penjelasan: 'Berasal dari "At home". Menggambarkan suasana tempat, toko, atau kantor yang hangat dan santai seperti rumah sendiri.',
     contoh1: 'アットホームな雰囲気のレストラン。\n(Restoran dengan suasana yang nyaman dan hangat seperti di rumah.)',
     contoh2: 'この職場はアットホームで働きやすいです。\n(Tempat kerja ini sangat ramah/kekeluargaan sehingga mudah untuk bekerja.)'
   },
@@ -22,8 +22,8 @@ const kosakata_m7h2 = [
     kategori: 'kata sifat',
     kanji: 'ラフ（な）',
     furigana: 'ラフ（な）',
-    arti: 'Kasual / Kasar / Sketsa Awal (Rough)',
-    penjelasan: 'Berasal dari kata Inggris "rough". Memiliki dua makna utama dalam bahasa Jepang: pertama untuk pakaian yang santai atau kasual (casual), dan kedua untuk draf, gambar, atau sketsa kasar yang belum disempurnakan.',
+    arti: 'Kasual / Draf kasar (Rough)',
+    penjelasan: 'Berasal dari "Rough". Punya 2 arti: pakaian yang santai/kasual, atau draf/gambar rancangan kasar.',
     contoh1: 'ラフな服装（＝カジュアルな服装）。\n(Pakaian yang kasual / santai.)',
     contoh2: 'ラフな図面を書いて、設計のイメージを膨らませる。\n(Menggambar sketsa/draf kasar untuk mengembangkan gambaran desain.)'
   },
@@ -34,8 +34,8 @@ const kosakata_m7h2 = [
     kategori: 'kata sifat',
     kanji: 'ソフト（な）',
     furigana: 'ソフト（な）',
-    arti: 'Lembut / Perangkat Lunak (Soft / Software)',
-    penjelasan: 'Berasal dari kata "soft". Digunakan untuk mengekspresikan sifat yang lembut, ramah, atau tidak kasar (seperti cara berbicara). Selain itu, kata ini juga merupakan singkatan dari "software" (perangkat lunak komputer).',
+    arti: 'Lembut / Perangkat lunak (Soft)',
+    penjelasan: 'Berasal dari "Soft". Menggambarkan sifat/sikap/suara yang lembut, atau singkatan dari software.',
     contoh1: 'ソフトな話し方をする人は好感が持てる。\n(Orang yang memiliki cara berbicara yang lembut memberikan kesan yang baik.)',
     contoh2: '新しいソフト（＝ソフトウェア）をパソコンにインストールした。\n(Menginstal perangkat lunak/software baru ke dalam komputer.)'
   },
@@ -46,8 +46,8 @@ const kosakata_m7h2 = [
     kategori: 'kata sifat',
     kanji: 'タイト（な）',
     furigana: 'タイト（な）',
-    arti: 'Ketat / Padat (Tight)',
-    penjelasan: 'Berasal dari kata "tight". Digunakan untuk menggambarkan pakaian (seperti rok) yang pas atau ketat di badan, serta situasi jadwal atau waktu yang sangat padat, mepet, dan tidak memiliki banyak kelonggaran.',
+    arti: 'Ketat / Jadwal padat (Tight)',
+    penjelasan: 'Berasal dari "Tight". Digunakan untuk pakaian yang pas/sempit di badan, serta jadwal kerja yang sangat padat/mepet.',
     contoh1: 'タイトスカートをはいて出かける。\n(Pergi keluar dengan mengenakan rok ketat.)',
     contoh2: '今週はタイトなスケジュールなので、風邪をひけない。\n(Minggu ini jadwalnya sangat padat, jadi saya tidak boleh sampai masuk angin.)'
   },
@@ -59,7 +59,7 @@ const kosakata_m7h2 = [
     kanji: 'シャープ（な）',
     furigana: 'シャープ（な）',
     arti: 'Tajam / Jelas (Sharp)',
-    penjelasan: 'Berasal dari kata "sharp". Digunakan untuk mengekspresikan kualitas gambar atau foto yang sangat jelas/tajam (tidak buram), serta menggambarkan kecerdasan seseorang atau pikiran yang sangat tajam, pintar, dan cepat tanggap.',
+    penjelasan: 'Berasal dari "Sharp". Menggambarkan kualitas gambar/foto yang sangat jelas (tajam), atau otak/pemikiran yang cerdas dan cepat tanggap.',
     contoh1: 'デジタルカメラできれいなシャープな画像を撮影する。\n(Mengambil gambar/foto yang indah dan tajam jelas dengan kamera digital.)',
     contoh2: '彼はシャープな頭脳の持ち主で、問題解決能力が高い。\n(Dia adalah pemilik otak/pikiran yang tajam dan memiliki kemampuan memecahkan masalah yang tinggi.)'
   },
@@ -70,8 +70,8 @@ const kosakata_m7h2 = [
     kategori: 'kata sifat',
     kanji: 'デリケート（な）',
     furigana: 'デリケート（な）',
-    arti: 'Sensitif / Halus / Rumit (Delicate)',
-    penjelasan: 'Berasal dari kata "delicate". Menggambarkan kondisi emosional atau saraf seseorang yang sangat sensitif, peka, dan mudah tersinggung/terganggu. Kata ini juga digunakan untuk masalah atau urusan yang sensitif, pelik, dan memerlukan penanganan yang sangat hati-hati.',
+    arti: 'Sensitif / Halus (Delicate)',
+    penjelasan: 'Berasal dari "Delicate". Digunakan untuk perasaan/kulit yang peka dan sensitif, atau urusan/isu politik yang rumit dan harus hati-hati.',
     contoh1: '彼女はデリケートな神経の持ち主だ。\n(Dia memiliki sistem saraf/perasaan yang sangat sensitif [mudah stres/tersinggung].)',
     contoh2: 'これは政治的に非常にデリケートな問題です。\n(Ini adalah masalah yang secara politik sangat sensitif/pelik.)'
   },
@@ -83,7 +83,7 @@ const kosakata_m7h2 = [
     kanji: 'セキュリティ',
     furigana: 'セキュリティ',
     arti: 'Keamanan (Security)',
-    penjelasan: 'Berasal dari bahasa Inggris "security". Merujuk pada sistem keamanan, perlindungan, atau penjagaan, baik dalam konteks fisik (keamanan gedung/rumah) maupun konteks digital (keamanan data/jaringan internet).',
+    penjelasan: 'Berasal dari "Security". Merujuk pada sistem penjagaan keamanan fisik (gedung) maupun keamanan data/siber.',
     contoh1: 'このマンションはセキュリティがしっかりしている。\n(Apartemen ini memiliki sistem keamanan yang ketat/terjamin.)',
     contoh2: '個人情報を守るためにセキュリティを高める。\n(Meningkatkan keamanan untuk melindungi informasi pribadi.)'
   },
@@ -94,8 +94,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'エスカレーター',
     furigana: 'エスカレーター',
-    arti: 'Eskalator / Sistem Pendidikan Tanpa Ujian Masuk',
-    penjelasan: 'Selain berarti tangga berjalan (eskalator), istilah "Escalator-shiki" (エスカレーター式) dalam dunia pendidikan Jepang merujuk pada sistem sekolah terpadu (dari SD/SMP hingga Universitas) di mana siswa dapat naik ke jenjang berikutnya secara otomatis tanpa perlu mengikuti ujian saringan masuk lagi.',
+    arti: 'Eskalator / Sistem naik otomatis',
+    penjelasan: 'Selain tangga berjalan, istilah "Escalator-shiki" merujuk pada sistem sekolah terpadu yang muridnya naik jenjang otomatis tanpa ujian masuk.',
     contoh1: 'エスカレーター式（＝入学試験なしに）に進学できる学校。\n(Sekolah di mana siswa dapat melanjutkan pendidikan ke jenjang berikutnya secara otomatis [tanpa ujian masuk].)',
     contoh2: '駅のエスカレーターを利用する。\n(Menggunakan eskalator di stasiun.)'
   },
@@ -106,8 +106,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'ノルマ',
     furigana: 'ノルマ',
-    arti: 'Target Kerja / Kuota / Target Minimum',
-    penjelasan: 'Kata ini diserap dari bahasa Rusia "norma". Merujuk pada kuota, jumlah minimum tugas, atau target penjualan/pekerjaan yang dialokasikan kepada seseorang dan wajib diselesaikan dalam jangka waktu tertentu.',
+    arti: 'Target kerja / Kuota minimal',
+    penjelasan: 'Diserap dari bahasa Rusia "Norma". Merujuk pada jumlah target jualan atau beban kerja wajib yang harus diselesaikan tepat waktu.',
     contoh1: '今日の仕事のノルマをこなす。\n(Menyelesaikan target/kuota pekerjaan hari ini.)',
     contoh2: '営業のノルマがきつくて大変だ。\n(Target minimum penjualan sangat ketat sehingga terasa berat.)'
   },
@@ -118,8 +118,8 @@ const kosakata_m7h2 = [
     kategori: 'kata kerja',
     kanji: 'ブレイク（する）',
     furigana: 'ブレイク（する）',
-    arti: 'Istirahat Sejenak / Meledak Populer (Break)',
-    penjelasan: 'Berasal dari kata "break". Memiliki makna ganda: pertama sebagai waktu istirahat singkat (coffee break), dan kedua sebagai kata kerja yang berarti meraih kesuksesan besar secara mendadak, menjadi sangat populer, atau meledak di pasaran (monster hit).',
+    arti: 'Istirahat / Meledak terkenal (Break)',
+    penjelasan: 'Berasal dari "Break". Berarti istirahat sejenak (coffee break), atau meraih kesuksesan mendadak / mendadak sangat populer.',
     contoh1: 'コーヒーブレイクを挟んで会議を続ける。\n(Melanjutkan rapat setelah diselingi istirahat minum kopi sejenak.)',
     contoh2: 'その曲は去年大ブレイクした。\n(Lagu itu meledak sangat populer [menjadi hits besar] tahun lalu.)'
   },
@@ -130,8 +130,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'トラウマ',
     furigana: 'トラウマ',
-    arti: 'Trauma Psikologis',
-    penjelasan: 'Berasal dari kata medis/psikologis "trauma". Merujuk pada luka batin, trauma emosional, atau pengalaman masa lalu yang sangat buruk dan membekas dalam ingatan, sehingga memengaruhi kondisi psikologis seseorang hingga masa sekarang.',
+    arti: 'Trauma psikologis',
+    penjelasan: 'Berasal dari istilah medis "Trauma". Mengacu pada luka batin mendalam akibat pengalaman masa lalu yang buruk.',
     contoh1: '子どもの頃の体験がトラウマになる。\n(Pengalaman masa kecil berubah menjadi trauma psikologis.)',
     contoh2: '事故のトラウマで車に乗れなくなった。\n(Karena trauma kecelakaan, saya tidak bisa naik mobil lagi.)'
   },
@@ -143,7 +143,7 @@ const kosakata_m7h2 = [
     kanji: 'ゲット（する）',
     furigana: 'ゲット（する）',
     arti: 'Mendapatkan / Memperoleh (Get)',
-    penjelasan: 'Berasal dari bahasa Inggris "get". Merupakan kata kasual yang digunakan saat seseorang berhasil mendapatkan, membeli, memperoleh, atau memenangkan suatu barang atau informasi.',
+    penjelasan: 'Kata kasual dari "Get". Dipakai saat berhasil membeli, memenangkan, atau memperoleh barang dan informasi.',
     contoh1: 'それ、どこでゲットしたの？\n(Benda itu, kamu dapatkan di mana?)',
     contoh2: '欲しかった限定品をようやくゲットした。\n(Akhirnya saya berhasil mendapatkan barang edisi terbatas yang saya inginkan.)'
   },
@@ -154,8 +154,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'アルコール',
     furigana: 'アルコール',
-    arti: 'Alkohol / Minuman Keras',
-    penjelasan: 'Berasal dari kata "alcohol". Selain merujuk pada senyawa kimia alkohol untuk sterilisasi, dalam percakapan sehari-hari kata ini lebih sering digunakan untuk merujuk pada minuman keras atau minuman beralkohol (sake).',
+    arti: 'Alkohol / Minuman keras',
+    penjelasan: 'Berasal dari "Alcohol". Dipakai untuk cairan steril medis, atau istilah umum untuk minuman keras (sake).',
     contoh1: '私はアルコールは全くだめです。\n(Saya sama sekali tidak bisa minum alkohol.)',
     contoh2: '注射の前に肌をアルコールで消毒する。\n(Mensterilkan kulit dengan alkohol sebelum disuntik.)'
   },
@@ -167,7 +167,7 @@ const kosakata_m7h2 = [
     kanji: 'オファー（する）',
     furigana: 'オファー（する）',
     arti: 'Tawaran / Menawarkan (Offer)',
-    penjelasan: 'Berasal dari kata "offer". Digunakan ketika menerima atau memberikan sebuah tawaran resmi, baik berupa tawaran pekerjaan, kontrak kerja sama bisnis, peran dalam film, maupun pengajuan harga.',
+    penjelasan: 'Berasal dari "Offer". Digunakan untuk tawaran resmi seperti tawaran kerja, peran film, atau tawaran bisnis.',
     contoh1: '有名企業からオファーが来る。\n(Mendapat tawaran pekerjaan/kontrak dari perusahaan terkenal.)',
     contoh2: '彼に主役のオファーをする。\n(Memberikan tawaran peran utama kepadanya.)'
   },
@@ -178,8 +178,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'ブランド',
     furigana: 'ブランド',
-    arti: 'Merek / Barang Bermerek (Brand)',
-    penjelasan: 'Berasal dari kata "brand". Merujuk pada merek terkenal yang memiliki gengsi tinggi. Ketika digabungkan menjadi "Brand-hin" (ブランド品), artinya merujuk khusus pada barang-barang mewah dari desainer terkenal luar negeri.',
+    arti: 'Merek / Barang bermerek (Brand)',
+    penjelasan: 'Berasal dari "Brand". Merujuk pada merek ternama. Jika "Brand-hin", artinya barang-barang mewah dari desainer ternama.',
     contoh1: 'ブランド品ばかりを好んで買う。\n(Gemar membeli barang-barang bermerek mewah saja.)',
     contoh2: 'この会社は独自のブランドを立ち上げた。\n(Perusahaan ini mendirikan merek dagang/brand milik mereka sendiri.)'
   },
@@ -190,8 +190,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'オプション',
     furigana: 'オプション',
-    arti: 'Pilihan Opsional / Tambahan (Option)',
-    penjelasan: 'Berasal dari kata "option". Merujuk pada layanan, komponen, atau aktivitas tambahan yang tidak wajib (opsional), di mana seseorang bebas memilih untuk menambahkannya atau tidak (biasanya memerlukan biaya ekstra).',
+    arti: 'Pilihan opsional / Tambahan',
+    penjelasan: 'Berasal dari "Option". Fitur, layanan, atau komponen tambahan yang bisa dipilih secara bebas (biasanya bayar ekstra).',
     contoh1: '市内観光はオプションになっている。\n(Tur keliling kota sifatnya opsional [pilihan tambahan].)',
     contoh2: '車のカーナビはオプションで追加しました。\n(Navigasi mobil ditambahkan sebagai opsi tambahan.)'
   },
@@ -202,8 +202,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'テンション',
     furigana: 'テンション',
-    arti: 'Semangat / Tingkat Kehebohan (Excitement)',
-    penjelasan: 'Berasal dari bahasa Inggris "tension". Namun, berbeda dengan arti bahasa Inggrisnya yang bermakna "tegang/stres", dalam bahasa Jepang slang kata ini berarti tingkat semangat, antusiasme, suasana hati, atau kegembiraan seseorang.',
+    arti: 'Semangat / Antusiasme (Mood)',
+    penjelasan: 'Serapan dari "Tension", tapi dalam bahasa Jepang slang berarti tingkat semangat, antusiasme, atau mood kehebohan seseorang.',
     contoh1: 'お祭りに行くとテンションが上がる。\n(Ketika pergi ke festival, tingkat semangat/kegembiraan saya langsung naik.)',
     contoh2: '彼は今日、なぜかテンションが低い。\n(Hari ini entah mengapa dia terlihat tidak bersemangat/loyo.)'
   },
@@ -216,8 +216,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'プレッシャー',
     furigana: 'プレッシャー',
-    arti: 'Tekanan Mental / Beban Pikiran (Pressure)',
-    penjelasan: 'Berasal dari kata "pressure". Merujuk pada tekanan psikologis, beban mental, atau stres yang dirasakan seseorang akibat tuntutan tugas, ekspektasi dari orang lain, atau situasi menjelang ujian/pertandingan penting.',
+    arti: 'Tekanan mental / Beban pikiran',
+    penjelasan: 'Berasal dari "Pressure". Beban psikologis atau stres akibat ekspektasi orang lain dan tuntutan situasi penting.',
     contoh1: '周囲の期待からプレッシャーがかかる。\n(Merasakan tekanan mental akibat ekspektasi orang-orang di sekitar.)',
     contoh2: 'プレッシャーに負けずに実力を発揮する。\n(Menunjukkan kemampuan terbaik tanpa kalah dari tekanan mental.)'
   },
@@ -228,8 +228,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'ギャップ',
     furigana: 'ギャップ',
-    arti: 'Celah / Kesenjangan / Perbedaan (Gap)',
-    penjelasan: 'Berasal dari kata "gap". Digunakan untuk menggambarkan adanya celah perbedaan atau ketidakselarasan antara dua hal, misalnya kesenjangan pendapat antar generasi, perbedaan antara ekspektasi dan realita, atau perbedaan sifat asli seseorang dengan penampilannya.',
+    arti: 'Kesenjangan / Celah perbedaan',
+    penjelasan: 'Berasal dari "Gap". Celah perbedaan antara dua hal, misalnya beda generasi, perbedaan ekspektasi vs realita, dll.',
     contoh1: '世代間のギャップを感じる。\n(Merasakan adanya kesenjangan/perbedaan antargenerasi.)',
     contoh2: '理想と現実のギャップに悩む。\n(Merasa bingung/khawatir karena adanya celah antara idealisme dan kenyataan.)'
   },
@@ -240,10 +240,10 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'バブル',
     furigana: 'バブル',
-    arti: 'Gelembung Ekonomi (Bubble)',
-    penjelasan: 'Berasal dari kata "bubble". Secara khusus sering digunakan dalam istilah ekonomi (Bubble Keizai) untuk menggambarkan kondisi ekonomi yang melonjak tinggi tidak realistis lalu tiba-tiba hancur atau pecah (collapsed).',
+    arti: 'Gelembung ekonomi (Bubble)',
+    penjelasan: 'Berasal dari "Bubble". Spesifik untuk istilah ekonomi saat nilai pasar melonjak tidak wajar lalu meletus/hancur.',
     contoh1: 'バブル（経済）がはじける。\n(Gelembung ekonomi meletus/hancur.)',
-    contoh2: '1990年代に日本のバブル経済崩壊が起きた。\n(Pada tahun 1990-an terjadi kehancuran ekonomi gelembung di Jepang.)'
+    contoh2: '1990年代に日本のバブル経済崩壊が起きた。\n(Pada tahun 1990-an terjadi kehancuran経済 gelembung di Jepang.)'
   },
   {
     id: 'm7h2_21',
@@ -253,7 +253,7 @@ const kosakata_m7h2 = [
     kanji: 'ストーカー',
     furigana: 'ストーカー',
     arti: 'Penguntit (Stalker)',
-    penjelasan: 'Berasal dari kata "stalker". Merujuk pada pelaku kriminal atau seseorang yang memiliki obsesi tidak sehat terhadap orang lain, lalu terus-menerus mengikuti, mengintai, menguntit, atau mengganggu kehidupan pribadi orang tersebut secara obsesif.',
+    penjelasan: 'Berasal dari "Stalker". Pelaku yang terobsesi secara tidak sehat lalu terus mengintai dan mengganggu kehidupan pribadi korban.',
     contoh1: '最近、ストーカーに悩む人が増えている。\n(Belakangan ini, jumlah orang yang menderita akibat gangguan penguntit semakin meningkat.)',
     contoh2: 'ストーカー被害について警察に相談する。\n(Berkonsultasi dengan polisi mengenai kerugian/ancaman dari penguntit.)'
   },
@@ -264,8 +264,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'エリート',
     furigana: 'エリート',
-    arti: 'Elit / Orang Pilihan / Golongan Atas (Elite)',
-    penjelasan: 'Berasal dari kata "elite". Digunakan untuk menyebut kelompok orang atau individu yang memiliki keunggulan luar biasa, kepintaran di atas rata-rata, posisi tinggi, atau status sosial terbaik di dalam suatu organisasi atau masyarakat.',
+    arti: 'Elit / Golongan atas',
+    penjelasan: 'Berasal dari "Elite". Sebutan untuk kelompok atau individu berpendidikan tinggi, cerdas, dan berposisi sukses/atas.',
     contoh1: '彼は一流大学を卒業したエリート社員だ。\n(Dia adalah karyawan elit yang lulus dari universitas ternama.)',
     contoh2: 'エリートコースを歩む。\n(Menapaki jalur karier kesuksesan para elit.)'
   },
@@ -276,8 +276,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'バリアフリー',
     furigana: 'バリアフリー',
-    arti: 'Bebas Hambatan (Barrier-Free / Akses Difabel)',
-    penjelasan: 'Berasal dari kata "barrier-free". Konsep desain arsitektur atau fasilitas umum yang dibuat tanpa undakan, tangga tajam, atau pembatas fisik lainnya, sehingga ramah, aman, dan mudah diakses oleh lansia maupun penyandang disabilitas (pengguna kursi roda).',
+    arti: 'Akses ramah difabel & lansia',
+    penjelasan: 'Berasal dari "Barrier-free". Konsep desain/fasilitas tanpa hambatan (tanpa tangga tajam) agar aman untuk lansia dan pengguna kursi roda.',
     contoh1: '祖父母のためにバリアフリーの家を建てる。\n(Membangun rumah ramah lansia/bebas hambatan demi kakek dan nenek.)',
     contoh2: 'この駅はバリアフリー化が進んでいる。\n(Stasiun ini sudah mengalami kemajuan dalam modernisasi fasilitas bebas hambatan [akses disabilitas].)'
   },
@@ -288,8 +288,8 @@ const kosakata_m7h2 = [
     kategori: 'kata benda',
     kanji: 'ニート',
     furigana: 'ニート',
-    arti: 'NEET (Pengangguran Usia Produktif)',
-    penjelasan: 'Akronim dari bahasa Inggris "Not in Education, Employment, or Training". Merujuk pada kelompok usia muda produktif yang tidak bekerja, tidak menempuh jalur pendidikan formal, dan juga tidak sedang mengikuti pelatihan keterampilan apa pun.',
+    arti: 'Pengangguran usia sekolah/kerja (NEET)',
+    penjelasan: 'Singkatan dari "Not in Education, Employment, or Training". Usia muda yang tidak sekolah, tidak bekerja, dan tidak pelatihan kerja.',
     contoh1: '彼は大学卒業後、就職せずにニートになった。\n(Setelah lulus universitas, dia tidak mencari kerja dan menjadi NEET [pengangguran].)',
     contoh2: 'ニートの若者の社会復帰を支援するプログラム。\n(Program untuk mendukung kembalinya para pemuda NEET ke dalam lingkungan masyarakat/dunia kerja.)'
   }
