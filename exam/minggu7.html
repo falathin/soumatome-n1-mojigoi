@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JLPT N1 Simulator - Minggu 6</title>
+    <title>JLPT N1 Simulator - 7</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -224,33 +224,40 @@
     <div class="container py-5" id="app">
         </div>
 
-    <script>
-        const hari6_data = [
-            { id: 1, text: "彼は芸能界の話題にとても（  ）。", options: ["明るい", "あまい", "かたい", "重い"], answer: 0, explanation: "Konteks: Dia sangat berpengetahuan tentang topik dunia hiburan.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 明るい:</strong> Tepat. 「～に明るい」 artinya berpengetahuan luas / familier dengan suatu topik.</li><li><strong>2. あまい:</strong> Manis / naif / tidak tegas.</li><li><strong>3. かたい:</strong> Keras / teguh.</li><li><strong>4. 重い:</strong> Berat.</li></ul>" },
-            { id: 2, text: "彼女は口は悪いけど（  ）はやさしい人ですよ。", options: ["種", "根", "身", "実"], answer: 1, explanation: "Konteks: Mulutnya memang tajam, tapi sifat aslinya baik lho.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 種:</strong> Biji / rahasia trik.</li><li><strong>2. 根 (ね):</strong> Tepat. 「根はやさしい」 artinya sifat aslinya (dari akar/hatinya) adalah baik.</li><li><strong>3. 身:</strong> Tubuh / diri.</li><li><strong>4. 実:</strong> Buah / kenyataan.</li></ul>" },
-            { id: 3, text: "息子は頭が少し（  ）。頑固な父親にそっくりだ。", options: ["かたい", "軽い", "あまい", "強い"], answer: 0, explanation: "Konteks: Anakku kepalanya sedikit keras (keras kepala). Persis seperti ayahnya yang keras kepala.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. かたい:</strong> Tepat. 「頭がかたい」 (atama ga katai) berarti keras kepala / kaku pemikirannya.</li><li><strong>2. 軽い:</strong> Ringan.</li><li><strong>3. あまい:</strong> Manis / terlalu longgar.</li><li><strong>4. 強い:</strong> Kuat.</li></ul>" },
-            { id: 4, text: "うまい話に（  ）ように気をつけよう。", options: ["受けない", "乗らない", "すべらない", "通らない"], answer: 1, explanation: "Konteks: Berhati-hatilah agar tidak termakan tipuan berkedok keuntungan/cerita manis.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 受けない:</strong> Tidak menerima.</li><li><strong>2. 乗らない:</strong> Tepat. 「話に乗る」 berarti menanggapi / termakan tipuan / ikut-ikutan.</li><li><strong>3. すべらない:</strong> Tidak terpeleset.</li><li><strong>4. 通らない:</strong> Tidak tembus/lewat.</li></ul>" },
-            { id: 5, text: "何回も振り込みをすると、手数料が（  ）。", options: ["バカになる", "バカにならない", "バカをみる", "バカをみない"], answer: 1, explanation: "Konteks: Kalau berkali-kali transfer, biaya adminnya jadi jumlah yang tidak bisa diremehkan.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. バカになる:</strong> Menjadi rusak / tidak berfungsi.</li><li><strong>2. バカにならない:</strong> Tepat. Artinya 'tidak bisa diremehkan' atau 'berjumlah lumayan besar'.</li><li><strong>3. バカを見る:</strong> Rugi / mendapati kesialan.</li><li><strong>4. バカをみない:</strong> Tidak rugi.</li></ul>" },
-            { id: 6, text: "もう遅いので、後は明日に（  ）今日は帰りましょう。", options: ["つながって", "回して", "引いて", "通して"], answer: 1, explanation: "Konteks: Karena sudah larut, mari kita tinggalkan sisanya untuk besok dan pulang sekarang.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. つながって:</strong> Tersambung.</li><li><strong>2. 回して (まわして):</strong> Tepat. 「明日に回す」 (ashitani mawasu) berarti menunda/menggeser ke hari esok.</li><li><strong>3. 引いて:</strong> Menarik.</li><li><strong>4. 通して:</strong> Melewati / membiarkan lewat.</li></ul>" },
-            { id: 7, text: "もう少しスピードを出していたら、大事故に（  ）ところだった。", options: ["回る", "引かれる", "つながる", "結ぶ"], answer: 2, explanation: "Konteks: Jika tadinya aku ngebut sedikit lagi, itu bisa berujung pada kecelakaan besar.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 回る:</strong> Berputar.</li><li><strong>2. 引かれる:</strong> Tertabrak / tertarik.</li><li><strong>3. つながる:</strong> Tepat. Berujung pada / berkaitan dengan (大事故につながる).</li><li><strong>4. 結ぶ:</strong> Mengikat.</li></ul>" },
-            { id: 8, text: "妻は、私が昔、浮気をしたことを、いまだに（  ）に持っているようだ。", options: ["根", "気", "頭", "種"], answer: 0, explanation: "Konteks: Istriku sepertinya masih menyimpan dendam soal perselingkuhanku di masa lalu.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 根 (ね):</strong> Tepat. 「根に持つ」 (nenimotsu) adalah idiom yang berarti menaruh dendam / mengingat-ingat kesalahan orang.</li><li><strong>2. 気:</strong> Perasaan/Niat.</li><li><strong>3. 頭:</strong> Kepala.</li><li><strong>4. 種:</strong> Benih/Bibit.</li></ul>" },
-            { id: 9, text: "子どもの学費の支払いでボーナスが（  ）しまった。", options: ["送って", "すべって", "結んで", "飛んで"], answer: 3, explanation: "Konteks: Uang bonusku lenyap (terbang) untuk membayar uang sekolah anak.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 送って:</strong> Mengirim.</li><li><strong>2. すべって:</strong> Tergelincir.</li><li><strong>3. 結んで:</strong> Mengikat.</li><li><strong>4. 飛んで:</strong> Tepat. 「ボーナスが飛ぶ」 berarti uang bonus langsung habis / lenyap sekejap.</li></ul>" },
-            { id: 10, text: "社長が逮捕されてしまって、とてもショックを（  ）。", options: ["持った", "受けた", "あたった", "得た"], answer: 1, explanation: "Konteks: Presiden direktur ditangkap, dan saya sangat syok.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 持った:</strong> Membawa/Memegang.</li><li><strong>2. 受けた:</strong> Tepat. 「ショックを受ける」 (shokku o ukeru) berarti mengalami syok terkejut.</li><li><strong>3. あたった:</strong> Mengenai/Memenangkan.</li><li><strong>4. 得た:</strong> Mendapatkan (keuntungan/pengetahuan).</li></ul>" },
-            { id: 11, text: "【素質がいい。】", options: ["種がいい", "道がいい", "当たりがいい", "筋がいい"], answer: 3, explanation: "Makna: Memiliki bakat / potensi yang bagus.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 種がいい:</strong> Bibitnya bagus.</li><li><strong>2. 道がいい:</strong> Jalannya bagus.</li><li><strong>3. 当たりがいい:</strong> Ramah / perlakuan yang baik.</li><li><strong>4. 筋がいい (すじがいい):</strong> Tepat. Idiom ini berarti memiliki bakat atau potensi alami yang baik terhadap sesuatu.</li></ul>" },
-            { id: 12, text: "【方法。】", options: ["道", "筋", "種", "根"], answer: 0, explanation: "Makna: Cara / jalan keluar / metode.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 道 (みち):</strong> Tepat. Dapat diartikan sebagai cara/metode (contoh: 解決の道 = jalan penyelesaian).</li><li><strong>2. 筋:</strong> Alur / logika.</li><li><strong>3. 種:</strong> Trik / benih.</li><li><strong>4. 根:</strong> Akar.</li></ul>" },
-            { id: 13, text: "【次々に起こる。】", options: ["後に回す", "後をつぐ", "後をつけない", "後を絶たない"], answer: 3, explanation: "Makna: Terjadi satu demi satu / tidak ada habisnya.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 後に回す:</strong> Menunda.</li><li><strong>2. 後をつぐ:</strong> Mewarisi / meneruskan tahta.</li><li><strong>3. 後をつけない:</strong> Tidak mengikuti.</li><li><strong>4. 後を絶たない (あとをたたない):</strong> Tepat. Sesuatu (seringnya hal buruk) terus terjadi tanpa henti.</li></ul>" },
-            { id: 14, text: "【よい結果が表れる。】", options: ["実をつなぐ", "実を結ぶ", "道をつなぐ", "道を結ぶ"], answer: 1, explanation: "Makna: Membuahkan hasil yang baik.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 実をつなぐ:</strong> Bukan idiom yang tepat.</li><li><strong>2. 実を結ぶ (みをむすぶ):</strong> Tepat. Usaha yang membuahkan hasil (berbuah).</li><li><strong>3. 道をつなぐ:</strong> Menyambung jalan.</li><li><strong>4. 道を結ぶ:</strong> Bukan idiom yang tepat.</li></ul>" },
-            { id: 15, text: "【見た目などを実際以上によく見せようとする。】", options: ["胸を張る", "調子に乗る", "人当たりがいい", "見栄を張る"], answer: 3, explanation: "Makna: Berusaha menunjukkan penampilan/gaya hidup lebih baik dari aslinya (gengsi).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 胸を張る:</strong> Membusungkan dada (bangga).</li><li><strong>2. 調子に乗る:</strong> Besar kepala / terbawa suasana.</li><li><strong>3. 人当たりがいい:</strong> Ramah / pandai bergaul.</li><li><strong>4. 見栄を張る (みえをはる):</strong> Tepat. Pamer / memaksakan diri demi gengsi.</li></ul>" },
-            { id: 16, text: "ここでは<u>都合が悪い</u>から、別の場所で話そう。", options: ["重い", "かたい", "あまい", "まずい"], answer: 3, explanation: "Kata yang bersinonim dengan 都合が悪い (situasinya buruk/tidak nyaman).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 重い:</strong> Berat.</li><li><strong>2. かたい:</strong> Keras.</li><li><strong>3. あまい:</strong> Manis / longgar.</li><li><strong>4. まずい:</strong> Tepat. Selain tidak enak (makanan), まずい juga berarti situasi/kondisi yang buruk atau canggung.</li></ul>" },
-            { id: 17, text: "彼は、<u>自分からやめて</u>、後輩に仕事を譲った。", options: ["身を引いて", "話をつけて", "調子を下げて", "筋を通して"], answer: 0, explanation: "Kata yang bersinonim dengan 自分からやめる (mengundurkan diri secara sukarela).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 身を引いて (みをひいて):</strong> Tepat. Menarik diri / mengundurkan diri (untuk memberikan posisi pada orang lain).</li><li><strong>2. 話をつけて:</strong> Mencapai kesepakatan.</li><li><strong>3. 調子を下げて:</strong> Menurunkan nada/kondisi.</li><li><strong>4. 筋を通して:</strong> Bertindak logis / taat pada prinsip.</li></ul>" },
-            { id: 18, text: "手品の<u>仕掛け</u>がばれた。", options: ["波", "道", "根", "種"], answer: 3, explanation: "Kata yang bersinonim dengan 仕掛け (rahasia / trik dalam sulap).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 波:</strong> Gelombang.</li><li><strong>2. 道:</strong> Jalan.</li><li><strong>3. 根:</strong> Akar.</li><li><strong>4. 種 (たね):</strong> Tepat. 「手品の種」 (tejina no tane) berarti rahasia atau trik sulap.</li></ul>" },
-            { id: 19, text: "わがチームの優勝は<u>間違いない</u>でしょう。", options: ["明るい", "かたい", "強い", "重い"], answer: 1, explanation: "Kata yang bersinonim dengan 間違いない (pasti / tidak diragukan lagi).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 明るい:</strong> Terang.</li><li><strong>2. かたい:</strong> Tepat. Dalam konteks ini berarti solid / pasti / kemungkinannya sangat kuat (優勝がかたい).</li><li><strong>3. 強い:</strong> Kuat (fisik).</li><li><strong>4. 重い:</strong> Berat.</li></ul>" },
-            { id: 20, text: "授業料のことを考えると<u>憂うつだ</u>。", options: ["頭が重い", "気が重い", "心にかかる", "思いが強い"], answer: 1, explanation: "Kata yang bersinonim dengan 憂うつだ (depresi / terbebani / malas memikirkannya).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 頭が重い:</strong> Pusing/Sakit kepala ringan.</li><li><strong>2. 気が重い (きがおもい):</strong> Tepat. Merasa terbebani / malas atau depresi memikirkan sesuatu (heavy-hearted).</li><li><strong>3. 心にかかる:</strong> Menjadi beban pikiran/khawatir.</li><li><strong>4. 思いが強い:</strong> Perasaannya kuat.</li></ul>" },
-            { id: 21, text: "波 (なみ)", options: ["彼は授業の波に乗って、すらすら答えた。", "その会社は不況の波を受けてついに倒産してしまった。", "セールスマンの波に乗らないように気をつけてください。", "台風の被害には波がいろいろある。"], answer: 1, explanation: "Penggunaan yang tepat untuk 波 (gelombang tren/dampak/fluktuasi).<br>Opsi 2 paling tepat: 'Perusahaan itu terkena gelombang (dampak) resesi ekonomi dan akhirnya bangkrut.' <br>Opsi 1 salah (seharusnya 調子にのって). Opsi 3 salah (seharusnya 口車にのらない). Opsi 4 salah (seharusnya 程度がある)." },
-            { id: 22, text: "すべる", options: ["コップを手ですべって、落としてしまった。", "つい口がすべってしまい、うそがばれてしまった。", "湖水の上を白鳥がすべるように泳いでいる。", "試験の時間にすべるように、落ち着いてください。"], answer: 1, explanation: "Penggunaan yang tepat untuk すべる (tergelincir / gagal / keceplosan).<br>Opsi 2 paling tepat: 'Karena keceplosan (口がすべる / kuchi ga suberu), kebohonganku ketahuan.' <br>Opsi 1 salah (seharusnya 手がすべって). Opsi 3 salah (kurang pas digunakan untuk angsa berenang). Opsi 4 salah (seharusnya 間に合うように)." },
-            { id: 23, text: "通る (とおる)", options: ["彼の主張は、一応、筋が通っている。", "彼は恋人の肩に手を通した。", "車で駅まで通っていきましょう。", "わからなかった問題がやっと通った。"], answer: 0, explanation: "Penggunaan yang tepat untuk 通る (lewat / masuk akal / lulus).<br>Opsi 1 paling tepat: 'Pendapatnya, untuk sementara ini, masuk akal (筋が通っている).' <br>Opsi 2 salah (seharusnya 手を回した - merangkul). Opsi 3 salah (seharusnya 通って/向かって/行って). Opsi 4 salah (seharusnya 解けた/わかった)." },
-            { id: 24, text: "飛ぶ (とぶ)", options: ["扇風機で風が飛んで、涼しくなった。", "暑さで氷が一気に飛んでしまった。", "年とともに髪の毛が飛んで、はげてきた。", "ブレーキランプのヒューズが飛んでしまった。"], answer: 3, explanation: "Penggunaan yang tepat untuk 飛ぶ (terbang / hilang seketika / putus).<br>Opsi 4 paling tepat: 'Sekering (fuse) lampu rem putus (飛ぶ / blew).' <br>Opsi 1 salah (seharusnya 風が吹いて). Opsi 2 salah (seharusnya 溶けて - mencair). Opsi 3 salah (seharusnya 抜けて - rontok)." },
-            { id: 25, text: "明るい (あかるい)", options: ["彼はとても責任感の明るい人です。", "父は世界の地理に明るい。", "この計算は明るい。", "おじいちゃん、おばあちゃんは孫に明るいものだ。"], answer: 1, explanation: "Penggunaan yang tepat untuk 明るい (terang / berpengetahuan luas / familier).<br>Opsi 2 paling tepat: 'Ayah sangat berpengetahuan luas/paham betul tentang geografi dunia (地理に明るい).' <br>Opsi 1 salah (seharusnya 責任感が強い). Opsi 3 salah (seharusnya 簡単/明白). Opsi 4 salah (seharusnya 甘い - memanjakan)." }
+<script>
+        const hari7_data = [
+            // 問題1
+            { id: 1, text: "そのバンドはデビュー10年目で（  ）した。", options: ["トラウマ", "ブランド", "リストラ", "ブレイク"], answer: 3, explanation: "Konteks: Band itu menjadi sangat populer/terkenal mendadak (breakthrough) di tahun ke-10 debutnya.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. トラウマ:</strong> Trauma.</li><li><strong>2. ブランド:</strong> Merek/Brand.</li><li><strong>3. リストラ:</strong> PHK (Restrukturisasi).</li><li><strong>4. ブレイク:</strong> Tepat. 「ブレイクする」 berarti mendadak populer/sukses besar.</li></ul>" },
+            { id: 2, text: "私は、ふだんお酒を飲むと（  ）があがるが、今日はまったく気分がよくならない。", options: ["テンション", "プレッシャー", "ギャップ", "グレード"], answer: 0, explanation: "Konteks: Biasanya kalau minum sake semangatmya/moodnya naik, tapi hari ini sama sekali tidak merasa senang.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. テンション:</strong> Tepat. 「テンションがあがる」 berarti semangat/mood naik.</li><li><strong>2. プレッシャー:</strong> Tekanan/Sikap tertekan.</li><li><strong>3. ギャップ:</strong> Celah/Perbedaan.</li><li><strong>4. グレード:</strong> Tingkatan/Grade.</li></ul>" },
+            { id: 3, text: "警察は誘拐犯と人質を解放させるための（  ）をした。", options: ["取り締まり", "取り調べ", "取引", "引き立て"], answer: 2, explanation: "Konteks: Polisi melakukan negosiasi/transaksi dengan penculik untuk membebaskan sandera.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 取り締まり:</strong> Penertiban/Penindakan.</li><li><strong>2. 取り調べ:</strong> Interogasi/Pemeriksaan.</li><li><strong>3. 取引 (とりひき):</strong> Tepat. Negosiasi/Transaksi.</li><li><strong>4. 引き立て:</strong> Dukungan/Promosi.</li></ul>" },
+            { id: 4, text: "人気番組もあまり長く続くと（  ）化してくるものだ。", options: ["マニア", "セレブ", "マイナス", "マンネリ"], answer: 3, explanation: "Konteks: Acara populer pun kalau berlanjut terlalu lama akan menjadi monoton/membosankan.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. マニア:</strong> Penggemar berat/Mania.</li><li><strong>2. セレブ:</strong> Selebritas.</li><li><strong>3. マイナス:</strong> Minus/Dampak negatif.</li><li><strong>4. マンネリ:</strong> Tepat. 「マンネリ化する」 berarti menjadi monoton/rutinitas yang membosankan.</li></ul>" },
+            { id: 5, text: "最近の携帯電話は機能が多くて、（  ）のは大変です。", options: ["備え付ける", "使いこなす", "取り調べる", "成り立つ"], answer: 1, explanation: "Konteks: Ponsel belakangan ini fiturnya banyak, menguasai penggunaannya itu sulit.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 備え付ける:</strong> Memasang/Menyediakan.</li><li><strong>2. 使いこなす:</strong> Tepat. Menguasai cara penggunaan secara mahir.</li><li><strong>3. 取り調べる:</strong> Menginterogasi.</li><li><strong>4. 成り立つ:</strong> Terwujud/Terdiri dari.</li></ul>" },
+            { id: 6, text: "今週はスケジュールが（  ）なので、映画に行くのは来週にしよう。", options: ["デリケート", "タイト", "マイナス", "ラフ"], answer: 1, explanation: "Konteks: Minggu ini jadwalnya padat (ketat), jadi mari pergi nonton bioskop minggu depan saja.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. デリケート:</strong> Sensitif/Hati-hati.</li><li><strong>2. タイト:</strong> Tepat. Jadwal yang padat/ketat (tight).</li><li><strong>3. マイナス:</strong> Minus.</li><li><strong>4. ラフ:</strong> Kasar/Santai (rough).</li></ul>" },
+            { id: 7, text: "お近くにお越しの際は、ぜひ（  ）ください。", options: ["お申し込み", "お立ち寄り", "お持ち込み", "お取り寄せ"], answer: 1, explanation: "Konteks: Jika kebetulan berkunjung ke dekat sini, silakan mampir.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. お申し込み:</strong> Pendaftaran.</li><li><strong>2. お立ち寄り (おたちより):</strong> Tepat. Mampir/Singgah sebentar.</li><li><strong>3. お持ち込み:</strong> Membawa masuk.</li><li><strong>4. お取り寄せ:</strong> Memesan/Pesan antar.</li></ul>" },
+            { id: 8, text: "そのマラソン選手は、なぜか中間地点を（  ）ところでコースを外れた。", options: ["たどり着いた", "やりとげた", "折り返した", "踏み込んだ"], answer: 2, explanation: "Konteks: Pelari maraton itu, entah mengapa keluar dari lintasan tepat saat berputar balik di titik tengah.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. たどり着いた:</strong> Tiba setelah berjuang.</li><li><strong>2. やりとげた:</strong> Menyelesaikan.</li><li><strong>3. 折り返した (おりかえした):</strong> Tepat. Memutar balik / titik balik rute.</li><li><strong>4. 踏み込んだ:</strong> Menginjak dalam-dalam/mencampuri.</li></ul>" },
+            { id: 9, text: "彼が変なことを言って（  ）ので、楽しいパーティーが台無しになった。", options: ["差し支えた", "取り込んだ", "かみ切った", "かき回した"], answer: 3, explanation: "Konteks: Gara-gara dia mengatakan hal aneh dan mengacaukan suasana, pesta yang menyenangkan jadi berantakan.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 差し支えた:</strong> Mengganggu/Menghalangi.</li><li><strong>2. 取り込んだ:</strong> Mengangkat jemuran/Mengimpor.</li><li><strong>3. かみ切った:</strong> Menggigit sampai putus.</li><li><strong>4. かき回した (かきまわした):</strong> Tepat. Mengaduk / Mengacaukan suasana.</li></ul>" },
+            { id: 10, text: "予算が（  ）になって、その企画は会議を通らなかった。", options: ["ネック", "ルーズ", "シャープ", "ノルマ"], answer: 0, explanation: "Konteks: Karena anggaran menjadi hambatan (bottleneck), rencana itu tidak lolos rapat.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ネック:</strong> Tepat. Kendala/Hambatan utama (bottleneck).</li><li><strong>2. ルーズ:</strong> Ceroboh/Longgar.</li><li><strong>3. シャープ:</strong> Tajam/Cerdas.</li><li><strong>4. ノルマ:</strong> Target kerja/Kuota minimum.</li></ul>" },
+
+            // 問題2
+            { id: 11, text: "【特定の個人に一方的な恋愛感情もうらみを持って、しつこく追いかけたりする人。】", options: ["セクハラ", "ニート", "ストーカー", "インテリ"], answer: 2, explanation: "Makna: Orang yang secara sepihak mengejar seseorang terus-menerus karena perasaan cinta atau dendam.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. セクハラ:</strong> Pelecehan seksual.</li><li><strong>2. ニート:</strong> NEET (Pengangguran).</li><li><strong>3. ストーカー:</strong> Tepat. Stalker / Penguntit.</li><li><strong>4. インテリ:</strong> Kaum intelektual.</li></ul>" },
+            { id: 12, text: "【爆発的に売れる。】", options: ["ゴールインする", "バブルする", "ゲットする", "ブレイクする"], answer: 3, explanation: "Makna: Laku/terjual secara meledak-ledak.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ゴールインする:</strong> Mencapai garis finis / menikah.</li><li><strong>2. バブルする:</strong> Gelembung ekonomi.</li><li><strong>3. ゲットする:</strong> Mendapatkan.</li><li><strong>4. ブレイクする:</strong> Tepat. Ngetren / Meledak penjualannya.</li></ul>" },
+            { id: 13, text: "【並んでいる列に強引に入ること。】", options: ["踏み込み", "放り込み", "取り込み", "割り込み"], answer: 3, explanation: "Makna: Memotong/menyerobot antrean orang secara paksa.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 踏み込み:</strong> Menginjak pedal / menerobos.</li><li><strong>2. 放り込み:</strong> Melemparkan masuk.</li><li><strong>3. 取り込み:</strong> Kesibukan / mengambil masuk.</li><li><strong>4. 割り込み (わりこみ):</strong> Tepat. Menyerobot antrean.</li></ul>" },
+            { id: 14, text: "【一つのことに心を集中させる。】", options: ["打ち込む", "やりとげる", "乗っ取る", "突っ張る"], answer: 0, explanation: "Makna: Memfokuskan/menumpahkan pikiran pada satu hal secara tekun.<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 打ち込む (うちこむ):</strong> Tepat. Tekun / fokus sepenuh hati.</li><li><strong>2. やりとげる:</strong> Menyelesaikan hingga tuntas.</li><li><strong>3. 乗っ取る:</strong> Merebut/Mengambil alih.</li><li><strong>4. 突っ張る:</strong> Kaku tegang / keras kepala.</li></ul>" },
+            { id: 15, text: "【もう少し付け加えること、またその付け加えられたもの。】", options: ["リップサービス", "プラスアルファ", "バージョンアップ", "グレードアップ"], answer: 1, explanation: "Makna: Menambahkan sedikit lagi, atau sesuatu yang ditambahkan tersebut (nilai tambah).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. リップサービス:</strong> Omong kosong/Pujian manis di mulut saja.</li><li><strong>2. プラスアルファ:</strong> Tepat. Nilai tambah / bonus tambahan (plus alpha).</li><li><strong>3. バージョンアップ:</strong> Pembaruan versi.</li><li><strong>4. グレードアップ:</strong> Peningkatan kualitas/kelas.</li></ul>" },
+
+            // 問題3
+            { id: 16, text: "新型の携帯電話のデザインを<u>おおまかに</u>手書きで書いてみました。", options: ["ラフに", "ソフトに", "シャープに", "デリケートに"], answer: 0, explanation: "Sinonim dari おおまかに (secara garis besar / sketsa kasar).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ラフに:</strong> Tepat. Secara kasar / sketsa awal (rough).</li><li><strong>2. ソフトに:</strong> Secara lembut.</li><li><strong>3. シャープに:</strong> Secara tajam.</li><li><strong>4. デリケートに:</strong> Secara halus/sensitif.</li></ul>" },
+            { id: 17, text: "彼は病気で入院していたので、一年<u>留年した</u>。", options: ["ドジった", "サボった", "ダブった", "キレた"], answer: 2, explanation: "Sinonim dari 留年した (tinggal kelas / mengulang tahun ajaran).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. ドジった:</strong> Ceroboh/Melakukan kebodohan.</li><li><strong>2. サボった:</strong> Membolos.</li><li><strong>3. ダブった:</strong> Tepat. Mengulang tahun/kelas (Double).</li><li><strong>4. キレた:</strong> Ngamuk/Putus asa.</li></ul>" },
+            { id: 18, text: "始まったばかりのドラマがもう<u>終了</u>になってしまった。", options: ["取り戻し", "引き下げ", "打ち切り", "投げ出し"], answer: 2, explanation: "Sinonim dari 終了 (dihentikan/diakhiri di tengah jalan).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 取り戻し:</strong> Mengambil kembali.</li><li><strong>2. 引き下げ:</strong> Penurunan/Pemotongan.</li><li><strong>3. 打ち切り (うちきり):</strong> Tepat. Penghentian/Pembatalan acara di tengah jalan.</li><li><strong>4. 投げ出し:</strong> Menelantarkan/Menyerah.</li></ul>" },
+            { id: 19, text: "デパートの開店と同時に、客が<u>どっと入ってきた</u>。", options: ["押し寄せて", "寄り添って", "乗っ取って", "盛り上がって"], answer: 0, explanation: "Sinonim dari どっと入ってきた (masuk membanjiri secara berbondong-bondong).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 押し寄せて (おしよせて):</strong> Tepat. Datang mengerumuni/membanjiri dalam jumlah besar.</li><li><strong>2. 寄り添って:</strong> Saling mendekat/mendampingi.</li><li><strong>3. 乗っ取って:</strong> Merebut/Menguasai.</li><li><strong>4. 盛り上がって:</strong> Ramai/Meriah.</li></ul>" },
+            { id: 20, text: "彼女に新しいドラマへの出演の<u>オファー</u>が来た。", options: ["引き立て", "受け入れ", "引き継ぎ", "申し込み"], answer: 3, explanation: "Sinonim dari オファー (penawaran / permintaan kerja).<ul class='explanation-list mt-2 mb-0 ps-3'><li><strong>1. 引き立て:</strong> Dukungan/Favoritisme.</li><li><strong>2. 受け入れ:</strong> Penerimaan.</li><li><strong>3. 引き継ぎ:</strong> Serah terima pekerjaan.</li><li><strong>4. 申し込み (もうしこみ):</strong> Tepat. Penawaran/Pendaftaran/Lamaran (Offer).</li></ul>" },
+
+            // 問題4
+            { id: 21, text: "持ち込む (もちこむ)", options: ["それは日本に持ち込むことはできないんじゃないの。", "パソコンに音符を持ち込んで作曲をした。", "苦い薬を無理やり口に持ち込んだ。", "バナナやミカンをバッグに持ち込んで、旅に出かけた。"], answer: 0, explanation: "Penggunaan yang tepat untuk 持ち込む (Membawa masuk ke suatu negara/area/tempat).<br>Opsi 1 paling tepat: 'Bukannya barang itu tidak boleh dibawa masuk ke Jepang?'<br>Opsi 2 salah (seharusnya 入力して). Opsi 3 salah (seharusnya 放り込んだ / 押し込んだ). Opsi 4 salah (seharusnya 詰め込んで / 入れて)." },
+            { id: 22, text: "トラウマ", options: ["彼は上司のトラウマが原因が出世できなかった。", "すぐに落ち込むのは、トラウマになるからだ。", "私は、震災で被害を受けたことがトラウマになっている。", "小さいころのトラウマがいい状況になってきました。"], answer: 2, explanation: "Penggunaan yang tepat untuk トラウマ (Trauma psikologis akibat pengalaman buruk).<br>Opsi 3 paling tepat: 'Saya mengalami trauma akibat menjadi korban bencana gempa bumi.'<br>Opsi 1, 2, dan 4 tidak sesuai dengan makna klinis/psikologis trauma." },
+            { id: 23, text: "ハンデ", options: ["大学での研究は、ハンデがついたのでスムーズに進んでいない。", "彼は体が不自由であるというハンデを乗り越えて、国立大学に合格した。", "プロの彼にはハンデをあげたほうがいいよ。", "彼女の考え方はハンデがあるので、あまり参考にならない。"], answer: 1, explanation: "Penggunaan yang tepat untuk ハンデ (Handicap / Keterbatasan / Kerugian fisik atau kondisi).<br>Opsi 2 paling tepat: 'Dia berhasil mengatasi keterbatasan (disabilitas) fisiknya dan lulus universitas negeri.'<br>Opsi 1, 3, dan 4 salah secara idiomatis/penggunaan kata." },
+            { id: 24, text: "取り戻す (とりもどす)", options: ["住民たちは、災害を取り戻して、立ち直った。", "父が意識を取り戻してまた話ができることを願っています。", "事件の内容をじっくり取り戻してみた。", "病気の症状がいささか取り戻してきた。"], answer: 1, explanation: "Penggunaan yang tepat untuk 取り戻す (Pulih / Mendapatkan kembali kesadaran/kondisi semula).<br>Opsi 2 paling tepat: 'Saya berharap ayah bisa pulih kembali kesadarannya (意識を取り戻す) dan ngobrol lagi.'<br>Opsi 1, 3, dan 4 tidak logis dipasangkan dengan kata 取り戻す." },
+            { id: 25, text: "ギャップ", options: ["最近の不況でついにギャップができてしまった。", "年をとったせいか、最近の若者とのギャップを感じる。", "天候のギャップを気にしないで、日夜練習に励んだ。", "あなたと私のギャップの違いに驚いてしまった。"], answer: 1, explanation: "Penggunaan yang tepat untuk ギャップ (Gap / Perbedaan pemikiran atau jarak antar generasi/pandangan).<br>Opsi 2 paling tepat: 'Mungkin karena faktor usia, saya merasakan adanya gap/perbedaan dengan anak muda zaman sekarang.'<br>Opsi 1, 3, dan 4 tidak tepat penggunaan katan/konteksnya." }
         ];
     </script>
 
@@ -281,7 +288,7 @@
         setTheme(getSavedTheme());
 
         // --- 2. STATE MANAGEMENT ---
-        let state = JSON.parse(sessionStorage.getItem('jlpt_session_minggu6')) || {
+        let state = JSON.parse(sessionStorage.getItem('jlpt_session_minggu7')) || {
             mode: null,          
             answers: {},         
             timeRemaining: 900,  
@@ -290,7 +297,7 @@
         };
         let timerInterval;
 
-        const saveState = () => sessionStorage.setItem('jlpt_session_minggu6', JSON.stringify(state));
+        const saveState = () => sessionStorage.setItem('jlpt_session_minggu7', JSON.stringify(state));
 
         const resetSession = () => {
             if(confirm("Yakin ingin keluar? Riwayat ujian saat ini akan terhapus.")) {
@@ -319,8 +326,8 @@
                             </div>
                             <h1 class="display-6 fw-bold mb-1" style="letter-spacing: -1px;">日本語能力試験 <span class="text-dark" data-bs-theme="dark" style="color: inherit;">N1</span></h1>
                         </div>
-                        <h5 class="text-secondary mb-4 fw-bold">SOU MATOME - 第6週 意味が多い言葉を覚えよう</h5>
-                        <p class="mb-4 text-muted">Silakan pilih mode simulasi. <br class="d-none d-md-block">Uji kemampuan kosakata kata bermakna ganda Anda sekarang.</p>
+                        <h5 class="text-secondary mb-4 fw-bold">SOU MATOME - 第7週 覚えているか確かめよう (2)</h5>
+                        <p class="mb-4 text-muted">Silakan pilih mode simulasi. <br class="d-none d-md-block">Uji kemampuan komprehensif kosakata Minggu ke-7 Anda sekarang.</p>
                         
                         <div class="d-grid gap-3 mb-4">
                             <button onclick="startQuiz('asli')" class="btn btn-outline-primary btn-lg p-3 p-md-4 text-start position-relative shadow-sm rounded-4">
@@ -384,7 +391,7 @@
                 const m = Math.floor(state.timeRemaining / 60).toString().padStart(2, '0');
                 const s = (state.timeRemaining % 60).toString().padStart(2, '0');
                 
-                if (state.timeRemaining < 180) { // Kurang dari 3 menit
+                if (state.timeRemaining < 180) {
                     timerEl.classList.remove('bg-primary');
                     timerEl.classList.add('timer-warning');
                 }
@@ -395,7 +402,7 @@
         window.selectOption = function(qId, optIndex) {
             if (state.isFinished) return;
             
-            const isCorrect = hari6_data.find(q => q.id === qId).answer === optIndex;
+            const isCorrect = hari7_data.find(q => q.id === qId).answer === optIndex;
             
             state.answers[qId] = optIndex;
             state.lastClicked = { qId, optIndex, isCorrect }; 
@@ -409,7 +416,7 @@
 
             let scoreLatihan = calculateScore();
             let totalAnswered = Object.keys(state.answers).length;
-            let progress = (totalAnswered / hari6_data.length) * 100;
+            let progress = (totalAnswered / hari7_data.length) * 100;
 
             let html = `
                 <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center mb-4 sticky-top bg-body pt-3 pb-2 z-3" style="margin-top:-20px;">
@@ -428,18 +435,18 @@
                     <div class="card-body p-4">
                         <h4 class="fw-bold mb-3 ${state.mode === 'asli' ? 'text-primary' : 'text-success'}">
                             <i class="${state.mode === 'asli' ? 'fas fa-pen-nib' : 'fas fa-dumbbell'} me-2"></i>
-                            ${state.mode === 'asli' ? '本試験 (Ujian Asli) - 第6週' : '練習 (Mode Latihan) - 第6週'}
+                            ${state.mode === 'asli' ? '本試験 (Ujian Asli) - 第7週' : '練習 (Mode Latihan) - 第7週'}
                         </h4>
                         <div class="progress" style="height: 12px; border-radius: 10px; background-color: var(--bs-secondary-bg);">
                             <div class="progress-bar progress-bar-striped progress-bar-animated ${state.mode === 'asli' ? 'bg-primary' : 'bg-success'}" 
                                  style="width: ${progress}%"></div>
                         </div>
-                        <div class="text-end mt-2 fw-bold text-muted small">${totalAnswered} / ${hari6_data.length} Terjawab</div>
+                        <div class="text-end mt-2 fw-bold text-muted small">${totalAnswered} / ${hari7_data.length} Terjawab</div>
                     </div>
                 </div>
             `;
 
-            hari6_data.forEach((q, index) => {
+            hari7_data.forEach((q, index) => {
                 const userAnswer = state.answers[q.id];
                 html += `
                     <div class="card card-exam mb-4" id="q${q.id}">
@@ -514,7 +521,7 @@
         function calculateScore() {
             let correct = 0, wrong = 0;
             for (let qId in state.answers) {
-                const q = hari6_data.find(x => x.id == qId);
+                const q = hari7_data.find(x => x.id == qId);
                 if (state.answers[qId] === q.answer) correct++;
                 else wrong++;
             }
@@ -523,8 +530,8 @@
 
         window.confirmFinish = function() {
             const answered = Object.keys(state.answers).length;
-            if (answered < hari6_data.length) {
-                if(!confirm(`Ada soal yang belum dijawab (${answered}/${hari6_data.length}). Yakin ingin mengumpulkan sekarang?`)) {
+            if (answered < hari7_data.length) {
+                if(!confirm(`Ada soal yang belum dijawab (${answered}/${hari7_data.length}). Yakin ingin mengumpulkan sekarang?`)) {
                     return;
                 }
             } else {
@@ -544,7 +551,7 @@
         function renderResult() {
             const result = calculateScore();
             const answeredCount = Object.keys(state.answers).length;
-            const unanswered = hari6_data.length - answeredCount;
+            const unanswered = hari7_data.length - answeredCount;
             
             let grade = '不合格 (F)';
             let gradeColor = 'text-danger';
@@ -559,7 +566,7 @@
             let html = `
                 <div class="card card-exam border-0 mb-5 text-center overflow-hidden">
                     <div class="bg-primary text-white py-4 shadow-sm">
-                        <h2 class="fw-bold m-0"><i class="fas fa-poll me-2"></i> Hasil Simulasi N1 - 第6週</h2>
+                        <h2 class="fw-bold m-0"><i class="fas fa-poll me-2"></i> Hasil Simulasi N1 - 第7週</h2>
                     </div>
                     <div class="card-body p-4 p-md-5">
                         <i class="fas ${icon} fa-5x mb-3 drop-shadow"></i>
@@ -602,7 +609,7 @@
                 </div>
             `;
 
-            hari6_data.forEach((q, index) => {
+            hari7_data.forEach((q, index) => {
                 const userAnswer = state.answers[q.id];
                 const isCorrect = userAnswer === q.answer;
                 const isUnanswered = userAnswer === undefined;
@@ -613,52 +620,48 @@
                     : (isCorrect ? '<span class="badge bg-success rounded-pill px-3"><i class="fas fa-check me-1"></i> Benar</span>' : '<span class="badge bg-danger rounded-pill px-3"><i class="fas fa-times me-1"></i> Salah</span>');
 
                 html += `
-                    <div class="card card-exam mb-4 shadow-sm border-0" style="border-left: 6px solid ${isUnanswered ? '#6c757d' : (isCorrect ? '#198754' : '#dc3545')} !important; border-top: none;">
-                        <div class="card-body p-4">
-                            <h5 class="mb-3 lh-base">
-                                ${badgeStatus} <span class="ms-2 fw-bold text-muted">No. ${index + 1}</span>
-                            </h5>
-                            <h5 class="fw-bold mb-4">${q.text}</h5>
-                            
-                            <div class="row g-3 mb-4">
-                                <div class="col-md-6">
-                                    <div class="p-3 rounded-4 bg-light text-dark h-100 ${!isUnanswered && !isCorrect ? 'border border-danger border-2' : 'border border-light'}">
-                                        <small class="text-muted d-block mb-2 fw-bold"><i class="fas fa-user-edit me-1"></i> Jawaban Anda:</small>
-                                        <strong class="${isCorrect ? 'text-success' : (!isUnanswered ? 'text-danger' : 'text-muted')} fs-6">
-                                            ${isUnanswered ? '<em>Tidak dijawab</em>' : (userAnswer + 1) + '. ' + q.options[userAnswer]}
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="p-3 rounded-4 bg-light text-dark h-100 border border-success border-2" style="background-color: rgba(25,135,84,0.05) !important;">
-                                        <small class="text-success d-block mb-2 fw-bold"><i class="fas fa-key me-1"></i> Kunci Jawaban:</small>
-                                        <strong class="text-success fs-6">
-                                            ${(q.answer + 1)}. ${q.options[q.answer]}
-                                        </strong>
-                                    </div>
-                                </div>
+                    <div class="card card-exam mb-4 ${borderClass} border-2">
+                        <div class="card-body p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge badge-soal rounded-pill py-2 px-3">${index + 1}</span>
+                                ${badgeStatus}
                             </div>
-                            <div class="explanation-box p-3 rounded-3">
-                                <span class="badge bg-primary mb-2">解説 (Penjelasan)</span>
-                                <div class="lh-lg small">${q.explanation}</div>
+                            <h5 class="soal-text mb-4">${q.text}</h5>
+                            
+                            <div class="row g-2 mb-3 ms-md-2">
+                                ${q.options.map((opt, oIndex) => {
+                                    let optStyle = 'btn-outline-secondary disabled opacity-75';
+                                    if (oIndex === q.answer) optStyle = 'btn-success text-white fw-bold';
+                                    else if (oIndex === userAnswer && !isCorrect) optStyle = 'btn-danger text-white fw-bold';
+                                    
+                                    return `
+                                        <div class="col-12 col-md-6">
+                                            <div class="btn ${optStyle} w-100 text-start p-2 d-flex align-items-center">
+                                                <span class="opt-number me-2" style="width: 25px; height: 25px; font-size: 0.8rem;">${oIndex + 1}</span>
+                                                <span>${opt}</span>
+                                            </div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+
+                            <div class="p-3 explanation-box rounded-3 mt-3">
+                                <div class="small lh-lg">${q.explanation}</div>
                             </div>
                         </div>
                     </div>
                 `;
             });
 
-            html += `<div class="mb-5 pb-5"></div>`;
             app.innerHTML = html;
         }
 
-        // --- 4. INIT ---
-        if (state.mode && !state.isFinished) {
-            if (state.mode === 'asli' && !timerInterval) {
+        // --- 4. INITIALIZATION ---
+        if (state.mode) {
+            if (state.mode === 'asli' && !state.isFinished) {
                 timerInterval = setInterval(updateTimer, 1000);
             }
             renderQuiz();
-        } else if (state.isFinished) {
-            renderResult();
         } else {
             renderHome();
         }
