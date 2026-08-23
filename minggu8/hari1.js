@@ -295,4 +295,5 @@ const kosakata_m8h1 = [
   }
 ];
 
+// Menggabungkan data ke variabel global window.vocabData
 window.vocabData.push(...kosakata_m8h1);
