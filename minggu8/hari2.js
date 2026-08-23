@@ -343,4 +343,5 @@ const kosakata_m8h2 = [
   }
 ];
 
+// Menggabungkan data m8h2 ke dalam array global window.vocabData
 window.vocabData.push(...kosakata_m8h2);
